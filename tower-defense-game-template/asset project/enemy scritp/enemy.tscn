@@ -1,5 +1,6 @@
-[gd_scene load_steps=53 format=3 uid="uid://2emepi2ytiic"]
+[gd_scene load_steps=54 format=3 uid="uid://2emepi2ytiic"]
 
+[ext_resource type="Script" uid="uid://cfta36uercsum" path="res://asset project/enemy scritp/enemy.gd" id="1_b4e7n"]
 [ext_resource type="Texture2D" uid="uid://dwlohbx4c3fsd" path="res://asset project/enemy asset/Skull_Run.png" id="1_kd8w4"]
 [ext_resource type="Texture2D" uid="uid://b066jfifp4qdy" path="res://asset project/enemy asset/Shaman_Run.png" id="2_b4e7n"]
 [ext_resource type="Texture2D" uid="uid://bhoiixt7j138q" path="res://asset project/enemy asset/Troll_Walk.png" id="3_yllj7"]
@@ -356,7 +357,8 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_a3161"]
 radius = 32.0
 
-[node name="Enemy" type="Node2D"]
+[node name="Enemy" type="Node2D" groups=["enemies"]]
+script = ExtResource("1_b4e7n")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(5.72205e-06, 3.8147e-06)
