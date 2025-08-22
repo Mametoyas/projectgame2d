@@ -366,7 +366,11 @@ scale = Vector2(0.419271, 0.470052)
 sprite_frames = SubResource("SpriteFrames_ibpe8")
 animation = &"crawler_walk"
 
-[node name="Hit_box" type="Area2D" parent="."]
+[node name="Hitbox" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hit_box"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 shape = SubResource("CircleShape2D_a3161")
+
+[node name="HPBar" type="TextureProgressBar" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
