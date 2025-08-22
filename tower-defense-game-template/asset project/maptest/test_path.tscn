@@ -27,6 +27,6 @@ script = ExtResource("1_a51kg")
 script = ExtResource("2_6kfwk")
 
 [node name="WaveTimer" type="Timer" parent="Spawner"]
-wait_time = 2.0
+wait_time = 0.878
 
 [connection signal="timeout" from="Spawner/WaveTimer" to="Spawner" method="_on_wave_timer_timeout"]
