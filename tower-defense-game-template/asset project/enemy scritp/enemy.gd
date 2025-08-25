@@ -14,7 +14,7 @@ var armor: int = 0
 var regen: float = 0.0
 var flying: bool = false
 var shield_hp: int = 0
-var on_death_spawn: Dictionary = {}   # << สำคัญ: ให้เป็น Dictionary เสมอ
+var on_death_spawn: Dictionary = {}
 var size: float = 1.0
 var anim_name: String = ""
 
@@ -22,8 +22,13 @@ var hp: float = 0.0
 var follower: PathFollow2D
 
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
-@onready var hpbar: TextureProgressBar = $HPBar
 @onready var hitbox: Area2D = $Hitbox
+
+# --- HP Bar (ใช้ ColorRect) ---
+@export var bar_size: Vector2 = Vector2(28, 5)
+@onready var bar_root: Node2D    = $HPBarRoot
+@onready var bar_back: ColorRect = $HPBarRoot/Back
+@onready var bar_fill: ColorRect = $HPBarRoot/Fill
 
 func setup(config: Dictionary) -> void:
 	type_id   = String(config.get("type_id", type_id))
@@ -35,13 +40,11 @@ func setup(config: Dictionary) -> void:
 	flying    = bool(config.get("flying", flying))
 	shield_hp = int(config.get("shield_hp", shield_hp))
 
-	# ---- ตรงนี้คือส่วนแก้ ----
 	var d = config.get("on_death_spawn", {})
 	if d is Dictionary:
 		on_death_spawn = d
 	else:
 		on_death_spawn = {}
-	# --------------------------
 
 	size      = float(config.get("size", size))
 	anim_name = String(config.get("anim", anim_name))
@@ -50,15 +53,26 @@ func setup(config: Dictionary) -> void:
 
 func _ready() -> void:
 	hp = max_hp
-	if hpbar:
-		hpbar.max_value = max_hp
-		hpbar.value = hp
+
+	# ตั้งค่าหลอดเลือด
+	bar_back.size = bar_size
+	bar_back.color = Color(0, 0, 0, 0.75)
+	bar_fill.size = bar_size - Vector2(2,2)
+	bar_fill.position = Vector2(1,1)
+	bar_fill.color = Color(0.2, 0.9, 0.2)
+	_update_bar()
+
 	if flying: add_to_group("flying_enemies")
 	add_to_group("enemies")
 	if hitbox:
 		hitbox.area_entered.connect(_on_area_entered)
+		#---------ลบ-------------------------
+		hitbox.input_pickable = true
+		hitbox.input_event.connect(_on_hitbox_input_event)
+		#---------ลบ-------------------------
 	if anim_name != "" and anim and anim.sprite_frames and anim.sprite_frames.has_animation(anim_name):
 		anim.play(anim_name)
+
 
 func _process(delta: float) -> void:
 	if follower == null: return
@@ -68,7 +82,7 @@ func _process(delta: float) -> void:
 		rotation = follower.rotation
 	if regen > 0.0 and hp > 0.0:
 		hp = min(hp + regen * delta, float(max_hp))
-		if hpbar: hpbar.value = hp
+		_update_bar()
 	if follower.progress_ratio >= 1.0:
 		reached_end.emit()
 		queue_free()
@@ -82,17 +96,20 @@ func apply_damage(amount: int) -> void:
 		dmg -= absorbed
 		if dmg <= 0: return
 	hp -= float(dmg)
-	if hpbar: hpbar.value = max(hp, 0.0)
+	_update_bar()
 	if hp <= 0.0:
 		_spawn_children_if_any()
 		died.emit(reward)
 		queue_free()
 
+func _update_bar() -> void:
+	var ratio: float = clamp(hp / float(max_hp), 0.0, 1.0)
+	bar_fill.size.x = (bar_size.x - 2.0) * ratio
+
 func _on_area_entered(a: Area2D) -> void:
 	if a.has_method("get_damage"):
 		apply_damage(int(a.get_damage()))
 
-# ====== ไม่อ้างชื่อคลาส EnemyFactory อีกต่อไป ======
 func _spawn_children_if_any() -> void:
 	if on_death_spawn.is_empty():
 		return
@@ -102,7 +119,6 @@ func _spawn_children_if_any() -> void:
 	if t == "" or c <= 0:
 		return
 
-	# หาโรงงานผ่าน group แทน (ไม่ต้องรู้จัก class)
 	var tree := Engine.get_main_loop() as SceneTree
 	if tree == null: return
 	var factory := tree.get_first_node_in_group("enemy_factory")
@@ -115,7 +131,17 @@ func _spawn_children_if_any() -> void:
 		var f: PathFollow2D = follower.duplicate() as PathFollow2D
 		f.progress = max(0.0, follower.progress - 10.0)
 		path2d.add_child(f)
-		var child = factory.spawn(t, f)   # เรียกด้วย method ปกติ
+		var child = factory.spawn(t, f)
 		if child:
 			get_parent().add_child(child)
 			child.global_position = global_position + Vector2(randf_range(-s, s), randf_range(-s, s))
+
+#---------ลบ-------------------------
+func _on_hitbox_input_event(_viewport, event, _shape_idx) -> void:
+	# ลากเมาส์ผ่าน Hitbox ขณะกดซ้ายค้าง = โดนดาเมจถี่ ๆ
+	if event is InputEventMouseMotion and (event.button_mask & MOUSE_BUTTON_MASK_LEFT) != 0:
+		apply_damage(1)
+	# คลิกซ้ายหนึ่งครั้งบน Hitbox = โดนดาเมจทันที
+	elif event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		apply_damage(1)
+#---------ลบ-------------------------

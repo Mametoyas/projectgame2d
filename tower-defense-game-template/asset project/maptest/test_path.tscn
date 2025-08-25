@@ -5,9 +5,9 @@
 
 [sub_resource type="Curve2D" id="Curve2D_imca6"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1150, 641)
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 52, 74, 0, 0, 0, 0, 132, 107, 0, 0, 0, 0, 228, 122, 0, 0, 0, 0, 309, 122, 0, 0, 0, 0, 426, 127, 0, 0, 0, 0, 562, 131, 0, 0, 0, 0, 725, 145, 0, 0, 0, 0, 757, 214, 0, 0, 0, 0, 683, 336, 0, 0, 0, 0, 603, 327, 0, 0, 0, 0, 509, 325, 0, 0, 0, 0, 486, 278, 0, 0, 0, 0, 476, 239, 0, 0, 0, 0, 497, 139, 0, 0, 0, 0, 591, 70, 0, 0, 0, 0, 713, 61, 0, 0, 0, 0, 802, 76, 0, 0, 0, 0, 899, 129, 0, 0, 0, 0, 941, 191, 0, 0, 0, 0, 984, 295, 0, 0, 0, 0, 1046, 410, 0, 0, 0, 0, 1087, 511, 0, 0, 0, 0, 1094, 573, 0, 0, 0, 0, 1142, 634)
 }
-point_count = 2
+point_count = 25
 
 [node name="TestPath" type="Node2D"]
 script = ExtResource("1_a51kg")
@@ -17,7 +17,7 @@ curve = SubResource("Curve2D_imca6")
 script = ExtResource("1_a51kg")
 
 [node name="SeedFollow" type="PathFollow2D" parent="Path2D"]
-rotation = 0.5085
+rotation = 0.958259
 script = ExtResource("1_a51kg")
 
 [node name="EnemyFactory" type="Node" parent="."]

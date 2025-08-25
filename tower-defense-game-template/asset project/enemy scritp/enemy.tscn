@@ -371,6 +371,20 @@ animation = &"crawler_walk"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 shape = SubResource("CircleShape2D_a3161")
 
-[node name="HPBar" type="TextureProgressBar" parent="."]
+[node name="HPBarRoot" type="Node2D" parent="."]
+position = Vector2(-19, -31)
+scale = Vector2(1.41883, 2.28659)
+
+[node name="Back" type="ColorRect" parent="HPBarRoot"]
 offset_right = 40.0
 offset_bottom = 40.0
+scale = Vector2(1.29187, 0.122874)
+color = Color(0.099986, 0.099986, 0.099986, 1)
+
+[node name="Fill" type="ColorRect" parent="HPBarRoot"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(1.29367, 0.122551)
+color = Color(0.101961, 0.717647, 0.101961, 0.878431)
+
+[connection signal="input_event" from="Hitbox" to="." method="_on_hitbox_input_event"]
