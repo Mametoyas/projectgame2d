@@ -1,0 +1,73 @@
+[gd_scene load_steps=11 format=3 uid="uid://3w0jf5wh2op0"]
+
+[ext_resource type="Texture2D" uid="uid://cbjcx80aanrba" path="res://Tiny Swords (Enemy Pack)/Enemy Pack/Thief/Thief_Run.png" id="1_4ubgs"]
+[ext_resource type="Script" uid="uid://bvagu253obsi4" path="res://enemy__test.gd" id="1_54wyh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_54wyh"]
+atlas = ExtResource("1_4ubgs")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i5d0b"]
+atlas = ExtResource("1_4ubgs")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_spr6g"]
+atlas = ExtResource("1_4ubgs")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k6nmf"]
+atlas = ExtResource("1_4ubgs")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cl8ms"]
+atlas = ExtResource("1_4ubgs")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_myn2w"]
+atlas = ExtResource("1_4ubgs")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7fok1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_54wyh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i5d0b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_spr6g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k6nmf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cl8ms")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_myn2w")
+}],
+"loop": true,
+"name": &"thief_run",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4ubgs"]
+radius = 24.0
+height = 48.0
+
+[node name="thief" type="CharacterBody2D"]
+script = ExtResource("1_54wyh")
+speed = null
+anim_name = null
+
+[node name="Thief_walk" type="AnimatedSprite2D" parent="."]
+position = Vector2(1.90735e-06, 1.90735e-06)
+scale = Vector2(0.708333, 0.708333)
+sprite_frames = SubResource("SpriteFrames_7fok1")
+animation = &"thief_run"
+frame_progress = 0.503899
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_4ubgs")

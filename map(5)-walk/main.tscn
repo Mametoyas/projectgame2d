@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://c6kcyoct22nil"]
+
+[ext_resource type="PackedScene" uid="uid://b38kluylin6p8" path="res://Forest1.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://mo76pueu4x8q" path="res://Forest2.tscn" id="2_lquwl"]
+[ext_resource type="PackedScene" uid="uid://mwmsveodp24y" path="res://Forest3.tscn" id="3_7mycd"]
+[ext_resource type="PackedScene" uid="uid://cvgqcvfm012i7" path="res://Forest4.tscn" id="4_272bh"]
+[ext_resource type="PackedScene" uid="uid://dqw6j1nkyu6lq" path="res://Forest5.tscn" id="5_5vw27"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Node2D" parent="." instance=ExtResource("1_ig7tw")]
+position = Vector2(16, 32)
+
+[node name="Node2D2" parent="." instance=ExtResource("2_lquwl")]
+position = Vector2(24, 1992)
+
+[node name="Node2D3" parent="." instance=ExtResource("3_7mycd")]
+position = Vector2(3104, 56)
+
+[node name="Node2D4" parent="." instance=ExtResource("4_272bh")]
+position = Vector2(3232, 2024)
+
+[node name="Node2D5" parent="." instance=ExtResource("5_5vw27")]
+position = Vector2(32, 3880)
