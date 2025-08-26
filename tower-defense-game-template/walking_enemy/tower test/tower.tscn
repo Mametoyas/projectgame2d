@@ -7,6 +7,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_57haq"]
 
 [node name="Tower" type="Node2D"]
+scale = Vector2(0.64807, 0.589695)
 script = ExtResource("1_lw08b")
 bullet_scene = ExtResource("2_57haq")
 can_target_flying = true
