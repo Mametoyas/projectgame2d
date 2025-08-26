@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://dvvgcahy0kc4l"]
 
-[ext_resource type="Script" uid="uid://bjg8wxx761w5p" path="res://asset project/enemy scritp/EnemyFactory.gd" id="1_a51kg"]
-[ext_resource type="Script" uid="uid://kcd6ypmmu5e2" path="res://asset project/maptest/spawner.gd" id="2_6kfwk"]
-[ext_resource type="PackedScene" uid="uid://ca6bce7weuioh" path="res://asset project/tower test/tower.tscn" id="2_imca6"]
+[ext_resource type="Script" uid="uid://bjg8wxx761w5p" path="res://walking_enemy/enemy scritp/EnemyFactory.gd" id="1_a51kg"]
+[ext_resource type="Script" uid="uid://kcd6ypmmu5e2" path="res://walking_enemy/maptest/spawner.gd" id="2_6kfwk"]
+[ext_resource type="PackedScene" uid="uid://ca6bce7weuioh" path="res://walking_enemy/tower test/tower.tscn" id="2_imca6"]
 
 [sub_resource type="Curve2D" id="Curve2D_imca6"]
 _data = {
@@ -12,6 +12,7 @@ point_count = 25
 
 [node name="TestPath" type="Node2D"]
 script = ExtResource("1_a51kg")
+enemy_scene = null
 
 [node name="Tower" parent="." instance=ExtResource("2_imca6")]
 position = Vector2(597, 153)
@@ -20,13 +21,16 @@ scale = Vector2(0.5, 0.5)
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource("Curve2D_imca6")
 script = ExtResource("1_a51kg")
+enemy_scene = null
 
 [node name="SeedFollow" type="PathFollow2D" parent="Path2D"]
 rotation = 0.958259
 script = ExtResource("1_a51kg")
+enemy_scene = null
 
 [node name="EnemyFactory" type="Node" parent="."]
 script = ExtResource("1_a51kg")
+enemy_scene = null
 
 [node name="Spawner" type="Node" parent="."]
 script = ExtResource("2_6kfwk")

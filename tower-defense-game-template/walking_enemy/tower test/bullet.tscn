@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://baodamjy1ue7b"]
 
-[ext_resource type="Script" uid="uid://dyqge05exakj0" path="res://bullet.gd" id="1_88aak"]
-[ext_resource type="Texture2D" uid="uid://bkoc430eg0l3" path="res://asset project/tower test/arrow_test.png" id="2_e38j7"]
+[ext_resource type="Script" uid="uid://dyqge05exakj0" path="res://walking_enemy/tower test/bullet.gd" id="1_88aak"]
+[ext_resource type="Texture2D" uid="uid://bkoc430eg0l3" path="res://walking_enemy/tower test/arrow_test.png" id="2_e38j7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3vgrm"]
 
