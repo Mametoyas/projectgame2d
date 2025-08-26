@@ -107,7 +107,10 @@ func apply_damage(amount: int) -> void:
 		var absorbed: int = min(dmg, shield_hp)
 		shield_hp -= absorbed
 		dmg -= absorbed
-		if dmg <= 0: return
+		# อัปเดตแถบเลือด/สีทันที เผื่อโล่เพิ่งหมด
+		_update_bar()
+		if dmg <= 0:
+			return
 	hp -= float(dmg)
 	_update_bar()
 	if hp <= 0.0:
@@ -118,6 +121,13 @@ func apply_damage(amount: int) -> void:
 func _update_bar() -> void:
 	var ratio: float = clamp(hp / float(max_hp), 0.0, 1.0)
 	bar_fill.size.x = (bar_size.x - 2.0) * ratio
+
+	# สีของหลอด: มีโล่ = ขาว, โล่หมด = เขียว
+	if shield_hp > 0:
+		bar_fill.color = Color(1, 1, 1, 1)         # ขาว
+	else:
+		bar_fill.color = Color(0.2, 0.9, 0.2, 1)   # เขียว
+
 
 func _on_area_entered(a: Area2D) -> void:
 	if a.has_method("get_damage"):
