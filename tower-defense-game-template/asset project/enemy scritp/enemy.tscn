@@ -357,28 +357,30 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_a3161"]
 radius = 32.0
 
-[node name="Enemy" type="Node2D" groups=["enemies"]]
+[node name="Enemy" type="Node2D"]
 script = ExtResource("1_b4e7n")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(5.72205e-06, 3.8147e-06)
 scale = Vector2(0.419271, 0.470052)
 sprite_frames = SubResource("SpriteFrames_ibpe8")
-animation = &"crawler_walk"
+animation = &"flyer_fly"
 
 [node name="Hitbox" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 shape = SubResource("CircleShape2D_a3161")
 
 [node name="HPBarRoot" type="Node2D" parent="."]
-position = Vector2(-19, -31)
+position = Vector2(-37, -31)
 scale = Vector2(1.41883, 2.28659)
 
 [node name="Back" type="ColorRect" parent="HPBarRoot"]
 offset_right = 40.0
 offset_bottom = 40.0
-scale = Vector2(1.29187, 0.122874)
+scale = Vector2(1.294, 0.123)
 color = Color(0.099986, 0.099986, 0.099986, 1)
 
 [node name="Fill" type="ColorRect" parent="HPBarRoot"]

@@ -27,7 +27,7 @@ const ENEMY_DB := {
 	"splitter": {  # 5) ตายแตกเป็นลูก
 		"hp": 50, "speed": 110, "reward": 10,
 		"armor": 2, "regen": 0, "flying": false, "shield_hp": 0,
-		"on_death_spawn": {"type_id": "crawler", "count": 2, "spread": 12}, "size": 1.05,
+		"on_death_spawn": {"type_id": "crawler", "count": 5, "spread": 40}, "size": 1.5,
 		"anim": "split_walk"
 	},
 	"shielded": {  # 6) มีโล่ก่อนเลือดจริง

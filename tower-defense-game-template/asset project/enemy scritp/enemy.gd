@@ -23,12 +23,26 @@ var follower: PathFollow2D
 
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 @onready var hitbox: Area2D = $Hitbox
-
-# --- HP Bar (ใช้ ColorRect) ---
-@export var bar_size: Vector2 = Vector2(28, 5)
 @onready var bar_root: Node2D    = $HPBarRoot
 @onready var bar_back: ColorRect = $HPBarRoot/Back
 @onready var bar_fill: ColorRect = $HPBarRoot/Fill
+
+@export var bar_size: Vector2 = Vector2(28, 5)
+
+# ======================
+# ตั้งค่า Layer ให้ Hitbox ตามชนิด (บิน/ดิน)
+func _apply_hitbox_layers() -> void:
+	if hitbox == null:
+		return
+	hitbox.collision_layer = 0
+	hitbox.collision_mask = 0
+	if flying:
+		# ศัตรูบินอยู่ Layer 2
+		hitbox.set_collision_layer_value(2, true)
+	else:
+		# ศัตรูภาคพื้นอยู่ Layer 1
+		hitbox.set_collision_layer_value(1, true)
+# ======================
 
 func setup(config: Dictionary) -> void:
 	type_id   = String(config.get("type_id", type_id))
@@ -50,11 +64,13 @@ func setup(config: Dictionary) -> void:
 	anim_name = String(config.get("anim", anim_name))
 	scale     = Vector2.ONE * size
 
+	# หลังจากรู้ค่า flying แล้ว → ตั้ง Layer ของ Hitbox
+	_apply_hitbox_layers()
 
 func _ready() -> void:
 	hp = max_hp
 
-	# ตั้งค่าหลอดเลือด
+	# ตั้งค่า HP bar
 	bar_back.size = bar_size
 	bar_back.color = Color(0, 0, 0, 0.75)
 	bar_fill.size = bar_size - Vector2(2,2)
@@ -62,17 +78,14 @@ func _ready() -> void:
 	bar_fill.color = Color(0.2, 0.9, 0.2)
 	_update_bar()
 
+	_apply_hitbox_layers()   # กันพลาด เรียกอีกทีตอนเริ่ม
+	print("Enemy:", type_id, " flying=", flying, " layer=", hitbox.collision_layer)
 	if flying: add_to_group("flying_enemies")
 	add_to_group("enemies")
 	if hitbox:
 		hitbox.area_entered.connect(_on_area_entered)
-		#---------ลบ-------------------------
-		hitbox.input_pickable = true
-		hitbox.input_event.connect(_on_hitbox_input_event)
-		#---------ลบ-------------------------
 	if anim_name != "" and anim and anim.sprite_frames and anim.sprite_frames.has_animation(anim_name):
 		anim.play(anim_name)
-
 
 func _process(delta: float) -> void:
 	if follower == null: return
@@ -130,18 +143,10 @@ func _spawn_children_if_any() -> void:
 		if path2d == null: break
 		var f: PathFollow2D = follower.duplicate() as PathFollow2D
 		f.progress = max(0.0, follower.progress - 10.0)
-		path2d.add_child(f)
+		f.h_offset = randf_range(-s, s)
+		f.v_offset = randf_range(-s, s)
+		path2d.call_deferred("add_child", f)
+
 		var child = factory.spawn(t, f)
 		if child:
-			get_parent().add_child(child)
-			child.global_position = global_position + Vector2(randf_range(-s, s), randf_range(-s, s))
-
-#---------ลบ-------------------------
-func _on_hitbox_input_event(_viewport, event, _shape_idx) -> void:
-	# ลากเมาส์ผ่าน Hitbox ขณะกดซ้ายค้าง = โดนดาเมจถี่ ๆ
-	if event is InputEventMouseMotion and (event.button_mask & MOUSE_BUTTON_MASK_LEFT) != 0:
-		apply_damage(1)
-	# คลิกซ้ายหนึ่งครั้งบน Hitbox = โดนดาเมจทันที
-	elif event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		apply_damage(1)
-#---------ลบ-------------------------
+			get_parent().call_deferred("add_child", child)

@@ -1,0 +1,38 @@
+## โครงสร้างป้อม
+
+```
+Tower (Node2D)
+ ├─ Range (Area2D + CircleShape2D)
+ └─ ShootTimer (Timer)
+```
+
+## การทำงาน
+
+1. `Range.area_entered/area_exited` เก็บศัตรูไว้ใน `in_range`.
+2. เลือก `target` จาก `in_range` (เช่น ใกล้สุด).
+3. `ShootTimer` เรียกยิงเป็นจังหวะ → ยิงกระสุนหรือ `target.apply_damage(damage)`.
+
+## แยกดิน/บิน (Layer/Mask)
+
+* Enemy.gd ตั้ง Hitbox อัตโนมัติ:
+
+  * ดิน → **Layer 1**
+  * บิน → **Layer 2**
+* Tower.Range (Mask):
+
+  * ป้อมภาคพื้น → **Mask = 1**
+  * ป้อมต่อต้านอากาศ → **Mask = 2**
+  * ยิงได้ทั้งสองแบบ → **Mask = 1+2**
+
+## เปิดยิงอากาศผ่าน Inspector (ทางเลือก 1 ที่ขอเพิ่ม)
+
+* เลือกอินสแตนซ์ **Tower** ในฉาก
+* ไปที่ **Inspector → `can_target_flying` → ติ๊ก `true`**
+* ทดสอบอีกครั้ง (อย่าลืมว่า **Range.Mask ต้องเป็น 2** สำหรับป้อม Anti-Air)
+
+## กระสุน (ถ้าใช้)
+
+* Bullet (Area2D) ตั้ง **Mask ให้ตรงกับ Layer เป้าหมาย** (ภาคพื้น=1, อากาศ=2)
+* `area_entered` → `enemy.apply_damage(damage); queue_free()`.
+
+สั้น ๆ: แยกศัตรูคนละ **Layer**, ให้ป้อมเลือก **Mask**, และถ้าต้องการให้ป้อมยิงอากาศ ให้ติ๊ก `can_target_flying = true` ที่ Inspector ด้วยครับ ✅
