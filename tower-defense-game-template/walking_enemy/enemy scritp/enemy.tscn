@@ -1,12 +1,12 @@
 [gd_scene load_steps=54 format=3 uid="uid://2emepi2ytiic"]
 
-[ext_resource type="Script" uid="uid://cfta36uercsum" path="res://asset project/enemy scritp/enemy.gd" id="1_b4e7n"]
-[ext_resource type="Texture2D" uid="uid://dwlohbx4c3fsd" path="res://asset project/enemy asset/Skull_Run.png" id="1_kd8w4"]
-[ext_resource type="Texture2D" uid="uid://b066jfifp4qdy" path="res://asset project/enemy asset/Shaman_Run.png" id="2_b4e7n"]
-[ext_resource type="Texture2D" uid="uid://bhoiixt7j138q" path="res://asset project/enemy asset/Troll_Walk.png" id="3_yllj7"]
-[ext_resource type="Texture2D" uid="uid://x6ni5pjx0ku8" path="res://asset project/enemy asset/Spider_Run.png" id="4_7buoo"]
-[ext_resource type="Texture2D" uid="uid://btlesm56kmbms" path="res://asset project/enemy asset/Lancer_Run.png" id="5_o6ot4"]
-[ext_resource type="Texture2D" uid="uid://dyvj7xhs5hok5" path="res://asset project/enemy asset/Turtle_Walk.png" id="6_2vnqu"]
+[ext_resource type="Script" uid="uid://cfta36uercsum" path="res://walking_enemy/enemy scritp/enemy.gd" id="1_b4e7n"]
+[ext_resource type="Texture2D" uid="uid://dwlohbx4c3fsd" path="res://walking_enemy/enemy asset/Skull_Run.png" id="1_kd8w4"]
+[ext_resource type="Texture2D" uid="uid://b066jfifp4qdy" path="res://walking_enemy/enemy asset/Shaman_Run.png" id="2_b4e7n"]
+[ext_resource type="Texture2D" uid="uid://bhoiixt7j138q" path="res://walking_enemy/enemy asset/Troll_Walk.png" id="3_yllj7"]
+[ext_resource type="Texture2D" uid="uid://x6ni5pjx0ku8" path="res://walking_enemy/enemy asset/Spider_Run.png" id="4_7buoo"]
+[ext_resource type="Texture2D" uid="uid://btlesm56kmbms" path="res://walking_enemy/enemy asset/Lancer_Run.png" id="5_o6ot4"]
+[ext_resource type="Texture2D" uid="uid://dyvj7xhs5hok5" path="res://walking_enemy/enemy asset/Turtle_Walk.png" id="6_2vnqu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m72bm"]
 atlas = ExtResource("1_kd8w4")
@@ -364,7 +364,7 @@ script = ExtResource("1_b4e7n")
 position = Vector2(5.72205e-06, 3.8147e-06)
 scale = Vector2(0.419271, 0.470052)
 sprite_frames = SubResource("SpriteFrames_ibpe8")
-animation = &"flyer_fly"
+animation = &"runner_run"
 
 [node name="Hitbox" type="Area2D" parent="."]
 collision_layer = 2

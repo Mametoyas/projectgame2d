@@ -1,8 +1,8 @@
 extends Node
 class_name EnemyFactory
 
-@export var enemy_scene: PackedScene = preload("res://asset project/enemy scritp/enemy.tscn")
-static var DB: Dictionary = preload("res://asset project/enemy scritp/EnemyDB.gd").ENEMY_DB
+@export var enemy_scene: PackedScene = preload("res://walking_enemy/enemy scritp/enemy.tscn")
+static var DB: Dictionary = preload("res://walking_enemy/enemy scritp/EnemyDB.gd").ENEMY_DB
 
 func _ready() -> void:
 	add_to_group("enemy_factory")

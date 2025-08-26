@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var damage: int = 50
+@export var damage: int = 15
 @export var range_radius: float = 120.0
 @export var shoot_interval: float = 0.6
 @export var bullet_scene: PackedScene
