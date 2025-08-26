@@ -7,7 +7,6 @@
 
 [node name="Bullet" type="Area2D"]
 collision_layer = 0
-collision_mask = 2
 script = ExtResource("1_88aak")
 
 [node name="ArrowTest" type="Sprite2D" parent="."]

@@ -12,7 +12,6 @@ point_count = 25
 
 [node name="TestPath" type="Node2D"]
 script = ExtResource("1_a51kg")
-enemy_scene = null
 
 [node name="Tower" parent="." instance=ExtResource("2_imca6")]
 position = Vector2(597, 153)
@@ -21,16 +20,13 @@ scale = Vector2(0.5, 0.5)
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource("Curve2D_imca6")
 script = ExtResource("1_a51kg")
-enemy_scene = null
 
 [node name="SeedFollow" type="PathFollow2D" parent="Path2D"]
 rotation = 0.958259
 script = ExtResource("1_a51kg")
-enemy_scene = null
 
 [node name="EnemyFactory" type="Node" parent="."]
 script = ExtResource("1_a51kg")
-enemy_scene = null
 
 [node name="Spawner" type="Node" parent="."]
 script = ExtResource("2_6kfwk")
