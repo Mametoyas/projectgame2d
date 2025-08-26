@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://ca6bce7weuioh"]
 
-[ext_resource type="Script" uid="uid://bj8h73amollx2" path="res://tower.gd" id="1_lw08b"]
+[ext_resource type="Script" uid="uid://bj8h73amollx2" path="res://walking_enemy/tower test/tower.gd" id="1_lw08b"]
 [ext_resource type="PackedScene" uid="uid://baodamjy1ue7b" path="res://walking_enemy/tower test/bullet.tscn" id="2_57haq"]
 [ext_resource type="Texture2D" uid="uid://t5gxli4f76ot" path="res://walking_enemy/tower test/tower test.png" id="2_v3c1x"]
 
