@@ -15,7 +15,6 @@ func _process(_delta: float) -> void:
 	if ghost:
 		var mp: Vector2 = get_viewport().get_mouse_position()
 		ghost.global_position = mp
-		# ตอนนี้ให้วางได้ทุกที่ (ยังไม่ทำกฎแมพ)
 		can_place = true
 		if can_place:
 			_set_ghost_tint(Color(0, 1, 0, 0.6))
@@ -27,8 +26,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		return
 	if event is InputEventKey and event.pressed and event.keycode == KEY_ESCAPE:
 		_cancel_place()
-	if event is InputEventMouseButton and event.pressed:
-		var mb: InputEventMouseButton = event
+	elif event is InputEventMouseButton and event.pressed:
+		var mb := event as InputEventMouseButton
 		if mb.button_index == MOUSE_BUTTON_RIGHT:
 			_cancel_place()
 		elif mb.button_index == MOUSE_BUTTON_LEFT and can_place:
@@ -48,30 +47,21 @@ func _make_ghost() -> void:
 	if ghost == null:
 		return
 
-	# ปิดการทำงานภายใน ghost
-	var shoot_timer: Timer = ghost.get_node_or_null("ShootTimer") as Timer
+	# ปิดระบบของ ghost
+	var shoot_timer := ghost.get_node_or_null("ShootTimer") as Timer
 	if shoot_timer:
 		shoot_timer.stop()
-	var range_area: Area2D = ghost.get_node_or_null("Range") as Area2D
+	var range_area := ghost.get_node_or_null("Range") as Area2D
 	if range_area:
 		range_area.monitoring = false
 		range_area.monitorable = false
 
-	# ให้ป้อมเป็นคนโชว์วงระยะเอง
+	# โชว์วงรัศมี ghost
 	if ghost.has_method("show_range"):
 		ghost.call("show_range", true)
 
 	_set_ghost_tint(Color(1, 1, 1, 0.6))
 	get_tree().current_scene.add_child(ghost)
-
-func _set_ghost_tint(col: Color) -> void:
-	if ghost == null:
-		return
-	if ghost is CanvasItem:
-		(ghost as CanvasItem).modulate = col
-	for child in ghost.get_children():
-		if child is CanvasItem:
-			(child as CanvasItem).modulate = col
 
 func _place_now() -> void:
 	if pending_scene == null or ghost == null:
@@ -79,23 +69,24 @@ func _place_now() -> void:
 	if not ui.spend_money(pending_cost):
 		return
 
-	var t: Node2D = pending_scene.instantiate() as Node2D
+	var t := pending_scene.instantiate() as Node2D
 	if t == null:
 		return
+
 	t.global_position = ghost.global_position
 	get_tree().current_scene.add_child(t)
 	t.add_to_group("towers")
 
-	# เปิดส่วนที่ปิดตอน ghost
-	var range_area: Area2D = t.get_node_or_null("Range") as Area2D
+	# เปิดระบบที่ปิด
+	var range_area := t.get_node_or_null("Range") as Area2D
 	if range_area:
 		range_area.monitoring = true
 		range_area.monitorable = true
-	var timer: Timer = t.get_node_or_null("ShootTimer") as Timer
+	var timer := t.get_node_or_null("ShootTimer") as Timer
 	if timer:
 		timer.start()
 
-	# ปิดวงระยะของป้อมจริงหลังวาง (ยังเรียกเปิดได้ภายหลังหากต้องการ)
+	# ปิดวงรัศมีของป้อมจริง
 	if t.has_method("show_range"):
 		t.call("show_range", false)
 
@@ -113,3 +104,12 @@ func _free_ghost() -> void:
 		if is_instance_valid(ghost):
 			ghost.queue_free()
 	ghost = null
+
+func _set_ghost_tint(col: Color) -> void:
+	if ghost == null:
+		return
+	if ghost is CanvasItem:
+		(ghost as CanvasItem).modulate = col
+	for child in ghost.get_children():
+		if child is CanvasItem:
+			(child as CanvasItem).modulate = col

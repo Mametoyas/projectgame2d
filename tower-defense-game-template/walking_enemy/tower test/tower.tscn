@@ -9,7 +9,6 @@
 [node name="Tower" type="Node2D"]
 scale = Vector2(0.64807, 0.589695)
 script = ExtResource("1_lw08b")
-range_radius = 500.0
 bullet_scene = ExtResource("2_57haq")
 can_target_flying = true
 
@@ -20,7 +19,6 @@ texture = ExtResource("2_v3c1x")
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Range"]
-scale = Vector2(50, 50)
 shape = SubResource("CircleShape2D_57haq")
 
 [node name="ShootTimer" type="Timer" parent="."]
