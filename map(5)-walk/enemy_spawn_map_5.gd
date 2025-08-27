@@ -1,9 +1,9 @@
 # enemy_spawn_forest2.gd
 extends Node
-class_name EnemySpawnerForest2
+class_name EnemySpawnerForest5
 
 @export var enemy_scene: PackedScene
-@export var paths: Array[Path2D] = [$"../MAP_FOREST2/walking_line/Forest2Line1",$"../MAP_FOREST2/walking_line/Forest2Line2",$"../MAP_FOREST2/walking_line/Forest2Line3"]     # ลาก Forest2Line1/2/3 มาใส่ให้ครบ
+@export var paths: Array[Path2D] = [$"../MAP_FOREST5/walking_line/Forest5Line1",$"../MAP_FOREST5/walking_line/Forest5Line2",$"../MAP_FOREST5/walking_line/Forest5Line3",$"../MAP_FOREST5/walking_line/Forest5Line4",$"../MAP_FOREST5/walking_line/Forest5Line5",$"../MAP_FOREST5/walking_line/Forest5Line6",$"../MAP_FOREST5/walking_line/Forest5Line7",$"../MAP_FOREST5/walking_line/Forest5Line8",$"../MAP_FOREST5/walking_line/Forest5Line9"]     # ลาก Forest2Line1/2/3 มาใส่ให้ครบ
 @export var base: Node = null             # ลากโหนด BASE (ที่ติด Base.gd)
 @export var start_on_ready := true
 

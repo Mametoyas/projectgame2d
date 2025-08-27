@@ -1,8 +1,8 @@
 extends Node
-class_name EnemyWaveSpawner
+class_name EnemyWaveSpawner4
 
 @export var enemy_scene: PackedScene
-@export var paths: Array[Path2D] = [$"../MAP_FOREST1/Path2D_forest1"]          # ลาก Path2D ของด่าน (1–หลายเส้น)
+@export var paths: Array[Path2D] = [$"../MAP_FOREST4/Forest4Line1"]          # ลาก Path2D ของด่าน (1–หลายเส้น)
 @export var base: Node = null                   # ลากโหนด BASE (มี apply_damage)
 
 # ---- ตั้งค่าเวฟ ----

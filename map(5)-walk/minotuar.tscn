@@ -1,0 +1,84 @@
+[gd_scene load_steps=13 format=3 uid="uid://dfupla56rwkii"]
+
+[ext_resource type="Script" uid="uid://dcw0unrauifo" path="res://minotuar.gd" id="1_0wiyi"]
+[ext_resource type="Texture2D" uid="uid://bfbho8v718e7g" path="res://Tiny Swords (Enemy Pack)/Enemy Pack/Minotaur/Minotaur_Walk.png" id="2_y3ugl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2agwh"]
+atlas = ExtResource("2_y3ugl")
+region = Rect2(0, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_noki7"]
+atlas = ExtResource("2_y3ugl")
+region = Rect2(320, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kh0a4"]
+atlas = ExtResource("2_y3ugl")
+region = Rect2(640, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vo26q"]
+atlas = ExtResource("2_y3ugl")
+region = Rect2(960, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6reiv"]
+atlas = ExtResource("2_y3ugl")
+region = Rect2(1280, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wosos"]
+atlas = ExtResource("2_y3ugl")
+region = Rect2(1600, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5cr1x"]
+atlas = ExtResource("2_y3ugl")
+region = Rect2(1920, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8weam"]
+atlas = ExtResource("2_y3ugl")
+region = Rect2(2240, 0, 320, 320)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k8ly5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2agwh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_noki7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kh0a4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vo26q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6reiv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wosos")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5cr1x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8weam")
+}],
+"loop": true,
+"name": &"mino_run",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pvvxa"]
+radius = 56.0
+height = 128.0
+
+[node name="minotuar" type="CharacterBody2D"]
+script = ExtResource("1_0wiyi")
+
+[node name="mino_run" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_k8ly5")
+animation = &"mino_run"
+frame_progress = 0.130503
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -8)
+shape = SubResource("CapsuleShape2D_pvvxa")

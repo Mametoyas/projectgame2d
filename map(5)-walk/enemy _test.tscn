@@ -59,15 +59,11 @@ height = 48.0
 
 [node name="thief" type="CharacterBody2D"]
 script = ExtResource("1_54wyh")
-speed = null
-anim_name = null
 
 [node name="Thief_walk" type="AnimatedSprite2D" parent="."]
-position = Vector2(1.90735e-06, 1.90735e-06)
-scale = Vector2(0.708333, 0.708333)
 sprite_frames = SubResource("SpriteFrames_7fok1")
 animation = &"thief_run"
-frame_progress = 0.503899
+frame_progress = 0.84663
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_4ubgs")
