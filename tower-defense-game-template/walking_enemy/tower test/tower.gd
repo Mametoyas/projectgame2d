@@ -87,9 +87,8 @@ func _on_shoot() -> void:
 	else:
 		target.apply_damage(damage)
 		
-# ====== วางเพิ่มใน tower.gd ======
+# ===== Range helpers (add to tower.gd) =====
 
-# เรียกได้จากภายนอก/PlacementManager
 func get_effective_range_radius() -> float:
 	var area: Area2D = get_node_or_null("Range") as Area2D
 	if area == null:
@@ -102,37 +101,47 @@ func get_effective_range_radius() -> float:
 	if cs and cs.shape is CircleShape2D:
 		base = (cs.shape as CircleShape2D).radius
 	else:
-		# 2) ไม่งั้น fallback เป็น export var ที่มีอยู่ในสคริปต์
+		# 2) ไม่งั้น fallback เป็น export var range_radius ที่มีอยู่ใน tower.gd
 		base = float(range_radius)
 
 	# คูณสเกลของ Range ให้ตรงกับของจริง
 	var s: float = max(abs(area.global_scale.x), abs(area.global_scale.y))
 	return base * (s if s > 0.0 else 1.0)
 
-
-# ====== วาด/ลบวงระยะของ "ป้อมที่วางแล้ว" ======
 var _range_line: Line2D = null
 
+func _ensure_range_line() -> Line2D:
+	var area: Area2D = get_node_or_null("Range") as Area2D
+	if area == null:
+		return null
+	var line: Line2D = area.get_node_or_null("RangeCircle") as Line2D
+	if line == null:
+		line = Line2D.new()
+		line.name = "RangeCircle"
+		line.width = 2.0
+		line.default_color = Color(0, 1, 0, 0.5)
+		line.closed = true
+		line.visible = false  # ซ่อนเป็นค่าเริ่มต้น
+		area.add_child(line)
+	_range_line = line
+	return line
+
+func _update_range_visual() -> void:
+	var line := _ensure_range_line()
+	if line == null:
+		return
+	var r: float = get_effective_range_radius()
+	var segs: int = 64
+	var pts := PackedVector2Array()
+	for i in segs:
+		var ang: float = TAU * float(i) / float(segs)
+		pts.append(Vector2(cos(ang), sin(ang)) * r)
+	line.points = pts
+
 func show_range(show: bool) -> void:
+	var line := _ensure_range_line()
+	if line == null:
+		return
 	if show:
-		if _range_line == null or not is_instance_valid(_range_line):
-			_range_line = Line2D.new()
-			_range_line.width = 2.0
-			_range_line.default_color = Color(0, 1, 0, 0.5)
-			_range_line.closed = true
-			# ผูกกับ Range โดยตรงให้ตรงศูนย์กลาง/สเกล/ออฟเซ็ต
-			var area: Area2D = get_node_or_null("Range") as Area2D
-			if area:
-				area.add_child(_range_line)
-		# อัปเดตรัศมีทุกครั้งที่สั่งโชว์
-		var r: float = get_effective_range_radius()
-		var pts := PackedVector2Array()
-		var segs: int = 64
-		for i in segs:
-			var ang: float = TAU * float(i) / float(segs)
-			pts.append(Vector2(cos(ang), sin(ang)) * r)
-		_range_line.points = pts
-	else:
-		if _range_line and is_instance_valid(_range_line):
-			_range_line.queue_free()
-		_range_line = null
+		_update_range_visual()
+	line.visible = show

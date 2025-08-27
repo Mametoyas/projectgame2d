@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://b36l1vryt31k5" path="res://gui/placement_manager.gd" id="1_q46mf"]
 [ext_resource type="Script" uid="uid://bx1sioays26qs" path="res://gui/build_ui.gd" id="2_n360k"]
 [ext_resource type="PackedScene" uid="uid://ca6bce7weuioh" path="res://walking_enemy/tower test/tower.tscn" id="3_hp187"]
-[ext_resource type="Texture2D" uid="uid://t5gxli4f76ot" path="res://walking_enemy/tower test/tower test.png" id="4_n360k"]
+[ext_resource type="Texture2D" uid="uid://bbfbga1q4b8el" path="res://walking_enemy/tower test/tower test.png" id="4_n360k"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ytf3d"]
 shadow_size = 3

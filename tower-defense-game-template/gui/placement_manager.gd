@@ -6,7 +6,6 @@ var pending_scene: PackedScene = null
 var pending_cost: int = 0
 var ghost: Node2D = null
 var can_place: bool = false
-var preview_line: Line2D = null   # วงรัศมีพรีวิว
 
 func _ready() -> void:
 	ui.pick_tower.connect(_on_pick_tower)
@@ -42,66 +41,29 @@ func _on_pick_tower(scene: PackedScene, cost: int) -> void:
 
 func _make_ghost() -> void:
 	_free_ghost()
-	if pending_scene == null: return
+	if pending_scene == null:
+		return
 
 	ghost = pending_scene.instantiate() as Node2D
-	if ghost == null: return
+	if ghost == null:
+		return
 
 	# ปิดการทำงานภายใน ghost
 	var shoot_timer: Timer = ghost.get_node_or_null("ShootTimer") as Timer
-	if shoot_timer: shoot_timer.stop()
+	if shoot_timer:
+		shoot_timer.stop()
 	var range_area: Area2D = ghost.get_node_or_null("Range") as Area2D
 	if range_area:
 		range_area.monitoring = false
 		range_area.monitorable = false
 
-	# >>> ใช้ฟังก์ชันเดียวกับของจริง
-	var radius: float = 0.0
-	if ghost.has_method("get_effective_range_radius"):
-		radius = float(ghost.call("get_effective_range_radius"))
-	else:
-		# fallback (เผื่อยังไม่ได้ใส่ฟังก์ชันใน tower.gd)
-		var cs: CollisionShape2D = range_area.get_node_or_null("CollisionShape2D") as CollisionShape2D
-		if cs and cs.shape is CircleShape2D:
-			var base: float = (cs.shape as CircleShape2D).radius
-			var s: float = max(abs(range_area.global_scale.x), abs(range_area.global_scale.y))
-			radius = base * (s if s > 0.0 else 1.0)
-
-	_show_range_preview(range_area, radius)
+	# ให้ป้อมเป็นคนโชว์วงระยะเอง
+	if ghost.has_method("show_range"):
+		ghost.call("show_range", true)
 
 	_set_ghost_tint(Color(1, 1, 1, 0.6))
 	get_tree().current_scene.add_child(ghost)
 
-
-# ===== แสดง/คำนวณรัศมีจริง =====
-func _show_range_preview(range_area: Area2D, radius: float) -> void:
-	_clear_range_preview()
-
-	if ghost == null or range_area == null or radius <= 0.0:
-		return
-
-	preview_line = Line2D.new()
-	preview_line.width = 2.0
-	preview_line.default_color = Color(0, 1, 0, 0.5)
-	preview_line.closed = true
-	preview_line.z_index = 0  # กันปัญหา z เกิน
-
-	var pts: PackedVector2Array = PackedVector2Array()
-	var segs: int = 64
-	for i in segs:
-		var ang: float = TAU * float(i) / float(segs)
-		pts.append(Vector2(cos(ang), sin(ang)) * radius)
-	preview_line.points = pts
-
-	# ผูกไว้กับ Range เพื่อให้ตรงศูนย์กลาง/สเกล/ออฟเซ็ต
-	range_area.add_child(preview_line)
-
-func _clear_range_preview() -> void:
-	if preview_line and is_instance_valid(preview_line):
-		preview_line.queue_free()
-	preview_line = null
-
-# ===== ยูทิล =====
 func _set_ghost_tint(col: Color) -> void:
 	if ghost == null:
 		return
@@ -111,7 +73,6 @@ func _set_ghost_tint(col: Color) -> void:
 		if child is CanvasItem:
 			(child as CanvasItem).modulate = col
 
-# ===== วางป้อมจริง =====
 func _place_now() -> void:
 	if pending_scene == null or ghost == null:
 		return
@@ -134,6 +95,10 @@ func _place_now() -> void:
 	if timer:
 		timer.start()
 
+	# ปิดวงระยะของป้อมจริงหลังวาง (ยังเรียกเปิดได้ภายหลังหากต้องการ)
+	if t.has_method("show_range"):
+		t.call("show_range", false)
+
 	_cancel_place()
 
 func _cancel_place() -> void:
@@ -142,7 +107,9 @@ func _cancel_place() -> void:
 	_free_ghost()
 
 func _free_ghost() -> void:
-	_clear_range_preview()
-	if ghost and is_instance_valid(ghost):
-		ghost.queue_free()
+	if ghost:
+		if ghost.has_method("show_range"):
+			ghost.call("show_range", false)
+		if is_instance_valid(ghost):
+			ghost.queue_free()
 	ghost = null

@@ -2,13 +2,14 @@
 
 [ext_resource type="Script" uid="uid://bj8h73amollx2" path="res://walking_enemy/tower test/tower.gd" id="1_lw08b"]
 [ext_resource type="PackedScene" uid="uid://baodamjy1ue7b" path="res://walking_enemy/tower test/bullet.tscn" id="2_57haq"]
-[ext_resource type="Texture2D" uid="uid://t5gxli4f76ot" path="res://walking_enemy/tower test/tower test.png" id="2_v3c1x"]
+[ext_resource type="Texture2D" uid="uid://bbfbga1q4b8el" path="res://walking_enemy/tower test/tower test.png" id="2_v3c1x"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_57haq"]
 
 [node name="Tower" type="Node2D"]
 scale = Vector2(0.64807, 0.589695)
 script = ExtResource("1_lw08b")
+range_radius = 500.0
 bullet_scene = ExtResource("2_57haq")
 can_target_flying = true
 

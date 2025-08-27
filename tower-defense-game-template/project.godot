@@ -11,14 +11,8 @@ config_version=5
 [application]
 
 config/name="Tower Defense Game Template"
-run/main_scene="res://Scenes/ui/mainMenu/mainMenu.tscn"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
-
-[autoload]
-
-Globals="*res://Scenes/main/Globals.gd"
-Data="*res://Scenes/main/Data.gd"
 
 [display]
 
