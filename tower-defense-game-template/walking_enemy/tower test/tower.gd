@@ -86,3 +86,53 @@ func _on_shoot() -> void:
 		b.set("dir", (target.global_position - global_position).normalized())
 	else:
 		target.apply_damage(damage)
+		
+# ====== วางเพิ่มใน tower.gd ======
+
+# เรียกได้จากภายนอก/PlacementManager
+func get_effective_range_radius() -> float:
+	var area: Area2D = get_node_or_null("Range") as Area2D
+	if area == null:
+		return 0.0
+
+	var cs: CollisionShape2D = area.get_node_or_null("CollisionShape2D") as CollisionShape2D
+	var base: float = 0.0
+
+	# 1) ใช้ค่าจาก Shape ถ้ามี
+	if cs and cs.shape is CircleShape2D:
+		base = (cs.shape as CircleShape2D).radius
+	else:
+		# 2) ไม่งั้น fallback เป็น export var ที่มีอยู่ในสคริปต์
+		base = float(range_radius)
+
+	# คูณสเกลของ Range ให้ตรงกับของจริง
+	var s: float = max(abs(area.global_scale.x), abs(area.global_scale.y))
+	return base * (s if s > 0.0 else 1.0)
+
+
+# ====== วาด/ลบวงระยะของ "ป้อมที่วางแล้ว" ======
+var _range_line: Line2D = null
+
+func show_range(show: bool) -> void:
+	if show:
+		if _range_line == null or not is_instance_valid(_range_line):
+			_range_line = Line2D.new()
+			_range_line.width = 2.0
+			_range_line.default_color = Color(0, 1, 0, 0.5)
+			_range_line.closed = true
+			# ผูกกับ Range โดยตรงให้ตรงศูนย์กลาง/สเกล/ออฟเซ็ต
+			var area: Area2D = get_node_or_null("Range") as Area2D
+			if area:
+				area.add_child(_range_line)
+		# อัปเดตรัศมีทุกครั้งที่สั่งโชว์
+		var r: float = get_effective_range_radius()
+		var pts := PackedVector2Array()
+		var segs: int = 64
+		for i in segs:
+			var ang: float = TAU * float(i) / float(segs)
+			pts.append(Vector2(cos(ang), sin(ang)) * r)
+		_range_line.points = pts
+	else:
+		if _range_line and is_instance_valid(_range_line):
+			_range_line.queue_free()
+		_range_line = null

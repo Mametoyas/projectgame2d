@@ -364,7 +364,7 @@ script = ExtResource("1_b4e7n")
 position = Vector2(5.72205e-06, 3.8147e-06)
 scale = Vector2(0.419271, 0.470052)
 sprite_frames = SubResource("SpriteFrames_ibpe8")
-animation = &"runner_run"
+animation = &"tank_walk"
 
 [node name="Hitbox" type="Area2D" parent="."]
 collision_layer = 2
