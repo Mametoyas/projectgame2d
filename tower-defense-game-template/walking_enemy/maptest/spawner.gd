@@ -7,7 +7,7 @@ extends Node
 @onready var next_button: Button = $NextWaveButton
 
 var waves = [
-	["flyer","flyer","crawler","shielded","shielded"],
+	["tank","crawler","runner","regenerator","runner"],
 	["tank","crawler","runner","regenerator","runner"],
 	["shielded","shielded","splitter","runner","flyer","flyer","splitter","splitter","splitter"]
 ]
