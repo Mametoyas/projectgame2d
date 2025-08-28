@@ -1,0 +1,14 @@
+res://main.tscn
+res://MAP1/enemy_spawn.gd
+res://MAP1/Forest1.tscn
+res://MAP2/Forest2.tscn
+res://MAP3/Forest3.tscn
+res://MAP4/Forest4.tscn
+res://MAP5/Forest5.tscn
+res://stage1.tscn
+res://ememy_def.tscn
+res://MAP_FOREST1.tscn
+res://wave_test.tscn
+res://enemy _test.tscn
+res://minotuar.tscn
+res://rock.tscn
