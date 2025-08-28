@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://ca6bce7weuioh"]
+
+[ext_resource type="Script" uid="uid://bj8h73amollx2" path="res://walking_enemy/tower test/tower.gd" id="1_lw08b"]
+[ext_resource type="PackedScene" uid="uid://baodamjy1ue7b" path="res://walking_enemy/tower test/bullet.tscn" id="2_57haq"]
+[ext_resource type="Texture2D" uid="uid://bbfbga1q4b8el" path="res://walking_enemy/tower test/tower test.png" id="2_v3c1x"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_57haq"]
+
+[node name="Tower" type="Node2D"]
+scale = Vector2(0.64807, 0.589695)
+script = ExtResource("1_lw08b")
+bullet_scene = ExtResource("2_57haq")
+can_target_flying = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_v3c1x")
+
+[node name="Range" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Range"]
+shape = SubResource("CircleShape2D_57haq")
+
+[node name="ShootTimer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
