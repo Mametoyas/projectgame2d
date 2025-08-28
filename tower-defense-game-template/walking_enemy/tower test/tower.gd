@@ -23,8 +23,16 @@ func _ready() -> void:
 	# ค่าเริ่มต้น
 	range_area.monitoring = true
 	range_area.monitorable = true
+
+	# <<< ต่อสัญญาณเข้า–ออก >>>
+	if not range_area.area_entered.is_connected(_on_area_entered):
+		range_area.area_entered.connect(_on_area_entered)
+	if not range_area.area_exited.is_connected(_on_area_exited):
+		range_area.area_exited.connect(_on_area_exited)
+
 	shoot_timer.wait_time = shoot_interval
-	shoot_timer.timeout.connect(_on_shoot)
+	if not shoot_timer.timeout.is_connected(_on_shoot):
+		shoot_timer.timeout.connect(_on_shoot)
 	shoot_timer.start()
 
 # ===== ฟังก์ชันแสดง/ซ่อนวงรัศมี =====
@@ -49,6 +57,13 @@ func show_range(enable: bool) -> void:
 		if range_preview and is_instance_valid(range_preview):
 			range_preview.queue_free()
 		range_preview = null
+
+# ===== เพิ่ม _process() ตรวจเป้าใหม่ =====
+func _process(_delta: float) -> void:
+	if target == null or not is_instance_valid(target):
+		_pick_target()
+	elif not can_target_flying and target.is_in_group("flying_enemies"):
+		_pick_target()
 
 # ===== ระบบยิงป้อมเดิม =====
 func _on_area_entered(a: Area2D) -> void:
