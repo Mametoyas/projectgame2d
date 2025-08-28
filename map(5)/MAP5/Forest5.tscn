@@ -4708,6 +4708,12 @@ position = Vector2(1360, 640)
 position = Vector2(0, -28)
 shape = SubResource("RectangleShape2D_j0ye3")
 
+[node name="Area2D6" type="Area2D" parent="NoBuildZones4" groups=["no_build5"]]
+position = Vector2(229, 147)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="NoBuildZones4/Area2D6"]
+polygon = PackedVector2Array(-104, -58, 2029, -47, 2024, 1069, -104, 1041, -105, 41, 66, 38, 112, 996, 430, 989, 460, 918, 532, 936, 603, 1025, 729, 948, 1918, 936, 1891, -6, 1601, -8, 1601, 50, -114, 24)
+
 [node name="Enemy spawn_map5" type="Node" parent="." node_paths=PackedStringArray("paths", "base")]
 script = ExtResource("7_c2ave")
 enemy_scene = ExtResource("8_npoy5")
