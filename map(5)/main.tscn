@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://c6kcyoct22nil"]
 
-[ext_resource type="PackedScene" uid="uid://b38kluylin6p8" path="res://MAP1/Forest1.tscn" id="1_ig7tw"]
-[ext_resource type="PackedScene" uid="uid://mo76pueu4x8q" path="res://MAP2/Forest2.tscn" id="2_lquwl"]
-[ext_resource type="PackedScene" uid="uid://mwmsveodp24y" path="res://MAP3/Forest3.tscn" id="3_7mycd"]
-[ext_resource type="PackedScene" uid="uid://cvgqcvfm012i7" path="res://MAP4/Forest4.tscn" id="4_272bh"]
-[ext_resource type="PackedScene" uid="uid://dqw6j1nkyu6lq" path="res://MAP5/Forest5.tscn" id="5_5vw27"]
+[ext_resource type="PackedScene" uid="uid://b38kluylin6p8" path="res://Forest1.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://mo76pueu4x8q" path="res://Forest2.tscn" id="2_lquwl"]
+[ext_resource type="PackedScene" uid="uid://mwmsveodp24y" path="res://Forest3.tscn" id="3_7mycd"]
+[ext_resource type="PackedScene" uid="uid://cvgqcvfm012i7" path="res://Forest4.tscn" id="4_272bh"]
+[ext_resource type="PackedScene" uid="uid://dqw6j1nkyu6lq" path="res://Forest5.tscn" id="5_5vw27"]
 
 [node name="Node2D" type="Node2D"]
 

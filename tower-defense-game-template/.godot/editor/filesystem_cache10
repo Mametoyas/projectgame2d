@@ -1,32 +1,32 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1756366674
-icon.svg::CompressedTexture2D::4214891337292926333::1756366564::1756366676::1::::<><><>0<>0<>d63825e53e35f5cd086811b2ae0930ed<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-README.md::TextFile::-1::1756366564::0::1::::<><><>0<>0<><>::
-::res://gui/::1756366564
-build_ui.gd::GDScript::4055545837636939430::1756366564::0::1::::<>Control<><>0<>0<><>::
-gui.tscn::PackedScene::3739221455282557784::1756366564::0::1::::<><><>0<>0<><>::uid://b36l1vryt31k5::::res://gui/placement_manager.gd<>uid://bx1sioays26qs::::res://gui/build_ui.gd<>uid://ca6bce7weuioh::::res://walking_enemy/tower test/tower.tscn<>uid://bbfbga1q4b8el::::res://walking_enemy/tower test/tower test.png
-placement_manager.gd::GDScript::4416419463864818858::1756366564::0::1::::<>Node<><>0<>0<><>::
-::res://walking_enemy/::1756366564
-::res://walking_enemy/enemy asset/::1756366564
-Lancer_Run.png::CompressedTexture2D::6803150488194759973::1756366564::1756366676::1::::<><><>0<>0<>230a2ad36cc98648ac74f0d1981d54d7<>res://.godot/imported/Lancer_Run.png-0d6b50a2f80a41c6b523e2e860667561.ctex::
-Shaman_Run.png::CompressedTexture2D::6444438353289708528::1756366564::1756366676::1::::<><><>0<>0<>9765021aeab07d1093519f7aefbaa94a<>res://.godot/imported/Shaman_Run.png-630f2c479d957debc6bf6d83c15a6768.ctex::
-Skull_Run.png::CompressedTexture2D::6265143815715823114::1756366564::1756366676::1::::<><><>0<>0<>355007c34233840490ca5df89831b999<>res://.godot/imported/Skull_Run.png-db40654f3420d763fc51366dff7f72c8.ctex::
-Spider_Run.png::CompressedTexture2D::8544730349449585730::1756366564::1756366676::1::::<><><>0<>0<>dc3482b1666abe924455c213bb0575fa<>res://.godot/imported/Spider_Run.png-23c45ffe6d17fde26293e6ebf874e565.ctex::
-Troll_Walk.png::CompressedTexture2D::3872497269671372200::1756366564::1756366676::1::::<><><>0<>0<>b69ec054fe01e4b9d7ec6a7fa050381e<>res://.godot/imported/Troll_Walk.png-685552796dbe3d1011888f855bec26d1.ctex::
-Turtle_Walk.png::CompressedTexture2D::1005558056912825858::1756366564::1756366676::1::::<><><>0<>0<>a4a70e13428f9a6026edf3108f675852<>res://.godot/imported/Turtle_Walk.png-1b4430ac60555cdfddf6c6b2fb485f7f.ctex::
-::res://walking_enemy/enemy scritp/::1756366564
-enemy.gd::GDScript::5163060424457339164::1756366564::0::1::::Enemy<>Node2D<><>0<>0<><>::
-enemy.tscn::PackedScene::1904092837800202922::1756366564::0::1::::<><><>0<>0<><>::uid://cfta36uercsum::::res://walking_enemy/enemy scritp/enemy.gd<>uid://dc2j0t42c01em::::res://walking_enemy/enemy asset/Skull_Run.png<>uid://dos2dwsjsp81k::::res://walking_enemy/enemy asset/Shaman_Run.png<>uid://dqpti8wojqnpj::::res://walking_enemy/enemy asset/Troll_Walk.png<>uid://vpse1feten20::::res://walking_enemy/enemy asset/Spider_Run.png<>uid://cwcqrtmai73ei::::res://walking_enemy/enemy asset/Lancer_Run.png<>uid://cu88a34iq46me::::res://walking_enemy/enemy asset/Turtle_Walk.png
-EnemyDB.gd::GDScript::2030382326581226268::1756366564::0::1::::<>RefCounted<><>0<>0<><>::
-EnemyFactory.gd::GDScript::3032550736250915427::1756366564::0::1::::EnemyFactory<>Node<><>0<>0<><>::
-::res://walking_enemy/maptest/::1756366564
-spawner.gd::GDScript::706255986772346299::1756366564::0::1::::<>Node<><>0<>0<><>::
-test_path.tscn::PackedScene::8676947585795532941::1756366564::0::1::::<><><>0<>0<><>::uid://bjg8wxx761w5p::::res://walking_enemy/enemy scritp/EnemyFactory.gd<>uid://kcd6ypmmu5e2::::res://walking_enemy/maptest/spawner.gd<>uid://ca6bce7weuioh::::res://walking_enemy/tower test/tower.tscn
-::res://walking_enemy/tower test/::1756366564
-arrow_test.png::CompressedTexture2D::3123463680510124552::1756366564::1756366677::1::::<><><>0<>0<>2f3ec1e09ebbc6c89132e2b9d3fe4d76<>res://.godot/imported/arrow_test.png-2269d9cb2005dea1f90b81b5a997e97d.ctex::
-bullet.gd::GDScript::8877197147229630563::1756366564::0::1::::<>Area2D<><>0<>0<><>::
-bullet.tscn::PackedScene::2415504768537665489::1756366564::0::1::::<><><>0<>0<><>::uid://dyqge05exakj0::::res://walking_enemy/tower test/bullet.gd<>uid://dal0yron602g6::::res://walking_enemy/tower test/arrow_test.png
-create tower.txt::TextFile::-1::1756366564::0::1::::<><><>0<>0<><>::
-tower test.png::CompressedTexture2D::7383401985013261969::1756366564::1756366676::1::::<><><>0<>0<>dd98e30e991c20265f1636c3dac84482<>res://.godot/imported/tower test.png-b6d84790f4678280d63c8ad9e22f33a7.ctex::
-tower.gd::GDScript::3086728377891870733::1756366564::0::1::::<>Node2D<><>0<>0<><>::
-tower.tscn::PackedScene::4836901626875493795::1756366564::0::1::::<><><>0<>0<><>::uid://bj8h73amollx2::::res://walking_enemy/tower test/tower.gd<>uid://baodamjy1ue7b::::res://walking_enemy/tower test/bullet.tscn<>uid://bbfbga1q4b8el::::res://walking_enemy/tower test/tower test.png
+::res://::1756369685
+icon.svg::CompressedTexture2D/CompressedTexture2D::4214891337292926333::1756369204::1756368018::1::::<><><>0<>0<>d63825e53e35f5cd086811b2ae0930ed<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+README.md::TextFile::-1::1756369204::0::1::::<><><>0<>0<><>::
+::res://gui/::1756369204
+build_ui.gd::GDScript::4055545837636939430::1756369204::0::1::::<>Control<><>0<>0<><>::
+gui.tscn::PackedScene::3739221455282557784::1756369204::0::1::::<><><>0<>0<><>::uid://b36l1vryt31k5::::res://gui/placement_manager.gd<>uid://bx1sioays26qs::::res://gui/build_ui.gd<>uid://ca6bce7weuioh::::res://walking_enemy/tower test/tower.tscn<>uid://bbfbga1q4b8el::::res://walking_enemy/tower test/tower test.png
+placement_manager.gd::GDScript::4416419463864818858::1756369204::0::1::::<>Node<><>0<>0<><>::
+::res://walking_enemy/::1756369204
+::res://walking_enemy/enemy asset/::1756369204
+Lancer_Run.png::CompressedTexture2D/CompressedTexture2D::6803150488194759973::1756369204::1756368018::1::::<><><>0<>0<>230a2ad36cc98648ac74f0d1981d54d7<>res://.godot/imported/Lancer_Run.png-0d6b50a2f80a41c6b523e2e860667561.ctex::
+Shaman_Run.png::CompressedTexture2D/CompressedTexture2D::6444438353289708528::1756369204::1756368018::1::::<><><>0<>0<>9765021aeab07d1093519f7aefbaa94a<>res://.godot/imported/Shaman_Run.png-630f2c479d957debc6bf6d83c15a6768.ctex::
+Skull_Run.png::CompressedTexture2D/CompressedTexture2D::6265143815715823114::1756369204::1756368018::1::::<><><>0<>0<>355007c34233840490ca5df89831b999<>res://.godot/imported/Skull_Run.png-db40654f3420d763fc51366dff7f72c8.ctex::
+Spider_Run.png::CompressedTexture2D/CompressedTexture2D::8544730349449585730::1756369204::1756368018::1::::<><><>0<>0<>dc3482b1666abe924455c213bb0575fa<>res://.godot/imported/Spider_Run.png-23c45ffe6d17fde26293e6ebf874e565.ctex::
+Troll_Walk.png::CompressedTexture2D/CompressedTexture2D::3872497269671372200::1756369204::1756368018::1::::<><><>0<>0<>b69ec054fe01e4b9d7ec6a7fa050381e<>res://.godot/imported/Troll_Walk.png-685552796dbe3d1011888f855bec26d1.ctex::
+Turtle_Walk.png::CompressedTexture2D/CompressedTexture2D::1005558056912825858::1756369204::1756368018::1::::<><><>0<>0<>a4a70e13428f9a6026edf3108f675852<>res://.godot/imported/Turtle_Walk.png-1b4430ac60555cdfddf6c6b2fb485f7f.ctex::
+::res://walking_enemy/enemy scritp/::1756369204
+enemy.gd::GDScript::5163060424457339164::1756369204::0::1::::Enemy<>Node2D<><>0<>0<><>::
+enemy.tscn::PackedScene::1904092837800202922::1756369204::0::1::::<><><>0<>0<><>::uid://cfta36uercsum::::res://walking_enemy/enemy scritp/enemy.gd<>uid://dc2j0t42c01em::::res://walking_enemy/enemy asset/Skull_Run.png<>uid://dos2dwsjsp81k::::res://walking_enemy/enemy asset/Shaman_Run.png<>uid://dqpti8wojqnpj::::res://walking_enemy/enemy asset/Troll_Walk.png<>uid://vpse1feten20::::res://walking_enemy/enemy asset/Spider_Run.png<>uid://cwcqrtmai73ei::::res://walking_enemy/enemy asset/Lancer_Run.png<>uid://cu88a34iq46me::::res://walking_enemy/enemy asset/Turtle_Walk.png
+EnemyDB.gd::GDScript::2030382326581226268::1756369204::0::1::::<>RefCounted<><>0<>0<><>::
+EnemyFactory.gd::GDScript::3032550736250915427::1756369204::0::1::::EnemyFactory<>Node<><>0<>0<><>::
+::res://walking_enemy/maptest/::1756369204
+spawner.gd::GDScript::706255986772346299::1756369204::0::1::::<>Node<><>0<>0<><>::
+test_path.tscn::PackedScene::8676947585795532941::1756369204::0::1::::<><><>0<>0<><>::uid://bjg8wxx761w5p::::res://walking_enemy/enemy scritp/EnemyFactory.gd<>uid://kcd6ypmmu5e2::::res://walking_enemy/maptest/spawner.gd<>uid://ca6bce7weuioh::::res://walking_enemy/tower test/tower.tscn
+::res://walking_enemy/tower test/::1756369204
+arrow_test.png::CompressedTexture2D/CompressedTexture2D::3123463680510124552::1756369204::1756368018::1::::<><><>0<>0<>2f3ec1e09ebbc6c89132e2b9d3fe4d76<>res://.godot/imported/arrow_test.png-2269d9cb2005dea1f90b81b5a997e97d.ctex::
+bullet.gd::GDScript::8877197147229630563::1756369204::0::1::::<>Area2D<><>0<>0<><>::
+bullet.tscn::PackedScene::2415504768537665489::1756369204::0::1::::<><><>0<>0<><>::uid://dyqge05exakj0::::res://walking_enemy/tower test/bullet.gd<>uid://dal0yron602g6::::res://walking_enemy/tower test/arrow_test.png
+create tower.txt::TextFile::-1::1756369204::0::1::::<><><>0<>0<><>::
+tower test.png::CompressedTexture2D/CompressedTexture2D::7383401985013261969::1756369204::1756368018::1::::<><><>0<>0<>dd98e30e991c20265f1636c3dac84482<>res://.godot/imported/tower test.png-b6d84790f4678280d63c8ad9e22f33a7.ctex::
+tower.gd::GDScript::3086728377891870733::1756369204::0::1::::<>Node2D<><>0<>0<><>::
+tower.tscn::PackedScene::4836901626875493795::1756369204::0::1::::<><><>0<>0<><>::uid://bj8h73amollx2::::res://walking_enemy/tower test/tower.gd<>uid://baodamjy1ue7b::::res://walking_enemy/tower test/bullet.tscn<>uid://bbfbga1q4b8el::::res://walking_enemy/tower test/tower test.png

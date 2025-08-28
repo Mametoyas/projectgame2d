@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://d07kkcxqrxte5" path="res://Tiny Swords (Free Pack)/Terrain/Tilemap_color2.png" id="5_ydun4"]
 [ext_resource type="PackedScene" uid="uid://dd31auwxsj6w3" path="res://base1.tscn" id="6_3exhb"]
 [ext_resource type="Texture2D" uid="uid://clfrxm31o7dx8" path="res://Tiny Swords (Free Pack)/Decorations/Sheep/Sheep_Grass.png" id="6_7mqjx"]
-[ext_resource type="Script" uid="uid://b2oixsictakva" path="res://MAP4/enemy_spawn_map_4.gd" id="7_3ikxg"]
+[ext_resource type="Script" uid="uid://b2oixsictakva" path="res://enemy_spawn_map_4.gd" id="7_3ikxg"]
 [ext_resource type="Texture2D" uid="uid://72srihgxvp3b" path="res://Tiny Swords (Free Pack)/Decorations/Trees/Tree1.png" id="7_srtyk"]
 [ext_resource type="PackedScene" uid="uid://3w0jf5wh2op0" path="res://enemy _test.tscn" id="8_5yxci"]
 [ext_resource type="Texture2D" uid="uid://chrajmyp5ksd7" path="res://Tiny Swords (Free Pack)/Decorations/Trees/Tree3.png" id="8_nndpw"]

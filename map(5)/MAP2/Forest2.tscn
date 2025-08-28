@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://chrajmyp5ksd7" path="res://Tiny Swords (Free Pack)/Decorations/Trees/Tree3.png" id="6_6tukt"]
 [ext_resource type="Texture2D" uid="uid://baq1o7lx06kds" path="res://Tiny Swords (Free Pack)/Decorations/Bushes/Bushe4.png" id="6_l76dg"]
 [ext_resource type="PackedScene" uid="uid://dd31auwxsj6w3" path="res://base1.tscn" id="7_2kx64"]
-[ext_resource type="Script" uid="uid://caun8qwy261tq" path="res://MAP2/enemy_spawn_map_2.gd" id="7_4owi8"]
+[ext_resource type="Script" uid="uid://caun8qwy261tq" path="res://enemy_spawn_map_2.gd" id="7_4owi8"]
 [ext_resource type="Texture2D" uid="uid://deqnpredirtt1" path="res://Tiny Swords (Free Pack)/Decorations/Trees/Tree4.png" id="7_nse3n"]
 [ext_resource type="Texture2D" uid="uid://bah8jx1h26pcq" path="res://Tiny Swords (Free Pack)/Buildings/Blue Buildings/Castle.png" id="7_qbt3u"]
 [ext_resource type="Script" uid="uid://dx1mvbieyio4j" path="res://camera_2d_map_1.gd" id="8_b2iyy"]

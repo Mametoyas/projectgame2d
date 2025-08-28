@@ -1,12 +1,12 @@
 [gd_scene load_steps=54 format=3 uid="uid://2emepi2ytiic"]
 
 [ext_resource type="Script" uid="uid://cfta36uercsum" path="res://walking_enemy/enemy scritp/enemy.gd" id="1_b4e7n"]
-[ext_resource type="Texture2D" uid="uid://dc2j0t42c01em" path="res://walking_enemy/enemy asset/Skull_Run.png" id="1_kd8w4"]
-[ext_resource type="Texture2D" uid="uid://dos2dwsjsp81k" path="res://walking_enemy/enemy asset/Shaman_Run.png" id="2_b4e7n"]
-[ext_resource type="Texture2D" uid="uid://dqpti8wojqnpj" path="res://walking_enemy/enemy asset/Troll_Walk.png" id="3_yllj7"]
-[ext_resource type="Texture2D" uid="uid://vpse1feten20" path="res://walking_enemy/enemy asset/Spider_Run.png" id="4_7buoo"]
-[ext_resource type="Texture2D" uid="uid://cwcqrtmai73ei" path="res://walking_enemy/enemy asset/Lancer_Run.png" id="5_o6ot4"]
-[ext_resource type="Texture2D" uid="uid://cu88a34iq46me" path="res://walking_enemy/enemy asset/Turtle_Walk.png" id="6_2vnqu"]
+[ext_resource type="Texture2D" uid="uid://cvi5ad2snmpew" path="res://walking_enemy/enemy asset/Skull_Run.png" id="1_kd8w4"]
+[ext_resource type="Texture2D" uid="uid://cx2y7turtgw2c" path="res://walking_enemy/enemy asset/Shaman_Run.png" id="2_b4e7n"]
+[ext_resource type="Texture2D" uid="uid://bvf4p1w8nye8g" path="res://walking_enemy/enemy asset/Troll_Walk.png" id="3_yllj7"]
+[ext_resource type="Texture2D" uid="uid://dt0epwjyg3s8y" path="res://walking_enemy/enemy asset/Spider_Run.png" id="4_7buoo"]
+[ext_resource type="Texture2D" uid="uid://c36q5oe4655qn" path="res://walking_enemy/enemy asset/Lancer_Run.png" id="5_o6ot4"]
+[ext_resource type="Texture2D" uid="uid://oldnn16hip27" path="res://walking_enemy/enemy asset/Turtle_Walk.png" id="6_2vnqu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m72bm"]
 atlas = ExtResource("1_kd8w4")
@@ -364,7 +364,7 @@ script = ExtResource("1_b4e7n")
 position = Vector2(5.72205e-06, 3.8147e-06)
 scale = Vector2(0.419271, 0.470052)
 sprite_frames = SubResource("SpriteFrames_ibpe8")
-animation = &"tank_walk"
+animation = &"shield_walk"
 
 [node name="Hitbox" type="Area2D" parent="."]
 collision_mask = 0
