@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvj8j4ghnmqwi"]
+
+[ext_resource type="Script" uid="uid://bx81a8m0jnq1o" path="res://wave_test.gd" id="1_x804r"]
+
+[node name="wave_test" type="Node"]
+script = ExtResource("1_x804r")
+waves = null
+spawn_interval_range = null
+delay_between_waves = null
+start_on_ready = null
