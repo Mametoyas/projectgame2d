@@ -6,30 +6,37 @@ extends Node2D
 @export var bullet_scene: PackedScene
 
 # ======== โครงเลเวล 1..3 ========
-const LEVELS: Array = [
+const LEVELS := [
 	{}, # index 0 ไม่ใช้
 	{   # Lv1
 		"damage": 12,
 		"range": 140.0,
 		"interval": 0.65,
 		"anim": "lv1_idle",
-		"cost": 0
+		"cost": 0,
+		"bullet": preload("res://bullets/bullet_lv1.tscn"),
+		"muzzles": ["MuzzleLv1"]
 	},
 	{   # Lv2
 		"damage": 18,
 		"range": 170.0,
 		"interval": 0.55,
 		"anim": "lv2_idle",
-		"cost": 50
+		"cost": 50,
+		"bullet": preload("res://bullets/bullet_lv2.tscn"),
+		"muzzles": ["MuzzleLv2_Left", "MuzzleLv2_Right"]
 	},
 	{   # Lv3
 		"damage": 26,
 		"range": 210.0,
 		"interval": 0.45,
 		"anim": "lv3_idle",
-		"cost": 90
+		"cost": 90,
+		"bullet": preload("res://bullets/bullet_lv3.tscn"),
+		"muzzles": ["MuzzleLv3_Left", "MuzzleLv3_Right", "MuzzleLv3_Center"]
 	}
 ]
+
 
 # ======== refs ========
 @onready var sprite: AnimatedSprite2D = $Sprite

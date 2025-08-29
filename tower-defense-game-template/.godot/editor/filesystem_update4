@@ -1,8 +1,0 @@
-res://walking_enemy/enemy scritp/enemy.tscn
-res://gui/gui.tscn
-res://walking_enemy/maptest/test_path.tscn
-res://walking_enemy/tower test/tower.tscn
-res://Map/USE/MAP1/Forest1.tscn
-res://walking_enemy/tower test/bullet.tscn
-res://tower_use/tower_archer/tower_archer.gd
-res://tower_use/tower_archer.tscn
