@@ -1,3 +1,11 @@
+res://Map/USE/MAP1/Forest1.tscn
+res://walking_enemy/enemy scritp/EnemyFactory.gd
 res://walking_enemy/enemy scritp/enemy.tscn
 res://gui/gui.tscn
 res://walking_enemy/maptest/test_path.tscn
+res://walking_enemy/tower test/tower.tscn
+res://walking_enemy/tower test/bullet.tscn
+res://walking_enemy/maptest/spawnerF1.gd
+res://walking_enemy/enemy scritp/EnemyFactoryF1.gd
+res://walking_enemy/tower test/tower.gd
+res://walking_enemy/tower test/bullet.gd

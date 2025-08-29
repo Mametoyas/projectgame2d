@@ -19,7 +19,12 @@ func spawn(type_id: String, follower: PathFollow2D) -> Enemy:
 
 static func spawn_configured(type_id: String, follower: PathFollow2D) -> Enemy:
 	var tree := Engine.get_main_loop() as SceneTree
-	if tree == null: return null
-	var fac := tree.get_first_node_in_group("enemy_factory") as EnemyFactory
-	if fac == null: return null
-	return fac.spawn(type_id, follower)
+	if tree == null:
+		return null
+	var n := tree.get_first_node_in_group("enemy_factory")
+	if n == null:
+		return null
+	# ป้องกัน invalid cast
+	if n is EnemyFactory:
+		return (n as EnemyFactory).spawn(type_id, follower)
+	return null

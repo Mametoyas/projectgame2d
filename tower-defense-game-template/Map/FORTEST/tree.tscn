@@ -1,0 +1,71 @@
+[gd_scene load_steps=11 format=3 uid="uid://v1wvqtg8c5vy"]
+
+[ext_resource type="Texture2D" uid="uid://chrajmyp5ksd7" path="res://Tiny Swords (Free Pack)/Decorations/Trees/Tree3.png" id="1_brfkd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nnvrw"]
+atlas = ExtResource("1_brfkd")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gvmkm"]
+atlas = ExtResource("1_brfkd")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2g23"]
+atlas = ExtResource("1_brfkd")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_44ud8"]
+atlas = ExtResource("1_brfkd")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ind6k"]
+atlas = ExtResource("1_brfkd")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6vbnm"]
+atlas = ExtResource("1_brfkd")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bcqui"]
+atlas = ExtResource("1_brfkd")
+region = Rect2(1152, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bgygo"]
+atlas = ExtResource("1_brfkd")
+region = Rect2(1344, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oph6y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nnvrw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gvmkm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2g23")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_44ud8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ind6k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6vbnm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bcqui")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bgygo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="tree" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_oph6y")
+frame_progress = 0.491852

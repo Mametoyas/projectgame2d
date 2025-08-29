@@ -1,7 +1,7 @@
 extends Node2D
 
 @export var damage: int = 15
-@export var range_radius: float = 600.0
+@export var range_radius: float = 1200.0
 @export var shoot_interval: float = 0.6
 @export var bullet_scene: PackedScene
 @export var can_target_flying: bool = false
@@ -131,7 +131,7 @@ func _on_shoot() -> void:
 
 	var b := bullet_scene.instantiate() as Area2D
 	get_tree().current_scene.add_child(b)
-
+	b.z_index = 300    
 	var spawn_pos := _get_spawn_pos()
 	b.global_position = spawn_pos
 	b.look_at(target.global_position)
