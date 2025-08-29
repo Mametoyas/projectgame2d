@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://btjkowko5a665"]
+[gd_scene load_steps=7 format=3 uid="uid://btjkowko5a665"]
 
-[ext_resource type="Script" uid="uid://b36l1vryt31k5" path="res://gui/placement_manager.gd" id="1_q46mf"]
-[ext_resource type="Script" uid="uid://bx1sioays26qs" path="res://gui/build_ui.gd" id="2_n360k"]
+[ext_resource type="Script" uid="uid://b36l1vryt31k5" path="res://gui_test/placement_manager.gd" id="1_q46mf"]
+[ext_resource type="Script" uid="uid://bx1sioays26qs" path="res://gui_test/build_ui.gd" id="2_n360k"]
 [ext_resource type="PackedScene" uid="uid://ca6bce7weuioh" path="res://walking_enemy/tower test/tower.tscn" id="3_hp187"]
-[ext_resource type="Texture2D" uid="uid://ddgts1cohmpf2" path="res://walking_enemy/tower test/tower test.png" id="4_n360k"]
+[ext_resource type="PackedScene" uid="uid://ckbbe0lkkwj3b" path="res://tower_use/tower_archer/tower_archer.tscn" id="3_ytf3d"]
+[ext_resource type="Texture2D" uid="uid://cx2pcq142l7vs" path="res://tower_use/asset/Tower.png" id="5_bk7cs"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ytf3d"]
 shadow_size = 3
@@ -24,7 +25,7 @@ offset_right = 675.0
 offset_bottom = 587.0
 scale = Vector2(12.8599, 2.45212)
 script = ExtResource("2_n360k")
-ground_tower_scene = ExtResource("3_hp187")
+ground_tower_scene = ExtResource("3_ytf3d")
 air_tower_scene = ExtResource("3_hp187")
 
 [node name="MoneyLabel" type="Label" parent="UI/BuildUI"]
@@ -42,7 +43,7 @@ offset_top = 12.6421
 offset_right = 537.866
 offset_bottom = 532.642
 scale = Vector2(0.0130342, 0.0357142)
-icon = ExtResource("4_n360k")
+icon = ExtResource("5_bk7cs")
 
 [node name="AirBtn" type="Button" parent="UI/BuildUI"]
 layout_mode = 0

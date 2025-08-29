@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://hkn42tc1unre"]
+
+[ext_resource type="Texture2D" uid="uid://b3n153tvadkdy" path="res://tower_use/asset/Arrow.png" id="1_3co1c"]
+[ext_resource type="Script" uid="uid://dw882kckbjk4d" path="res://tower_use/tower_archer/arrow_archer_tower.gd" id="1_qy5v3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qy5v3"]
+radius = 7.0
+
+[node name="Arrow_archerTower" type="Area2D"]
+script = ExtResource("1_qy5v3")
+
+[node name="Arrow_archerTower" type="Sprite2D" parent="."]
+texture = ExtResource("1_3co1c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_qy5v3")

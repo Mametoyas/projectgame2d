@@ -9,30 +9,30 @@ extends Node2D
 const LEVELS := [
 	{}, # index 0 ไม่ใช้
 	{   # Lv1
-		"damage": 12,
+		"damage": 6,
 		"range": 140.0,
 		"interval": 0.65,
 		"anim": "lv1_idle",
 		"cost": 0,
-		"bullet": preload("res://bullets/bullet_lv1.tscn"),
+		"bullet": preload("res://tower_use/tower_archer/arrow_archer_tower.tscn"),
 		"muzzles": ["MuzzleLv1"]
 	},
 	{   # Lv2
-		"damage": 18,
+		"damage": 6,
 		"range": 170.0,
 		"interval": 0.55,
 		"anim": "lv2_idle",
 		"cost": 50,
-		"bullet": preload("res://bullets/bullet_lv2.tscn"),
+		"bullet": preload("res://tower_use/tower_archer/arrow_archer_tower.tscn"),
 		"muzzles": ["MuzzleLv2_Left", "MuzzleLv2_Right"]
 	},
 	{   # Lv3
-		"damage": 26,
+		"damage": 6,
 		"range": 210.0,
 		"interval": 0.45,
 		"anim": "lv3_idle",
 		"cost": 90,
-		"bullet": preload("res://bullets/bullet_lv3.tscn"),
+		"bullet": preload("res://tower_use/tower_archer/arrow_archer_tower.tscn"),
 		"muzzles": ["MuzzleLv3_Left", "MuzzleLv3_Right", "MuzzleLv3_Center"]
 	}
 ]
@@ -44,7 +44,7 @@ const LEVELS := [
 @onready var range_shape: CollisionShape2D = $Range/CollisionShape2D
 @onready var shoot_timer: Timer       = $ShootTimer
 @onready var footprint: Area2D        = $BuildFootprint
-@onready var muzzle: Marker2D = $Muzzle
+var muzzles: Array[Marker2D] = []
 
 # สเตตัส runtime
 var damage: int = 10
@@ -97,18 +97,31 @@ func _apply_level() -> void:
 	range_radius = float(cfg["range"])
 	shoot_interval = float(cfg["interval"])
 
+	# bullet ที่ใช้ในเลเวลนี้
+	if cfg.has("bullet"):
+		bullet_scene = cfg["bullet"]
+
+	# muzzles ที่ใช้ในเลเวลนี้
+	muzzles.clear()
+	if cfg.has("muzzles"):
+		for mname in cfg["muzzles"]:
+			var m: Marker2D = get_node_or_null(mname) as Marker2D
+			if m:
+				muzzles.append(m)
+
 	var cs: CircleShape2D = range_shape.shape as CircleShape2D
-	if cs != null:
+	if cs:
 		cs.radius = range_radius
 
 	shoot_timer.wait_time = shoot_interval
 
-	if sprite != null and sprite.sprite_frames != null and cfg.has("anim"):
-		var anim_name_local: String = String(cfg["anim"])
-		if sprite.sprite_frames.has_animation(anim_name_local):
-			sprite.play(anim_name_local)
+	if sprite and sprite.sprite_frames and cfg.has("anim"):
+		var anim_name: String = String(cfg["anim"])
+		if sprite.sprite_frames.has_animation(anim_name):
+			sprite.play(anim_name)
 
 	_set_range_mask()
+
 
 func get_upgrade_cost() -> int:
 	if current_level >= 3:
@@ -130,27 +143,40 @@ func _set_range_mask() -> void:
 
 # ====== วงรัศมีแสดง/ซ่อน (ถ้าต้องการ) ======
 func show_range(enabled: bool) -> void:
+	# หา range_area แบบปลอดภัย (กรณี _ready() ยังไม่ทำงาน)
+	if range_area == null:
+		range_area = get_node_or_null("Range") as Area2D
+
 	if enabled:
 		if range_preview != null and is_instance_valid(range_preview):
 			range_preview.queue_free()
+
 		range_preview = Line2D.new()
 		range_preview.width = 2.0
 		range_preview.default_color = Color(0, 1, 1, 0.45)
 		range_preview.closed = true
 
-		var pts: PackedVector2Array = PackedVector2Array()
-		var segs: int = 64
-		var i: int = 0
+		var pts := PackedVector2Array()
+		var segs := 64
+		var i := 0
 		while i < segs:
-			var ang: float = TAU * float(i) / float(segs)
+			var ang := TAU * float(i) / float(segs)
 			pts.append(Vector2(cos(ang), sin(ang)) * range_radius)
 			i += 1
 		range_preview.points = pts
-		range_area.add_child(range_preview)
+
+		# เลือก parent ที่จะ add_child
+		var parent_node: Node = self
+		if range_area != null:
+			parent_node = range_area
+		parent_node.add_child(range_preview)
+
 	else:
 		if range_preview != null and is_instance_valid(range_preview):
 			range_preview.queue_free()
 		range_preview = null
+
+
 
 # ====== เลือกเป้าหมาย / ยิง ======
 func _on_area_entered(a: Area2D) -> void:
@@ -193,22 +219,35 @@ func _pick_target() -> void:
 func _on_shoot() -> void:
 	if target == null or not is_instance_valid(target):
 		return
-	if bullet_scene != null:
-		var b: Area2D = bullet_scene.instantiate() as Area2D
-		get_tree().current_scene.add_child(b)
-		b.z_index = 300
-
-		# ยิงจากตำแหน่ง Muzzle ถ้ามี, ไม่งั้น fallback เป็นตำแหน่ง Tower
-		if muzzle != null:
-			b.global_position = muzzle.global_position
+	if bullet_scene:
+		if muzzles.is_empty():
+			# fallback ยิงจากกลางป้อม
+			_spawn_bullet(global_position)
 		else:
-			b.global_position = global_position
-
-		b.look_at(target.global_position)
-		b.set("damage", damage)
-		b.set("dir", (target.global_position - b.global_position).normalized())
+			for m in muzzles:
+				if m and is_instance_valid(m):
+					_spawn_bullet(m.global_position)
 	else:
 		target.apply_damage(damage)
+
+
+func _spawn_bullet(pos: Vector2) -> void:
+	var b: Area2D = bullet_scene.instantiate() as Area2D
+
+	# หา parent ที่จะใส่กระสุนลงไป (กัน current_scene เป็น null)
+	var parent: Node = get_tree().current_scene
+	if parent == null:
+		parent = get_tree().root
+
+	parent.add_child(b)
+
+	b.z_index = 300
+	b.global_position = pos
+	b.look_at(target.global_position)
+	b.set("damage", damage)
+	b.set("dir", (target.global_position - pos).normalized())
+
+
 
 # ====== ยูทิล: บอกระยะจริง (เผื่อระบบอื่นเรียกใช้) ======
 func get_effective_range_radius() -> float:

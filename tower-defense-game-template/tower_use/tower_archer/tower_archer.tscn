@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://qlc3dllkdi4g" path="res://tower_use/tower_archer/tower_archer.gd" id="1_t3dgo"]
 [ext_resource type="PackedScene" uid="uid://baodamjy1ue7b" path="res://walking_enemy/tower test/bullet.tscn" id="2_523vt"]
-[ext_resource type="Texture2D" uid="uid://dg5puu323ukjk" path="res://tower_use/asset/Tower.png" id="2_wy2dy"]
-[ext_resource type="Texture2D" uid="uid://cfuxm27nipwqh" path="res://tower_use/asset/Archer_Shoot.png" id="3_523vt"]
-[ext_resource type="Texture2D" uid="uid://y3bbfh0ncb5s" path="res://tower_use/asset/level2.png" id="4_4gnge"]
-[ext_resource type="Texture2D" uid="uid://bk71l3kfwpi11" path="res://tower_use/asset/level3.png" id="5_01hwy"]
+[ext_resource type="Texture2D" uid="uid://cx2pcq142l7vs" path="res://tower_use/asset/Tower.png" id="2_wy2dy"]
+[ext_resource type="Texture2D" uid="uid://dvw32112cdrke" path="res://tower_use/asset/Archer_Shoot.png" id="3_523vt"]
+[ext_resource type="Texture2D" uid="uid://mti7ve1wy5xs" path="res://tower_use/asset/level2.png" id="4_4gnge"]
+[ext_resource type="Texture2D" uid="uid://cgrxaedl8afmw" path="res://tower_use/asset/level3.png" id="5_01hwy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_o6dod"]
 
@@ -215,12 +215,28 @@ animation = &"lv3_idle"
 frame_progress = 0.0797089
 
 [node name="BuildFootprint" type="Area2D" parent="." groups=["tower_footprint"]]
-collision_layer = 384
+collision_layer = 256
+collision_mask = 384
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BuildFootprint"]
 polygon = PackedVector2Array(-38, 7, -43, 17, -40, 34, -40, 34, -37, 50, -23, 62, -13, 68, 15, 68, 27, 60, 39, 50, 43, 40, 44, 22, 43, 4, 36, 2, 23, -5, 3, -8, -13, -10, -29, -5)
 
 [node name="ShootTimer" type="Timer" parent="."]
 
-[node name="Muzzle" type="Marker2D" parent="."]
-position = Vector2(0, -82)
+[node name="MuzzleLv1" type="Marker2D" parent="."]
+position = Vector2(28, -93)
+
+[node name="MuzzleLv2_Left" type="Marker2D" parent="."]
+position = Vector2(-24, -100)
+
+[node name="MuzzleLv2_Right" type="Marker2D" parent="."]
+position = Vector2(28, -93)
+
+[node name="MuzzleLv3_Left" type="Marker2D" parent="."]
+position = Vector2(-25, -100)
+
+[node name="MuzzleLv3_Right" type="Marker2D" parent="."]
+position = Vector2(28, -92)
+
+[node name="MuzzleLv3_Center" type="Marker2D" parent="."]
+position = Vector2(-1, -73)
