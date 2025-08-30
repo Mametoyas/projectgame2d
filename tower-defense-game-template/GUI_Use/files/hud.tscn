@@ -1,0 +1,71 @@
+[gd_scene load_steps=6 format=3 uid="uid://dy4ipkvnbrgty"]
+
+[ext_resource type="Script" uid="uid://bomsu3c37kbe3" path="res://GUI_Use/files/hud.gd" id="1_yhpii"]
+[ext_resource type="Script" uid="uid://br33skp2ihilc" path="res://GUI_Use/files/build_ui.gd" id="2_ngh62"]
+[ext_resource type="PackedScene" uid="uid://ckbbe0lkkwj3b" path="res://tower_use/tower_archer/tower_archer.tscn" id="3_mauiy"]
+[ext_resource type="Script" uid="uid://dpxjatww25y86" path="res://GUI_Use/files/floating_tower_menu.gd" id="4_ngh62"]
+[ext_resource type="Script" uid="uid://b36l1vryt31k5" path="res://gui_test/placement_manager.gd" id="5_mauiy"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_yhpii")
+
+[node name="MoneyLabel" type="Label" parent="."]
+offset_left = 1147.0
+offset_top = 498.0
+offset_right = 1201.0
+offset_bottom = 521.0
+text = "money"
+
+[node name="BuildUI" type="HBoxContainer" parent="."]
+offset_left = 1149.0
+offset_top = 525.0
+offset_right = 1189.0
+offset_bottom = 565.0
+scale = Vector2(2, 2)
+script = ExtResource("2_ngh62")
+ground_tower_scene = ExtResource("3_mauiy")
+
+[node name="BuyTower1" type="Button" parent="BuildUI"]
+layout_mode = 2
+text = "g"
+
+[node name="CancelPlace" type="Button" parent="BuildUI"]
+layout_mode = 2
+text = "c"
+
+[node name="FloatingTowerMenu" type="Panel" parent="." groups=["floating_tower_menu"]]
+offset_left = 2211.0
+offset_top = 115.0
+offset_right = 2257.0
+offset_bottom = 250.0
+scale = Vector2(3.64075, 1.0394)
+mouse_filter = 2
+script = ExtResource("4_ngh62")
+
+[node name="UpgradeButton" type="Button" parent="FloatingTowerMenu"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(0.429526, 1.286)
+text = "up"
+
+[node name="ToggleRangeButton" type="Button" parent="FloatingTowerMenu"]
+layout_mode = 0
+offset_left = 0.274696
+offset_top = 44.2562
+offset_right = 56.2747
+offset_bottom = 75.2562
+scale = Vector2(0.448257, 1.31355)
+text = "Range"
+
+[node name="SellButton" type="Button" parent="FloatingTowerMenu"]
+layout_mode = 0
+offset_left = 1.09867
+offset_top = 87.5502
+offset_right = 35.0987
+offset_bottom = 118.55
+scale = Vector2(0.382243, 1.29387)
+text = "sell"
+
+[node name="placement_manager" type="Node" parent="."]
+script = ExtResource("5_mauiy")

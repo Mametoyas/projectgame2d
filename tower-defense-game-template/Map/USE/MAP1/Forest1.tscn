@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=4 uid="uid://b38kluylin6p8"]
+[gd_scene load_steps=44 format=4 uid="uid://b38kluylin6p8"]
 
 [ext_resource type="PackedScene" uid="uid://k0wwmy1a2m60" path="res://Map/USE/MAP_FOREST.tscn" id="1_u7t5k"]
 [ext_resource type="Texture2D" uid="uid://b64pfxfvso2po" path="res://Map/Tiny Swords (Free Pack)/Terrain/Tilemap_color1.png" id="2_5hh7t"]
@@ -20,11 +20,8 @@
 [ext_resource type="PackedScene" uid="uid://dd31auwxsj6w3" path="res://Map/USE/BASE/base1.tscn" id="10_glf3u"]
 [ext_resource type="Texture2D" uid="uid://deqnpredirtt1" path="res://Map/Tiny Swords (Free Pack)/Decorations/Trees/Tree4.png" id="11_nupx6"]
 [ext_resource type="PackedScene" uid="uid://kbd8nu0r2ngb" path="res://Map/USE/Sheep_move/sheep.tscn" id="20_663nu"]
-[ext_resource type="Script" uid="uid://bkgdrlv42d6hp" path="res://GUI_Use/files/placement_manager.gd" id="20_tmnq2"]
 [ext_resource type="Script" uid="uid://6xeoiknqklcy" path="res://walking_enemy/maptest/spawnerF1.gd" id="21_bm05h"]
-[ext_resource type="Script" uid="uid://bou82puddkjy7" path="res://GUI_Use/files/build_ui.gd" id="21_gfwxi"]
-[ext_resource type="PackedScene" uid="uid://ckbbe0lkkwj3b" path="res://tower_use/tower_archer/tower_archer.tscn" id="22_b8bmh"]
-[ext_resource type="Script" uid="uid://6bffpstwhhs8" path="res://GUI_Use/files/hud.gd" id="23_20xqa"]
+[ext_resource type="PackedScene" uid="uid://dy4ipkvnbrgty" path="res://GUI_Use/files/hud.tscn" id="23_20xqa"]
 [ext_resource type="Script" uid="uid://ccd6w1tvp5vky" path="res://walking_enemy/enemy scritp/EnemyFactoryF1.gd" id="23_xk0xd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ctoj2"]
@@ -5765,43 +5762,6 @@ offset_bottom = 1064.0
 scale = Vector2(3, 2)
 text = "start"
 
-[node name="HUD" type="CanvasLayer" parent="MAP_FOREST1"]
-script = ExtResource("23_20xqa")
-
-[node name="MoneyLabel" type="Label" parent="MAP_FOREST1/HUD"]
-offset_left = 2062.0
-offset_top = 984.0
-offset_right = 2102.0
-offset_bottom = 1007.0
-scale = Vector2(2, 2)
-text = "Money"
-
-[node name="PlacementManager" type="Node" parent="MAP_FOREST1"]
-script = ExtResource("20_tmnq2")
-
-[node name="BuildUI" type="Control" parent="MAP_FOREST1"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(12.4077, 7.5611)
-script = ExtResource("21_gfwxi")
-tower1_scene = ExtResource("22_b8bmh")
-
-[node name="BuyTower1" type="Button" parent="MAP_FOREST1/BuildUI"]
-layout_mode = 0
-offset_left = 134.594
-offset_top = 68.7731
-offset_right = 142.594
-offset_bottom = 76.7731
-
-[node name="CancelPlace" type="Button" parent="MAP_FOREST1/BuildUI"]
-layout_mode = 0
-offset_left = 134.191
-offset_top = 79.3536
-offset_right = 142.191
-offset_bottom = 87.3536
-
 [node name="Camera2D_map1" type="Camera2D" parent="MAP_FOREST1"]
 position = Vector2(1182, 637)
 rotation = 3.14159
@@ -5838,10 +5798,11 @@ position = Vector2(1076, 912)
 [node name="AnimatedSprite2D2" parent="MAP_FOREST1" instance=ExtResource("20_663nu")]
 position = Vector2(1480, 875)
 
-[node name="NoBuildZones" type="Node2D" parent="."]
+[node name="NoBuildZones" type="Node2D" parent="." groups=["no_build"]]
 
 [node name="NoBuild_PathOuter" type="Area2D" parent="NoBuildZones" groups=["no_build"]]
-collision_layer = 129
+collision_layer = 128
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NoBuildZones/NoBuild_PathOuter"]
 position = Vector2(281.5, 650)
@@ -5849,7 +5810,8 @@ shape = SubResource("RectangleShape2D_wu2gt")
 
 [node name="NoBuild_PathOuter3" type="Area2D" parent="NoBuildZones" groups=["no_build"]]
 position = Vector2(1112, 272)
-collision_layer = 129
+collision_layer = 128
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NoBuildZones/NoBuild_PathOuter3"]
 position = Vector2(40, -59)
@@ -5858,6 +5820,7 @@ shape = SubResource("RectangleShape2D_4n7cl")
 [node name="NoBuild_PathOuter2" type="Area2D" parent="NoBuildZones" groups=["no_build"]]
 position = Vector2(1936, 600)
 collision_layer = 128
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NoBuildZones/NoBuild_PathOuter2"]
 position = Vector2(128.5, 46.5)
@@ -5866,9 +5829,12 @@ shape = SubResource("RectangleShape2D_fplrv")
 [node name="Area2D" type="Area2D" parent="NoBuildZones" groups=["no_build"]]
 position = Vector2(1141, 853)
 collision_layer = 128
+collision_mask = 0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="NoBuildZones/Area2D"]
 polygon = PackedVector2Array(-705, 206, -652, 196, -607, 226, -360, 198, -337, 42, -450, -82, -444, -221, -305, -324, -54, -310, 229, -226, 431, -55, 533, 44, 646, 296, 597, 339, -707, 341)
 
 [node name="EnemyFactoryF1" type="Node" parent="."]
 script = ExtResource("23_xk0xd")
+
+[node name="HUD" parent="." instance=ExtResource("23_20xqa")]

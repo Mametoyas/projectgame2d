@@ -4,9 +4,8 @@ extends Node2D
 @export var current_level: int = 1        # 1..3
 @export var can_target_flying: bool = false
 @export var bullet_scene: PackedScene
-
 # ======== โครงเลเวล 1..3 ========
-const LEVELS := [
+const LEVELS: Array = [
 	{}, # index 0 ไม่ใช้
 	{   # Lv1
 		"damage": 6,
@@ -37,13 +36,14 @@ const LEVELS := [
 	}
 ]
 
-
 # ======== refs ========
 @onready var sprite: AnimatedSprite2D = $Sprite
 @onready var range_area: Area2D       = $Range
 @onready var range_shape: CollisionShape2D = $Range/CollisionShape2D
 @onready var shoot_timer: Timer       = $ShootTimer
 @onready var footprint: Area2D        = $BuildFootprint
+@onready var select_area: Area2D      = $SelectArea
+
 var muzzles: Array[Marker2D] = []
 
 # สเตตัส runtime
@@ -55,10 +55,11 @@ var shoot_interval: float = 0.6
 var target: Enemy = null
 var in_range: Array[Enemy] = []
 
-# วงรัศมีโชว์ (ตอนต้องการ debug หรือกดปุ่ม)
+# วงรัศมีโชว์
 var range_preview: Line2D = null
 
 func _ready() -> void:
+	# Range
 	range_area.monitoring = true
 	range_area.monitorable = true
 	range_area.collision_layer = 0
@@ -69,14 +70,32 @@ func _ready() -> void:
 	if not range_area.area_exited.is_connected(_on_area_exited):
 		range_area.area_exited.connect(_on_area_exited)
 
+	# เลือกป้อมด้วยการคลิก
+		# ===== ใน _ready() ของ tower.gd =====
+	if select_area:
+		# ให้รับคลิก
+		select_area.input_pickable = true
+		# อย่าให้ชนอะไรอื่น ๆ (ป้องกันชนจนรบกวน)
+		select_area.collision_mask = 0
+		# เลเยอร์ต้องไม่เป็น 0 (ให้สักบิตหนึ่ง)
+		select_area.collision_layer = 1
+		select_area.set_collision_layer_value(1, true)
+
+		# ต่อสัญญาณคลิก (กันต่อซ้ำ)
+		if not select_area.input_event.is_connected(_on_select_area_input):
+			select_area.input_event.connect(_on_select_area_input)
+
+	# โหลดเลเวลเริ่มต้น
 	_apply_level()
 
+	# ตั้ง Timer ยิง
 	shoot_timer.wait_time = shoot_interval
 	if not shoot_timer.timeout.is_connected(_on_shoot):
 		shoot_timer.timeout.connect(_on_shoot)
 	shoot_timer.autostart = true
 	shoot_timer.start()
 
+	# กันโดน Tilemap บัง
 	z_index = 50
 	if sprite:
 		sprite.z_index = 50
@@ -88,30 +107,33 @@ func _process(_delta: float) -> void:
 		if not can_target_flying and target.is_in_group("flying_enemies"):
 			_pick_target()
 
+# ====== คลิกเพื่อเปิดเมนู ======
+func _on_select_area_input(_vp, event, _shape_idx) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		var menu := get_tree().get_first_node_in_group("floating_tower_menu")
+		if menu != null and menu.has_method("open_for"):
+			menu.call("open_for", self)
+
 # ====== Level / Upgrade ======
 func _apply_level() -> void:
 	var lv: int = clamp(current_level, 1, 3)
-	var cfg: Dictionary = LEVELS[lv] as Dictionary
-
+	var cfg: Dictionary = LEVELS[lv]
 	damage = int(cfg["damage"])
 	range_radius = float(cfg["range"])
 	shoot_interval = float(cfg["interval"])
 
-	# bullet ที่ใช้ในเลเวลนี้
 	if cfg.has("bullet"):
 		bullet_scene = cfg["bullet"]
 
-	# muzzles ที่ใช้ในเลเวลนี้
 	muzzles.clear()
 	if cfg.has("muzzles"):
-		for mname in cfg["muzzles"]:
+		for mname_obj in cfg["muzzles"]:
+			var mname: String = String(mname_obj)
 			var m: Marker2D = get_node_or_null(mname) as Marker2D
-			if m:
-				muzzles.append(m)
+			if m: muzzles.append(m)
 
 	var cs: CircleShape2D = range_shape.shape as CircleShape2D
-	if cs:
-		cs.radius = range_radius
+	if cs: cs.radius = range_radius
 
 	shoot_timer.wait_time = shoot_interval
 
@@ -121,29 +143,33 @@ func _apply_level() -> void:
 			sprite.play(anim_name)
 
 	_set_range_mask()
-
+	print("[TOWER] apply lv=", lv, " dmg=", damage, " range=", range_radius, " interval=", shoot_interval, " muzzles=", muzzles.size())
 
 func get_upgrade_cost() -> int:
 	if current_level >= 3:
 		return 0
-	return int((LEVELS[current_level + 1] as Dictionary)["cost"])
+	var next_cfg: Dictionary = LEVELS[current_level + 1]
+	var c := int(next_cfg["cost"])
+	print("[TOWER] get_upgrade_cost lv=", current_level, " -> ", c)
+	return c
 
 func upgrade() -> bool:
 	if current_level >= 3:
+		print("[TOWER] upgrade blocked: max level")
 		return false
 	current_level += 1
+	print("[TOWER] upgrade -> lv=", current_level)
 	_apply_level()
 	return true
 
 func _set_range_mask() -> void:
 	range_area.collision_mask = 0
-	range_area.set_collision_mask_value(1, true)
+	range_area.set_collision_mask_value(1, true)    # ศัตรูเดินดิน
 	if can_target_flying:
-		range_area.set_collision_mask_value(2, true)
+		range_area.set_collision_mask_value(2, true) # ศัตรูบิน
 
-# ====== วงรัศมีแสดง/ซ่อน (ถ้าต้องการ) ======
+# ====== วงรัศมีแสดง/ซ่อน ======
 func show_range(enabled: bool) -> void:
-	# หา range_area แบบปลอดภัย (กรณี _ready() ยังไม่ทำงาน)
 	if range_area == null:
 		range_area = get_node_or_null("Range") as Area2D
 
@@ -156,27 +182,23 @@ func show_range(enabled: bool) -> void:
 		range_preview.default_color = Color(0, 1, 1, 0.45)
 		range_preview.closed = true
 
-		var pts := PackedVector2Array()
-		var segs := 64
-		var i := 0
+		var pts: PackedVector2Array = PackedVector2Array()
+		var segs: int = 64
+		var i: int = 0
 		while i < segs:
-			var ang := TAU * float(i) / float(segs)
+			var ang: float = TAU * float(i) / float(segs)
 			pts.append(Vector2(cos(ang), sin(ang)) * range_radius)
 			i += 1
 		range_preview.points = pts
 
-		# เลือก parent ที่จะ add_child
 		var parent_node: Node = self
 		if range_area != null:
 			parent_node = range_area
 		parent_node.add_child(range_preview)
-
 	else:
 		if range_preview != null and is_instance_valid(range_preview):
 			range_preview.queue_free()
 		range_preview = null
-
-
 
 # ====== เลือกเป้าหมาย / ยิง ======
 func _on_area_entered(a: Area2D) -> void:
@@ -221,7 +243,6 @@ func _on_shoot() -> void:
 		return
 	if bullet_scene:
 		if muzzles.is_empty():
-			# fallback ยิงจากกลางป้อม
 			_spawn_bullet(global_position)
 		else:
 			for m in muzzles:
@@ -230,15 +251,12 @@ func _on_shoot() -> void:
 	else:
 		target.apply_damage(damage)
 
-
 func _spawn_bullet(pos: Vector2) -> void:
-	var b: Area2D = bullet_scene.instantiate() as Area2D
-
-	# หา parent ที่จะใส่กระสุนลงไป (กัน current_scene เป็น null)
 	var parent: Node = get_tree().current_scene
 	if parent == null:
 		parent = get_tree().root
 
+	var b: Area2D = bullet_scene.instantiate() as Area2D
 	parent.add_child(b)
 
 	b.z_index = 300
@@ -247,9 +265,7 @@ func _spawn_bullet(pos: Vector2) -> void:
 	b.set("damage", damage)
 	b.set("dir", (target.global_position - pos).normalized())
 
-
-
-# ====== ยูทิล: บอกระยะจริง (เผื่อระบบอื่นเรียกใช้) ======
+# ====== ยูทิล: ระยะจริง ======
 func get_effective_range_radius() -> float:
 	var cs: CircleShape2D = range_shape.shape as CircleShape2D
 	if cs == null:

@@ -1,35 +1,30 @@
 extends CanvasLayer
 class_name HUD
 
-signal money_changed(value: int)
-
-@export var start_money: int = 150
 @onready var money_label: Label = $MoneyLabel
+@onready var build_ui: Node = $BuildUI
+@onready var floating_menu: Node = $FloatingTowerMenu
 
-var money: int
+var money: int = 200
 
 func _ready() -> void:
-	money = start_money
-	_update_ui()
-	emit_signal("money_changed", money)
-	add_to_group("hud")
+	update_money()
+	var menu = $FloatingTowerMenu
+	if menu:
+		print("FOUND FloatingTowerMenu at runtime")
+	else:
+		print("NOT FOUND FloatingTowerMenu")
 
-func can_spend(cost: int) -> bool:
-	return money >= cost
-
-func spend(cost: int) -> bool:
-	if money < cost:
+func spend_money(amount: int) -> bool:
+	if money < amount:
 		return false
-	money -= cost
-	_update_ui()
-	emit_signal("money_changed", money)
+	money -= amount
+	update_money()
 	return true
 
-func add_cash(amount: int) -> void:
+func add_money(amount: int) -> void:
 	money += amount
-	_update_ui()
-	emit_signal("money_changed", money)
+	update_money()
 
-func _update_ui() -> void:
-	if money_label:
-		money_label.text = "Money: %d" % money
+func update_money() -> void:
+	money_label.text = "Money: %d" % money

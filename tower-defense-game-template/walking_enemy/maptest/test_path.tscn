@@ -41,7 +41,6 @@ text = "start"
 
 [node name="tower_archer" parent="." instance=ExtResource("4_basrl")]
 position = Vector2(561, 168)
-current_level = 3
 bullet_scene = ExtResource("4_2pjka")
 
 [connection signal="timeout" from="Spawner/WaveTimer" to="Spawner" method="_on_wave_timer_timeout"]

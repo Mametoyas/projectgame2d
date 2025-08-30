@@ -1,43 +1,52 @@
 extends Node
+class_name PlacementManager
 
-@onready var ui: Control = $"../UI/BuildUI"
+@onready var ui: BuildUI = $"../BuildUI"
 
 var pending_scene: PackedScene = null
 var pending_cost: int = 0
+
 var ghost: Node2D = null
 var can_place: bool = false
 
 func _ready() -> void:
-	ui.pick_tower.connect(_on_pick_tower)
-	ui.cancel_place.connect(_cancel_place)
+	if ui != null:
+		if not ui.pick_tower.is_connected(_on_pick_tower):
+			ui.pick_tower.connect(_on_pick_tower)
+		if not ui.cancel_place.is_connected(_cancel_place):
+			ui.cancel_place.connect(_cancel_place)
 
 func _process(_delta: float) -> void:
 	if ghost:
-		var mp: Vector2 = get_viewport().get_mouse_position()
+		# ได้พิกัดโลกของเมาส์แบบตรง ๆ จาก Node2D
+		var mp: Vector2 = ghost.get_global_mouse_position()
 		ghost.global_position = mp
-		can_place = true
-		if can_place:
-			_set_ghost_tint(Color(0, 1, 0, 0.6))
-		else:
-			_set_ghost_tint(Color(1, 0, 0, 0.6))
+
+		can_place = _check_place_valid(ghost)
+		_set_ghost_tint( Color(0, 1, 0, 0.6) if can_place else Color(1, 0, 0, 0.6) )
+
+
 
 func _unhandled_input(event: InputEvent) -> void:
 	if ghost == null:
 		return
-	if event is InputEventKey and event.pressed and event.keycode == KEY_ESCAPE:
-		_cancel_place()
-	elif event is InputEventMouseButton and event.pressed:
-		var mb := event as InputEventMouseButton
-		if mb.button_index == MOUSE_BUTTON_RIGHT:
+	if event is InputEventKey:
+		if event.pressed and event.keycode == KEY_ESCAPE:
 			_cancel_place()
-		elif mb.button_index == MOUSE_BUTTON_LEFT and can_place:
-			_place_now()
+	if event is InputEventMouseButton and event.pressed:
+		if event.button_index == MOUSE_BUTTON_RIGHT:
+			_cancel_place()
+		elif event.button_index == MOUSE_BUTTON_LEFT:
+			if can_place:
+				_place_now()
 
+# ============= signals =============
 func _on_pick_tower(scene: PackedScene, cost: int) -> void:
 	pending_scene = scene
 	pending_cost = cost
 	_make_ghost()
 
+# ============= ghost mode =============
 func _make_ghost() -> void:
 	_free_ghost()
 	if pending_scene == null:
@@ -47,51 +56,81 @@ func _make_ghost() -> void:
 	if ghost == null:
 		return
 
-	# ปิดระบบของ ghost
-	var shoot_timer := ghost.get_node_or_null("ShootTimer") as Timer
-	if shoot_timer:
-		shoot_timer.stop()
+	var timer := ghost.get_node_or_null("ShootTimer") as Timer
+	if timer != null:
+		timer.stop()
+
 	var range_area := ghost.get_node_or_null("Range") as Area2D
-	if range_area:
+	if range_area != null:
 		range_area.monitoring = false
 		range_area.monitorable = false
 
-	# โชว์วงรัศมี ghost
+	# ปิด footprint ของโกสต์
+	var fp := ghost.get_node_or_null("BuildFootprint") as Area2D
+	if fp != null:
+		fp.monitoring = false
+		fp.collision_layer = 0
+
 	if ghost.has_method("show_range"):
 		ghost.call("show_range", true)
 
 	_set_ghost_tint(Color(1, 1, 1, 0.6))
 	get_tree().current_scene.add_child(ghost)
 
+
+func _set_ghost_tint(col: Color) -> void:
+	if ghost == null:
+		return
+	if ghost is CanvasItem:
+		(ghost as CanvasItem).modulate = col
+	for c in ghost.get_children():
+		if c is CanvasItem:
+			(c as CanvasItem).modulate = col
+
+# ============= place =============
 func _place_now() -> void:
-	if pending_scene == null or ghost == null:
+	if pending_scene == null:
+		return
+	if ghost == null:
+		return
+	if ui == null:
 		return
 	if not ui.spend_money(pending_cost):
 		return
 
-	var t := pending_scene.instantiate() as Node2D
-	if t == null:
+	var tower := pending_scene.instantiate() as Node2D
+	if tower == null:
 		return
 
-	t.global_position = ghost.global_position
-	get_tree().current_scene.add_child(t)
-	t.add_to_group("towers")
+	tower.global_position = ghost.global_position
+	get_tree().current_scene.add_child(tower)
+	tower.add_to_group("towers")
 
-	# เปิดระบบที่ปิด
-	var range_area := t.get_node_or_null("Range") as Area2D
-	if range_area:
+	# เปิดระบบที่ปิดตอนโกสต์
+	var range_area := tower.get_node_or_null("Range") as Area2D
+	if range_area != null:
 		range_area.monitoring = true
 		range_area.monitorable = true
-	var timer := t.get_node_or_null("ShootTimer") as Timer
-	if timer:
+
+	var timer := tower.get_node_or_null("ShootTimer") as Timer
+	if timer != null:
 		timer.start()
 
-	# ปิดวงรัศมีของป้อมจริง
-	if t.has_method("show_range"):
-		t.call("show_range", false)
+	# เปิด footprint ให้ชนเลเยอร์ 9 อีกครั้ง และไม่ตรวจมาสก์ใด ๆ
+	var fp2 := tower.get_node_or_null("BuildFootprint") as Area2D
+	if fp2 != null:
+		fp2.monitoring = true
+		fp2.collision_layer = 0
+		fp2.set_collision_layer_value(9, true)
+		fp2.collision_mask = 0
+
+	if tower.has_method("show_range"):
+		tower.call("show_range", false)
 
 	_cancel_place()
 
+
+# ============= cancel / cleanup =============
 func _cancel_place() -> void:
 	pending_scene = null
 	pending_cost = 0
@@ -105,11 +144,59 @@ func _free_ghost() -> void:
 			ghost.queue_free()
 	ghost = null
 
-func _set_ghost_tint(col: Color) -> void:
-	if ghost == null:
-		return
-	if ghost is CanvasItem:
-		(ghost as CanvasItem).modulate = col
-	for child in ghost.get_children():
-		if child is CanvasItem:
-			(child as CanvasItem).modulate = col
+# ============= ตรวจพื้นที่ห้ามวาง =============
+func _check_place_valid(tower: Node2D) -> bool:
+	# หาโหนดรูปทรงของ footprint
+	var shape_node: Node = tower.get_node_or_null("BuildFootprint/CollisionShape2D")
+	if shape_node == null:
+		shape_node = tower.get_node_or_null("BuildFootprint/CollisionPolygon2D")
+	if shape_node == null:
+		return true
+
+	var space: PhysicsDirectSpaceState2D = get_viewport().world_2d.direct_space_state
+	var q: PhysicsShapeQueryParameters2D = PhysicsShapeQueryParameters2D.new()
+	var xf: Transform2D = (shape_node as Node2D).global_transform
+
+	if shape_node is CollisionShape2D:
+		var s: Shape2D = (shape_node as CollisionShape2D).shape
+		if s == null:
+			return true
+		q.shape = s
+		q.transform = xf
+	elif shape_node is CollisionPolygon2D:
+		var poly: PackedVector2Array = (shape_node as CollisionPolygon2D).polygon
+		if poly.is_empty():
+			return true
+		var convexes: Array[PackedVector2Array] = Geometry2D.decompose_polygon_in_convex(poly)
+		if convexes.is_empty():
+			return true
+		var convex: ConvexPolygonShape2D = ConvexPolygonShape2D.new()
+		convex.set_points(convexes[0])
+		q.shape = convex
+		q.transform = xf
+	else:
+		return true
+
+	# คิวรีเฉพาะ Area ในเลเยอร์ 8 no_build และ 9 tower_footprint
+	q.collide_with_areas = true
+	q.collide_with_bodies = false
+	q.collision_mask = (1 << 7) | (1 << 8)  # ช่องที่ 8 และ 9
+
+	# กันชน footprint ของโกสต์เอง
+	var fp_area: Area2D = tower.get_node_or_null("BuildFootprint") as Area2D
+	if fp_area != null:
+		q.exclude = [fp_area.get_rid()]
+
+	var results: Array = space.intersect_shape(q, 16)
+	var i := 0
+	while i < results.size():
+		var d: Dictionary = results[i]
+		var n: Node = d.get("collider")
+		if n != null:
+			if n.is_in_group("no_build"):
+				return false
+			if n.is_in_group("tower_footprint"):
+				return false
+		i += 1
+
+	return true

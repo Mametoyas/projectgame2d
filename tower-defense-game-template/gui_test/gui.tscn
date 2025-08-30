@@ -19,10 +19,10 @@ script = ExtResource("1_q46mf")
 [node name="BuildUI" type="Control" parent="UI"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 635.0
-offset_top = 547.0
-offset_right = 675.0
-offset_bottom = 587.0
+offset_left = 686.0
+offset_top = 503.0
+offset_right = 726.0
+offset_bottom = 543.0
 scale = Vector2(12.8599, 2.45212)
 script = ExtResource("2_n360k")
 ground_tower_scene = ExtResource("3_ytf3d")
