@@ -1,11 +1,281 @@
-[gd_scene load_steps=189 format=3 uid="uid://cas2ckenysxyv"]
+[gd_scene load_steps=216 format=3 uid="uid://cas2ckenysxyv"]
 
 [ext_resource type="Texture2D" uid="uid://cx3c3t64tbw78" path="res://tower_use/asset/Tower 05.png" id="1_2gltm"]
 [ext_resource type="Script" uid="uid://dyv0jq18xgy7p" path="res://tower_use/aoe tower/tower_bomb.gd" id="1_g6q8o"]
-[ext_resource type="PackedScene" uid="uid://hkn42tc1unre" path="res://tower_use/tower_archer/arrow_archer_tower.tscn" id="2_010os"]
 [ext_resource type="Texture2D" uid="uid://b00386setyfub" path="res://tower_use/asset/Tower 05 - Level 01 - Weapon.png" id="2_g6q8o"]
+[ext_resource type="Texture2D" uid="uid://sl4ys8ck2tx4" path="res://tower_use/asset/Tower 05 - Level 01 - Projectile - Impact.png" id="2_nbokm"]
+[ext_resource type="Texture2D" uid="uid://cv1pxckposnrp" path="res://tower_use/asset/Tower 05 - Level 01 - Projectile.png" id="3_snfk6"]
 [ext_resource type="Texture2D" uid="uid://d0ekt55r705v1" path="res://tower_use/asset/Tower 05 - Level 02 - Weapon.png" id="4_6qyof"]
 [ext_resource type="Texture2D" uid="uid://cewm6u6c1e7vk" path="res://tower_use/asset/Tower 05 - Level 03 - Weapon.png" id="5_010os"]
+
+[sub_resource type="GDScript" id="GDScript_5jxje"]
+script/source = "extends Area2D
+
+@export var speed: float = 900.0
+@export var life_time: float = 2.0
+@export var damage: int = 10
+@export var fly_anim: StringName = \"bullet\"      # ตอนพุ่ง
+@export var hit_anim: StringName = \"_explode\"    # ตอนโดน
+
+var dir: Vector2 = Vector2.RIGHT
+var exploding: bool = false
+var last_hit: Node = null
+
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var col: CollisionShape2D = $CollisionShape2D
+
+func _ready() -> void:
+	# ชั้นการวาด
+	z_index = 300
+	z_as_relative = false
+
+	# เปิดชนกับศัตรูชั้น 1 และ 2
+	monitoring = true
+	monitorable = true
+	collision_layer = 0
+	collision_mask = 0
+	set_collision_mask_value(1, true)
+	set_collision_mask_value(2, true)
+
+	# หมุนตามทิศยิง + เล่นอนิเมชันวิ่ง
+	rotation = dir.angle()
+	if sprite and sprite.sprite_frames and sprite.sprite_frames.has_animation(fly_anim):
+		sprite.play(fly_anim)
+
+	# รับทั้ง Area และ Body
+	if not area_entered.is_connected(_on_area_entered):
+		area_entered.connect(_on_area_entered)
+	if not body_entered.is_connected(_on_body_entered):
+		body_entered.connect(_on_body_entered)
+
+	# อายุสูงสุด
+	get_tree().create_timer(life_time).timeout.connect(queue_free)
+
+func _physics_process(delta: float) -> void:
+	if exploding:
+		return
+	global_position += dir * speed * delta
+
+func _on_area_entered(a: Area2D) -> void:
+	var p: Node = a.get_parent() if a.get_parent() != null else a
+	_schedule_hit(p)
+
+func _on_body_entered(b: Node) -> void:
+	_schedule_hit(b)
+
+# เลื่อนงาน “หลังเฟรม” เพื่อไม่ไปยุ่งตอนฟิสิกส์กำลัง flush
+func _schedule_hit(p: Node) -> void:
+	if exploding:
+		return
+	last_hit = p
+	call_deferred(\"_do_hit\")
+
+func _do_hit() -> void:
+	if exploding:
+		return
+	exploding = true
+
+	# หาเป้าให้ชัด : ถ้าโดน Area ของศัตรู ให้ชี้ไปที่พาเรนต์
+	var tgt: Node = last_hit
+	if tgt is Area2D and tgt.get_parent() != null:
+		tgt = tgt.get_parent()
+	if tgt != null and tgt.is_in_group(\"enemies\") and tgt.has_method(\"apply_damage\"):
+		tgt.call(\"apply_damage\", damage)
+
+	# ปิดชนแบบ deferred ให้ปลอดภัย
+	if col != null:
+		col.set_deferred(\"disabled\", true)
+	set_deferred(\"monitoring\", false)
+	set_deferred(\"monitorable\", false)
+
+	# เล่นเอฟเฟกต์ระเบิดแล้วค่อยลบ
+	if sprite and sprite.sprite_frames and sprite.sprite_frames.has_animation(hit_anim):
+		sprite.play(hit_anim)
+		await sprite.animation_finished
+	queue_free()
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rf3fj"]
+atlas = ExtResource("2_nbokm")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fg4oe"]
+atlas = ExtResource("2_nbokm")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m8ieh"]
+atlas = ExtResource("2_nbokm")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nxp3n"]
+atlas = ExtResource("2_nbokm")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qrl8w"]
+atlas = ExtResource("2_nbokm")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jweip"]
+atlas = ExtResource("2_nbokm")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3by5f"]
+atlas = ExtResource("2_nbokm")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gqool"]
+atlas = ExtResource("2_nbokm")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d754r"]
+atlas = ExtResource("2_nbokm")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jcou0"]
+atlas = ExtResource("2_nbokm")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5jxje"]
+atlas = ExtResource("3_snfk6")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sol8p"]
+atlas = ExtResource("3_snfk6")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4i18j"]
+atlas = ExtResource("3_snfk6")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7f3vt"]
+atlas = ExtResource("3_snfk6")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4rrdt"]
+atlas = ExtResource("3_snfk6")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lkdo1"]
+atlas = ExtResource("3_snfk6")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gh6sv"]
+atlas = ExtResource("3_snfk6")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xpwxx"]
+atlas = ExtResource("3_snfk6")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fxse3"]
+atlas = ExtResource("3_snfk6")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5rpku"]
+atlas = ExtResource("3_snfk6")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_36p82"]
+atlas = ExtResource("3_snfk6")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g7dbi"]
+atlas = ExtResource("3_snfk6")
+region = Rect2(352, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rf3fj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rf3fj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fg4oe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m8ieh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nxp3n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qrl8w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jweip")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3by5f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gqool")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d754r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jcou0")
+}],
+"loop": false,
+"name": &"_explode",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5jxje")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sol8p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4i18j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7f3vt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4rrdt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lkdo1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gh6sv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xpwxx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fxse3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5rpku")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_36p82")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g7dbi")
+}],
+"loop": true,
+"name": &"bullet",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fg4oe"]
+
+[sub_resource type="PackedScene" id="PackedScene_h0vlb"]
+_bundled = {
+"conn_count": 2,
+"conns": PackedInt32Array(0, 0, 13, 12, 2, 0, 0, 0, 0, 15, 14, 2, 0, 0),
+"editable_instances": [],
+"names": PackedStringArray("bomb_bullet", "disable_mode", "collision_layer", "script", "Area2D", "AnimatedSprite2D", "sprite_frames", "animation", "autoplay", "CollisionShape2D", "scale", "shape", "_on_area_entered", "area_entered", "_on_body_entered", "body_entered"),
+"node_count": 3,
+"node_paths": [],
+"nodes": PackedInt32Array(-1, -1, 4, 0, -1, 3, 1, 0, 2, 1, 3, 2, 0, 0, 0, 5, 5, -1, 3, 6, 3, 7, 4, 8, 5, 0, 0, 0, 9, 9, -1, 2, 10, 6, 11, 7, 0),
+"variants": [2, 2056, SubResource("GDScript_5jxje"), SubResource("SpriteFrames_rf3fj"), &"bullet", "bullet", Vector2(3, 3), SubResource("CircleShape2D_fg4oe")],
+"version": 3
+}
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fmr2x"]
 atlas = ExtResource("1_2gltm")
@@ -1287,11 +1557,12 @@ animations = [{
 [sub_resource type="GDScript" id="GDScript_0leon"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0k8ev"]
-size = Vector2(76.4167, 123.83)
+size = Vector2(76.4167, 124.977)
 
 [node name="tower_bomb" type="Node2D"]
 script = ExtResource("1_g6q8o")
-bullet_scene = ExtResource("2_010os")
+can_target_flying = true
+bullet_scene = SubResource("PackedScene_h0vlb")
 
 [node name="SpriteBase" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_6qyof")
@@ -1304,6 +1575,7 @@ animation = &"lv3_idle"
 frame_progress = 0.726275
 
 [node name="Range" type="Area2D" parent="."]
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Range"]
 shape = SubResource("CircleShape2D_diju4")
@@ -1321,11 +1593,11 @@ collision_mask = 0
 script = SubResource("GDScript_0leon")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SelectArea"]
-position = Vector2(-1, 9)
+position = Vector2(-1, 8.49996)
 scale = Vector2(0.837513, 0.872162)
 shape = SubResource("RectangleShape2D_0k8ev")
 
 [node name="ShootTimer" type="Timer" parent="."]
 
 [node name="MuzzleLv1" type="Marker2D" parent="."]
-position = Vector2(0, -35)
+position = Vector2(1, -58)
