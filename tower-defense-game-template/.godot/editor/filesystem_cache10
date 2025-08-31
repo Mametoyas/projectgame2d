@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1756548651
+::res://::1756655650
 icon.svg::CompressedTexture2D/CompressedTexture2D::4214891337292926333::1756392809::1756392864::1::::<><><>0<>0<>d63825e53e35f5cd086811b2ae0930ed<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile/TextFile::-1::1756392809::0::1::::<><><>0<>0<><>::
 ::res://BackGround_Music/::1756493628
@@ -8,16 +8,16 @@ Boss_appere.wav::AudioStreamWAV/AudioStreamWAV::856346492666259041::1756486162::
 start_defendes.wav::AudioStreamWAV/AudioStreamWAV::737591483821019880::1756486162::1756493627::1::::<><><>0<>0<>785123d6ced5088708293530969cb218<>res://.godot/imported/start_defendes.wav-506770ea7aa5466435ec676bec4b8bc8.sample::
 Wainting_home.wav::AudioStreamWAV/AudioStreamWAV::501436550381579153::1756486162::1756493626::1::::<><><>0<>0<>fa36c0d26d73db7920a0415025baf63a<>res://.godot/imported/Wainting_home.wav-795131be08e44ba68cf51085172a8ed1.sample::
 Winning_all_wave.wav::AudioStreamWAV/AudioStreamWAV::8678080293719925275::1756486162::1756493628::1::::<><><>0<>0<>ba00f7d41251d78c49837093733ebfe9<>res://.godot/imported/Winning_all_wave.wav-c4a2ca6a3e8ec08ef904320cc22cb501.sample::
-::res://gui_test/::1756548586
+::res://gui_test/::1756650658
 build_ui.gd::GDScript/GDScript::4055545837636939430::1756498561::0::1::::<>Control<><>0<>0<><>::
-gui.tscn::PackedScene::3739221455282557784::1756548586::0::1::::<><><>0<>0<><>::uid://b36l1vryt31k5::::res://gui_test/placement_manager.gd<>uid://bx1sioays26qs::::res://gui_test/build_ui.gd<>uid://ca6bce7weuioh::::res://walking_enemy/tower test/tower.tscn<>uid://ckbbe0lkkwj3b::::res://tower_use/tower_archer/tower_archer.tscn<>uid://cx2pcq142l7vs::::res://tower_use/asset/Tower.png
-placement_manager.gd::GDScript::4416419463864818858::1756542603::0::1::::PlacementManager<>Node<><>0<>0<><>::
+gui.tscn::PackedScene/PackedScene::3739221455282557784::1756563163::0::1::::<><><>0<>0<><>::uid://b36l1vryt31k5::::res://gui_test/placement_manager.gd<>uid://bx1sioays26qs::::res://gui_test/build_ui.gd<>uid://ca6bce7weuioh::::res://walking_enemy/tower test/tower.tscn<>uid://ckbbe0lkkwj3b::::res://tower_use/tower_archer/tower_archer.tscn<>uid://cx2pcq142l7vs::::res://tower_use/asset/Tower.png
+placement_manager.gd::GDScript/GDScript::4416419463864818858::1756650658::0::1::::PlacementManager<>Node<><>0<>0<><>::
 ::res://GUI_Use/::1756498561
-::res://GUI_Use/files/::1756548623
-build_ui.gd::GDScript::3639166372384374000::1756545675::0::1::::BuildUI<>HBoxContainer<><>0<>0<><>::
-floating_tower_menu.gd::GDScript::8260122879894280257::1756548585::0::1::::FloatingTowerMenu<>Panel<><>0<>0<><>::
-hud.gd::GDScript::3394967124480927864::1756541437::0::1::::HUD<>CanvasLayer<><>0<>0<><>::
-hud.tscn::PackedScene::8904174334377585838::1756548623::0::1::::<><><>0<>0<><>::uid://bomsu3c37kbe3::::res://GUI_Use/files/hud.gd<>uid://br33skp2ihilc::::res://GUI_Use/files/build_ui.gd<>uid://ckbbe0lkkwj3b::::res://tower_use/tower_archer/tower_archer.tscn<>uid://dpxjatww25y86::::res://GUI_Use/files/floating_tower_menu.gd<>uid://b36l1vryt31k5::::res://gui_test/placement_manager.gd
+::res://GUI_Use/files/::1756654397
+build_ui.gd::GDScript/GDScript::3639166372384374000::1756650658::0::1::::BuildUI<>HBoxContainer<><>0<>0<><>::
+floating_tower_menu.gd::GDScript/GDScript::8260122879894280257::1756563163::0::1::::FloatingTowerMenu<>Panel<><>0<>0<><>::
+hud.gd::GDScript/GDScript::3394967124480927864::1756563163::0::1::::HUD<>CanvasLayer<><>0<>0<><>::
+hud.tscn::PackedScene/PackedScene::8904174334377585838::1756654397::0::1::::<><><>0<>0<><>::uid://bomsu3c37kbe3::::res://GUI_Use/files/hud.gd<>uid://br33skp2ihilc::::res://GUI_Use/files/build_ui.gd<>uid://ckbbe0lkkwj3b::::res://tower_use/tower_archer/tower_archer.tscn<>uid://dpxjatww25y86::::res://GUI_Use/files/floating_tower_menu.gd<>uid://b36l1vryt31k5::::res://gui_test/placement_manager.gd
 ::res://Map/::1756400675
 ::res://Map/FORTEST/::1756400675
 ememy_def.tscn::PackedScene/PackedScene::734899578738850661::1756400675::0::1::::<><><>0<>0<><>::uid://d2tu1pqsf6w5c::::res://FORTEST/EnemyDef.gd
@@ -306,14 +306,15 @@ Warrior_Idle.png::CompressedTexture2D/CompressedTexture2D::4999834536533526134::
 Warrior_Run.png::CompressedTexture2D/CompressedTexture2D::8628714081024316574::1756400675::1756493623::1::::<><><>0<>0<>d45d4ab1678ba41cd621a1979792bafe<>res://.godot/imported/Warrior_Run.png-ddbefd495ccbb757aa110f66bfcb696c.ctex::
 ::res://Map/USE/::1756400675
 MAP_FOREST.tscn::PackedScene/PackedScene::754873610076493055::1756400675::0::1::::<><><>0<>0<><>::
-::res://Map/USE/BASE/::1756400675
-base1.tscn::PackedScene/PackedScene::7429210886441161292::1756400675::0::1::::<><><>0<>0<><>::uid://14dqy3f3mnnh::::res://USE/BASE/base_1.gd<>uid://bah8jx1h26pcq::::res://Tiny Swords (Free Pack)/Buildings/Blue Buildings/Castle.png
+::res://Map/USE/BASE/::1756653100
+base1.tscn::PackedScene/PackedScene::7429210886441161292::1756653100::0::1::::<><><>0<>0<><>::uid://14dqy3f3mnnh::::res://Map/USE/BASE/base_1.gd<>uid://bah8jx1h26pcq::::res://Map/Tiny Swords (Free Pack)/Buildings/Blue Buildings/Castle.png
 base_1.gd::GDScript/GDScript::1884988917217361973::1756400675::0::1::::<>Node2D<><>0<>0<><>::
-::res://Map/USE/MAP1/::1756548585
+::res://Map/USE/MAP1/::1756654396
 camera_2d_map_1.gd::GDScript/GDScript::8828045447040733403::1756400675::0::1::::<>Camera2D<><>0<>0<><>::
 enemy_spawn.gd::GDScript/GDScript::6745814558040535382::1756400675::0::1::::EnemyWaveSpawne1<>Node<><>0<>0<><>::
-Forest1.tscn::PackedScene::4420460673155935459::1756548585::0::1::::<><><>0<>0<><>::uid://k0wwmy1a2m60::::res://Map/USE/MAP_FOREST.tscn<>uid://b64pfxfvso2po::::res://Map/Tiny Swords (Free Pack)/Terrain/Tilemap_color1.png<>uid://bqrsoasilkmjj::::res://Map/Tiny Swords (Free Pack)/Terrain/Water Background color.png<>uid://gypnvehbyx4v::::res://Map/Tiny Swords (Free Pack)/Terrain/Tilemap_color3.png<>uid://buv35ggar0l2y::::res://Map/Tiny Swords (Free Pack)/Buildings/Blue Buildings/House3.png<>uid://d07kkcxqrxte5::::res://Map/Tiny Swords (Free Pack)/Terrain/Tilemap_color2.png<>uid://bhfdwvxqgkqhp::::res://Map/Tiny Swords (Free Pack)/Buildings/Blue Buildings/House2.png<>uid://dd4br6c60vd2v::::res://Map/USE/MAP1/map_forest_1.gd<>uid://cgo2ixkghnb7v::::res://Map/Tiny Swords (Free Pack)/Buildings/Blue Buildings/House1.png<>uid://b6cgpvrcf8kog::::res://Map/Tiny Swords (Free Pack)/Decorations/Rocks/Rock4.png<>uid://bah8jx1h26pcq::::res://Map/Tiny Swords (Free Pack)/Buildings/Blue Buildings/Castle.png<>uid://bh5h0q4q7e1jx::::res://Map/Tiny Swords (Free Pack)/Decorations/Rocks/Rock3.png<>uid://dirg2s71r50we::::res://Map/Tiny Swords (Free Pack)/Decorations/Rocks/Rock2.png<>uid://cxfmyp02hlu42::::res://Map/Tiny Swords (Free Pack)/Decorations/Bushes/Bushe1.png<>uid://dx1mvbieyio4j::::res://Map/USE/MAP1/camera_2d_map_1.gd<>uid://72srihgxvp3b::::res://Map/Tiny Swords (Free Pack)/Decorations/Trees/Tree1.png<>uid://chrajmyp5ksd7::::res://Map/Tiny Swords (Free Pack)/Decorations/Trees/Tree3.png<>uid://dd31auwxsj6w3::::res://Map/USE/BASE/base1.tscn<>uid://deqnpredirtt1::::res://Map/Tiny Swords (Free Pack)/Decorations/Trees/Tree4.png<>uid://kbd8nu0r2ngb::::res://Map/USE/Sheep_move/sheep.tscn<>uid://6xeoiknqklcy::::res://walking_enemy/maptest/spawnerF1.gd<>uid://ccd6w1tvp5vky::::res://walking_enemy/enemy scritp/EnemyFactoryF1.gd
+Forest1.tscn::PackedScene/PackedScene::4420460673155935459::1756654396::0::1::::<><><>0<>0<><>::uid://k0wwmy1a2m60::::res://Map/USE/MAP_FOREST.tscn<>uid://b64pfxfvso2po::::res://Map/Tiny Swords (Free Pack)/Terrain/Tilemap_color1.png<>uid://bqrsoasilkmjj::::res://Map/Tiny Swords (Free Pack)/Terrain/Water Background color.png<>uid://gypnvehbyx4v::::res://Map/Tiny Swords (Free Pack)/Terrain/Tilemap_color3.png<>uid://buv35ggar0l2y::::res://Map/Tiny Swords (Free Pack)/Buildings/Blue Buildings/House3.png<>uid://d07kkcxqrxte5::::res://Map/Tiny Swords (Free Pack)/Terrain/Tilemap_color2.png<>uid://bhfdwvxqgkqhp::::res://Map/Tiny Swords (Free Pack)/Buildings/Blue Buildings/House2.png<>uid://dd4br6c60vd2v::::res://Map/USE/MAP1/map_forest_1.gd<>uid://cgo2ixkghnb7v::::res://Map/Tiny Swords (Free Pack)/Buildings/Blue Buildings/House1.png<>uid://b6cgpvrcf8kog::::res://Map/Tiny Swords (Free Pack)/Decorations/Rocks/Rock4.png<>uid://bah8jx1h26pcq::::res://Map/Tiny Swords (Free Pack)/Buildings/Blue Buildings/Castle.png<>uid://bh5h0q4q7e1jx::::res://Map/Tiny Swords (Free Pack)/Decorations/Rocks/Rock3.png<>uid://dirg2s71r50we::::res://Map/Tiny Swords (Free Pack)/Decorations/Rocks/Rock2.png<>uid://cxfmyp02hlu42::::res://Map/Tiny Swords (Free Pack)/Decorations/Bushes/Bushe1.png<>uid://dx1mvbieyio4j::::res://Map/USE/MAP1/camera_2d_map_1.gd<>uid://72srihgxvp3b::::res://Map/Tiny Swords (Free Pack)/Decorations/Trees/Tree1.png<>uid://chrajmyp5ksd7::::res://Map/Tiny Swords (Free Pack)/Decorations/Trees/Tree3.png<>uid://dd31auwxsj6w3::::res://Map/USE/BASE/base1.tscn<>uid://deqnpredirtt1::::res://Map/Tiny Swords (Free Pack)/Decorations/Trees/Tree4.png<>uid://kbd8nu0r2ngb::::res://Map/USE/Sheep_move/sheep.tscn<>uid://6xeoiknqklcy::::res://walking_enemy/maptest/spawnerF1.gd<>uid://dy4ipkvnbrgty::::res://GUI_Use/files/hud.tscn<>uid://ccd6w1tvp5vky::::res://walking_enemy/enemy scritp/EnemyFactoryF1.gd
 map_forest_1.gd::GDScript/GDScript::7429788245106483151::1756400675::0::1::::TDMap2<>Node2D<><>0<>0<><>::
+placement_manager.gd::GDScript/GDScript::6963595750512607886::1756563163::0::1::::<>Node<><>0<>0<><>::
 ::res://Map/USE/MAP2/::1756400675
 enemy_spawn_map_2.gd::GDScript/GDScript::4814978050059303078::1756400675::0::1::::EnemySpawnerForest2<>Node<><>0<>0<><>::
 Forest2.tscn::PackedScene/PackedScene::873166534548780534::1756400675::0::1::::<><><>0<>0<><>::uid://k0wwmy1a2m60::::res://USE/MAP_FOREST.tscn<>uid://b64pfxfvso2po::::res://Tiny Swords (Free Pack)/Terrain/Tilemap_color1.png<>uid://bqrsoasilkmjj::::res://Tiny Swords (Free Pack)/Terrain/Water Background color.png<>uid://gypnvehbyx4v::::res://Tiny Swords (Free Pack)/Terrain/Tilemap_color3.png<>uid://bweow6qntp83k::::res://Tiny Swords (Free Pack)/Decorations/Bushes/Bushe2.png<>uid://qhpomfl2ipla::::res://Tiny Swords (Free Pack)/Decorations/Bushes/Bushe3.png<>uid://d07kkcxqrxte5::::res://Tiny Swords (Free Pack)/Terrain/Tilemap_color2.png<>uid://chrajmyp5ksd7::::res://Tiny Swords (Free Pack)/Decorations/Trees/Tree3.png<>uid://baq1o7lx06kds::::res://Tiny Swords (Free Pack)/Decorations/Bushes/Bushe4.png<>uid://dd31auwxsj6w3::::res://USE/BASE/base1.tscn<>uid://caun8qwy261tq::::res://USE/MAP2/enemy_spawn_map_2.gd<>uid://deqnpredirtt1::::res://Tiny Swords (Free Pack)/Decorations/Trees/Tree4.png<>uid://bah8jx1h26pcq::::res://Tiny Swords (Free Pack)/Buildings/Blue Buildings/Castle.png<>uid://dx1mvbieyio4j::::res://USE/MAP1/camera_2d_map_1.gd<>uid://dirg2s71r50we::::res://Tiny Swords (Free Pack)/Decorations/Rocks/Rock2.png<>uid://cgo2ixkghnb7v::::res://Tiny Swords (Free Pack)/Buildings/Blue Buildings/House1.png<>uid://bvagu253obsi4::::res://FORTEST/enemy__test.gd<>uid://cbjcx80aanrba::::res://Tiny Swords (Enemy Pack)/Enemy Pack/Thief/Thief_Run.png<>uid://bhfdwvxqgkqhp::::res://Tiny Swords (Free Pack)/Buildings/Blue Buildings/House2.png<>uid://cxfmyp02hlu42::::res://Tiny Swords (Free Pack)/Decorations/Bushes/Bushe1.png<>uid://b6cgpvrcf8kog::::res://Tiny Swords (Free Pack)/Decorations/Rocks/Rock4.png<>uid://bh5h0q4q7e1jx::::res://Tiny Swords (Free Pack)/Decorations/Rocks/Rock3.png<>uid://buv35ggar0l2y::::res://Tiny Swords (Free Pack)/Buildings/Blue Buildings/House3.png<>uid://kbd8nu0r2ngb::::res://USE/Sheep_move/sheep.tscn
@@ -331,18 +332,31 @@ animated_sprite_2d.gd::GDScript/GDScript::5387797468432542310::1756400675::0::1:
 animated_sprite_2d_2.gd::GDScript/GDScript::4734926853815511175::1756400675::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
 sheep.gd::GDScript/GDScript::210985803928949209::1756400675::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
 sheep.tscn::PackedScene/PackedScene::704194611170864521::1756400675::0::1::::<><><>0<>0<><>::uid://db5ijblleuube::::res://Tiny Swords (Free Pack)/Decorations/Sheep/Sheep_Idle.png<>uid://clfrxm31o7dx8::::res://Tiny Swords (Free Pack)/Decorations/Sheep/Sheep_Grass.png<>uid://dag51uqigsgv::::res://USE/Sheep_move/sheep.gd<>uid://b8pvs232ey8e2::::res://USE/Sheep_move/animated_sprite_2d_2.gd<>uid://ci05iceqcui1s::::res://USE/Sheep_move/animated_sprite_2d.gd
-::res://tower_use/::1756493569
-::res://tower_use/asset/::1756493623
+::res://tower_use/::1756652239
+::res://tower_use/aoe tower/::1756655650
+bomb_bullet.gd::GDScript/GDScript::3161505023137116731::1756653057::0::1::::<>Area2D<><>0<>0<><>::
+bomb_bullet.tscn::PackedScene/PackedScene::4299210865219625376::1756654397::0::1::::<><><>0<>0<><>::uid://blbpr44g057fr::::res://tower_use/aoe tower/bomb_bullet.gd<>uid://cv1pxckposnrp::::res://tower_use/asset/Tower 05 - Level 01 - Projectile.png
+explosion_aoe.gd::GDScript/GDScript::8167118442765332513::1756653057::0::1::::<>Area2D<><>0<>0<><>::
+explosion_aoe.tscn::PackedScene/PackedScene::3618224950674457912::1756654397::0::1::::<><><>0<>0<><>::uid://sl4ys8ck2tx4::::res://tower_use/asset/Tower 05 - Level 01 - Projectile - Impact.png<>uid://domhioet1c8an::::res://tower_use/aoe tower/explosion_aoe.gd
+tower_bomb.gd::GDScript/GDScript::8888681110260527855::1756654380::0::1::::<>Node2D<><>0<>0<><>::
+tower_bomb.tscn::PackedScene/PackedScene::4811643629387968977::1756654397::0::1::::<><><>0<>0<><>::uid://cx3c3t64tbw78::::res://tower_use/asset/Tower 05.png<>uid://dyv0jq18xgy7p::::res://tower_use/aoe tower/tower_bomb.gd<>uid://b00386setyfub::::res://tower_use/asset/Tower 05 - Level 01 - Weapon.png
+::res://tower_use/asset/::1756655650
 Archer_Shoot.png::CompressedTexture2D/CompressedTexture2D::8680393777301777076::1756491985::1756493623::1::::<><><>0<>0<>b04e345ba49922947c5229aac722308e<>res://.godot/imported/Archer_Shoot.png-bd55438f489d13e4a0d2199ecf4bfafe.ctex::
 Arrow.png::CompressedTexture2D/CompressedTexture2D::4380178932949221278::1756493570::1756493623::1::::<><><>0<>0<>b4357cfab04b4af46145b7919588a742<>res://.godot/imported/Arrow.png-d616d9dec5bb2058aaa041a77eef4353.ctex::
 level2.png::CompressedTexture2D/CompressedTexture2D::882033292711882616::1756491985::1756493623::1::::<><><>0<>0<>be9b94f284d92fdf2d673b1bf9f0c574<>res://.godot/imported/level2.png-1e0458ff40964f2f78d93993a348e826.ctex::
 level3.png::CompressedTexture2D/CompressedTexture2D::5230465557138750066::1756491985::1756493623::1::::<><><>0<>0<>750dd3ae492e0586a37c9f9132a5d917<>res://.godot/imported/level3.png-b51c0dba91a8e97e05d94e54005cdf7a.ctex::
+Tower 05 - Level 01 - Projectile - Impact.png::CompressedTexture2D/CompressedTexture2D::1287911989127351919::1756652850::1756652850::1::::<><><>0<>0<>4606ab352bcc60d76c5e5e154ae533d5<>res://.godot/imported/Tower 05 - Level 01 - Projectile - Impact.png-d1c9dca4cb0da7a023961fd7de2b8b2c.ctex::
+Tower 05 - Level 01 - Projectile.png::CompressedTexture2D/CompressedTexture2D::6301432854737453525::1756652422::1756652423::1::::<><><>0<>0<>49a7c860908df1f6693acda56be2aa56<>res://.godot/imported/Tower 05 - Level 01 - Projectile.png-dedba2ad457780204a067edb3bb6c678.ctex::
+Tower 05 - Level 01 - Weapon.png::CompressedTexture2D/CompressedTexture2D::4194511881730143405::1756653635::1756653635::1::::<><><>0<>0<>12902b425c6f489c4749f9648b72a34e<>res://.godot/imported/Tower 05 - Level 01 - Weapon.png-9084392a4eebeb7ce1206e33c22a5062.ctex::
+Tower 05 - Level 02 - Weapon.png::CompressedTexture2D::8922883375919029316::1756655607::1756655651::1::::<><><>0<>0<>1ec23daaf699808f998b0dc1ce8d4902<>res://.godot/imported/Tower 05 - Level 02 - Weapon.png-ff6c1f8ee372529efb2b5306d564b417.ctex::
+Tower 05 - Level 03 - Weapon.png::CompressedTexture2D/CompressedTexture2D::5099798114533646356::1756655610::1756655611::1::::<><><>0<>0<>fb889a5c72c1f8ae0dab4ec06fc8c2bf<>res://.godot/imported/Tower 05 - Level 03 - Weapon.png-1597db21a7895a5b3b06854587bbe152.ctex::
+Tower 05.png::CompressedTexture2D/CompressedTexture2D::6445159831565163857::1756652260::1756652407::1::::<><><>0<>0<>c2080c90cf68e150a489392258e361a6<>res://.godot/imported/Tower 05.png-647c125f64a8e8bb0356b0c43a7cc6be.ctex::
 Tower.png::CompressedTexture2D/CompressedTexture2D::6443838178792563204::1756491985::1756493623::1::::<><><>0<>0<>de1bdc04db65e444894dfee18209ceef<>res://.godot/imported/Tower.png-b654f4a3ab2e1c90fe27e331a7ec13e7.ctex::
-::res://tower_use/tower_archer/::1756548586
+::res://tower_use/tower_archer/::1756654396
 arrow_archer_tower.gd::GDScript/GDScript::8773593482975880861::1756498561::0::1::::<>Area2D<><>0<>0<><>::
-arrow_archer_tower.tscn::PackedScene::512808239544185530::1756548586::0::1::::<><><>0<>0<><>::uid://b3n153tvadkdy::::res://tower_use/asset/Arrow.png<>uid://dw882kckbjk4d::::res://tower_use/tower_archer/arrow_archer_tower.gd
-tower_archer.gd::GDScript::1145901264794225880::1756548205::0::1::::<>Node2D<><>0<>0<><>::
-tower_archer.tscn::PackedScene::5476863372234167597::1756548585::0::1::::<><><>0<>0<><>::uid://qlc3dllkdi4g::::res://tower_use/tower_archer/tower_archer.gd<>uid://baodamjy1ue7b::::res://walking_enemy/tower test/bullet.tscn<>uid://cx2pcq142l7vs::::res://tower_use/asset/Tower.png<>uid://dvw32112cdrke::::res://tower_use/asset/Archer_Shoot.png<>uid://mti7ve1wy5xs::::res://tower_use/asset/level2.png<>uid://cgrxaedl8afmw::::res://tower_use/asset/level3.png
+arrow_archer_tower.tscn::PackedScene/PackedScene::512808239544185530::1756654396::0::1::::<><><>0<>0<><>::uid://b3n153tvadkdy::::res://tower_use/asset/Arrow.png<>uid://dw882kckbjk4d::::res://tower_use/tower_archer/arrow_archer_tower.gd
+tower_archer.gd::GDScript/GDScript::1145901264794225880::1756563163::0::1::::<>Node2D<><>0<>0<><>::
+tower_archer.tscn::PackedScene/PackedScene::5476863372234167597::1756654396::0::1::::<><><>0<>0<><>::uid://qlc3dllkdi4g::::res://tower_use/tower_archer/tower_archer.gd<>uid://hkn42tc1unre::::res://tower_use/tower_archer/arrow_archer_tower.tscn<>uid://cx2pcq142l7vs::::res://tower_use/asset/Tower.png<>uid://dvw32112cdrke::::res://tower_use/asset/Archer_Shoot.png<>uid://mti7ve1wy5xs::::res://tower_use/asset/level2.png<>uid://cgrxaedl8afmw::::res://tower_use/asset/level3.png
 ::res://walking_enemy/::1756392864
 ::res://walking_enemy/enemy asset/::1756392864
 Lancer_Run.png::CompressedTexture2D/CompressedTexture2D::6803150488194759973::1756392864::1756392864::1::::<><><>0<>0<>230a2ad36cc98648ac74f0d1981d54d7<>res://.godot/imported/Lancer_Run.png-0d6b50a2f80a41c6b523e2e860667561.ctex::
@@ -351,21 +365,21 @@ Skull_Run.png::CompressedTexture2D/CompressedTexture2D::6265143815715823114::175
 Spider_Run.png::CompressedTexture2D/CompressedTexture2D::8544730349449585730::1756392864::1756392864::1::::<><><>0<>0<>dc3482b1666abe924455c213bb0575fa<>res://.godot/imported/Spider_Run.png-23c45ffe6d17fde26293e6ebf874e565.ctex::
 Troll_Walk.png::CompressedTexture2D/CompressedTexture2D::3872497269671372200::1756392864::1756392864::1::::<><><>0<>0<>b69ec054fe01e4b9d7ec6a7fa050381e<>res://.godot/imported/Troll_Walk.png-685552796dbe3d1011888f855bec26d1.ctex::
 Turtle_Walk.png::CompressedTexture2D/CompressedTexture2D::1005558056912825858::1756392864::1756392864::1::::<><><>0<>0<>a4a70e13428f9a6026edf3108f675852<>res://.godot/imported/Turtle_Walk.png-1b4430ac60555cdfddf6c6b2fb485f7f.ctex::
-::res://walking_enemy/enemy scritp/::1756548585
+::res://walking_enemy/enemy scritp/::1756653099
 enemy.gd::GDScript/GDScript::5163060424457339164::1756392864::0::1::::Enemy<>Node2D<><>0<>0<><>::
-enemy.tscn::PackedScene::1904092837800202922::1756548585::0::1::::<><><>0<>0<><>::uid://cfta36uercsum::::res://walking_enemy/enemy scritp/enemy.gd<>uid://cvi5ad2snmpew::::res://walking_enemy/enemy asset/Skull_Run.png<>uid://cx2y7turtgw2c::::res://walking_enemy/enemy asset/Shaman_Run.png<>uid://bvf4p1w8nye8g::::res://walking_enemy/enemy asset/Troll_Walk.png<>uid://dt0epwjyg3s8y::::res://walking_enemy/enemy asset/Spider_Run.png<>uid://c36q5oe4655qn::::res://walking_enemy/enemy asset/Lancer_Run.png<>uid://oldnn16hip27::::res://walking_enemy/enemy asset/Turtle_Walk.png
+enemy.tscn::PackedScene/PackedScene::1904092837800202922::1756653099::0::1::::<><><>0<>0<><>::uid://cfta36uercsum::::res://walking_enemy/enemy scritp/enemy.gd<>uid://cvi5ad2snmpew::::res://walking_enemy/enemy asset/Skull_Run.png<>uid://cx2y7turtgw2c::::res://walking_enemy/enemy asset/Shaman_Run.png<>uid://bvf4p1w8nye8g::::res://walking_enemy/enemy asset/Troll_Walk.png<>uid://dt0epwjyg3s8y::::res://walking_enemy/enemy asset/Spider_Run.png<>uid://c36q5oe4655qn::::res://walking_enemy/enemy asset/Lancer_Run.png<>uid://oldnn16hip27::::res://walking_enemy/enemy asset/Turtle_Walk.png
 EnemyDB.gd::GDScript/GDScript::2030382326581226268::1756392864::0::1::::<>RefCounted<><>0<>0<><>::
 EnemyFactory.gd::GDScript/GDScript::3032550736250915427::1756400675::0::1::::EnemyFactory<>Node<><>0<>0<><>::
 EnemyFactoryF1.gd::GDScript/GDScript::4921335098099894656::1756400675::0::1::::<>Node<><>0<>0<><>::
-::res://walking_enemy/maptest/::1756548585
+::res://walking_enemy/maptest/::1756654397
 spawner.gd::GDScript/GDScript::706255986772346299::1756392864::0::1::::<>Node<><>0<>0<><>::
 spawnerF1.gd::GDScript/GDScript::2223603146455406200::1756400675::0::1::::<>Node<><>0<>0<><>::
-test_path.tscn::PackedScene::8676947585795532941::1756548585::0::1::::<><><>0<>0<><>::uid://bjg8wxx761w5p::::res://walking_enemy/enemy scritp/EnemyFactory.gd<>uid://kcd6ypmmu5e2::::res://walking_enemy/maptest/spawner.gd<>uid://hkn42tc1unre::::res://tower_use/tower_archer/arrow_archer_tower.tscn<>uid://ckbbe0lkkwj3b::::res://tower_use/tower_archer/tower_archer.tscn
-::res://walking_enemy/tower test/::1756539518
+test_path.tscn::PackedScene/PackedScene::8676947585795532941::1756654397::0::1::::<><><>0<>0<><>::uid://bjg8wxx761w5p::::res://walking_enemy/enemy scritp/EnemyFactory.gd<>uid://kcd6ypmmu5e2::::res://walking_enemy/maptest/spawner.gd<>uid://ckbbe0lkkwj3b::::res://tower_use/tower_archer/tower_archer.tscn
+::res://walking_enemy/tower test/::1756654397
 arrow_test.png::CompressedTexture2D/CompressedTexture2D::3123463680510124552::1756392864::1756392864::1::::<><><>0<>0<>2f3ec1e09ebbc6c89132e2b9d3fe4d76<>res://.godot/imported/arrow_test.png-2269d9cb2005dea1f90b81b5a997e97d.ctex::
 bullet.gd::GDScript/GDScript::8877197147229630563::1756400675::0::1::::<>Area2D<><>0<>0<><>::
-bullet.tscn::PackedScene::2415504768537665489::1756539518::0::1::::<><><>0<>0<><>::uid://dyqge05exakj0::::res://walking_enemy/tower test/bullet.gd<>uid://bkra8w8unmr0c::::res://walking_enemy/tower test/arrow_test.png
+bullet.tscn::PackedScene/PackedScene::2415504768537665489::1756654397::0::1::::<><><>0<>0<><>::uid://dyqge05exakj0::::res://walking_enemy/tower test/bullet.gd<>uid://bkra8w8unmr0c::::res://walking_enemy/tower test/arrow_test.png
 create tower.txt::TextFile/TextFile::-1::1756392864::0::1::::<><><>0<>0<><>::
 tower test.png::CompressedTexture2D/CompressedTexture2D::7383401985013261969::1756392864::1756392864::1::::<><><>0<>0<>dd98e30e991c20265f1636c3dac84482<>res://.godot/imported/tower test.png-b6d84790f4678280d63c8ad9e22f33a7.ctex::
 tower.gd::GDScript/GDScript::3086728377891870733::1756400675::0::1::::<>Node2D<><>0<>0<><>::
-tower.tscn::PackedScene::4836901626875493795::1756539518::0::1::::<><><>0<>0<><>::uid://bj8h73amollx2::::res://walking_enemy/tower test/tower.gd<>uid://baodamjy1ue7b::::res://walking_enemy/tower test/bullet.tscn<>uid://ddgts1cohmpf2::::res://walking_enemy/tower test/tower test.png
+tower.tscn::PackedScene/PackedScene::4836901626875493795::1756539518::0::1::::<><><>0<>0<><>::uid://bj8h73amollx2::::res://walking_enemy/tower test/tower.gd<>uid://baodamjy1ue7b::::res://walking_enemy/tower test/bullet.tscn<>uid://ddgts1cohmpf2::::res://walking_enemy/tower test/tower test.png

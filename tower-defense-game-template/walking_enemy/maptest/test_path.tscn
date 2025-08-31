@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dvvgcahy0kc4l"]
+[gd_scene load_steps=5 format=3 uid="uid://dvvgcahy0kc4l"]
 
 [ext_resource type="Script" uid="uid://bjg8wxx761w5p" path="res://walking_enemy/enemy scritp/EnemyFactory.gd" id="1_a51kg"]
 [ext_resource type="Script" uid="uid://kcd6ypmmu5e2" path="res://walking_enemy/maptest/spawner.gd" id="2_6kfwk"]
-[ext_resource type="PackedScene" uid="uid://hkn42tc1unre" path="res://tower_use/tower_archer/arrow_archer_tower.tscn" id="4_2pjka"]
-[ext_resource type="PackedScene" uid="uid://ckbbe0lkkwj3b" path="res://tower_use/tower_archer/tower_archer.tscn" id="4_basrl"]
+[ext_resource type="PackedScene" uid="uid://cas2ckenysxyv" path="res://tower_use/aoe tower/tower_bomb.tscn" id="3_basrl"]
 
 [sub_resource type="Curve2D" id="Curve2D_imca6"]
 _data = {
@@ -39,8 +38,7 @@ offset_bottom = 509.0
 scale = Vector2(3, 2)
 text = "start"
 
-[node name="tower_archer" parent="." instance=ExtResource("4_basrl")]
-position = Vector2(561, 168)
-bullet_scene = ExtResource("4_2pjka")
+[node name="tower_bomb" parent="." instance=ExtResource("3_basrl")]
+position = Vector2(544, 170)
 
 [connection signal="timeout" from="Spawner/WaveTimer" to="Spawner" method="_on_wave_timer_timeout"]
