@@ -18,6 +18,8 @@ extends Control
 @onready var b5: Button = $CenterContainer/Menu/Stage5Btn
 @onready var bBack: Button = $CenterContainer/Menu/BackBtn
 
+const SND_CLICK := preload("res://audio/computer-mouse-click-02-383961.mp3")
+
 func _ready() -> void:
 	_wire(b1, stage1_path)
 	_wire(b2, stage2_path)
@@ -38,9 +40,11 @@ func _wire(btn: Button, scene_path: String) -> void:
 	btn.pressed.connect(Callable(self, "_go_scene").bind(scene_path))
 
 func _go_scene(p: String) -> void:
+	SFX.play_ui(SND_CLICK)
 	if p == "":
 		return
 	get_tree().change_scene_to_file(p)
 
 func _go_main() -> void:
+	SFX.play_ui(SND_CLICK)
 	_go_scene(main_menu_path)

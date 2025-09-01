@@ -17,6 +17,8 @@ signal cancel_place
 @onready var buy_pierce: Button = $BuyTower3
 @onready var cancel_btn: Button = $CancelPlace
 
+const SND_CLICK := preload("res://audio/computer-mouse-click-02-383961.mp3")
+
 var money: int = 400
 
 func _ready() -> void:
@@ -24,15 +26,18 @@ func _ready() -> void:
 	buy_btn.pressed.connect(func():
 		if money >= ground_cost and ground_tower_scene:
 			pick_tower.emit(ground_tower_scene, ground_cost)
+			SFX.play_ui(SND_CLICK)
 	)
 	
 	buy_aoe.pressed.connect(func():
 		if money >= aoe_cost and aoe_tower_scene:
 			pick_tower.emit(aoe_tower_scene, aoe_cost)
+			SFX.play_ui(SND_CLICK)
 	)
 	buy_pierce.pressed.connect(func():
 		if money >= pierce_cost and pierce_tower_scene:
 			pick_tower.emit(pierce_tower_scene, pierce_cost)
+			SFX.play_ui(SND_CLICK)
 	)
 	cancel_btn.pressed.connect(func(): cancel_place.emit())
 

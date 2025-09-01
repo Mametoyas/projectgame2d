@@ -5,6 +5,8 @@ extends Control
 @onready var retry_btn: Button = $Panel/RetryBtn
 @onready var menu_btn:  Button = $Panel/MenuBtn
 
+const SND_CLICK := preload("res://audio/computer-mouse-click-02-383961.mp3")
+
 func _ready() -> void:
 	# ให้ UI ตอบสนองแม้เกมถูก pause
 	process_mode = Node.PROCESS_MODE_ALWAYS
@@ -16,6 +18,7 @@ func _ready() -> void:
 		menu_btn.pressed.connect(_on_menu)
 
 func _on_retry() -> void:
+	SFX.play_ui(SND_CLICK)
 	var tree := get_tree()
 	tree.paused = false
 
@@ -32,6 +35,7 @@ func _on_retry() -> void:
 
 
 func _on_menu() -> void:
+	SFX.play_ui(SND_CLICK)
 	get_tree().paused = false
 	if main_menu_path != "":
 		get_tree().change_scene_to_file(main_menu_path)

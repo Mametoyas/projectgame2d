@@ -29,6 +29,8 @@ var follower: PathFollow2D
 
 @export var bar_size: Vector2 = Vector2(28, 5)
 
+const SND_DIE := preload("res://audio/monster-death-grunt-131480.mp3")
+
 # ======================
 # ตั้งค่า Layer ให้ Hitbox ตามชนิด (บิน/ดิน)
 func _apply_hitbox_layers() -> void:
@@ -114,6 +116,7 @@ func apply_damage(amount: int) -> void:
 	hp -= float(dmg)
 	_update_bar()
 	if hp <= 0.0:
+		SFX.play_2d(SND_DIE, global_position)
 		_spawn_children_if_any()
 		died.emit(reward)
 		queue_free()

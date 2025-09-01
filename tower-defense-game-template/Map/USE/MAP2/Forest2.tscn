@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=4 uid="uid://mo76pueu4x8q"]
+[gd_scene load_steps=52 format=4 uid="uid://mo76pueu4x8q"]
 
 [ext_resource type="PackedScene" uid="uid://k0wwmy1a2m60" path="res://Map/USE/MAP_FOREST.tscn" id="1_pxaev"]
 [ext_resource type="Texture2D" uid="uid://b64pfxfvso2po" path="res://Map/Tiny Swords (Free Pack)/Terrain/Tilemap_color1.png" id="2_0v2uo"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://bh5h0q4q7e1jx" path="res://Map/Tiny Swords (Free Pack)/Decorations/Rocks/Rock3.png" id="10_behgk"]
 [ext_resource type="Texture2D" uid="uid://buv35ggar0l2y" path="res://Map/Tiny Swords (Free Pack)/Buildings/Blue Buildings/House3.png" id="10_vdt6h"]
 [ext_resource type="PackedScene" uid="uid://kbd8nu0r2ngb" path="res://Map/USE/Sheep_move/sheep.tscn" id="13_xfpxh"]
+[ext_resource type="AudioStream" uid="uid://krka2yk0mshc" path="res://BackGround_Music/start_defendes.wav" id="22_80g06"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4g0fa"]
 texture = ExtResource("2_0v2uo")
@@ -5765,3 +5766,6 @@ position = Vector2(882, 677)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="NoBuildZones2/Area2D8"]
 polygon = PackedVector2Array(-177, 123, -217, -2, -204, -96, -124, -194, -50, -257, 138, -251, 165, -226, 220, -130, 266, -49, 283, 14, 248, 73, 147, 143, 46, 157)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("22_80g06")
