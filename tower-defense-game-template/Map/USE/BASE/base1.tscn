@@ -9,7 +9,7 @@ size = Vector2(304, 184)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q8hdi"]
 size = Vector2(301, 183)
 
-[node name="Node2D" type="CharacterBody2D"]
+[node name="Node2D2" type="CharacterBody2D"]
 script = ExtResource("1_ug736")
 lose_scene_path = "uid://dmrfnns1p0xgf"
 
