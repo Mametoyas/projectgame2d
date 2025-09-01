@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=4 uid="uid://b38kluylin6p8"]
+[gd_scene load_steps=45 format=4 uid="uid://b38kluylin6p8"]
 
 [ext_resource type="PackedScene" uid="uid://k0wwmy1a2m60" path="res://Map/USE/MAP_FOREST.tscn" id="1_u7t5k"]
 [ext_resource type="Texture2D" uid="uid://b64pfxfvso2po" path="res://Map/Tiny Swords (Free Pack)/Terrain/Tilemap_color1.png" id="2_5hh7t"]
@@ -23,6 +23,7 @@
 [ext_resource type="Script" uid="uid://6xeoiknqklcy" path="res://walking_enemy/maptest/spawnerF1.gd" id="21_bm05h"]
 [ext_resource type="PackedScene" uid="uid://dy4ipkvnbrgty" path="res://GUI_Use/files/hud.tscn" id="23_20xqa"]
 [ext_resource type="Script" uid="uid://ccd6w1tvp5vky" path="res://walking_enemy/enemy scritp/EnemyFactoryF1.gd" id="23_xk0xd"]
+[ext_resource type="AudioStream" uid="uid://krka2yk0mshc" path="res://BackGround_Music/start_defendes.wav" id="24_xk0xd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ctoj2"]
 texture = ExtResource("2_5hh7t")
@@ -5838,3 +5839,8 @@ polygon = PackedVector2Array(-705, 206, -652, 196, -607, 226, -360, 198, -337, 4
 script = ExtResource("23_xk0xd")
 
 [node name="HUD" parent="." instance=ExtResource("23_20xqa")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("24_xk0xd")
+volume_db = -10.0
+autoplay = true

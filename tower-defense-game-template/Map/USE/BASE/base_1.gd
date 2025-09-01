@@ -9,6 +9,12 @@ signal base_destroyed
 
 @onready var goal_area: Area2D = $GoalArea
 
+const SND_LOSE := preload("res://audio/monster-bite-44538.mp3")
+
+	#SFX.play_ui(SND_LOSE)
+
+
+
 var hp: int
 var _dead: bool = false
 
@@ -23,6 +29,7 @@ func _on_goal_area_entered(a: Area2D) -> void:
 		return
 	var e := a.get_parent()
 	if e and e.is_in_group("enemies"):
+		SFX.play_ui(SND_LOSE)
 		apply_damage(1)
 		# ฆ่าศัตรูแบบปลอดภัยในเฟรมถัดไป
 		if e.has_method("die"):

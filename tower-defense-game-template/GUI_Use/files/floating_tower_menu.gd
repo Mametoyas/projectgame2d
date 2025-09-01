@@ -7,6 +7,8 @@ class_name FloatingTowerMenu
 @onready var toggle_btn:  Button = $ToggleRangeButton
 @onready var sell_btn:    Button = $SellButton
 
+const SND_CLICK := preload("res://audio/computer-mouse-click-02-383961.mp3")
+
 var tower: Node2D = null
 var follow := false
 
@@ -86,6 +88,7 @@ func _on_upgrade() -> void:
 		return
 
 	if tower.has_method("upgrade"):
+		SFX.play_ui(SND_CLICK)
 		tower.call("upgrade")
 	_update_texts()
 
@@ -94,6 +97,7 @@ func _on_toggle_range() -> void:
 		return
 	var showing := false
 	if tower.has_method("get"):
+		SFX.play_ui(SND_CLICK)
 		var r = tower.get("range_preview")
 		showing = (r != null and is_instance_valid(r))
 	tower.call("show_range", not showing)
@@ -104,6 +108,7 @@ func _on_sell() -> void:
 	var ui := _find_build_ui()
 	if ui != null and ui.has_method("add_money"):
 		ui.call("add_money", 30)
+		SFX.play_ui(SND_CLICK)
 	tower.queue_free()
 	close()
 

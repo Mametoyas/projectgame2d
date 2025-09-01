@@ -44,6 +44,11 @@ const LEVELS: Array = [
 @onready var footprint: Area2D        = $BuildFootprint
 @onready var select_area: Area2D      = $SelectArea
 
+const SND_SHOOT := preload("res://audio/arrow-body-impact-146419.mp3")
+
+	#SFX.play_2d(SND_SHOOT, global_position)
+
+
 var muzzles: Array[Marker2D] = []
 
 # สเตตัส runtime
@@ -252,6 +257,7 @@ func _on_shoot() -> void:
 		target.apply_damage(damage)
 
 func _spawn_bullet(pos: Vector2) -> void:
+	SFX.play_2d(SND_SHOOT, global_position)
 	var parent: Node = get_tree().current_scene
 	if parent == null:
 		parent = get_tree().root
