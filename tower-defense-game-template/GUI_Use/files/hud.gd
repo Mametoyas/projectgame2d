@@ -5,16 +5,13 @@ class_name HUD
 @onready var build_ui: Node = $BuildUI
 @onready var floating_menu: Node = $FloatingTowerMenu
 
-var money: int = 200
+var money: int = 400
 
 func _ready() -> void:
+	add_to_group("hud")
 	update_money()
-	var menu = $FloatingTowerMenu
-	if menu:
-		print("FOUND FloatingTowerMenu at runtime")
-	else:
-		print("NOT FOUND FloatingTowerMenu")
-
+	#var menu = $FloatingTowerMenu
+	
 func spend_money(amount: int) -> bool:
 	if money < amount:
 		return false

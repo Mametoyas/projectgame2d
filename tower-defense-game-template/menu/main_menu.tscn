@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbr8b4hp6o8"]
+
+[ext_resource type="Texture2D" uid="uid://rxjhd2w5xa54" path="res://menu/a181f7f3-9622-462e-8fa9-35b968eca6d7 (1).jpg" id="1_chmv6"]
+[ext_resource type="Script" uid="uid://1j2o3s8i8m6b" path="res://menu/main_menu.gd" id="1_f5okj"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_f5okj")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -72.0
+offset_top = -19.0
+offset_right = 952.0
+offset_bottom = 1517.0
+scale = Vector2(1.38932, 1.14718)
+texture = ExtResource("1_chmv6")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(640, 870)
+scale = Vector2(0.222929, 12.5761)
+zoom = Vector2(1, 0.42)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 599.0
+offset_right = 232.0
+offset_bottom = 735.0
+scale = Vector2(16.4524, 7.72771)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="StartButton" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "           "
+flat = true
+
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "           "
+flat = true
+
+[node name="Button2" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "           "
+flat = true
+
+[node name="ExitButton" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "           "
+flat = true

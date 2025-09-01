@@ -6,14 +6,14 @@ extends Node2D
 
 const LEVELS: Array = [
 	{},
-	{ "damage": 22, "range": 600.0, "interval": 0.9, "anim": "lv1_idle",
+	{ "damage": 22, "range": 120.0, "interval": 0.9, "anim": "lv1_idle",
 	  "cost": 0,   "bullet": preload("res://tower_use/aoe tower/bomb_bullet.tscn"),
 	  "muzzles": ["MuzzleLv1"] },
 	{ "damage": 32, "range": 180.0, "interval": 0.8, "anim": "lv2_idle",
-	  "cost": 70,  "bullet": preload("res://tower_use/aoe tower/bomb_bullet.tscn"),
+	  "cost": 70,  "bullet": preload("res://tower_use/aoe tower/bomb_bulletlv2.tscn"),
 	  "muzzles": ["MuzzleLv1"] },
 	{ "damage": 45, "range": 210.0, "interval": 0.7, "anim": "lv3_idle",
-	  "cost": 110, "bullet": preload("res://tower_use/aoe tower/bomb_bullet.tscn"),
+	  "cost": 110, "bullet": preload("res://tower_use/aoe tower/bomb_bulletlv3.tscn"),
 	  "muzzles": ["MuzzleLv1"] }
 ]
 
@@ -184,12 +184,20 @@ func show_range(enabled: bool) -> void:
 
 # เก็บศัตรูเข้า/ออกระยะ
 func _on_area_entered(a: Area2D) -> void:
-	var n: Node = a.get_parent() if a.get_parent() != null else a
-	_add_enemy(n)
+	var p := a.get_parent()
+	if p is Enemy:
+		var e: Enemy = p          # แคสต์เป็น Enemy
+		if not in_range.has(e):
+			in_range.append(e)
 
 func _on_area_exited(a: Area2D) -> void:
-	var n: Node = a.get_parent() if a.get_parent() != null else a
-	_remove_enemy(n)
+	var p := a.get_parent()
+	if p is Enemy:
+		var e: Enemy = p          # แคสต์เป็น Enemy
+		in_range.erase(e)         # ไม่ต้องเช็ค has ก็ได้ ปลอดภัย
+		if target == e:
+			target = null
+
 
 func _on_body_entered(b: Node) -> void:
 	_add_enemy(b)
@@ -206,11 +214,13 @@ func _add_enemy(e: Node) -> void:
 			if target == null:
 				_pick_target()
 
-func _remove_enemy(e: Node) -> void:
-	if in_range.has(e):
+func _remove_enemy(n: Node) -> void:
+	if n is Enemy:
+		var e: Enemy = n
 		in_range.erase(e)
-	if e == target:
-		_pick_target()
+		if target == e:
+			target = null
+
 
 # เลือกเป้าหมาย
 func _pick_target() -> void:
