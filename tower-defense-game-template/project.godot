@@ -10,9 +10,10 @@ config_version=5
 
 [application]
 
-config/name="Tower Defense Game Template"
+config/name="Tower Defense Game"
+run/main_scene="uid://cbr8b4hp6o8"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://bdrepu5l2meg5"
 
 [display]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://dd31auwxsj6w3"]
+[gd_scene load_steps=5 format=3 uid="uid://dd31auwxsj6w3"]
 
 [ext_resource type="Script" uid="uid://14dqy3f3mnnh" path="res://Map/USE/BASE/base_1.gd" id="1_ug736"]
 [ext_resource type="Texture2D" uid="uid://bah8jx1h26pcq" path="res://Map/Tiny Swords (Free Pack)/Buildings/Blue Buildings/Castle.png" id="2_25y18"]
@@ -6,11 +6,24 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8mj8c"]
 size = Vector2(304, 184)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q8hdi"]
+size = Vector2(301, 183)
+
 [node name="Node2D" type="CharacterBody2D"]
 script = ExtResource("1_ug736")
+lose_scene_path = "uid://dmrfnns1p0xgf"
 
 [node name="Castle" type="Sprite2D" parent="."]
 texture = ExtResource("2_25y18")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, 17)
 shape = SubResource("RectangleShape2D_8mj8c")
+
+[node name="GoalArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GoalArea"]
+position = Vector2(3.5, 16.5)
+shape = SubResource("RectangleShape2D_q8hdi")

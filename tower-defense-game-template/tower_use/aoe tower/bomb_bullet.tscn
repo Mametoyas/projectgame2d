@@ -180,15 +180,11 @@ script = ExtResource("1_5jxje")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_6do35")
-animation = &"hit"
-frame = 9
-frame_progress = 1.0
+animation = &"fly"
+frame_progress = 0.948787
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(3, 3)
 shape = SubResource("CircleShape2D_0ne4m")
 
 [node name="DeathTimer" type="Timer" parent="."]
-
-[node name="FuseTimer" type="Timer" parent="."]
-one_shot = true

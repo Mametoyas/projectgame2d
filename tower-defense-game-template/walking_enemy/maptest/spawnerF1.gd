@@ -9,7 +9,7 @@ extends Node
 const AUTO_START := false  # ตั้งเป็น true เพื่อให้เริ่ม wave อัตโนมัติไว้เทส
 
 var waves = [
-	["tank","crawler","runner","regenerator","runner"],
+	["runner","runner","runner","runner","runner","runner","runner","runner","runner","runner"],
 	["tank","crawler","runner","regenerator","runner"],
 	["shielded","shielded","splitter","runner","flyer","flyer","splitter","splitter","splitter"]
 ]
@@ -97,3 +97,20 @@ func spawn_enemy(type_id: String) -> void:
 	if e:
 		get_parent().add_child(e)
 		e.global_position = f.global_position
+		if not e.died.is_connected(_on_enemy_died):
+			e.died.connect(_on_enemy_died)
+
+func _on_enemy_died(reward: int) -> void:
+	if not is_inside_tree():
+		return
+	# เติมเงินเข้าที่ HUD
+	var hud := get_tree().get_first_node_in_group("hud")
+	if hud != null and hud.has_method("add_money"):
+		hud.call("add_money", reward)
+
+	# ถ้าใช้ BuildUI ให้ซิงก์ค่าเงินด้วย
+	var ui: Node = null        # <<< ใส่ชนิดให้ชัดเจน
+	if hud != null and hud.has_node("BuildUI"):
+		ui = hud.get_node("BuildUI")
+	if ui != null and ui.has_method("add_money"):
+		ui.call("add_money", reward)

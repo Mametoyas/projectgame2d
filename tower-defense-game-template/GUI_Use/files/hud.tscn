@@ -1,12 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://dy4ipkvnbrgty"]
+[gd_scene load_steps=9 format=3 uid="uid://dy4ipkvnbrgty"]
 
 [ext_resource type="Script" uid="uid://bomsu3c37kbe3" path="res://GUI_Use/files/hud.gd" id="1_yhpii"]
 [ext_resource type="Script" uid="uid://br33skp2ihilc" path="res://GUI_Use/files/build_ui.gd" id="2_ngh62"]
 [ext_resource type="PackedScene" uid="uid://ckbbe0lkkwj3b" path="res://tower_use/tower_archer/tower_archer.tscn" id="3_mauiy"]
 [ext_resource type="Script" uid="uid://dpxjatww25y86" path="res://GUI_Use/files/floating_tower_menu.gd" id="4_ngh62"]
+[ext_resource type="PackedScene" uid="uid://cas2ckenysxyv" path="res://tower_use/aoe tower/tower_bomb.tscn" id="4_svqud"]
 [ext_resource type="Script" uid="uid://b36l1vryt31k5" path="res://gui_test/placement_manager.gd" id="5_mauiy"]
+[ext_resource type="PackedScene" uid="uid://h1yckjwf6lp0" path="res://tower_use/pierce_tower/pierce_tower.tscn" id="5_qqowv"]
+[ext_resource type="Script" uid="uid://ow2hm6hos8jh" path="res://GUI_Use/files/panel.gd" id="8_knd4f"]
 
-[node name="HUD" type="CanvasLayer"]
+[node name="HUD" type="CanvasLayer" groups=["hud"]]
 script = ExtResource("1_yhpii")
 
 [node name="MoneyLabel" type="Label" parent="."]
@@ -17,21 +20,31 @@ offset_bottom = 521.0
 text = "money"
 
 [node name="BuildUI" type="HBoxContainer" parent="."]
-offset_left = 1149.0
-offset_top = 525.0
-offset_right = 1189.0
-offset_bottom = 565.0
+offset_left = 796.0
+offset_top = 523.0
+offset_right = 1034.0
+offset_bottom = 563.0
 scale = Vector2(2, 2)
 script = ExtResource("2_ngh62")
 ground_tower_scene = ExtResource("3_mauiy")
+aoe_tower_scene = ExtResource("4_svqud")
+pierce_tower_scene = ExtResource("5_qqowv")
 
 [node name="BuyTower1" type="Button" parent="BuildUI"]
 layout_mode = 2
-text = "g"
+text = "archer"
+
+[node name="BuyTower2" type="Button" parent="BuildUI"]
+layout_mode = 2
+text = "bomb"
+
+[node name="BuyTower3" type="Button" parent="BuildUI"]
+layout_mode = 2
+text = "pierce"
 
 [node name="CancelPlace" type="Button" parent="BuildUI"]
 layout_mode = 2
-text = "c"
+text = "cancel"
 
 [node name="FloatingTowerMenu" type="Panel" parent="." groups=["floating_tower_menu"]]
 offset_left = 2211.0
@@ -69,3 +82,18 @@ text = "sell"
 
 [node name="placement_manager" type="Node" parent="."]
 script = ExtResource("5_mauiy")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 1191.0
+offset_top = 19.0
+offset_right = 1231.0
+offset_bottom = 59.0
+scale = Vector2(1.6133, 1.18976)
+script = ExtResource("8_knd4f")
+
+[node name="ReturnBtn" type="Button" parent="Panel"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(1.7572, 1.2477)
+text = "<-"
