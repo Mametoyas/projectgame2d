@@ -1,7 +1,6 @@
-[gd_scene load_steps=35 format=3 uid="uid://ckbbe0lkkwj3b"]
+[gd_scene load_steps=34 format=3 uid="uid://ckbbe0lkkwj3b"]
 
 [ext_resource type="Script" uid="uid://qlc3dllkdi4g" path="res://tower_use/tower_archer/tower_archer.gd" id="1_t3dgo"]
-[ext_resource type="PackedScene" uid="uid://hkn42tc1unre" path="res://tower_use/tower_archer/arrow_archer_tower.tscn" id="2_f2g30"]
 [ext_resource type="Texture2D" uid="uid://cx2pcq142l7vs" path="res://tower_use/asset/Tower.png" id="2_wy2dy"]
 [ext_resource type="Texture2D" uid="uid://dvw32112cdrke" path="res://tower_use/asset/Archer_Shoot.png" id="3_523vt"]
 [ext_resource type="Texture2D" uid="uid://mti7ve1wy5xs" path="res://tower_use/asset/level2.png" id="4_4gnge"]
@@ -202,7 +201,6 @@ size = Vector2(106.267, 166.282)
 
 [node name="tower_archer" type="Node2D" groups=["tower"]]
 script = ExtResource("1_t3dgo")
-bullet_scene = ExtResource("2_f2g30")
 
 [node name="Range" type="Area2D" parent="."]
 

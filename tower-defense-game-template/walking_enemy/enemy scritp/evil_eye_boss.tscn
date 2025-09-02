@@ -108,7 +108,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_fmrt3")
 }],
-"loop": true,
+"loop": false,
 "name": &"hit",
 "speed": 30.0
 }, {
@@ -149,14 +149,16 @@ radius = 251.448
 script = ExtResource("1_lf6r3")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
-position = Vector2(89, -52)
-scale = Vector2(2.48929, 2.73925)
+position = Vector2(189, -149)
+scale = Vector2(6, 6.603)
 sprite_frames = SubResource("SpriteFrames_6rr37")
 animation = &"hit"
-frame_progress = 0.359578
+frame = 9
+frame_progress = 1.0
 flip_h = true
 
 [node name="Hitbox" type="Area2D" parent="."]
+scale = Vector2(6, 6)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 shape = SubResource("CircleShape2D_lf6r3")
