@@ -5762,6 +5762,7 @@ offset_right = 1916.0
 offset_bottom = 1064.0
 scale = Vector2(3, 2)
 text = "start"
+metadata/_edit_use_anchors_ = true
 
 [node name="Camera2D_map1" type="Camera2D" parent="MAP_FOREST1"]
 position = Vector2(1182, 637)

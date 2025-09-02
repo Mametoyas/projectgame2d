@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://breutqk6jnnpt" path="res://menu/stage_select.gd" id="1_ljhax"]
 [ext_resource type="Texture2D" uid="uid://bnenpfrjm4bvk" path="res://menu/b049ca12-731c-40be-9924-def24307361e.jpg" id="1_mp45l"]
 [ext_resource type="AudioStream" uid="uid://he5t7iunfh5b" path="res://BackGround_Music/Wainting_home.wav" id="3_m706i"]
-[ext_resource type="Script" uid="uid://c81fmojwhfe32" path="res://menu/StageProgress.gd" id="4_lpw1u"]
+[ext_resource type="Script" uid="uid://c81fmojwhfe32" path="res://menu/Stageprogress.gd" id="4_lpw1u"]
 
 [node name="StageSelect" type="Control"]
 layout_mode = 3

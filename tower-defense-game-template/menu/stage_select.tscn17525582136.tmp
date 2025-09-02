@@ -11,12 +11,6 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_ljhax")
-stage1_path = null
-stage2_path = null
-stage3_path = null
-stage4_path = null
-stage5_path = null
-main_menu_path = null
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
@@ -86,5 +80,5 @@ zoom = Vector2(1, 0.9)
 stream = ExtResource("3_m706i")
 autoplay = true
 
-[node name="StageProgress" type="Node" parent="."]
+[node name="StageProgressuser" type="Node" parent="."]
 script = ExtResource("4_lpw1u")

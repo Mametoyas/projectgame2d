@@ -27,3 +27,13 @@ collision_mask = 3
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GoalArea"]
 position = Vector2(3.5, 16.5)
 shape = SubResource("RectangleShape2D_q8hdi")
+
+[node name="HPLabel" type="Label" parent="."]
+anchors_preset = -1
+anchor_right = 0.5
+offset_left = -299.0
+offset_top = -103.0
+offset_bottom = 79.0
+grow_horizontal = 2
+scale = Vector2(2, 2)
+horizontal_alignment = 1

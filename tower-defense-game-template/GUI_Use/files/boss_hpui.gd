@@ -10,7 +10,7 @@ func _ready() -> void:
 func show_for_boss(max_hp: int) -> void:
 	bar.max_value = max_hp
 	bar.value = max_hp
-	label.text = "%d / %d" % [max_hp, max_hp]
+	label.text = "BossHP: %d / %d" % [max_hp, max_hp]
 	visible = true     # โผล่เฉพาะตอนบอสออกมา
 
 func update_hp(current: int, max_hp: int) -> void:
