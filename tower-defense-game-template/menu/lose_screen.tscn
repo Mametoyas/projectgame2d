@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://uc36qel2gdt8" path="res://menu/lose_screen.gd" id="1_g23bu"]
 [ext_resource type="Texture2D" uid="uid://7njcompqe6jp" path="res://menu/e88ab6ec-c270-438f-bcb7-33a0dfd7a612.jpg" id="1_s6wwd"]
-[ext_resource type="AudioStream" uid="uid://cihu3mxw2gb7u" path="res://BackGround_Music/base_destroy.wav" id="3_lm5fy"]
+[ext_resource type="AudioStream" uid="uid://ekv6ib25wpvs" path="res://BackGround_Music/base_destroy.wav" id="3_lm5fy"]
 
 [node name="LoseScreen" type="Control"]
 layout_mode = 3

@@ -1,27 +1,27 @@
 [gd_scene load_steps=52 format=4 uid="uid://mo76pueu4x8q"]
 
 [ext_resource type="PackedScene" uid="uid://k0wwmy1a2m60" path="res://Map/USE/MAP_FOREST.tscn" id="1_pxaev"]
-[ext_resource type="Texture2D" uid="uid://cd1f2nyahfm6q" path="res://Map/Tiny Swords (Free Pack)/Terrain/Tilemap_color1.png" id="2_0v2uo"]
-[ext_resource type="Texture2D" uid="uid://cfhb8rt771mh" path="res://Map/Tiny Swords (Free Pack)/Terrain/Water Background color.png" id="3_4owi8"]
-[ext_resource type="Texture2D" uid="uid://c3aylokytoryr" path="res://Map/Tiny Swords (Free Pack)/Terrain/Tilemap_color3.png" id="4_b2iyy"]
-[ext_resource type="Texture2D" uid="uid://dp5xmjkpthmv3" path="res://Map/Tiny Swords (Free Pack)/Decorations/Bushes/Bushe2.png" id="4_behgk"]
-[ext_resource type="Texture2D" uid="uid://ddxm5gksv1v0p" path="res://Map/Tiny Swords (Free Pack)/Decorations/Bushes/Bushe3.png" id="5_xfpxh"]
-[ext_resource type="Texture2D" uid="uid://0osmiffo0rsg" path="res://Map/Tiny Swords (Free Pack)/Terrain/Tilemap_color2.png" id="5_xykgl"]
-[ext_resource type="Texture2D" uid="uid://cr2quc0esxpo5" path="res://Map/Tiny Swords (Free Pack)/Decorations/Trees/Tree3.png" id="6_6tukt"]
-[ext_resource type="Texture2D" uid="uid://c1dgxsyj5rp4c" path="res://Map/Tiny Swords (Free Pack)/Decorations/Bushes/Bushe4.png" id="6_l76dg"]
+[ext_resource type="Texture2D" uid="uid://l83hp2dxdlcc" path="res://Map/Tiny Swords (Free Pack)/Terrain/Tilemap_color1.png" id="2_0v2uo"]
+[ext_resource type="Texture2D" uid="uid://boflhwo8e8hwd" path="res://Map/Tiny Swords (Free Pack)/Terrain/Water Background color.png" id="3_4owi8"]
+[ext_resource type="Texture2D" uid="uid://dkapk6bmqh3je" path="res://Map/Tiny Swords (Free Pack)/Terrain/Tilemap_color3.png" id="4_b2iyy"]
+[ext_resource type="Texture2D" uid="uid://bjbjrwqfbj0n2" path="res://Map/Tiny Swords (Free Pack)/Decorations/Bushes/Bushe2.png" id="4_behgk"]
+[ext_resource type="Texture2D" uid="uid://dp6hfohi0vc5h" path="res://Map/Tiny Swords (Free Pack)/Decorations/Bushes/Bushe3.png" id="5_xfpxh"]
+[ext_resource type="Texture2D" uid="uid://cpseuv25cs2q" path="res://Map/Tiny Swords (Free Pack)/Terrain/Tilemap_color2.png" id="5_xykgl"]
+[ext_resource type="Texture2D" uid="uid://cikly3g31xess" path="res://Map/Tiny Swords (Free Pack)/Decorations/Trees/Tree3.png" id="6_6tukt"]
+[ext_resource type="Texture2D" uid="uid://cqnrfu3s4ul0j" path="res://Map/Tiny Swords (Free Pack)/Decorations/Bushes/Bushe4.png" id="6_l76dg"]
 [ext_resource type="PackedScene" uid="uid://dd31auwxsj6w3" path="res://Map/USE/BASE/base1.tscn" id="7_2kx64"]
-[ext_resource type="Texture2D" uid="uid://b5ve7a6jd6iab" path="res://Map/Tiny Swords (Free Pack)/Decorations/Trees/Tree4.png" id="7_nse3n"]
-[ext_resource type="Texture2D" uid="uid://c2fnoblvty23x" path="res://Map/Tiny Swords (Free Pack)/Buildings/Blue Buildings/Castle.png" id="7_qbt3u"]
+[ext_resource type="Texture2D" uid="uid://du1qg0hcsxawk" path="res://Map/Tiny Swords (Free Pack)/Decorations/Trees/Tree4.png" id="7_nse3n"]
+[ext_resource type="Texture2D" uid="uid://de2yhkj5e3kkx" path="res://Map/Tiny Swords (Free Pack)/Buildings/Blue Buildings/Castle.png" id="7_qbt3u"]
 [ext_resource type="Script" uid="uid://dx1mvbieyio4j" path="res://Map/USE/MAP1/camera_2d_map_1.gd" id="8_b2iyy"]
-[ext_resource type="Texture2D" uid="uid://dp5jb8u2qtadn" path="res://Map/Tiny Swords (Free Pack)/Decorations/Rocks/Rock2.png" id="8_fltm2"]
-[ext_resource type="Texture2D" uid="uid://c0f8srixp5hmh" path="res://Map/Tiny Swords (Free Pack)/Buildings/Blue Buildings/House1.png" id="8_toclv"]
-[ext_resource type="Texture2D" uid="uid://bgtl7pv4jdf8o" path="res://Map/Tiny Swords (Free Pack)/Buildings/Blue Buildings/House2.png" id="9_68soc"]
-[ext_resource type="Texture2D" uid="uid://jdjp71owud15" path="res://Map/Tiny Swords (Free Pack)/Decorations/Bushes/Bushe1.png" id="9_qxvb4"]
-[ext_resource type="Texture2D" uid="uid://djpeiuftcaah6" path="res://Map/Tiny Swords (Free Pack)/Decorations/Rocks/Rock4.png" id="9_v1tsy"]
-[ext_resource type="Texture2D" uid="uid://mtrj63ye3t18" path="res://Map/Tiny Swords (Free Pack)/Decorations/Rocks/Rock3.png" id="10_behgk"]
-[ext_resource type="Texture2D" uid="uid://pkstdmscndmj" path="res://Map/Tiny Swords (Free Pack)/Buildings/Blue Buildings/House3.png" id="10_vdt6h"]
+[ext_resource type="Texture2D" uid="uid://dxx06w7s4wmjr" path="res://Map/Tiny Swords (Free Pack)/Decorations/Rocks/Rock2.png" id="8_fltm2"]
+[ext_resource type="Texture2D" uid="uid://sb18ilt80vjl" path="res://Map/Tiny Swords (Free Pack)/Buildings/Blue Buildings/House1.png" id="8_toclv"]
+[ext_resource type="Texture2D" uid="uid://b384bgup86luf" path="res://Map/Tiny Swords (Free Pack)/Buildings/Blue Buildings/House2.png" id="9_68soc"]
+[ext_resource type="Texture2D" uid="uid://c02f22bobohrh" path="res://Map/Tiny Swords (Free Pack)/Decorations/Bushes/Bushe1.png" id="9_qxvb4"]
+[ext_resource type="Texture2D" uid="uid://bxygvn87rmhf" path="res://Map/Tiny Swords (Free Pack)/Decorations/Rocks/Rock4.png" id="9_v1tsy"]
+[ext_resource type="Texture2D" uid="uid://bnoojcct2ut1m" path="res://Map/Tiny Swords (Free Pack)/Decorations/Rocks/Rock3.png" id="10_behgk"]
+[ext_resource type="Texture2D" uid="uid://bphistc4aern" path="res://Map/Tiny Swords (Free Pack)/Buildings/Blue Buildings/House3.png" id="10_vdt6h"]
 [ext_resource type="PackedScene" uid="uid://kbd8nu0r2ngb" path="res://Map/USE/Sheep_move/sheep.tscn" id="13_xfpxh"]
-[ext_resource type="AudioStream" uid="uid://31kp4ndy507m" path="res://BackGround_Music/start_defendes.wav" id="22_80g06"]
+[ext_resource type="AudioStream" uid="uid://chkwk8cjx4fq5" path="res://BackGround_Music/start_defendes.wav" id="22_80g06"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4g0fa"]
 texture = ExtResource("2_0v2uo")
@@ -5618,7 +5618,7 @@ size = Vector2(809, 131)
 [sub_resource type="CircleShape2D" id="CircleShape2D_behgk"]
 radius = 97.3242
 
-[node name="Node2D2" type="Node2D"]
+[node name="Node2D" type="Node2D"]
 
 [node name="MAP_FOREST2" parent="." instance=ExtResource("1_pxaev")]
 tile_set = SubResource("TileSet_sm1gs")
@@ -5712,9 +5712,9 @@ tile_set = SubResource("TileSet_sm1gs")
 position = Vector2(753, 732)
 
 [node name="Camera2D_map2" type="Camera2D" parent="."]
-position = Vector2(1201, 649)
-scale = Vector2(-2.23581, 0.756851)
-zoom = Vector2(0.645, 0.52)
+position = Vector2(1194, 658)
+scale = Vector2(-2.23581, 0.716671)
+zoom = Vector2(0.6, 0.65)
 script = ExtResource("8_b2iyy")
 
 [node name="NoBuildZones2" type="Node2D" parent="."]
