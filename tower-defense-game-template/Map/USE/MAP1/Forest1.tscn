@@ -1,6 +1,7 @@
 [gd_scene load_steps=45 format=4 uid="uid://b38kluylin6p8"]
 
 [ext_resource type="PackedScene" uid="uid://k0wwmy1a2m60" path="res://Map/USE/MAP_FOREST.tscn" id="1_u7t5k"]
+<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://cd1f2nyahfm6q" path="res://Map/Tiny Swords (Free Pack)/Terrain/Tilemap_color1.png" id="2_5hh7t"]
 [ext_resource type="Texture2D" uid="uid://cfhb8rt771mh" path="res://Map/Tiny Swords (Free Pack)/Terrain/Water Background color.png" id="3_glf3u"]
 [ext_resource type="Texture2D" uid="uid://c3aylokytoryr" path="res://Map/Tiny Swords (Free Pack)/Terrain/Tilemap_color3.png" id="4_j73gl"]
@@ -19,11 +20,35 @@
 [ext_resource type="Texture2D" uid="uid://cr2quc0esxpo5" path="res://Map/Tiny Swords (Free Pack)/Decorations/Trees/Tree3.png" id="10_6dvv0"]
 [ext_resource type="PackedScene" uid="uid://dd31auwxsj6w3" path="res://Map/USE/BASE/base1.tscn" id="10_glf3u"]
 [ext_resource type="Texture2D" uid="uid://b5ve7a6jd6iab" path="res://Map/Tiny Swords (Free Pack)/Decorations/Trees/Tree4.png" id="11_nupx6"]
+=======
+[ext_resource type="Texture2D" uid="uid://l83hp2dxdlcc" path="res://Map/Tiny Swords (Free Pack)/Terrain/Tilemap_color1.png" id="2_5hh7t"]
+[ext_resource type="Texture2D" uid="uid://boflhwo8e8hwd" path="res://Map/Tiny Swords (Free Pack)/Terrain/Water Background color.png" id="3_glf3u"]
+[ext_resource type="Texture2D" uid="uid://dkapk6bmqh3je" path="res://Map/Tiny Swords (Free Pack)/Terrain/Tilemap_color3.png" id="4_j73gl"]
+[ext_resource type="Texture2D" uid="uid://bphistc4aern" path="res://Map/Tiny Swords (Free Pack)/Buildings/Blue Buildings/House3.png" id="4_vuoar"]
+[ext_resource type="Texture2D" uid="uid://cpseuv25cs2q" path="res://Map/Tiny Swords (Free Pack)/Terrain/Tilemap_color2.png" id="5_pnww2"]
+[ext_resource type="Texture2D" uid="uid://b384bgup86luf" path="res://Map/Tiny Swords (Free Pack)/Buildings/Blue Buildings/House2.png" id="5_vtsf8"]
+[ext_resource type="Script" uid="uid://dd4br6c60vd2v" path="res://Map/USE/MAP1/map_forest_1.gd" id="6_8ef3s"]
+[ext_resource type="Texture2D" uid="uid://sb18ilt80vjl" path="res://Map/Tiny Swords (Free Pack)/Buildings/Blue Buildings/House1.png" id="6_ax4fx"]
+[ext_resource type="Texture2D" uid="uid://bxygvn87rmhf" path="res://Map/Tiny Swords (Free Pack)/Decorations/Rocks/Rock4.png" id="6_ctoj2"]
+[ext_resource type="Texture2D" uid="uid://de2yhkj5e3kkx" path="res://Map/Tiny Swords (Free Pack)/Buildings/Blue Buildings/Castle.png" id="7_6jajx"]
+[ext_resource type="Texture2D" uid="uid://bnoojcct2ut1m" path="res://Map/Tiny Swords (Free Pack)/Decorations/Rocks/Rock3.png" id="7_lnnc2"]
+[ext_resource type="Texture2D" uid="uid://dxx06w7s4wmjr" path="res://Map/Tiny Swords (Free Pack)/Decorations/Rocks/Rock2.png" id="8_olpot"]
+[ext_resource type="Texture2D" uid="uid://c02f22bobohrh" path="res://Map/Tiny Swords (Free Pack)/Decorations/Bushes/Bushe1.png" id="8_rk7mj"]
+[ext_resource type="Script" uid="uid://dx1mvbieyio4j" path="res://Map/USE/MAP1/camera_2d_map_1.gd" id="9_5hh7t"]
+[ext_resource type="Texture2D" uid="uid://clfrrb43sasfr" path="res://Map/Tiny Swords (Free Pack)/Decorations/Trees/Tree1.png" id="9_vgmcn"]
+[ext_resource type="Texture2D" uid="uid://cikly3g31xess" path="res://Map/Tiny Swords (Free Pack)/Decorations/Trees/Tree3.png" id="10_6dvv0"]
+[ext_resource type="PackedScene" uid="uid://dd31auwxsj6w3" path="res://Map/USE/BASE/base1.tscn" id="10_glf3u"]
+[ext_resource type="Texture2D" uid="uid://du1qg0hcsxawk" path="res://Map/Tiny Swords (Free Pack)/Decorations/Trees/Tree4.png" id="11_nupx6"]
+>>>>>>> Stashed changes
 [ext_resource type="PackedScene" uid="uid://kbd8nu0r2ngb" path="res://Map/USE/Sheep_move/sheep.tscn" id="20_663nu"]
 [ext_resource type="Script" uid="uid://6xeoiknqklcy" path="res://walking_enemy/maptest/spawnerF1.gd" id="21_bm05h"]
 [ext_resource type="PackedScene" uid="uid://dy4ipkvnbrgty" path="res://GUI_Use/files/hud.tscn" id="23_20xqa"]
 [ext_resource type="Script" uid="uid://ccd6w1tvp5vky" path="res://walking_enemy/enemy scritp/EnemyFactoryF1.gd" id="23_xk0xd"]
+<<<<<<< Updated upstream
 [ext_resource type="AudioStream" uid="uid://31kp4ndy507m" path="res://BackGround_Music/start_defendes.wav" id="24_xk0xd"]
+=======
+[ext_resource type="AudioStream" uid="uid://chkwk8cjx4fq5" path="res://BackGround_Music/start_defendes.wav" id="24_xk0xd"]
+>>>>>>> Stashed changes
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ctoj2"]
 texture = ExtResource("2_5hh7t")
