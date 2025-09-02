@@ -1,17 +1,22 @@
 extends Node
 
-@onready var path2d: Path2D = $"../Path2D_forest1"
-@onready var seed_follow: PathFollow2D = $"../Path2D_forest1/SeedFollow"
-@onready var factory = get_tree().get_first_node_in_group("enemy_factory") # อย่า type เป็น EnemyFactory เพื่อกันชนชื่อคลาส
+@onready var factory = get_tree().get_first_node_in_group("enemy_factory")
 @onready var wave_timer: Timer = $WaveTimer
 @onready var next_button: Button = $NextWaveButton
 
-const AUTO_START := false  # ตั้งเป็น true เพื่อให้เริ่ม wave อัตโนมัติไว้เทส
+# เก็บเส้นทางทั้งหมดใน Array
+@onready var paths: Array[Path2D] = [
+	$"../Forest2Line1",
+	$"../Forest2Line2",
+	$"../Forest2Line3"
+]
+
+const AUTO_START := false
 
 var waves = [
-	["runner"],
-	["runner"],
-	["runner"]
+	["runner","runner","runner","runner","runner"],
+	["tank","crawler","runner","regenerator","runner"],
+	["shielded","shielded","splitter","runner","flyer"]
 ]
 
 var current_wave := 0
@@ -23,19 +28,16 @@ func _ready() -> void:
 	if factory == null:
 		factory = get_tree().get_first_node_in_group("enemy_factory")
 
-	# ต่อสัญญาณให้ชัวร์ (กันลืมต่อใน Editor)
 	if next_button and not next_button.pressed.is_connected(_on_next_wave_button_pressed):
 		next_button.pressed.connect(_on_next_wave_button_pressed)
 	if wave_timer and not wave_timer.timeout.is_connected(_on_wave_timer_timeout):
 		wave_timer.timeout.connect(_on_wave_timer_timeout)
 
 	_prepare_next_wave()
-
 	if AUTO_START:
 		start_wave()
 
 func _process(_delta: float) -> void:
-	# ถ้าปล่อยครบแล้วรอจนศัตรูหมด
 	if waiting_for_clear:
 		var alive := get_tree().get_nodes_in_group("enemies")
 		if alive.is_empty():
@@ -47,7 +49,6 @@ func _prepare_next_wave() -> void:
 	if current_wave >= waves.size():
 		if next_button:
 			next_button.text = "All waves cleared!"
-			StageProgress.unlock_next_if_cleared(1)
 			next_button.disabled = true
 			next_button.visible = true
 		return
@@ -82,15 +83,18 @@ func _on_wave_timer_timeout() -> void:
 	spawn_enemy(type_id)
 
 func spawn_enemy(type_id: String) -> void:
-	# รีโซลฟ์โรงงานแบบขยันมือ – เผื่อยังไม่พร้อมตอน _ready()
 	if factory == null:
 		factory = get_tree().get_first_node_in_group("enemy_factory")
-		
-	var f: PathFollow2D = seed_follow.duplicate() as PathFollow2D
-	if f == null:
+
+	# สุ่มเลือกเส้นทาง
+	var chosen_path: Path2D = paths[randi() % paths.size()]
+	var seed_follow: PathFollow2D = chosen_path.get_node("SeedFollow") as PathFollow2D
+	if seed_follow == null:
 		return
+
+	var f: PathFollow2D = seed_follow.duplicate() as PathFollow2D
 	f.progress = 0.0
-	path2d.add_child(f)
+	chosen_path.add_child(f)
 
 	var e = null
 	if factory.has_method("spawn"):
@@ -104,14 +108,7 @@ func spawn_enemy(type_id: String) -> void:
 func _on_enemy_died(reward: int) -> void:
 	if not is_inside_tree():
 		return
-	# เติมเงินเข้าที่ HUD
+
 	var hud := get_tree().get_first_node_in_group("hud")
 	if hud != null and hud.has_method("add_money"):
 		hud.call("add_money", reward)
-
-	# ถ้าใช้ BuildUI ให้ซิงก์ค่าเงินด้วย
-	var ui: Node = null        # <<< ใส่ชนิดให้ชัดเจน
-	if hud != null and hud.has_node("BuildUI"):
-		ui = hud.get_node("BuildUI")
-	if ui != null and ui.has_method("add_money"):
-		ui.call("add_money", reward)

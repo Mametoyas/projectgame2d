@@ -1,7 +1,17 @@
 extends Node
 
-@onready var path2d: Path2D = $"../Path2D"
-@onready var seed_follow: PathFollow2D = $"../Path2D/SeedFollow"
+@onready var paths: Array[Path2D] = [
+	$"../Forest5Line1",
+	$"../Forest5Line2",
+	$"../Forest5Line3",
+	$"../Forest5Line4",
+	$"../Forest5Line5",
+	$"../Forest5Line6",
+	$"../Forest5Line7",
+	$"../Forest5Line8",
+	$"../Forest5Line9"
+]
+
 
 @onready var factory: EnemyFactory = get_tree().get_first_node_in_group("enemy_factory") as EnemyFactory
 @onready var boss_factory: BossFactory = get_tree().get_first_node_in_group("boss_factory") as BossFactory
@@ -14,7 +24,6 @@ var waves: Array = [
 	["splitter","splitter","splitter","splitter","splitter"],
 	["tank","crawler","runner","regenerator","runner"],
 	["shielded","shielded","splitter","runner","flyer","flyer","splitter","splitter","splitter"]
-	# ตัวอย่างเวฟบอส: ["boss:evil_eye"]
 ]
 
 var current_wave: int = 0
@@ -77,33 +86,50 @@ func _on_wave_timer_timeout() -> void:
 	spawn_enemy(type_id)
 
 func spawn_enemy(type_id: String) -> void:
+	# ---- สุ่มเลือกเส้นทาง ----
+	if paths.is_empty():
+		print("[SPAWNER] paths ว่าง")
+		return
+
+	var path: Path2D = paths.pick_random()
+	if path == null:
+		print("[SPAWNER] path เป็น null")
+		return
+
+	var seed_follow: PathFollow2D = path.get_node_or_null("SeedFollow") as PathFollow2D
+	if seed_follow == null:
+		print("[SPAWNER] ไม่มี SeedFollow ใน: ", path.name)
+		return
+
+	var pf := seed_follow.duplicate() as PathFollow2D
+	pf.progress = 0.0
+	path.add_child(pf)
+
+	print("[SPAWNER] Spawn ", type_id, " ที่เส้นทาง: ", path.name)
+
 	# ---- ถ้าเป็นบอส ----
 	if type_id == "boss":
-		if boss_factory == null or seed_follow == null or path2d == null:
+		if boss_factory == null:
+			print("[SPAWNER] boss_factory null")
 			return
-		var pf := seed_follow.duplicate() as PathFollow2D
-		pf.progress = 0.0
-		path2d.add_child(pf)
-
-		var b := boss_factory.spawn("boss", pf)
+		var b: Boss = boss_factory.spawn("boss", pf) as Boss
 		if b:
 			get_parent().add_child(b)
 			b.global_position = pf.global_position
+			print("[SPAWNER] Boss spawn ที่ ", path.name)
 			if not b.died.is_connected(_on_enemy_died):
 				b.died.connect(_on_enemy_died)
-		return   # <---- สำคัญ ต้อง return เลย ไม่งั้นมันตกไปเข้าที่ EnemyFactory อีก
-
-	# ---- ที่เหลือคือศัตรูปกติ ----
-	if factory == null or seed_follow == null or path2d == null:
 		return
-	var f: PathFollow2D = seed_follow.duplicate() as PathFollow2D
-	f.progress = 0.0
-	path2d.add_child(f)
 
-	var e: Enemy = factory.spawn(type_id, f)
+	# ---- ศัตรูปกติ ----
+	if factory == null:
+		print("[SPAWNER] enemy_factory null")
+		return
+	var e: Enemy = factory.spawn(type_id, pf)
 	if e:
 		get_parent().add_child(e)
-		e.global_position = f.global_position
+		e.global_position = pf.global_position
+		print("[SPAWNER] Enemy spawn ที่ ", path.name)
 		if not e.died.is_connected(_on_enemy_died):
 			e.died.connect(_on_enemy_died)
 

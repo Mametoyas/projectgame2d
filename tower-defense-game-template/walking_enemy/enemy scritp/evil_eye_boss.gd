@@ -5,7 +5,7 @@ signal died(reward: int)
 signal hp_changed(current: int, max_hp: int)
 
 @export var max_hp: int = 999999999999999
-@export var speed: float = 20.0
+@export var speed: float = 120.0
 @export var armor: int = 3
 @export var reward: int = 120
 

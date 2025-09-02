@@ -1,30 +1,32 @@
-[gd_scene load_steps=62 format=4 uid="uid://mwmsveodp24y"]
+[gd_scene load_steps=64 format=4 uid="uid://mwmsveodp24y"]
 
-[ext_resource type="PackedScene" uid="uid://k0wwmy1a2m60" path="res://USE/MAP_FOREST.tscn" id="1_d7huw"]
-[ext_resource type="Texture2D" uid="uid://b64pfxfvso2po" path="res://Tiny Swords (Free Pack)/Terrain/Tilemap_color1.png" id="2_iyn2n"]
-[ext_resource type="Texture2D" uid="uid://bqrsoasilkmjj" path="res://Tiny Swords (Free Pack)/Terrain/Water Background color.png" id="3_rryu1"]
-[ext_resource type="Texture2D" uid="uid://bh5h0q4q7e1jx" path="res://Tiny Swords (Free Pack)/Decorations/Rocks/Rock3.png" id="4_lj8eo"]
-[ext_resource type="Texture2D" uid="uid://gypnvehbyx4v" path="res://Tiny Swords (Free Pack)/Terrain/Tilemap_color3.png" id="4_ma5eg"]
-[ext_resource type="Texture2D" uid="uid://d07kkcxqrxte5" path="res://Tiny Swords (Free Pack)/Terrain/Tilemap_color2.png" id="5_6j4sf"]
-[ext_resource type="Texture2D" uid="uid://b6cgpvrcf8kog" path="res://Tiny Swords (Free Pack)/Decorations/Rocks/Rock4.png" id="5_tf5bq"]
-[ext_resource type="Texture2D" uid="uid://72srihgxvp3b" path="res://Tiny Swords (Free Pack)/Decorations/Trees/Tree1.png" id="6_6a8qh"]
-[ext_resource type="Script" uid="uid://dovgmfvvknuql" path="res://USE/MAP3/enemy_spawn_map_3.gd" id="6_iyn2n"]
-[ext_resource type="Texture2D" uid="uid://7uk04kegyu81" path="res://Tiny Swords (Free Pack)/Decorations/Trees/Tree2.png" id="7_3qoti"]
-[ext_resource type="PackedScene" uid="uid://3w0jf5wh2op0" path="res://FORTEST/enemy _test.tscn" id="7_rryu1"]
-[ext_resource type="Texture2D" uid="uid://chrajmyp5ksd7" path="res://Tiny Swords (Free Pack)/Decorations/Trees/Tree3.png" id="8_qaqv2"]
-[ext_resource type="Texture2D" uid="uid://deqnpredirtt1" path="res://Tiny Swords (Free Pack)/Decorations/Trees/Tree4.png" id="9_0a8ti"]
-[ext_resource type="Texture2D" uid="uid://ctijmtmibnvh4" path="res://Tiny Swords (Free Pack)/Buildings/Blue Buildings/Tower.png" id="10_xstst"]
-[ext_resource type="Texture2D" uid="uid://buv35ggar0l2y" path="res://Tiny Swords (Free Pack)/Buildings/Blue Buildings/House3.png" id="11_jr8v3"]
-[ext_resource type="Texture2D" uid="uid://bhfdwvxqgkqhp" path="res://Tiny Swords (Free Pack)/Buildings/Blue Buildings/House2.png" id="12_44fws"]
-[ext_resource type="Texture2D" uid="uid://cxfmyp02hlu42" path="res://Tiny Swords (Free Pack)/Decorations/Bushes/Bushe1.png" id="12_ddb3l"]
-[ext_resource type="Texture2D" uid="uid://cgo2ixkghnb7v" path="res://Tiny Swords (Free Pack)/Buildings/Blue Buildings/House1.png" id="13_umjim"]
-[ext_resource type="Texture2D" uid="uid://bweow6qntp83k" path="res://Tiny Swords (Free Pack)/Decorations/Bushes/Bushe2.png" id="13_x61wr"]
-[ext_resource type="Texture2D" uid="uid://qhpomfl2ipla" path="res://Tiny Swords (Free Pack)/Decorations/Bushes/Bushe3.png" id="14_k8743"]
-[ext_resource type="Texture2D" uid="uid://baq1o7lx06kds" path="res://Tiny Swords (Free Pack)/Decorations/Bushes/Bushe4.png" id="15_l6chw"]
-[ext_resource type="Texture2D" uid="uid://0aabma63q3bh" path="res://Tiny Swords (Free Pack)/Decorations/Rocks/Rock1.png" id="16_r17y3"]
-[ext_resource type="Texture2D" uid="uid://dirg2s71r50we" path="res://Tiny Swords (Free Pack)/Decorations/Rocks/Rock2.png" id="17_81kt6"]
-[ext_resource type="PackedScene" uid="uid://kbd8nu0r2ngb" path="res://USE/Sheep_move/sheep.tscn" id="18_tf5bq"]
-[ext_resource type="PackedScene" uid="uid://dd31auwxsj6w3" path="res://USE/BASE/base1.tscn" id="20_m6lmh"]
+[ext_resource type="PackedScene" uid="uid://k0wwmy1a2m60" path="res://Map/USE/MAP_FOREST.tscn" id="1_d7huw"]
+[ext_resource type="Texture2D" uid="uid://b64pfxfvso2po" path="res://Map/Tiny Swords (Free Pack)/Terrain/Tilemap_color1.png" id="2_iyn2n"]
+[ext_resource type="Texture2D" uid="uid://bqrsoasilkmjj" path="res://Map/Tiny Swords (Free Pack)/Terrain/Water Background color.png" id="3_rryu1"]
+[ext_resource type="Texture2D" uid="uid://bh5h0q4q7e1jx" path="res://Map/Tiny Swords (Free Pack)/Decorations/Rocks/Rock3.png" id="4_lj8eo"]
+[ext_resource type="Texture2D" uid="uid://gypnvehbyx4v" path="res://Map/Tiny Swords (Free Pack)/Terrain/Tilemap_color3.png" id="4_ma5eg"]
+[ext_resource type="Texture2D" uid="uid://d07kkcxqrxte5" path="res://Map/Tiny Swords (Free Pack)/Terrain/Tilemap_color2.png" id="5_6j4sf"]
+[ext_resource type="Texture2D" uid="uid://b6cgpvrcf8kog" path="res://Map/Tiny Swords (Free Pack)/Decorations/Rocks/Rock4.png" id="5_tf5bq"]
+[ext_resource type="Texture2D" uid="uid://72srihgxvp3b" path="res://Map/Tiny Swords (Free Pack)/Decorations/Trees/Tree1.png" id="6_6a8qh"]
+[ext_resource type="Texture2D" uid="uid://7uk04kegyu81" path="res://Map/Tiny Swords (Free Pack)/Decorations/Trees/Tree2.png" id="7_3qoti"]
+[ext_resource type="Texture2D" uid="uid://chrajmyp5ksd7" path="res://Map/Tiny Swords (Free Pack)/Decorations/Trees/Tree3.png" id="8_qaqv2"]
+[ext_resource type="Texture2D" uid="uid://deqnpredirtt1" path="res://Map/Tiny Swords (Free Pack)/Decorations/Trees/Tree4.png" id="9_0a8ti"]
+[ext_resource type="Texture2D" uid="uid://ctijmtmibnvh4" path="res://Map/Tiny Swords (Free Pack)/Buildings/Blue Buildings/Tower.png" id="10_xstst"]
+[ext_resource type="Texture2D" uid="uid://buv35ggar0l2y" path="res://Map/Tiny Swords (Free Pack)/Buildings/Blue Buildings/House3.png" id="11_jr8v3"]
+[ext_resource type="Texture2D" uid="uid://bhfdwvxqgkqhp" path="res://Map/Tiny Swords (Free Pack)/Buildings/Blue Buildings/House2.png" id="12_44fws"]
+[ext_resource type="Texture2D" uid="uid://cxfmyp02hlu42" path="res://Map/Tiny Swords (Free Pack)/Decorations/Bushes/Bushe1.png" id="12_ddb3l"]
+[ext_resource type="Texture2D" uid="uid://cgo2ixkghnb7v" path="res://Map/Tiny Swords (Free Pack)/Buildings/Blue Buildings/House1.png" id="13_umjim"]
+[ext_resource type="Texture2D" uid="uid://bweow6qntp83k" path="res://Map/Tiny Swords (Free Pack)/Decorations/Bushes/Bushe2.png" id="13_x61wr"]
+[ext_resource type="Texture2D" uid="uid://qhpomfl2ipla" path="res://Map/Tiny Swords (Free Pack)/Decorations/Bushes/Bushe3.png" id="14_k8743"]
+[ext_resource type="Texture2D" uid="uid://baq1o7lx06kds" path="res://Map/Tiny Swords (Free Pack)/Decorations/Bushes/Bushe4.png" id="15_l6chw"]
+[ext_resource type="Texture2D" uid="uid://0aabma63q3bh" path="res://Map/Tiny Swords (Free Pack)/Decorations/Rocks/Rock1.png" id="16_r17y3"]
+[ext_resource type="Texture2D" uid="uid://dirg2s71r50we" path="res://Map/Tiny Swords (Free Pack)/Decorations/Rocks/Rock2.png" id="17_81kt6"]
+[ext_resource type="PackedScene" uid="uid://kbd8nu0r2ngb" path="res://Map/USE/Sheep_move/sheep.tscn" id="18_tf5bq"]
+[ext_resource type="PackedScene" uid="uid://dd31auwxsj6w3" path="res://Map/USE/BASE/base1.tscn" id="20_m6lmh"]
+[ext_resource type="Script" uid="uid://tnoe8cwacs80" path="res://Map/USE/MAP3/spawner_f_3.gd" id="22_dwu68"]
+[ext_resource type="Script" uid="uid://bsy05qwfvqd68" path="res://Map/USE/MAP2/enemy_factory_f_2.gd" id="25_jp2k4"]
+[ext_resource type="Script" uid="uid://jpmieg4dnhd" path="res://walking_enemy/enemy scritp/boss_factory.gd" id="26_1oa0v"]
+[ext_resource type="PackedScene" uid="uid://dy4ipkvnbrgty" path="res://GUI_Use/files/hud.tscn" id="27_43o0f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ysu6d"]
 texture = ExtResource("2_iyn2n")
@@ -6640,7 +6642,8 @@ tile_map_data = PackedByteArray("AAD/////AQAAAAAAAAD//wAAAQAAAAEAAAD//wEAAQAAAAI
 tile_set = SubResource("TileSet_r73lm")
 
 [node name="Camera2D" type="Camera2D" parent="MAP_FOREST3"]
-position = Vector2(1336, 648)
+position = Vector2(1188, 648)
+zoom = Vector2(0.6, 0.65)
 
 [node name="Forest3Line1" type="Path2D" parent="MAP_FOREST3"]
 curve = SubResource("Curve2D_d7huw")
@@ -6651,6 +6654,10 @@ position = Vector2(72, 264)
 [node name="goal" type="Marker2D" parent="MAP_FOREST3/Forest3Line1"]
 position = Vector2(1968, 224)
 
+[node name="SeedFollow" type="PathFollow2D" parent="MAP_FOREST3/Forest3Line1"]
+position = Vector2(72, 264)
+rotation = -0.661043
+
 [node name="Forest3Line2" type="Path2D" parent="MAP_FOREST3"]
 curve = SubResource("Curve2D_iyn2n")
 
@@ -6659,6 +6666,10 @@ position = Vector2(64, 648)
 
 [node name="goal" type="Marker2D" parent="MAP_FOREST3/Forest3Line2"]
 position = Vector2(1968, 224)
+
+[node name="SeedFollow" type="PathFollow2D" parent="MAP_FOREST3/Forest3Line2"]
+position = Vector2(64, 648)
+rotation = -0.610726
 
 [node name="Forest3Line3" type="Path2D" parent="MAP_FOREST3"]
 curve = SubResource("Curve2D_rryu1")
@@ -6669,6 +6680,10 @@ position = Vector2(64, 1024)
 [node name="goal" type="Marker2D" parent="MAP_FOREST3/Forest3Line3"]
 position = Vector2(1968, 224)
 
+[node name="SeedFollow" type="PathFollow2D" parent="MAP_FOREST3/Forest3Line3"]
+position = Vector2(64, 1024)
+rotation = -0.674741
+
 [node name="Forest3Line4" type="Path2D" parent="MAP_FOREST3"]
 curve = SubResource("Curve2D_ma5eg")
 
@@ -6677,6 +6692,10 @@ position = Vector2(72, 264)
 
 [node name="goal" type="Marker2D" parent="MAP_FOREST3/Forest3Line4"]
 position = Vector2(1936, 992)
+
+[node name="SeedFollow" type="PathFollow2D" parent="MAP_FOREST3/Forest3Line4"]
+position = Vector2(72, 264)
+rotation = -0.661043
 
 [node name="Forest3Line5" type="Path2D" parent="MAP_FOREST3"]
 curve = SubResource("Curve2D_6j4sf")
@@ -6687,6 +6706,10 @@ position = Vector2(64, 648)
 [node name="goal" type="Marker2D" parent="MAP_FOREST3/Forest3Line5"]
 position = Vector2(1936, 992)
 
+[node name="SeedFollow" type="PathFollow2D" parent="MAP_FOREST3/Forest3Line5"]
+position = Vector2(64, 640)
+rotation = -0.54042
+
 [node name="Forest3Line6" type="Path2D" parent="MAP_FOREST3"]
 curve = SubResource("Curve2D_ysu6d")
 
@@ -6695,6 +6718,25 @@ position = Vector2(64, 1024)
 
 [node name="goal" type="Marker2D" parent="MAP_FOREST3/Forest3Line6"]
 position = Vector2(1936, 992)
+
+[node name="SeedFollow" type="PathFollow2D" parent="MAP_FOREST3/Forest3Line6"]
+position = Vector2(64, 1024)
+rotation = -0.674741
+
+[node name="spawnerF3" type="Node" parent="MAP_FOREST3"]
+script = ExtResource("22_dwu68")
+
+[node name="WaveTimer" type="Timer" parent="MAP_FOREST3/spawnerF3"]
+wait_time = 0.878
+
+[node name="NextWaveButton" type="Button" parent="MAP_FOREST3/spawnerF3"]
+offset_left = 1871.0
+offset_top = 1033.0
+offset_right = 1916.0
+offset_bottom = 1064.0
+scale = Vector2(3, 2)
+text = "start"
+metadata/_edit_use_anchors_ = true
 
 [node name="tree" type="TileMapLayer" parent="MAP_FOREST3"]
 use_parent_material = true
@@ -6714,9 +6756,6 @@ tile_set = SubResource("TileSet_r73lm")
 [node name="AnimatedSprite2D" parent="MAP_FOREST3" instance=ExtResource("18_tf5bq")]
 position = Vector2(1440, 200)
 
-[node name="AnimatedSprite2D2" parent="MAP_FOREST3" instance=ExtResource("18_tf5bq")]
-position = Vector2(2080, 792)
-
 [node name="AnimatedSprite2D3" parent="MAP_FOREST3" instance=ExtResource("18_tf5bq")]
 position = Vector2(1904, 800)
 
@@ -6725,84 +6764,109 @@ use_parent_material = true
 tile_map_data = PackedByteArray("AABOAAsAEwAAAAMAAABOAAwAEwAAAAQAAABOAA0AEwAAAAUAAABOAA4AEwAAAAYAAABOAA8AEwAAAAcAAABOABAAEwAAAAgAAABOABEAEwAAAAkAAABPAAoAEwABAAIAAABPAAsAEwABAAMAAABPAAwAEwABAAQAAABPAA0AEwABAAUAAABPAA4AEwABAAYAAABPAA8AEwABAAcAAABPABAAEwABAAgAAABPABEAEwABAAkAAABPABIAEwABAAoAAABQAAoAEwACAAIAAABQAAsAEwACAAMAAABQAAwAEwACAAQAAABQAA0AEwACAAUAAABQAA4AEwACAAYAAABQAA8AEwACAAcAAABQABAAEwACAAgAAABQABEAEwACAAkAAABQABIAEwACAAoAAABRAAkAEwADAAEAAABRAAoAEwADAAIAAABRAAsAEwADAAMAAABRAAwAEwADAAQAAABRAA0AEwADAAUAAABRAA4AEwADAAYAAABRAA8AEwADAAcAAABRABAAEwADAAgAAABRABEAEwADAAkAAABRABIAEwADAAoAAABSAAkAEwAEAAEAAABSAAoAEwAEAAIAAABSAAsAEwAEAAMAAABSAAwAEwAEAAQAAABSAA0AEwAEAAUAAABSAA4AEwAEAAYAAABSAA8AEwAEAAcAAABSABAAEwAEAAgAAABSABEAEwAEAAkAAABSABIAEwAEAAoAAABTAAoAEwAFAAIAAABTAAsAEwAFAAMAAABTAAwAEwAFAAQAAABTAA0AEwAFAAUAAABTAA4AEwAFAAYAAABTAA8AEwAFAAcAAABTABAAEwAFAAgAAABTABEAEwAFAAkAAABTABIAEwAFAAoAAABUAAoAEwAGAAIAAABUAAsAEwAGAAMAAABUAAwAEwAGAAQAAABUAA0AEwAGAAUAAABUAA4AEwAGAAYAAABUAA8AEwAGAAcAAABUABAAEwAGAAgAAABUABEAEwAGAAkAAABUABIAEwAGAAoAAABVAAsAEwAHAAMAAABVAAwAEwAHAAQAAABVAA0AEwAHAAUAAABVAA4AEwAHAAYAAABVAA8AEwAHAAcAAABVABAAEwAHAAgAAABVABIAEwAHAAoAAABFAAsAEwAAAAMAAABFAAwAEwAAAAQAAABFAA0AEwAAAAUAAABFAA4AEwAAAAYAAABFAA8AEwAAAAcAAABFABAAEwAAAAgAAABFABEAEwAAAAkAAABGAAoAEwABAAIAAABGAAsAEwABAAMAAABGAAwAEwABAAQAAABGAA0AEwABAAUAAABGAA4AEwABAAYAAABGAA8AEwABAAcAAABGABAAEwABAAgAAABGABEAEwABAAkAAABGABIAEwABAAoAAABHAAoAEwACAAIAAABHAAsAEwACAAMAAABHAAwAEwACAAQAAABHAA0AEwACAAUAAABHAA4AEwACAAYAAABHAA8AEwACAAcAAABHABAAEwACAAgAAABHABEAEwACAAkAAABHABIAEwACAAoAAABIAAkAEwADAAEAAABIAAoAEwADAAIAAABIAAsAEwADAAMAAABIAAwAEwADAAQAAABIAA0AEwADAAUAAABIAA4AEwADAAYAAABIAA8AEwADAAcAAABIABAAEwADAAgAAABIABEAEwADAAkAAABIABIAEwADAAoAAABJAAkAEwAEAAEAAABJAAoAEwAEAAIAAABJAAsAEwAEAAMAAABJAAwAEwAEAAQAAABJAA0AEwAEAAUAAABJAA4AEwAEAAYAAABJAA8AEwAEAAcAAABJABAAEwAEAAgAAABJABEAEwAEAAkAAABJABIAEwAEAAoAAABKAAoAEwAFAAIAAABKAAsAEwAFAAMAAABKAAwAEwAFAAQAAABKAA0AEwAFAAUAAABKAA4AEwAFAAYAAABKAA8AEwAFAAcAAABKABAAEwAFAAgAAABKABEAEwAFAAkAAABKABIAEwAFAAoAAABLAAoAEwAGAAIAAABLAAsAEwAGAAMAAABLAAwAEwAGAAQAAABLAA0AEwAGAAUAAABLAA4AEwAGAAYAAABLAA8AEwAGAAcAAABLABAAEwAGAAgAAABLABEAEwAGAAkAAABLABIAEwAGAAoAAABMAAsAEwAHAAMAAABMAAwAEwAHAAQAAABMAA0AEwAHAAUAAABMAA4AEwAHAAYAAABMAA8AEwAHAAcAAABMABAAEwAHAAgAAABMABIAEwAHAAoAAAA9AAsAEwAAAAMAAAA9AAwAEwAAAAQAAAA9AA0AEwAAAAUAAAA9AA4AEwAAAAYAAAA9AA8AEwAAAAcAAAA9ABAAEwAAAAgAAAA9ABEAEwAAAAkAAAA+AAoAEwABAAIAAAA+AAsAEwABAAMAAAA+AAwAEwABAAQAAAA+AA0AEwABAAUAAAA+AA4AEwABAAYAAAA+AA8AEwABAAcAAAA+ABAAEwABAAgAAAA+ABEAEwABAAkAAAA+ABIAEwABAAoAAAA/AAoAEwACAAIAAAA/AAsAEwACAAMAAAA/AAwAEwACAAQAAAA/AA0AEwACAAUAAAA/AA4AEwACAAYAAAA/AA8AEwACAAcAAAA/ABAAEwACAAgAAAA/ABEAEwACAAkAAAA/ABIAEwACAAoAAABAAAkAEwADAAEAAABAAAoAEwADAAIAAABAAAsAEwADAAMAAABAAAwAEwADAAQAAABAAA0AEwADAAUAAABAAA4AEwADAAYAAABAAA8AEwADAAcAAABAABAAEwADAAgAAABAABEAEwADAAkAAABAABIAEwADAAoAAABBAAkAEwAEAAEAAABBAAoAEwAEAAIAAABBAAsAEwAEAAMAAABBAAwAEwAEAAQAAABBAA0AEwAEAAUAAABBAA4AEwAEAAYAAABBAA8AEwAEAAcAAABBABAAEwAEAAgAAABBABEAEwAEAAkAAABBABIAEwAEAAoAAABCAAoAEwAFAAIAAABCAAsAEwAFAAMAAABCAAwAEwAFAAQAAABCAA0AEwAFAAUAAABCAA4AEwAFAAYAAABCAA8AEwAFAAcAAABCABAAEwAFAAgAAABCABEAEwAFAAkAAABCABIAEwAFAAoAAABDAAoAEwAGAAIAAABDAAsAEwAGAAMAAABDAAwAEwAGAAQAAABDAA0AEwAGAAUAAABDAA4AEwAGAAYAAABDAA8AEwAGAAcAAABDABAAEwAGAAgAAABDABEAEwAGAAkAAABDABIAEwAGAAoAAABEAAsAEwAHAAMAAABEAAwAEwAHAAQAAABEAA0AEwAHAAUAAABEAA4AEwAHAAYAAABEAA8AEwAHAAcAAABEABAAEwAHAAgAAABEABIAEwAHAAoAAAA/AEEAEQAAAAIAAAA/AEIAEQAAAAMAAAA/AEMAEQAAAAQAAAA/AEQAEQAAAAUAAAA/AEUAEQAAAAYAAAA/AEYAEQAAAAcAAAA/AEcAEQAAAAgAAAA/AEgAEQAAAAkAAAA/AEkAEQAAAAoAAABAAEEAEQABAAIAAABAAEIAEQABAAMAAABAAEMAEQABAAQAAABAAEQAEQABAAUAAABAAEUAEQABAAYAAABAAEYAEQABAAcAAABAAEcAEQABAAgAAABAAEgAEQABAAkAAABAAEkAEQABAAoAAABBAEEAEQACAAIAAABBAEIAEQACAAMAAABBAEMAEQACAAQAAABBAEQAEQACAAUAAABBAEUAEQACAAYAAABBAEYAEQACAAcAAABBAEcAEQACAAgAAABBAEgAEQACAAkAAABBAEkAEQACAAoAAABCAEEAEQADAAIAAABCAEIAEQADAAMAAABCAEMAEQADAAQAAABCAEQAEQADAAUAAABCAEUAEQADAAYAAABCAEYAEQADAAcAAABCAEcAEQADAAgAAABCAEgAEQADAAkAAABCAEkAEQADAAoAAABDAEEAEQAEAAIAAABDAEIAEQAEAAMAAABDAEMAEQAEAAQAAABDAEQAEQAEAAUAAABDAEUAEQAEAAYAAABDAEYAEQAEAAcAAABDAEcAEQAEAAgAAABDAEgAEQAEAAkAAABDAEkAEQAEAAoAAABEAEEAEQAFAAIAAABEAEIAEQAFAAMAAABEAEMAEQAFAAQAAABEAEQAEQAFAAUAAABEAEUAEQAFAAYAAABEAEYAEQAFAAcAAABEAEcAEQAFAAgAAABEAEgAEQAFAAkAAABEAEkAEQAFAAoAAABFAEEAEQAGAAIAAABFAEIAEQAGAAMAAABFAEMAEQAGAAQAAABFAEQAEQAGAAUAAABFAEUAEQAGAAYAAABFAEYAEQAGAAcAAABFAEcAEQAGAAgAAABFAEgAEQAGAAkAAABFAEkAEQAGAAoAAABGAEEAEQAHAAIAAABGAEIAEQAHAAMAAABGAEMAEQAHAAQAAABGAEQAEQAHAAUAAABGAEUAEQAHAAYAAABGAEYAEQAHAAcAAABGAEcAEQAHAAgAAABGAEgAEQAHAAkAAABGAEkAEQAHAAoAAABMAEEAEQAAAAIAAABMAEIAEQAAAAMAAABMAEMAEQAAAAQAAABMAEQAEQAAAAUAAABMAEUAEQAAAAYAAABMAEYAEQAAAAcAAABMAEcAEQAAAAgAAABMAEgAEQAAAAkAAABMAEkAEQAAAAoAAABNAEEAEQABAAIAAABNAEIAEQABAAMAAABNAEMAEQABAAQAAABNAEQAEQABAAUAAABNAEUAEQABAAYAAABNAEYAEQABAAcAAABNAEcAEQABAAgAAABNAEgAEQABAAkAAABNAEkAEQABAAoAAABOAEEAEQACAAIAAABOAEIAEQACAAMAAABOAEMAEQACAAQAAABOAEQAEQACAAUAAABOAEUAEQACAAYAAABOAEYAEQACAAcAAABOAEcAEQACAAgAAABOAEgAEQACAAkAAABOAEkAEQACAAoAAABPAEEAEQADAAIAAABPAEIAEQADAAMAAABPAEMAEQADAAQAAABPAEQAEQADAAUAAABPAEUAEQADAAYAAABPAEYAEQADAAcAAABPAEcAEQADAAgAAABPAEgAEQADAAkAAABPAEkAEQADAAoAAABQAEEAEQAEAAIAAABQAEIAEQAEAAMAAABQAEMAEQAEAAQAAABQAEQAEQAEAAUAAABQAEUAEQAEAAYAAABQAEYAEQAEAAcAAABQAEcAEQAEAAgAAABQAEgAEQAEAAkAAABQAEkAEQAEAAoAAABRAEEAEQAFAAIAAABRAEIAEQAFAAMAAABRAEMAEQAFAAQAAABRAEQAEQAFAAUAAABRAEUAEQAFAAYAAABRAEYAEQAFAAcAAABRAEcAEQAFAAgAAABRAEgAEQAFAAkAAABRAEkAEQAFAAoAAABSAEEAEQAGAAIAAABSAEIAEQAGAAMAAABSAEMAEQAGAAQAAABSAEQAEQAGAAUAAABSAEUAEQAGAAYAAABSAEYAEQAGAAcAAABSAEcAEQAGAAgAAABSAEgAEQAGAAkAAABSAEkAEQAGAAoAAABTAEEAEQAHAAIAAABTAEIAEQAHAAMAAABTAEMAEQAHAAQAAABTAEQAEQAHAAUAAABTAEUAEQAHAAYAAABTAEYAEQAHAAcAAABTAEcAEQAHAAgAAABTAEgAEQAHAAkAAABTAEkAEQAHAAoAAABXAD8AEQAAAAIAAABXAEAAEQAAAAMAAABXAEEAEQAAAAQAAABXAEIAEQAAAAUAAABXAEMAEQAAAAYAAABXAEQAEQAAAAcAAABXAEUAEQAAAAgAAABXAEYAEQAAAAkAAABXAEcAEQAAAAoAAABYAD8AEQABAAIAAABYAEAAEQABAAMAAABYAEEAEQABAAQAAABYAEIAEQABAAUAAABYAEMAEQABAAYAAABYAEQAEQABAAcAAABYAEUAEQABAAgAAABYAEYAEQABAAkAAABYAEcAEQABAAoAAABZAD8AEQACAAIAAABZAEAAEQACAAMAAABZAEEAEQACAAQAAABZAEIAEQACAAUAAABZAEMAEQACAAYAAABZAEQAEQACAAcAAABZAEUAEQACAAgAAABZAEYAEQACAAkAAABZAEcAEQACAAoAAABaAD8AEQADAAIAAABaAEAAEQADAAMAAABaAEEAEQADAAQAAABaAEIAEQADAAUAAABaAEMAEQADAAYAAABaAEQAEQADAAcAAABaAEUAEQADAAgAAABaAEYAEQADAAkAAABaAEcAEQADAAoAAABbAD8AEQAEAAIAAABbAEAAEQAEAAMAAABbAEEAEQAEAAQAAABbAEIAEQAEAAUAAABbAEMAEQAEAAYAAABbAEQAEQAEAAcAAABbAEUAEQAEAAgAAABbAEYAEQAEAAkAAABbAEcAEQAEAAoAAABcAD8AEQAFAAIAAABcAEAAEQAFAAMAAABcAEEAEQAFAAQAAABcAEIAEQAFAAUAAABcAEMAEQAFAAYAAABcAEQAEQAFAAcAAABcAEUAEQAFAAgAAABcAEYAEQAFAAkAAABcAEcAEQAFAAoAAABdAD8AEQAGAAIAAABdAEAAEQAGAAMAAABdAEEAEQAGAAQAAABdAEIAEQAGAAUAAABdAEMAEQAGAAYAAABdAEQAEQAGAAcAAABdAEUAEQAGAAgAAABdAEYAEQAGAAkAAABdAEcAEQAGAAoAAABeAD8AEQAHAAIAAABeAEAAEQAHAAMAAABeAEEAEQAHAAQAAABeAEIAEQAHAAUAAABeAEMAEQAHAAYAAABeAEQAEQAHAAcAAABeAEUAEQAHAAgAAABeAEYAEQAHAAkAAABeAEcAEQAHAAoAAAA=")
 tile_set = SubResource("TileSet_r73lm")
 
-[node name="Enemy spawn_map3" type="Node" parent="." node_paths=PackedStringArray("paths", "base")]
-script = ExtResource("6_iyn2n")
-enemy_scene = ExtResource("7_rryu1")
-paths = [NodePath("../MAP_FOREST3/Forest3Line1"), NodePath("../MAP_FOREST3/Forest3Line2"), NodePath("../MAP_FOREST3/Forest3Line3"), NodePath("../MAP_FOREST3/Forest3Line4"), NodePath("../MAP_FOREST3/Forest3Line5"), NodePath("../MAP_FOREST3/Forest3Line6")]
-base = NodePath("../base3(1)")
+[node name="AnimatedSprite2D6" parent="MAP_FOREST3" instance=ExtResource("18_tf5bq")]
+position = Vector2(337, 1093)
+
+[node name="AnimatedSprite2D5" parent="MAP_FOREST3" instance=ExtResource("18_tf5bq")]
+position = Vector2(551, 1076)
+
+[node name="AnimatedSprite2D4" parent="MAP_FOREST3" instance=ExtResource("18_tf5bq")]
+position = Vector2(762, 1084)
 
 [node name="NoBuildZones3" type="Node2D" parent="."]
 
-[node name="Area2D" type="Area2D" parent="NoBuildZones3" groups=["no_build3"]]
+[node name="Area2D" type="Area2D" parent="NoBuildZones3" groups=["no_build"]]
 position = Vector2(456, 216)
+collision_layer = 128
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NoBuildZones3/Area2D"]
 position = Vector2(741.5, -11.5)
 shape = SubResource("RectangleShape2D_rryu1")
 
-[node name="Area2D2" type="Area2D" parent="NoBuildZones3" groups=["no_build3"]]
+[node name="Area2D2" type="Area2D" parent="NoBuildZones3" groups=["no_build"]]
 position = Vector2(480, 600)
+collision_layer = 128
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NoBuildZones3/Area2D2"]
 position = Vector2(376, 0)
 shape = SubResource("RectangleShape2D_ma5eg")
 
-[node name="Area2D3" type="Area2D" parent="NoBuildZones3" groups=["no_build3"]]
+[node name="Area2D3" type="Area2D" parent="NoBuildZones3" groups=["no_build"]]
 position = Vector2(480, 952)
+collision_layer = 128
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NoBuildZones3/Area2D3"]
 position = Vector2(64, 97)
 shape = SubResource("RectangleShape2D_6j4sf")
 
-[node name="Area2D4" type="Area2D" parent="NoBuildZones3" groups=["no_build3"]]
+[node name="Area2D4" type="Area2D" parent="NoBuildZones3" groups=["no_build"]]
 position = Vector2(1768, 224)
+collision_layer = 128
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NoBuildZones3/Area2D4"]
 position = Vector2(-24, 8)
 shape = SubResource("RectangleShape2D_ysu6d")
 
-[node name="Area2D5" type="Area2D" parent="NoBuildZones3" groups=["no_build3"]]
+[node name="Area2D5" type="Area2D" parent="NoBuildZones3" groups=["no_build"]]
 position = Vector2(1760, 992)
+collision_layer = 128
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NoBuildZones3/Area2D5"]
 position = Vector2(149, 70)
 shape = SubResource("RectangleShape2D_rt27r")
 
-[node name="Area2D6" type="Area2D" parent="NoBuildZones3" groups=["no_build3"]]
+[node name="Area2D6" type="Area2D" parent="NoBuildZones3" groups=["no_build"]]
 position = Vector2(896, 584)
+collision_layer = 128
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NoBuildZones3/Area2D6"]
 position = Vector2(-4, 16)
 shape = SubResource("RectangleShape2D_04acc")
 
-[node name="Area2D7" type="Area2D" parent="NoBuildZones3" groups=["no_build3"]]
+[node name="Area2D7" type="Area2D" parent="NoBuildZones3" groups=["no_build"]]
 position = Vector2(1648, 592)
+collision_layer = 128
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NoBuildZones3/Area2D7"]
 position = Vector2(-8, 16)
 shape = SubResource("RectangleShape2D_dcyoa")
 
-[node name="Area2D8" type="Area2D" parent="NoBuildZones3"]
+[node name="Area2D8" type="Area2D" parent="NoBuildZones3" groups=["no_build"]]
 position = Vector2(1456, 232)
+collision_layer = 128
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NoBuildZones3/Area2D8"]
 shape = SubResource("CircleShape2D_tf5bq")
 
-[node name="Area2D9" type="Area2D" parent="NoBuildZones3"]
+[node name="Area2D9" type="Area2D" parent="NoBuildZones3" groups=["no_build"]]
 position = Vector2(1984, 808)
+collision_layer = 128
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NoBuildZones3/Area2D9"]
 position = Vector2(16, 16)
 shape = SubResource("RectangleShape2D_6a8qh")
 
-[node name="Area2D10" type="Area2D" parent="NoBuildZones3" groups=["no_build3"]]
+[node name="Area2D10" type="Area2D" parent="NoBuildZones3" groups=["no_build"]]
 position = Vector2(1231, 233)
+collision_layer = 128
+collision_mask = 0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="NoBuildZones3/Area2D10"]
 polygon = PackedVector2Array(-249, -55, -188, -96, 88, -95, 134, -51, 195, 60, 188, 81, -242, 78)
 
-[node name="Area2D11" type="Area2D" parent="NoBuildZones3" groups=["no_build3"]]
+[node name="Area2D11" type="Area2D" parent="NoBuildZones3" groups=["no_build"]]
 position = Vector2(1242, 1079)
+collision_layer = 128
+collision_mask = 0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="NoBuildZones3/Area2D11"]
 polygon = PackedVector2Array(-252, 89, -218, -44, 259, -70, 282, 96)
@@ -6812,3 +6876,11 @@ position = Vector2(1968, 224)
 
 [node name="base3(2)" parent="." instance=ExtResource("20_m6lmh")]
 position = Vector2(1920, 960)
+
+[node name="EnemyFactoryF2" type="Node" parent="."]
+script = ExtResource("25_jp2k4")
+
+[node name="Boss_factory" type="Node" parent="."]
+script = ExtResource("26_1oa0v")
+
+[node name="HUD" parent="." instance=ExtResource("27_43o0f")]

@@ -1,26 +1,28 @@
-[gd_scene load_steps=46 format=4 uid="uid://cvgqcvfm012i7"]
+[gd_scene load_steps=49 format=4 uid="uid://cvgqcvfm012i7"]
 
-[ext_resource type="PackedScene" uid="uid://k0wwmy1a2m60" path="res://USE/MAP_FOREST.tscn" id="1_x4amj"]
-[ext_resource type="Texture2D" uid="uid://b64pfxfvso2po" path="res://Tiny Swords (Free Pack)/Terrain/Tilemap_color1.png" id="2_3exhb"]
-[ext_resource type="Texture2D" uid="uid://bqrsoasilkmjj" path="res://Tiny Swords (Free Pack)/Terrain/Water Background color.png" id="3_3ikxg"]
-[ext_resource type="Texture2D" uid="uid://gypnvehbyx4v" path="res://Tiny Swords (Free Pack)/Terrain/Tilemap_color3.png" id="4_5yxci"]
-[ext_resource type="Texture2D" uid="uid://bweow6qntp83k" path="res://Tiny Swords (Free Pack)/Decorations/Bushes/Bushe2.png" id="4_k2442"]
-[ext_resource type="Texture2D" uid="uid://cxfmyp02hlu42" path="res://Tiny Swords (Free Pack)/Decorations/Bushes/Bushe1.png" id="5_yd466"]
-[ext_resource type="Texture2D" uid="uid://d07kkcxqrxte5" path="res://Tiny Swords (Free Pack)/Terrain/Tilemap_color2.png" id="5_ydun4"]
-[ext_resource type="PackedScene" uid="uid://dd31auwxsj6w3" path="res://USE/BASE/base1.tscn" id="6_3exhb"]
-[ext_resource type="Texture2D" uid="uid://clfrxm31o7dx8" path="res://Tiny Swords (Free Pack)/Decorations/Sheep/Sheep_Grass.png" id="6_7mqjx"]
-[ext_resource type="Script" uid="uid://b2oixsictakva" path="res://USE/MAP4/enemy_spawn_map_4.gd" id="7_3ikxg"]
-[ext_resource type="Texture2D" uid="uid://72srihgxvp3b" path="res://Tiny Swords (Free Pack)/Decorations/Trees/Tree1.png" id="7_srtyk"]
-[ext_resource type="PackedScene" uid="uid://3w0jf5wh2op0" path="res://FORTEST/enemy _test.tscn" id="8_5yxci"]
-[ext_resource type="Texture2D" uid="uid://chrajmyp5ksd7" path="res://Tiny Swords (Free Pack)/Decorations/Trees/Tree3.png" id="8_nndpw"]
-[ext_resource type="Texture2D" uid="uid://7uk04kegyu81" path="res://Tiny Swords (Free Pack)/Decorations/Trees/Tree2.png" id="9_gmmjc"]
-[ext_resource type="Texture2D" uid="uid://deqnpredirtt1" path="res://Tiny Swords (Free Pack)/Decorations/Trees/Tree4.png" id="10_3py3w"]
-[ext_resource type="Texture2D" uid="uid://0aabma63q3bh" path="res://Tiny Swords (Free Pack)/Decorations/Rocks/Rock1.png" id="13_4opi0"]
-[ext_resource type="Texture2D" uid="uid://dirg2s71r50we" path="res://Tiny Swords (Free Pack)/Decorations/Rocks/Rock2.png" id="14_w3q3x"]
-[ext_resource type="Texture2D" uid="uid://bh5h0q4q7e1jx" path="res://Tiny Swords (Free Pack)/Decorations/Rocks/Rock3.png" id="15_45yio"]
-[ext_resource type="Texture2D" uid="uid://b6cgpvrcf8kog" path="res://Tiny Swords (Free Pack)/Decorations/Rocks/Rock4.png" id="16_fk7hv"]
-[ext_resource type="Texture2D" uid="uid://baq1o7lx06kds" path="res://Tiny Swords (Free Pack)/Decorations/Bushes/Bushe4.png" id="17_ijvyy"]
-[ext_resource type="Texture2D" uid="uid://qhpomfl2ipla" path="res://Tiny Swords (Free Pack)/Decorations/Bushes/Bushe3.png" id="18_l0b67"]
+[ext_resource type="PackedScene" uid="uid://k0wwmy1a2m60" path="res://Map/USE/MAP_FOREST.tscn" id="1_x4amj"]
+[ext_resource type="Texture2D" uid="uid://b64pfxfvso2po" path="res://Map/Tiny Swords (Free Pack)/Terrain/Tilemap_color1.png" id="2_3exhb"]
+[ext_resource type="Texture2D" uid="uid://bqrsoasilkmjj" path="res://Map/Tiny Swords (Free Pack)/Terrain/Water Background color.png" id="3_3ikxg"]
+[ext_resource type="Texture2D" uid="uid://gypnvehbyx4v" path="res://Map/Tiny Swords (Free Pack)/Terrain/Tilemap_color3.png" id="4_5yxci"]
+[ext_resource type="Texture2D" uid="uid://bweow6qntp83k" path="res://Map/Tiny Swords (Free Pack)/Decorations/Bushes/Bushe2.png" id="4_k2442"]
+[ext_resource type="Texture2D" uid="uid://cxfmyp02hlu42" path="res://Map/Tiny Swords (Free Pack)/Decorations/Bushes/Bushe1.png" id="5_yd466"]
+[ext_resource type="Texture2D" uid="uid://d07kkcxqrxte5" path="res://Map/Tiny Swords (Free Pack)/Terrain/Tilemap_color2.png" id="5_ydun4"]
+[ext_resource type="PackedScene" uid="uid://dd31auwxsj6w3" path="res://Map/USE/BASE/base1.tscn" id="6_3exhb"]
+[ext_resource type="Texture2D" uid="uid://clfrxm31o7dx8" path="res://Map/Tiny Swords (Free Pack)/Decorations/Sheep/Sheep_Grass.png" id="6_7mqjx"]
+[ext_resource type="Texture2D" uid="uid://72srihgxvp3b" path="res://Map/Tiny Swords (Free Pack)/Decorations/Trees/Tree1.png" id="7_srtyk"]
+[ext_resource type="Texture2D" uid="uid://chrajmyp5ksd7" path="res://Map/Tiny Swords (Free Pack)/Decorations/Trees/Tree3.png" id="8_nndpw"]
+[ext_resource type="Texture2D" uid="uid://7uk04kegyu81" path="res://Map/Tiny Swords (Free Pack)/Decorations/Trees/Tree2.png" id="9_gmmjc"]
+[ext_resource type="Texture2D" uid="uid://deqnpredirtt1" path="res://Map/Tiny Swords (Free Pack)/Decorations/Trees/Tree4.png" id="10_3py3w"]
+[ext_resource type="Texture2D" uid="uid://0aabma63q3bh" path="res://Map/Tiny Swords (Free Pack)/Decorations/Rocks/Rock1.png" id="13_4opi0"]
+[ext_resource type="Texture2D" uid="uid://dirg2s71r50we" path="res://Map/Tiny Swords (Free Pack)/Decorations/Rocks/Rock2.png" id="14_w3q3x"]
+[ext_resource type="Texture2D" uid="uid://bh5h0q4q7e1jx" path="res://Map/Tiny Swords (Free Pack)/Decorations/Rocks/Rock3.png" id="15_45yio"]
+[ext_resource type="Texture2D" uid="uid://b6cgpvrcf8kog" path="res://Map/Tiny Swords (Free Pack)/Decorations/Rocks/Rock4.png" id="16_fk7hv"]
+[ext_resource type="Texture2D" uid="uid://baq1o7lx06kds" path="res://Map/Tiny Swords (Free Pack)/Decorations/Bushes/Bushe4.png" id="17_ijvyy"]
+[ext_resource type="Texture2D" uid="uid://qhpomfl2ipla" path="res://Map/Tiny Swords (Free Pack)/Decorations/Bushes/Bushe3.png" id="18_l0b67"]
+[ext_resource type="Script" uid="uid://bu07kln8hmhg5" path="res://Map/USE/MAP4/spawner_f_4.gd" id="20_swbws"]
+[ext_resource type="PackedScene" uid="uid://dy4ipkvnbrgty" path="res://GUI_Use/files/hud.tscn" id="21_gm3ld"]
+[ext_resource type="Script" uid="uid://bsy05qwfvqd68" path="res://Map/USE/MAP2/enemy_factory_f_2.gd" id="22_6q7mc"]
+[ext_resource type="Script" uid="uid://jpmieg4dnhd" path="res://walking_enemy/enemy scritp/boss_factory.gd" id="23_i65gr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yujfi"]
 texture = ExtResource("2_3exhb")
@@ -6399,9 +6401,15 @@ sources/16 = SubResource("TileSetAtlasSource_25hhn")
 
 [sub_resource type="Curve2D" id="Curve2D_x4amj"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 72, 288, 0, 0, 0, 0, 128, 272, 0, 0, 0, 0, 176, 256, 0, 0, 0, 0, 800, 256, 0, 0, 0, 0, 840, 264, 0, 0, 0, 0, 856, 280, 0, 0, 0, 0, 856, 320, 0, 0, 0, 0, 864, 1456, 0, 0, 0, 0, 1472, 1456, 0, 0, 0, 0, 1472, 304, 0, 0, 0, 0, 1488, 280, 0, 0, 0, 0, 1504, 256, 0, 0, 0, 0, 1544, 240, 0, 0, 0, 0, 2136, 240)
+"points": PackedVector2Array(0, 0, 0, 0, 72, 288, 0, 0, 0, 0, 128, 272, 0, 0, 0, 0, 176, 256, 0, 0, 0, 0, 800, 256, 0, 0, 0, 0, 840, 264, 0, 0, 0, 0, 856, 280, 0, 0, 0, 0, 856, 320, 0, 0, 0, 0, 864, 1456, 0, 0, 0, 0, 1472, 1456, 0, 0, 0, 0, 1472, 304, 0, 0, 0, 0, 1488, 280, 0, 0, 0, 0, 1504, 256, 0, 0, 0, 0, 1544, 240, 0, 0, 0, 0, 2136, 240, 0, 0, 0, 0, 72, 288)
 }
-point_count = 14
+point_count = 15
+
+[sub_resource type="Curve2D" id="Curve2D_y4185"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1137, 1454, 0, 0, 0, 0, 1476, 1458, 0, 0, 0, 0, 1463, 1174, 0, 0, 0, 0, 1459, 952, 0, 0, 0, 0, 1463, 739, 0, 0, 0, 0, 1471, 564, 0, 0, 0, 0, 1459, 405, 0, 0, 0, 0, 1455, 296, 0, 0, 0, 0, 1471, 234, 0, 0, 0, 0, 1551, 225, 0, 0, 0, 0, 1701, 225, 0, 0, 0, 0, 1831, 225, 0, 0, 0, 0, 2002, 217)
+}
+point_count = 13
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3exhb"]
 size = Vector2(128, 1312)
@@ -6445,8 +6453,8 @@ tile_map_data = PackedByteArray("AAD/////AQAAAAAAAAD//wAAAQAAAAEAAAD//wEAAQAAAAI
 tile_set = SubResource("TileSet_isxye")
 
 [node name="Camera2D" type="Camera2D" parent="MAP_FOREST4"]
-position = Vector2(1384, 696)
-zoom = Vector2(0.91, 0.91)
+position = Vector2(1189, 655)
+zoom = Vector2(0.6, 0.65)
 
 [node name="Forest4Line1" type="Path2D" parent="MAP_FOREST4"]
 curve = SubResource("Curve2D_x4amj")
@@ -6456,6 +6464,23 @@ position = Vector2(1920, 240)
 
 [node name="start" type="Marker2D" parent="MAP_FOREST4/Forest4Line1"]
 position = Vector2(72, 288)
+
+[node name="SeedFollow" type="PathFollow2D" parent="MAP_FOREST4/Forest4Line1"]
+position = Vector2(72, 288)
+rotation = -0.2783
+
+[node name="Forest4Line2" type="Path2D" parent="MAP_FOREST4"]
+curve = SubResource("Curve2D_y4185")
+
+[node name="goal" type="Marker2D" parent="MAP_FOREST4/Forest4Line2"]
+position = Vector2(1920, 240)
+
+[node name="start" type="Marker2D" parent="MAP_FOREST4/Forest4Line2"]
+position = Vector2(72, 288)
+
+[node name="SeedFollow" type="PathFollow2D" parent="MAP_FOREST4/Forest4Line2"]
+position = Vector2(1137, 1454)
+rotation = 0.0117989
 
 [node name="Base4" parent="MAP_FOREST4" instance=ExtResource("6_3exhb")]
 position = Vector2(2040, 216)
@@ -6475,49 +6500,78 @@ use_parent_material = true
 tile_map_data = PackedByteArray("AAA9ADUACQA5AAIAAAA9ADYACQA5AAMAAAA9ADcACQA5AAQAAAA+ADQACQA6AAEAAAA+ADUACQA6AAIAAAA+ADYACQA6AAMAAAA+ADcACQA6AAQAAAA+ADgACQA6AAUAAAA/ADQACQA7AAEAAAA/ADUACQA7AAIAAAA/ADYACQA7AAMAAAA/ADcACQA7AAQAAAA/ADgACQA7AAUAAABAADQACQA8AAEAAABAADUACQA8AAIAAABAADYACQA8AAMAAABAADcACQA8AAQAAABAADgACQA8AAUAAABBADQACQA9AAEAAABBADUACQA9AAIAAABBADYACQA9AAMAAABBADcACQA9AAQAAABBADgACQA9AAUAAABCADUACQA+AAIAAABCADYACQA+AAMAAABCADcACQA+AAQAAAA/AC8ACQA5AAIAAAA/ADAACQA5AAMAAAA/ADEACQA5AAQAAABAAC4ACQA6AAEAAABAAC8ACQA6AAIAAABAADAACQA6AAMAAABAADEACQA6AAQAAABAADIACQA6AAUAAABBAC4ACQA7AAEAAABBAC8ACQA7AAIAAABBADAACQA7AAMAAABBADEACQA7AAQAAABBADIACQA7AAUAAABCAC4ACQA8AAEAAABCAC8ACQA8AAIAAABCADAACQA8AAMAAABCADEACQA8AAQAAABCADIACQA8AAUAAABDAC4ACQA9AAEAAABDAC8ACQA9AAIAAABDADAACQA9AAMAAABDADEACQA9AAQAAABDADIACQA9AAUAAABEAC8ACQA+AAIAAABEADAACQA+AAMAAABEADEACQA+AAQAAABOACAACQA5AAIAAABOACEACQA5AAMAAABOACIACQA5AAQAAABPAB8ACQA6AAEAAABPACAACQA6AAIAAABPACEACQA6AAMAAABPACIACQA6AAQAAABPACMACQA6AAUAAABQAB8ACQA7AAEAAABQACAACQA7AAIAAABQACEACQA7AAMAAABQACIACQA7AAQAAABQACMACQA7AAUAAABRAB8ACQA8AAEAAABRACAACQA8AAIAAABRACEACQA8AAMAAABRACIACQA8AAQAAABRACMACQA8AAUAAABSAB8ACQA9AAEAAABSACAACQA9AAIAAABSACEACQA9AAMAAABSACIACQA9AAQAAABSACMACQA9AAUAAABTACAACQA+AAIAAABTACEACQA+AAMAAABTACIACQA+AAQAAABEACAACQA5AAIAAABEACEACQA5AAMAAABEACIACQA5AAQAAABFAB8ACQA6AAEAAABFACAACQA6AAIAAABFACEACQA6AAMAAABFACIACQA6AAQAAABFACMACQA6AAUAAABGAB8ACQA7AAEAAABGACAACQA7AAIAAABGACEACQA7AAMAAABGACIACQA7AAQAAABGACMACQA7AAUAAABHAB8ACQA8AAEAAABHACAACQA8AAIAAABHACEACQA8AAMAAABHACIACQA8AAQAAABHACMACQA8AAUAAABIAB8ACQA9AAEAAABIACAACQA9AAIAAABIACEACQA9AAMAAABIACIACQA9AAQAAABIACMACQA9AAUAAABJACAACQA+AAIAAABJACEACQA+AAMAAABJACIACQA+AAQAAAA8ACAACQA5AAIAAAA8ACEACQA5AAMAAAA8ACIACQA5AAQAAAA9AB8ACQA6AAEAAAA9ACAACQA6AAIAAAA9ACEACQA6AAMAAAA9ACIACQA6AAQAAAA9ACMACQA6AAUAAAA+AB8ACQA7AAEAAAA+ACAACQA7AAIAAAA+ACEACQA7AAMAAAA+ACIACQA7AAQAAAA+ACMACQA7AAUAAAA/AB8ACQA8AAEAAAA/ACAACQA8AAIAAAA/ACEACQA8AAMAAAA/ACIACQA8AAQAAAA/ACMACQA8AAUAAABAAB8ACQA9AAEAAABAACAACQA9AAIAAABAACEACQA9AAMAAABAACIACQA9AAQAAABAACMACQA9AAUAAABBACAACQA+AAIAAABBACEACQA+AAMAAABBACIACQA+AAQAAABMADIACAAiAAMAAABMADMACAAiAAQAAABNADEACAAjAAIAAABNADIACAAjAAMAAABNADMACAAjAAQAAABOADEACAAkAAIAAABOADIACAAkAAMAAABOADMACAAkAAQAAABPADIACAAlAAMAAABPADMACAAlAAQAAAB1AEkACwAxAAMAAAB2AEgACwAyAAIAAAB2AEkACwAyAAMAAAB2AEoACwAyAAQAAAB3AEgACwAzAAIAAAB3AEkACwAzAAMAAAB3AEoACwAzAAQAAAB4AEgACwA0AAIAAAB4AEkACwA0AAMAAAB4AEoACwA0AAQAAAB5AEgACwA1AAIAAAB5AEkACwA1AAMAAAB5AEoACwA1AAQAAAB6AEkACwA2AAMAAAB6AEoACwA2AAQAAAB9AEkACwA5AAMAAAB+AEgACwA6AAIAAAB+AEkACwA6AAMAAAB+AEoACwA6AAQAAAB/AEgACwA7AAIAAAB/AEkACwA7AAMAAAB/AEoACwA7AAQAAACAAEgACwA8AAIAAACAAEkACwA8AAMAAACAAEoACwA8AAQAAACBAEgACwA9AAIAAACBAEkACwA9AAMAAACBAEoACwA9AAQAAACCAEkACwA+AAMAAACCAEoACwA+AAQAAABlAEkACwAxAAMAAABmAEgACwAyAAIAAABmAEkACwAyAAMAAABmAEoACwAyAAQAAABnAEgACwAzAAIAAABnAEkACwAzAAMAAABnAEoACwAzAAQAAABoAEgACwA0AAIAAABoAEkACwA0AAMAAABoAEoACwA0AAQAAABpAEgACwA1AAIAAABpAEkACwA1AAMAAABpAEoACwA1AAQAAABqAEkACwA2AAMAAABqAEoACwA2AAQAAABtAEkACwA5AAMAAABuAEgACwA6AAIAAABuAEkACwA6AAMAAABuAEoACwA6AAQAAABvAEgACwA7AAIAAABvAEkACwA7AAMAAABvAEoACwA7AAQAAABwAEgACwA8AAIAAABwAEkACwA8AAMAAABwAEoACwA8AAQAAABxAEgACwA9AAIAAABxAEkACwA9AAMAAABxAEoACwA9AAQAAAByAEkACwA+AAMAAAByAEoACwA+AAQAAAA/AEoACwAxAAMAAABAAEkACwAyAAIAAABAAEoACwAyAAMAAABAAEsACwAyAAQAAABBAEkACwAzAAIAAABBAEoACwAzAAMAAABBAEsACwAzAAQAAABCAEkACwA0AAIAAABCAEoACwA0AAMAAABCAEsACwA0AAQAAABDAEkACwA1AAIAAABDAEoACwA1AAMAAABDAEsACwA1AAQAAABEAEoACwA2AAMAAABEAEsACwA2AAQAAABHAEoACwA5AAMAAABIAEkACwA6AAIAAABIAEoACwA6AAMAAABIAEsACwA6AAQAAABJAEkACwA7AAIAAABJAEoACwA7AAMAAABJAEsACwA7AAQAAABKAEkACwA8AAIAAABKAEoACwA8AAMAAABKAEsACwA8AAQAAABLAEkACwA9AAIAAABLAEoACwA9AAMAAABLAEsACwA9AAQAAABMAEoACwA+AAMAAABMAEsACwA+AAQAAAAUAEkACwA+AAQAAAAVAEgACwAyAAIAAAAVAEkACwAyAAMAAAAVAEoACwAyAAQAAAAWAEgACwAzAAIAAAAWAEkACwAzAAMAAAAWAEoACwAzAAQAAAAXAEgACwA0AAIAAAAXAEkACwA0AAMAAAAXAEoACwA0AAQAAAAYAEgACwA1AAIAAAAYAEkACwA1AAMAAAAYAEoACwA1AAQAAAAZAEkACwA2AAMAAAAZAEoACwA2AAQAAAAcAEkACwA5AAMAAAAdAEgACwA6AAIAAAAdAEkACwA6AAMAAAAdAEoACwA6AAQAAAAeAEgACwA7AAIAAAAeAEkACwA7AAMAAAAeAEoACwA7AAQAAAAfAEgACwA8AAIAAAAfAEkACwA8AAMAAAAfAEoACwA8AAQAAAAgAEgACwA9AAIAAAAgAEkACwA9AAMAAAAgAEoACwA9AAQAAAAhAEkACwA+AAMAAAAhAEoACwA+AAQAAAAHAEgACwAxAAMAAAAIAEcACwAyAAIAAAAIAEgACwAyAAMAAAAIAEkACwAyAAQAAAAJAEcACwAzAAIAAAAJAEgACwAzAAMAAAAJAEkACwAzAAQAAAAKAEcACwA0AAIAAAAKAEgACwA0AAMAAAAKAEkACwA0AAQAAAALAEcACwA1AAIAAAALAEgACwA1AAMAAAALAEkACwA1AAQAAAAMAEgACwA2AAMAAAAMAEkACwA2AAQAAAAPAEgACwA5AAMAAAAQAEcACwA6AAIAAAAQAEgACwA6AAMAAAAQAEkACwA6AAQAAAARAEcACwA7AAIAAAARAEgACwA7AAMAAAARAEkACwA7AAQAAAASAEcACwA8AAIAAAASAEgACwA8AAMAAAASAEkACwA8AAQAAAATAEcACwA9AAIAAAATAEgACwA9AAMAAAATAEkACwA9AAQAAAAUAEgACwA+AAMAAAAVABQACwAxAAMAAAAWABMACwAyAAIAAAAWABQACwAyAAMAAAAWABUACwAyAAQAAAAXABMACwAzAAIAAAAXABQACwAzAAMAAAAXABUACwAzAAQAAAAYABMACwA0AAIAAAAYABQACwA0AAMAAAAYABUACwA0AAQAAAAZABMACwA1AAIAAAAZABQACwA1AAMAAAAZABUACwA1AAQAAAAaABQACwA2AAMAAAAaABUACwA2AAQAAAAdABQACwA5AAMAAAAeABMACwA6AAIAAAAeABQACwA6AAMAAAAeABUACwA6AAQAAAAfABMACwA7AAIAAAAfABQACwA7AAMAAAAfABUACwA7AAQAAAAgABMACwA8AAIAAAAgABQACwA8AAMAAAAgABUACwA8AAQAAAAhABMACwA9AAIAAAAhABQACwA9AAMAAAAhABUACwA9AAQAAAAiABQACwA+AAMAAAAiABUACwA+AAQAAABnAAoACwA+AAMAAABnAAsACwA+AAQAAABmAAkACwA9AAIAAABmAAoACwA9AAMAAABmAAsACwA9AAQAAABlAAkACwA8AAIAAABlAAoACwA8AAMAAABlAAsACwA8AAQAAABkAAkACwA7AAIAAABkAAoACwA7AAMAAABkAAsACwA7AAQAAABjAAkACwA6AAIAAABjAAoACwA6AAMAAABjAAsACwA6AAQAAABiAAoACwA5AAMAAABfAAoACwA2AAMAAABfAAsACwA2AAQAAABeAAkACwA1AAIAAABeAAoACwA1AAMAAABeAAsACwA1AAQAAABdAAkACwA0AAIAAABdAAoACwA0AAMAAABdAAsACwA0AAQAAABcAAkACwAzAAIAAABcAAoACwAzAAMAAABcAAsACwAzAAQAAABbAAkACwAyAAIAAABbAAoACwAyAAMAAABbAAsACwAyAAQAAABaAAoACwAxAAMAAAA=")
 tile_set = SubResource("TileSet_isxye")
 
+[node name="spawnerF4" type="Node" parent="MAP_FOREST4"]
+script = ExtResource("20_swbws")
+
+[node name="WaveTimer" type="Timer" parent="MAP_FOREST4/spawnerF4"]
+wait_time = 0.878
+
+[node name="NextWaveButton" type="Button" parent="MAP_FOREST4/spawnerF4"]
+offset_left = 1871.0
+offset_top = 1033.0
+offset_right = 1916.0
+offset_bottom = 1064.0
+scale = Vector2(3, 2)
+text = "start"
+metadata/_edit_use_anchors_ = true
+
 [node name="NoBuildZones4" type="Node2D" parent="."]
 
-[node name="Area2D2" type="Area2D" parent="NoBuildZones4"]
+[node name="Area2D2" type="Area2D" parent="NoBuildZones4" groups=["no_build"]]
 position = Vector2(864, 760)
+collision_layer = 128
+collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NoBuildZones4/Area2D2" groups=["no_build4"]]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NoBuildZones4/Area2D2" groups=["no_build"]]
 position = Vector2(0, 96)
 shape = SubResource("RectangleShape2D_3exhb")
 
-[node name="Area2D3" type="Area2D" parent="NoBuildZones4"]
+[node name="Area2D3" type="Area2D" parent="NoBuildZones4" groups=["no_build"]]
 position = Vector2(1472, 744)
+collision_layer = 128
+collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NoBuildZones4/Area2D3" groups=["no_build4"]]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NoBuildZones4/Area2D3" groups=["no_build"]]
 position = Vector2(0, 108)
 shape = SubResource("RectangleShape2D_3ikxg")
 
-[node name="Area2D4" type="Area2D" parent="NoBuildZones4"]
+[node name="Area2D4" type="Area2D" parent="NoBuildZones4" groups=["no_build"]]
 position = Vector2(1808, 232)
+collision_layer = 128
+collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NoBuildZones4/Area2D4" groups=["no_build4"]]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NoBuildZones4/Area2D4" groups=["no_build"]]
 position = Vector2(-80.5, 8.5)
 shape = SubResource("RectangleShape2D_5yxci")
 
-[node name="Area2D6" type="Area2D" parent="NoBuildZones4"]
+[node name="Area2D6" type="Area2D" parent="NoBuildZones4" groups=["no_build"]]
 position = Vector2(1160, 720)
+collision_layer = 128
+collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NoBuildZones4/Area2D6" groups=["no_build4"]]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NoBuildZones4/Area2D6" groups=["no_build"]]
 shape = SubResource("RectangleShape2D_ydun4")
 
-[node name="Area2D" type="Area2D" parent="NoBuildZones4"]
+[node name="Area2D" type="Area2D" parent="NoBuildZones4" groups=["no_build"]]
 position = Vector2(448, 256)
+collision_layer = 128
+collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NoBuildZones4/Area2D" groups=["no_build4"]]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NoBuildZones4/Area2D" groups=["no_build"]]
 position = Vector2(80, 0)
 shape = SubResource("RectangleShape2D_yujfi")
 
-[node name="Area2D5" type="Area2D" parent="NoBuildZones4" groups=["no_build4"]]
+[node name="Area2D5" type="Area2D" parent="NoBuildZones4" groups=["no_build"]]
+collision_layer = 128
+collision_mask = 0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="NoBuildZones4/Area2D5"]
 polygon = PackedVector2Array(127, 89, 2251, 94, 2255, 1198, 120, 1195, 135, 314, 272, 327, 268, 994, 356, 1048, 2150, 1048, 2107, 698, 2172, 173, 120, 190)
 
-[node name="Enemy spawn_map4" type="Node" parent="." node_paths=PackedStringArray("paths", "base")]
-script = ExtResource("7_3ikxg")
-enemy_scene = ExtResource("8_5yxci")
-paths = [NodePath("../MAP_FOREST4/Forest4Line1")]
-base = NodePath("../MAP_FOREST4/Base4")
+[node name="HUD" parent="." instance=ExtResource("21_gm3ld")]
+
+[node name="EnemyFactoryF2" type="Node" parent="."]
+script = ExtResource("22_6q7mc")
+
+[node name="Boss_factory" type="Node" parent="."]
+script = ExtResource("23_i65gr")
