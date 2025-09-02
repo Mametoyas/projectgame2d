@@ -1,32 +1,10 @@
 [gd_scene load_steps=34 format=3 uid="uid://ckbbe0lkkwj3b"]
 
 [ext_resource type="Script" uid="uid://qlc3dllkdi4g" path="res://tower_use/tower_archer/tower_archer.gd" id="1_t3dgo"]
-<<<<<<< Updated upstream
-<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://cx2pcq142l7vs" path="res://tower_use/asset/Tower.png" id="2_wy2dy"]
 [ext_resource type="Texture2D" uid="uid://dvw32112cdrke" path="res://tower_use/asset/Archer_Shoot.png" id="3_523vt"]
 [ext_resource type="Texture2D" uid="uid://mti7ve1wy5xs" path="res://tower_use/asset/level2.png" id="4_4gnge"]
 [ext_resource type="Texture2D" uid="uid://cgrxaedl8afmw" path="res://tower_use/asset/level3.png" id="5_01hwy"]
-=======
-[ext_resource type="PackedScene" uid="uid://hkn42tc1unre" path="res://tower_use/tower_archer/arrow_archer_tower.tscn" id="2_f2g30"]
-<<<<<<< HEAD
-[ext_resource type="Texture2D" uid="uid://cai2ytblpgkxd" path="res://tower_use/asset/Tower.png" id="2_wy2dy"]
-[ext_resource type="Texture2D" uid="uid://brllwnepx1hwe" path="res://tower_use/asset/Archer_Shoot.png" id="3_523vt"]
-[ext_resource type="Texture2D" uid="uid://pypgd008je4g" path="res://tower_use/asset/level2.png" id="4_4gnge"]
-[ext_resource type="Texture2D" uid="uid://2oebwe4g312v" path="res://tower_use/asset/level3.png" id="5_01hwy"]
->>>>>>> moded_tof31
-=======
-[ext_resource type="PackedScene" uid="uid://hkn42tc1unre" path="res://tower_use/tower_archer/arrow_archer_tower.tscn" id="2_f2g30"]
-=======
->>>>>>> moded_tof31
-[ext_resource type="Texture2D" uid="uid://bt1tvbxeog88r" path="res://tower_use/asset/Tower.png" id="2_wy2dy"]
-[ext_resource type="Texture2D" uid="uid://cftjuk1xywua4" path="res://tower_use/asset/Archer_Shoot.png" id="3_523vt"]
-[ext_resource type="Texture2D" uid="uid://c4c13ideueubh" path="res://tower_use/asset/level2.png" id="4_4gnge"]
-[ext_resource type="Texture2D" uid="uid://bnxaieg0p07lb" path="res://tower_use/asset/level3.png" id="5_01hwy"]
-<<<<<<< HEAD
->>>>>>> Stashed changes
-=======
->>>>>>> moded_tof31
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_o6dod"]
 

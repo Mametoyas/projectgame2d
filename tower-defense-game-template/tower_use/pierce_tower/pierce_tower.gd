@@ -24,9 +24,6 @@ const LEVELS: Array = [
 @onready var select_area: Area2D = $SelectArea
 @onready var select_shape: CollisionShape2D = $SelectArea/CollisionShape2D
 
-const SND_SHOOT := preload("res://audio/crossbow-firing-95020.mp3")
-
-	#SFX.play_2d(SND_SHOOT, global_position)
 
 var bullet_scene: PackedScene = null
 var muzzles: Array[Marker2D] = []
@@ -220,7 +217,6 @@ func _on_shoot() -> void:
 				_spawn_bullet(m.global_position, target.global_position)
 
 func _spawn_bullet(pos: Vector2, tgt: Vector2) -> void:
-	SFX.play_2d(SND_SHOOT, global_position)
 	var parent: Node = get_tree().current_scene
 	if parent == null:
 		parent = get_tree().root

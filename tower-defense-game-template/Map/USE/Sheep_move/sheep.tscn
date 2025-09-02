@@ -1,10 +1,10 @@
 [gd_scene load_steps=79 format=3 uid="uid://kbd8nu0r2ngb"]
 
-[ext_resource type="Texture2D" uid="uid://dnm4rrs8g2rwn" path="res://Map/Tiny Swords (Free Pack)/Decorations/Sheep/Sheep_Idle.png" id="1_64ldv"]
-[ext_resource type="Texture2D" uid="uid://b3wlf6b402uja" path="res://Map/Tiny Swords (Free Pack)/Decorations/Sheep/Sheep_Grass.png" id="2_f2gwy"]
-[ext_resource type="Script" uid="uid://dag51uqigsgv" path="res://Map/USE/Sheep_move/sheep.gd" id="3_tei6p"]
-[ext_resource type="Script" uid="uid://b8pvs232ey8e2" path="res://Map/USE/Sheep_move/animated_sprite_2d_2.gd" id="4_puuc2"]
-[ext_resource type="Script" uid="uid://ci05iceqcui1s" path="res://Map/USE/Sheep_move/animated_sprite_2d.gd" id="5_ttgos"]
+[ext_resource type="Texture2D" uid="uid://db5ijblleuube" path="res://Tiny Swords (Free Pack)/Decorations/Sheep/Sheep_Idle.png" id="1_64ldv"]
+[ext_resource type="Texture2D" uid="uid://clfrxm31o7dx8" path="res://Tiny Swords (Free Pack)/Decorations/Sheep/Sheep_Grass.png" id="2_f2gwy"]
+[ext_resource type="Script" uid="uid://dag51uqigsgv" path="res://USE/Sheep_move/sheep.gd" id="3_tei6p"]
+[ext_resource type="Script" uid="uid://b8pvs232ey8e2" path="res://USE/Sheep_move/animated_sprite_2d_2.gd" id="4_puuc2"]
+[ext_resource type="Script" uid="uid://ci05iceqcui1s" path="res://USE/Sheep_move/animated_sprite_2d.gd" id="5_ttgos"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qhocy"]
 atlas = ExtResource("1_64ldv")
