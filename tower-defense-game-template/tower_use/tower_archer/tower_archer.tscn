@@ -200,7 +200,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f2g30"]
 size = Vector2(106.267, 166.282)
 
-[node name="tower_archer" type="Node2D"]
+[node name="tower_archer" type="Node2D" groups=["tower"]]
 script = ExtResource("1_t3dgo")
 bullet_scene = ExtResource("2_f2g30")
 
