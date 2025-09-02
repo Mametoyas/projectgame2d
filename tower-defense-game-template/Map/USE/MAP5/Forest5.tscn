@@ -1,21 +1,22 @@
-[gd_scene load_steps=43 format=4 uid="uid://dqw6j1nkyu6lq"]
+[gd_scene load_steps=44 format=4 uid="uid://dqw6j1nkyu6lq"]
 
-[ext_resource type="PackedScene" uid="uid://k0wwmy1a2m60" path="res://USE/MAP_FOREST.tscn" id="1_xes46"]
-[ext_resource type="Texture2D" uid="uid://b64pfxfvso2po" path="res://Tiny Swords (Free Pack)/Terrain/Tilemap_color1.png" id="2_68cia"]
-[ext_resource type="Texture2D" uid="uid://bqrsoasilkmjj" path="res://Tiny Swords (Free Pack)/Terrain/Water Background color.png" id="3_c2ave"]
-[ext_resource type="Texture2D" uid="uid://gypnvehbyx4v" path="res://Tiny Swords (Free Pack)/Terrain/Tilemap_color3.png" id="4_npoy5"]
-[ext_resource type="Texture2D" uid="uid://bweow6qntp83k" path="res://Tiny Swords (Free Pack)/Decorations/Bushes/Bushe2.png" id="4_x8pdf"]
-[ext_resource type="Texture2D" uid="uid://d07kkcxqrxte5" path="res://Tiny Swords (Free Pack)/Terrain/Tilemap_color2.png" id="5_8p8o5"]
-[ext_resource type="PackedScene" uid="uid://dd31auwxsj6w3" path="res://USE/BASE/base1.tscn" id="6_68cia"]
-[ext_resource type="Script" uid="uid://b4ncvpwf1dxr8" path="res://USE/MAP5/enemy_spawn_map_5.gd" id="7_c2ave"]
-[ext_resource type="Texture2D" uid="uid://chrajmyp5ksd7" path="res://Tiny Swords (Free Pack)/Decorations/Trees/Tree3.png" id="7_w8632"]
-[ext_resource type="Texture2D" uid="uid://b6cgpvrcf8kog" path="res://Tiny Swords (Free Pack)/Decorations/Rocks/Rock4.png" id="8_30ciu"]
-[ext_resource type="PackedScene" uid="uid://3w0jf5wh2op0" path="res://FORTEST/enemy _test.tscn" id="8_npoy5"]
-[ext_resource type="Texture2D" uid="uid://dirg2s71r50we" path="res://Tiny Swords (Free Pack)/Decorations/Rocks/Rock2.png" id="9_6r4ne"]
-[ext_resource type="Texture2D" uid="uid://bh5h0q4q7e1jx" path="res://Tiny Swords (Free Pack)/Decorations/Rocks/Rock3.png" id="10_4shwh"]
-[ext_resource type="Texture2D" uid="uid://0aabma63q3bh" path="res://Tiny Swords (Free Pack)/Decorations/Rocks/Rock1.png" id="11_sps7t"]
-[ext_resource type="Texture2D" uid="uid://cxfmyp02hlu42" path="res://Tiny Swords (Free Pack)/Decorations/Bushes/Bushe1.png" id="12_33ytu"]
-[ext_resource type="PackedScene" uid="uid://kbd8nu0r2ngb" path="res://USE/Sheep_move/sheep.tscn" id="13_uhtsd"]
+[ext_resource type="PackedScene" uid="uid://k0wwmy1a2m60" path="res://Map/USE/MAP_FOREST.tscn" id="1_xes46"]
+[ext_resource type="Texture2D" uid="uid://cd1f2nyahfm6q" path="res://Map/Tiny Swords (Free Pack)/Terrain/Tilemap_color1.png" id="2_68cia"]
+[ext_resource type="Texture2D" uid="uid://cfhb8rt771mh" path="res://Map/Tiny Swords (Free Pack)/Terrain/Water Background color.png" id="3_c2ave"]
+[ext_resource type="Texture2D" uid="uid://c3aylokytoryr" path="res://Map/Tiny Swords (Free Pack)/Terrain/Tilemap_color3.png" id="4_npoy5"]
+[ext_resource type="Texture2D" uid="uid://dp5xmjkpthmv3" path="res://Map/Tiny Swords (Free Pack)/Decorations/Bushes/Bushe2.png" id="4_x8pdf"]
+[ext_resource type="Texture2D" uid="uid://0osmiffo0rsg" path="res://Map/Tiny Swords (Free Pack)/Terrain/Tilemap_color2.png" id="5_8p8o5"]
+[ext_resource type="PackedScene" uid="uid://dd31auwxsj6w3" path="res://Map/USE/BASE/base1.tscn" id="6_68cia"]
+[ext_resource type="Script" uid="uid://b4ncvpwf1dxr8" path="res://Map/USE/MAP5/enemy_spawn_map_5.gd" id="7_c2ave"]
+[ext_resource type="Texture2D" uid="uid://cr2quc0esxpo5" path="res://Map/Tiny Swords (Free Pack)/Decorations/Trees/Tree3.png" id="7_w8632"]
+[ext_resource type="Texture2D" uid="uid://djpeiuftcaah6" path="res://Map/Tiny Swords (Free Pack)/Decorations/Rocks/Rock4.png" id="8_30ciu"]
+[ext_resource type="PackedScene" uid="uid://3w0jf5wh2op0" path="res://Map/FORTEST/enemy _test.tscn" id="8_npoy5"]
+[ext_resource type="Texture2D" uid="uid://dp5jb8u2qtadn" path="res://Map/Tiny Swords (Free Pack)/Decorations/Rocks/Rock2.png" id="9_6r4ne"]
+[ext_resource type="Texture2D" uid="uid://mtrj63ye3t18" path="res://Map/Tiny Swords (Free Pack)/Decorations/Rocks/Rock3.png" id="10_4shwh"]
+[ext_resource type="Texture2D" uid="uid://dm8mv0242avup" path="res://Map/Tiny Swords (Free Pack)/Decorations/Rocks/Rock1.png" id="11_sps7t"]
+[ext_resource type="Texture2D" uid="uid://jdjp71owud15" path="res://Map/Tiny Swords (Free Pack)/Decorations/Bushes/Bushe1.png" id="12_33ytu"]
+[ext_resource type="PackedScene" uid="uid://kbd8nu0r2ngb" path="res://Map/USE/Sheep_move/sheep.tscn" id="13_uhtsd"]
+[ext_resource type="PackedScene" uid="uid://dy4ipkvnbrgty" path="res://GUI_Use/files/hud.tscn" id="17_2kwby"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j0ye3"]
 texture = ExtResource("2_68cia")
@@ -4638,7 +4639,8 @@ tile_map_data = PackedByteArray("AAD/////AQAAAAAAAAD//wAAAQAAAAEAAAD//wEAAQAAAAI
 tile_set = SubResource("TileSet_kgd2s")
 
 [node name="Camera2D" type="Camera2D" parent="MAP_FOREST5"]
-position = Vector2(1400, 712)
+position = Vector2(1190, 658)
+zoom = Vector2(0.665, 0.6)
 
 [node name="tree" type="TileMapLayer" parent="MAP_FOREST5"]
 use_parent_material = true
@@ -4719,3 +4721,5 @@ script = ExtResource("7_c2ave")
 enemy_scene = ExtResource("8_npoy5")
 paths = [NodePath("../MAP_FOREST5/walking_line/Forest5Line1"), NodePath("../MAP_FOREST5/walking_line/Forest5Line2"), NodePath("../MAP_FOREST5/walking_line/Forest5Line3"), NodePath("../MAP_FOREST5/walking_line/Forest5Line4"), NodePath("../MAP_FOREST5/walking_line/Forest5Line5"), NodePath("../MAP_FOREST5/walking_line/Forest5Line6"), NodePath("../MAP_FOREST5/walking_line/Forest5Line7"), NodePath("../MAP_FOREST5/walking_line/Forest5Line8"), NodePath("../MAP_FOREST5/walking_line/Forest5Line9")]
 base = NodePath("../Node2D")
+
+[node name="HUD" parent="." instance=ExtResource("17_2kwby")]

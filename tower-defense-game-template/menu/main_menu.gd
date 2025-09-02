@@ -3,8 +3,8 @@ extends Control
 
 @export var stage_select_path: String = "res://menu/stage_select.tscn"
 
-@onready var start_btn: Button = $CenterContainer/VBoxContainer/StartButton
-@onready var exit_btn:  Button = $CenterContainer/VBoxContainer/ExitButton
+@onready var start_btn: Button = $Panel/StartButton
+@onready var exit_btn:  Button = $Panel/ExitButton
 
 const SND_CLICK := preload("res://audio/computer-mouse-click-02-383961.mp3")
 

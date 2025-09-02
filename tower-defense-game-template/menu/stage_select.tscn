@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://hxdajeneoc0h"]
 
 [ext_resource type="Script" uid="uid://breutqk6jnnpt" path="res://menu/stage_select.gd" id="1_ljhax"]
-[ext_resource type="Texture2D" uid="uid://bnenpfrjm4bvk" path="res://menu/b049ca12-731c-40be-9924-def24307361e.jpg" id="1_mp45l"]
-[ext_resource type="AudioStream" uid="uid://he5t7iunfh5b" path="res://BackGround_Music/Wainting_home.wav" id="3_m706i"]
+[ext_resource type="Texture2D" uid="uid://c1oyc21x1xmxo" path="res://menu/b049ca12-731c-40be-9924-def24307361e.jpg" id="1_mp45l"]
+[ext_resource type="AudioStream" uid="uid://co3gf0y8wu026" path="res://BackGround_Music/Wainting_home.wav" id="3_m706i"]
 
 [node name="StageSelect" type="Control"]
 layout_mode = 3

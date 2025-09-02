@@ -84,10 +84,10 @@ text = "sell"
 script = ExtResource("5_mauiy")
 
 [node name="Panel" type="Panel" parent="."]
-offset_left = 1191.0
-offset_top = 19.0
-offset_right = 1231.0
-offset_bottom = 59.0
+offset_left = 21.0
+offset_top = 11.0
+offset_right = 61.0
+offset_bottom = 51.0
 scale = Vector2(1.6133, 1.18976)
 script = ExtResource("8_knd4f")
 

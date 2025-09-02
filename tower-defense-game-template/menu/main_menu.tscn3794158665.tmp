@@ -34,7 +34,6 @@ offset_right = 133.0
 offset_bottom = 397.0
 scale = Vector2(13.6014, 4.33547)
 text = "           "
-flat = true
 
 [node name="Button" type="Button" parent="Panel"]
 layout_mode = 2
@@ -44,7 +43,6 @@ offset_right = 900.0
 offset_bottom = 396.0
 scale = Vector2(6.66444, 4.07193)
 text = "           "
-flat = true
 
 [node name="Button2" type="Button" parent="Panel"]
 layout_mode = 2
@@ -54,7 +52,6 @@ offset_right = 132.0
 offset_bottom = 560.0
 scale = Vector2(9.54018, 4.11302)
 text = "           "
-flat = true
 
 [node name="ExitButton" type="Button" parent="Panel"]
 layout_mode = 2
@@ -64,7 +61,14 @@ offset_right = 681.0
 offset_bottom = 559.0
 scale = Vector2(10.7008, 4.09126)
 text = "           "
-flat = true
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_left = 5.00002
+offset_top = 14.0
+offset_right = 61.0
+offset_bottom = 150.0
+scale = Vector2(22.6344, 5.21432)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_o5w3e")
