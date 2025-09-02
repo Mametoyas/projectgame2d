@@ -1,0 +1,132 @@
+[gd_scene load_steps=27 format=3 uid="uid://h238yyti7uts"]
+
+[ext_resource type="Texture2D" uid="uid://c2bb8ebt0txoy" path="res://Skills/assets/Frames_hammer/VFX5/Frames/paladin_skill5_frame1.png" id="1_3110k"]
+[ext_resource type="Texture2D" uid="uid://c78xidfyv3gne" path="res://Skills/assets/Frames_hammer/VFX5/Frames/paladin_skill5_frame2.png" id="2_jgy3j"]
+[ext_resource type="Texture2D" uid="uid://fpjjk4gdxo3v" path="res://Skills/assets/Frames_hammer/VFX5/Frames/paladin_skill5_frame3.png" id="3_bhgb6"]
+[ext_resource type="Texture2D" uid="uid://ifbyk6anbw63" path="res://Skills/assets/Frames_hammer/VFX5/Frames/paladin_skill5_frame4.png" id="4_4ebr2"]
+[ext_resource type="Texture2D" uid="uid://b51hw3w7s2fuf" path="res://Skills/assets/Frames_hammer/VFX5/Frames/paladin_skill5_frame5.png" id="5_32vtq"]
+[ext_resource type="Texture2D" uid="uid://j50lwpgtd63h" path="res://Skills/assets/Frames_hammer/VFX5/Frames/paladin_skill5_frame6.png" id="6_n7lq3"]
+[ext_resource type="Texture2D" uid="uid://dsk367nk7ml0n" path="res://Skills/assets/Frames_hammer/VFX5/Frames/paladin_skill5_frame7.png" id="7_r1m3u"]
+[ext_resource type="Texture2D" uid="uid://c8gmvurqimste" path="res://Skills/assets/Frames_hammer/VFX5/Frames/paladin_skill5_frame8.png" id="8_1hxae"]
+[ext_resource type="Texture2D" uid="uid://eusi87wsuw4r" path="res://Skills/assets/Frames_hammer/VFX5/Frames/paladin_skill5_frame9.png" id="9_h247q"]
+[ext_resource type="Texture2D" uid="uid://c2rvv5lbcdvdn" path="res://Skills/assets/Frames_hammer/VFX5/Frames/paladin_skill5_frame10.png" id="10_4okfj"]
+[ext_resource type="Texture2D" uid="uid://tfv4m5ldrlgd" path="res://Skills/assets/Frames_hammer/VFX5/Frames/paladin_skill5_frame11.png" id="11_qg3pj"]
+[ext_resource type="Texture2D" uid="uid://bprlyayutull2" path="res://Skills/assets/Frames_hammer/VFX5/Frames/paladin_skill5_frame12.png" id="12_0adbq"]
+[ext_resource type="Texture2D" uid="uid://b2wtowv2ebnp1" path="res://Skills/assets/Frames_hammer/VFX 4/Frames/paladin_skill4_frame1.png" id="13_0adbq"]
+[ext_resource type="Texture2D" uid="uid://dov427nmhwrr" path="res://Skills/assets/Frames_hammer/VFX 4/Frames/paladin_skill4_frame2.png" id="14_tt1kf"]
+[ext_resource type="Texture2D" uid="uid://dysbnmbyowfbt" path="res://Skills/assets/Frames_hammer/VFX 4/Frames/paladin_skill4_frame3.png" id="15_wftuo"]
+[ext_resource type="Texture2D" uid="uid://c8rgmoc6sri0g" path="res://Skills/assets/Frames_hammer/VFX 4/Frames/paladin_skill4_frame5.png" id="16_drxes"]
+[ext_resource type="Texture2D" uid="uid://0516gvm0fhug" path="res://Skills/assets/Frames_hammer/VFX 4/Frames/paladin_skill4_frame6.png" id="17_clp4j"]
+[ext_resource type="Texture2D" uid="uid://bsued0xxjefsq" path="res://Skills/assets/Frames_hammer/VFX 4/Frames/paladin_skill4_frame7.png" id="18_pu84g"]
+[ext_resource type="Texture2D" uid="uid://d0r05gnqj64pu" path="res://Skills/assets/Frames_hammer/VFX 4/Frames/paladin_skill4_frame4.png" id="19_6tv1h"]
+[ext_resource type="Texture2D" uid="uid://d3ilqk7p87pcl" path="res://Skills/assets/Frames_hammer/VFX 4/Frames/paladin_skill4_frame8.png" id="20_1hi6i"]
+[ext_resource type="Texture2D" uid="uid://dv0nmd22kes22" path="res://Skills/assets/Frames_hammer/VFX 4/Frames/paladin_skill4_frame9.png" id="21_f1qd3"]
+[ext_resource type="Texture2D" uid="uid://bvqhqbjcr0y25" path="res://Skills/assets/Frames_hammer/VFX 4/Frames/paladin_skill4_frame10.png" id="22_yx05g"]
+[ext_resource type="Texture2D" uid="uid://swj0vyfuk153" path="res://Skills/assets/Frames_hammer/VFX 4/Frames/paladin_skill4_frame11.png" id="23_4vat7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tt1kf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3110k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_jgy3j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bhgb6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4ebr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_n7lq3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_r1m3u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_1hxae")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_32vtq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_h247q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_4okfj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_qg3pj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_0adbq")
+}],
+"loop": true,
+"name": &"Hammer",
+"speed": 15.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w0n2u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_0adbq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_tt1kf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_wftuo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_drxes")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_clp4j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_pu84g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_6tv1h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_1hi6i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_f1qd3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_yx05g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_4vat7")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wftuo"]
+radius = 40.4475
+
+[node name="frames_hammer" type="Area2D"]
+
+[node name="hammer" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -28)
+sprite_frames = SubResource("SpriteFrames_tt1kf")
+animation = &"Hammer"
+frame = 6
+frame_progress = 0.527591
+
+[node name="smoke" type="AnimatedSprite2D" parent="."]
+position = Vector2(7.10543e-15, 6)
+scale = Vector2(0.550781, 0.550781)
+sprite_frames = SubResource("SpriteFrames_w0n2u")
+frame = 4
+frame_progress = 0.444161
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_wftuo")
