@@ -1,11 +1,15 @@
 [gd_scene load_steps=5 format=3 uid="uid://dd31auwxsj6w3"]
 
 [ext_resource type="Script" uid="uid://14dqy3f3mnnh" path="res://Map/USE/BASE/base_1.gd" id="1_ug736"]
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://c2fnoblvty23x" path="res://Map/Tiny Swords (Free Pack)/Buildings/Blue Buildings/Castle.png" id="2_25y18"]
 =======
 [ext_resource type="Texture2D" uid="uid://de2yhkj5e3kkx" path="res://Map/Tiny Swords (Free Pack)/Buildings/Blue Buildings/Castle.png" id="2_25y18"]
 >>>>>>> Stashed changes
+=======
+[ext_resource type="Texture2D" uid="uid://de2yhkj5e3kkx" path="res://Map/Tiny Swords (Free Pack)/Buildings/Blue Buildings/Castle.png" id="2_25y18"]
+>>>>>>> moded_tof31
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8mj8c"]
 size = Vector2(304, 184)
