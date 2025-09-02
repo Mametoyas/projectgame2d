@@ -21,3 +21,9 @@ static func unlock_if_higher(level: int) -> void:
 	var cur: int = load_unlocked()  # << ใส่ชนิดให้ชัด
 	if level > cur:
 		save_unlocked(level)
+		
+static func unlock_next_if_cleared(current_stage: int) -> void:
+	var unlocked: int = load_unlocked()
+	var next_stage: int = max(current_stage + 1, 1)
+	if next_stage > unlocked:
+		save_unlocked(next_stage)

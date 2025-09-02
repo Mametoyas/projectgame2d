@@ -40,26 +40,26 @@ func _refresh_lock_state() -> void:
 	var unlocked: int = StageProgress.load_unlocked()  # ← ไม่มีอาร์กิวเมนต์
 
 	# stage 1
-	_set_btn_state(b1, unlocked >= 1, "STAGE 1")
+	_set_btn_state(b1, unlocked >= 1, " ")
 
 	# stage 2
-	var label2: String = "STAGE 2"
-	if unlocked < 2: label2 = "-"
+	var label2: String = " "
+	if unlocked < 2: label2 = "XXXX"
 	_set_btn_state(b2, unlocked >= 2, label2)
 
 	# stage 3
-	var label3: String = "STAGE 3"
-	if unlocked < 3: label3 = "-"
+	var label3: String = " "
+	if unlocked < 3: label3 = "XXXX"
 	_set_btn_state(b3, unlocked >= 3, label3)
 
 	# stage 4
-	var label4: String = "STAGE 4"
-	if unlocked < 4: label4 = "-"
+	var label4: String = " "
+	if unlocked < 4: label4 = "XXXX"
 	_set_btn_state(b4, unlocked >= 4, label4)
 
 	# stage 5
-	var label5: String = "STAGE 5"
-	if unlocked < 5: label5 = "-"
+	var label5: String = " "
+	if unlocked < 5: label5 = "XXXX"
 	_set_btn_state(b5, unlocked >= 5, label5)
 
 func _set_btn_state(btn: Button, enabled: bool, label: String) -> void:

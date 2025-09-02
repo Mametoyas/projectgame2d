@@ -9,9 +9,9 @@ extends Node
 const AUTO_START := false  # ตั้งเป็น true เพื่อให้เริ่ม wave อัตโนมัติไว้เทส
 
 var waves = [
-	["runner","runner","runner","runner","runner","runner","runner","runner","runner","runner"],
-	["tank","crawler","runner","regenerator","runner"],
-	["shielded","shielded","splitter","runner","flyer","flyer","splitter","splitter","splitter"]
+	["runner"],
+	["runner"],
+	["runner"]
 ]
 
 var current_wave := 0
@@ -47,6 +47,7 @@ func _prepare_next_wave() -> void:
 	if current_wave >= waves.size():
 		if next_button:
 			next_button.text = "All waves cleared!"
+			StageProgress.unlock_next_if_cleared(1)
 			next_button.disabled = true
 			next_button.visible = true
 		return
