@@ -9,7 +9,7 @@ const LEVELS: Array = [
 	{}, # index 0 ไม่ใช้
 	{   # Lv1
 		"damage": 6,
-		"range": 600.0,
+		"range": 120.0,
 		"interval": 0.65,
 		"anim": "lv1_idle",
 		"cost": 0,
