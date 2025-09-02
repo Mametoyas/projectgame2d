@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://dh6vmsjs4odw"]
+
+[ext_resource type="FontFile" uid="uid://bs1a7udesxgfv" path="res://connection_ii/ConnectionII.otf" id="1_hdmo1"]
+
+[node name="PauseMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ResumeButton" type="Button" parent="."]
+layout_mode = 2
+offset_left = 491.0
+offset_top = 135.0
+offset_right = 597.0
+offset_bottom = 168.0
+scale = Vector2(2.21035, 1.98854)
+theme_override_fonts/font = ExtResource("1_hdmo1")
+theme_override_font_sizes/font_size = 25
+action_mode = 0
+text = "Resume"
+
+[node name="SettingButton" type="Button" parent="."]
+layout_mode = 2
+offset_left = 330.0
+offset_top = 244.59
+offset_right = 427.0
+offset_bottom = 279.59
+theme_override_fonts/font = ExtResource("1_hdmo1")
+theme_override_font_sizes/font_size = 26
+text = "Setting"
+
+[node name="ExitButton2" type="Button" parent="."]
+layout_mode = 2
+offset_left = 330.0
+offset_top = 346.298
+offset_right = 427.0
+offset_bottom = 381.298
+theme_override_fonts/font = ExtResource("1_hdmo1")
+theme_override_font_sizes/font_size = 26
+text = "Exit
+"

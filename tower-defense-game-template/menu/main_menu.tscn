@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cbr8b4hp6o8"]
+[gd_scene load_steps=5 format=3 uid="uid://cbr8b4hp6o8"]
 
-[ext_resource type="Texture2D" uid="uid://rxjhd2w5xa54" path="res://menu/a181f7f3-9622-462e-8fa9-35b968eca6d7 (1).jpg" id="1_chmv6"]
 [ext_resource type="Script" uid="uid://1j2o3s8i8m6b" path="res://menu/main_menu.gd" id="1_f5okj"]
+[ext_resource type="Texture2D" uid="uid://b3d71shlc650m" path="res://menu/Game_Menu.png" id="2_o5w3e"]
+[ext_resource type="Script" uid="uid://btnlgqck465tg" path="res://menu/panel.gd" id="3_1x3cv"]
 [ext_resource type="AudioStream" uid="uid://he5t7iunfh5b" path="res://BackGround_Music/Wainting_home.wav" id="3_o5w3e"]
 
 [node name="MainMenu" type="Control"]
@@ -13,46 +14,55 @@ script = ExtResource("1_f5okj")
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = -72.0
-offset_top = -19.0
-offset_right = 952.0
-offset_bottom = 1517.0
-scale = Vector2(1.38932, 1.14718)
-texture = ExtResource("1_chmv6")
+offset_left = -28.0
+offset_right = 1252.0
+offset_bottom = 832.0
+scale = Vector2(1.071, 0.865839)
+texture = ExtResource("2_o5w3e")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(640, 870)
-scale = Vector2(0.222929, 12.5761)
-zoom = Vector2(1, 0.42)
-
-[node name="CenterContainer" type="CenterContainer" parent="."]
+[node name="Panel" type="Panel" parent="."]
 layout_mode = 0
-offset_left = 176.0
-offset_top = 599.0
-offset_right = 232.0
-offset_bottom = 735.0
-scale = Vector2(16.4524, 7.72771)
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_1x3cv")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+[node name="StartButton" type="Button" parent="Panel"]
 layout_mode = 2
-
-[node name="StartButton" type="Button" parent="CenterContainer/VBoxContainer"]
-layout_mode = 2
+offset_left = 79.0
+offset_top = 366.0
+offset_right = 133.0
+offset_bottom = 397.0
+scale = Vector2(13.6014, 4.33547)
 text = "           "
 flat = true
 
-[node name="Button" type="Button" parent="CenterContainer/VBoxContainer"]
+[node name="Button" type="Button" parent="Panel"]
 layout_mode = 2
+offset_left = 846.0
+offset_top = 365.0
+offset_right = 900.0
+offset_bottom = 396.0
+scale = Vector2(6.66444, 4.07193)
 text = "           "
 flat = true
 
-[node name="Button2" type="Button" parent="CenterContainer/VBoxContainer"]
+[node name="Button2" type="Button" parent="Panel"]
 layout_mode = 2
+offset_left = 78.0
+offset_top = 529.0
+offset_right = 132.0
+offset_bottom = 560.0
+scale = Vector2(9.54018, 4.11302)
 text = "           "
 flat = true
 
-[node name="ExitButton" type="Button" parent="CenterContainer/VBoxContainer"]
+[node name="ExitButton" type="Button" parent="Panel"]
 layout_mode = 2
+offset_left = 627.0
+offset_top = 528.0
+offset_right = 681.0
+offset_bottom = 559.0
+scale = Vector2(10.7008, 4.09126)
 text = "           "
 flat = true
 
