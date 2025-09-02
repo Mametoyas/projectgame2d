@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://btnlgqck465tg" path="res://menu/panel.gd" id="3_1x3cv"]
 [ext_resource type="AudioStream" uid="uid://co3gf0y8wu026" path="res://BackGround_Music/Wainting_home.wav" id="3_o5w3e"]
 =======
-[ext_resource type="Script" uid="uid://1j2o3s8i8m6b" path="res://menu - Copy/main_menu.gd" id="1_f5okj"]
+[ext_resource type="Script" uid="uid://1j2o3s8i8m6b" path="res://menu/main_menu.gd" id="1_f5okj"]
 [ext_resource type="Texture2D" uid="uid://gqip1peme7os" path="res://menu/Game_Menu.png" id="2_o5w3e"]
 [ext_resource type="Script" uid="uid://ow2hm6hos8jh" path="res://GUI_Use/files/panel.gd" id="3_1x3cv"]
 [ext_resource type="AudioStream" uid="uid://0gdma0cl16fi" path="res://BackGround_Music/Wainting_home.wav" id="3_o5w3e"]
