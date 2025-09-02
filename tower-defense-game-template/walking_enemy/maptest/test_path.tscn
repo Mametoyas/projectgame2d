@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dvvgcahy0kc4l"]
+[gd_scene load_steps=6 format=3 uid="uid://dvvgcahy0kc4l"]
 
 [ext_resource type="Script" uid="uid://bjg8wxx761w5p" path="res://walking_enemy/enemy scritp/EnemyFactory.gd" id="1_a51kg"]
 [ext_resource type="Script" uid="uid://kcd6ypmmu5e2" path="res://walking_enemy/maptest/spawner.gd" id="2_6kfwk"]
+[ext_resource type="Script" uid="uid://jpmieg4dnhd" path="res://walking_enemy/enemy scritp/boss_factory.gd" id="2_basrl"]
 [ext_resource type="PackedScene" uid="uid://dy4ipkvnbrgty" path="res://GUI_Use/files/hud.tscn" id="3_cyn7k"]
 
 [sub_resource type="Curve2D" id="Curve2D_imca6"]
@@ -23,6 +24,9 @@ script = ExtResource("1_a51kg")
 
 [node name="EnemyFactory" type="Node" parent="."]
 script = ExtResource("1_a51kg")
+
+[node name="Boss_factory" type="Node" parent="."]
+script = ExtResource("2_basrl")
 
 [node name="Spawner" type="Node" parent="."]
 script = ExtResource("2_6kfwk")

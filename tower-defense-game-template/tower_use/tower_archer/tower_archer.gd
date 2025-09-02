@@ -9,7 +9,7 @@ const LEVELS: Array = [
 	{}, # index 0 ไม่ใช้
 	{   # Lv1
 		"damage": 6,
-		"range": 140.0,
+		"range": 600.0,
 		"interval": 0.65,
 		"anim": "lv1_idle",
 		"cost": 0,
@@ -53,7 +53,7 @@ var muzzles: Array[Marker2D] = []
 
 # สเตตัส runtime
 var damage: int = 10
-var range_radius: float = 120.0
+var range_radius: float = 600.0
 var shoot_interval: float = 0.6
 
 # ยิง
