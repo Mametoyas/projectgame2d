@@ -1,0 +1,90 @@
+[gd_scene load_steps=5 format=3 uid="uid://hxdajeneoc0h"]
+
+[ext_resource type="Script" uid="uid://breutqk6jnnpt" path="res://menu/stage_select.gd" id="1_ljhax"]
+[ext_resource type="Texture2D" uid="uid://bnenpfrjm4bvk" path="res://menu/b049ca12-731c-40be-9924-def24307361e.jpg" id="1_mp45l"]
+[ext_resource type="AudioStream" uid="uid://he5t7iunfh5b" path="res://BackGround_Music/Wainting_home.wav" id="3_m706i"]
+[ext_resource type="Script" uid="uid://c81fmojwhfe32" path="res://menu/StageProgress.gd" id="4_lpw1u"]
+
+[node name="StageSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_ljhax")
+stage1_path = null
+stage2_path = null
+stage3_path = null
+stage4_path = null
+stage5_path = null
+main_menu_path = null
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -35.0
+offset_top = -48.0
+offset_right = 989.0
+offset_bottom = 1488.0
+scale = Vector2(1.33096, 0.445464)
+texture = ExtResource("1_mp45l")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -38.9999
+offset_top = 2003.0
+offset_right = 985.0
+offset_bottom = 3539.0
+rotation = -1.57211
+scale = Vector2(1.33767, 0.896727)
+texture = ExtResource("1_mp45l")
+metadata/_edit_lock_ = true
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_left = 198.0
+offset_top = -13.0
+offset_right = 248.0
+offset_bottom = 193.0
+scale = Vector2(17.8809, 3.81571)
+
+[node name="Menu" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Stage1Btn" type="Button" parent="CenterContainer/Menu"]
+layout_mode = 2
+text = "      "
+flat = true
+
+[node name="Stage2Btn" type="Button" parent="CenterContainer/Menu"]
+layout_mode = 2
+text = "      "
+flat = true
+
+[node name="Stage3Btn" type="Button" parent="CenterContainer/Menu"]
+layout_mode = 2
+text = " "
+flat = true
+
+[node name="Stage4Btn" type="Button" parent="CenterContainer/Menu"]
+layout_mode = 2
+text = " "
+flat = true
+
+[node name="Stage5Btn" type="Button" parent="CenterContainer/Menu"]
+layout_mode = 2
+text = " "
+flat = true
+
+[node name="BackBtn" type="Button" parent="CenterContainer/Menu"]
+layout_mode = 2
+text = "BACK"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(642, 397)
+zoom = Vector2(1, 0.9)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_m706i")
+autoplay = true
+
+[node name="StageProgress" type="Node" parent="."]
+script = ExtResource("4_lpw1u")

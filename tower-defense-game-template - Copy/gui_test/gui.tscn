@@ -1,0 +1,64 @@
+[gd_scene load_steps=7 format=3 uid="uid://btjkowko5a665"]
+
+[ext_resource type="Script" uid="uid://b36l1vryt31k5" path="res://gui_test/placement_manager.gd" id="1_q46mf"]
+[ext_resource type="Script" uid="uid://bx1sioays26qs" path="res://gui_test/build_ui.gd" id="2_n360k"]
+[ext_resource type="PackedScene" uid="uid://ca6bce7weuioh" path="res://walking_enemy/tower test/tower.tscn" id="3_hp187"]
+[ext_resource type="PackedScene" uid="uid://ckbbe0lkkwj3b" path="res://tower_use/tower_archer/tower_archer.tscn" id="3_ytf3d"]
+[ext_resource type="Texture2D" uid="uid://cx2pcq142l7vs" path="res://tower_use/asset/Tower.png" id="5_bk7cs"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ytf3d"]
+shadow_size = 3
+
+[node name="gui" type="Node2D"]
+
+[node name="PlacementManager" type="Node" parent="."]
+script = ExtResource("1_q46mf")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="BuildUI" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 686.0
+offset_top = 503.0
+offset_right = 726.0
+offset_bottom = 543.0
+scale = Vector2(12.8599, 2.45212)
+script = ExtResource("2_n360k")
+ground_tower_scene = ExtResource("3_ytf3d")
+air_tower_scene = ExtResource("3_hp187")
+
+[node name="MoneyLabel" type="Label" parent="UI/BuildUI"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+scale = Vector2(0.178993, 0.397167)
+text = "money"
+label_settings = SubResource("LabelSettings_ytf3d")
+
+[node name="GroundBtn" type="Button" parent="UI/BuildUI"]
+layout_mode = 0
+offset_left = 1.86626
+offset_top = 12.6421
+offset_right = 537.866
+offset_bottom = 532.642
+scale = Vector2(0.0130342, 0.0357142)
+icon = ExtResource("5_bk7cs")
+
+[node name="AirBtn" type="Button" parent="UI/BuildUI"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 13.0
+offset_right = 30.0
+offset_bottom = 44.0
+scale = Vector2(0.295, 0.521)
+text = "A"
+
+[node name="CancelBtn" type="Button" parent="UI/BuildUI"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 13.0
+offset_right = 38.0
+offset_bottom = 44.0
+scale = Vector2(0.295, 0.521)
+text = "C"

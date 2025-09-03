@@ -1,0 +1,99 @@
+[gd_scene load_steps=15 format=3 uid="uid://nqhy1vxpq7bd"]
+
+[ext_resource type="Script" uid="uid://ma71us3axd07" path="res://tower_use/pierce_tower/pierce_bullet.gd" id="1_xsdl0"]
+[ext_resource type="Texture2D" uid="uid://mmxy5syie8ax" path="res://tower_use/asset/Tower 06 - Level 01 - Projectile.png" id="2_xsdl0"]
+[ext_resource type="Texture2D" uid="uid://dca6c448n15wg" path="res://tower_use/asset/Tower 06 - Weapon - Impact.png" id="3_m3eqb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_evp1j"]
+atlas = ExtResource("2_xsdl0")
+region = Rect2(0, 0, 6, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2w4a8"]
+atlas = ExtResource("2_xsdl0")
+region = Rect2(6, 0, 6, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hmmfw"]
+atlas = ExtResource("2_xsdl0")
+region = Rect2(12, 0, 6, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uye5n"]
+atlas = ExtResource("3_m3eqb")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_unhwf"]
+atlas = ExtResource("3_m3eqb")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cguet"]
+atlas = ExtResource("3_m3eqb")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7rbq"]
+atlas = ExtResource("3_m3eqb")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2vpxj"]
+atlas = ExtResource("3_m3eqb")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2lki"]
+atlas = ExtResource("3_m3eqb")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m3eqb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_evp1j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2w4a8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hmmfw")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uye5n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_unhwf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cguet")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h7rbq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2vpxj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2lki")
+}],
+"loop": false,
+"name": &"hit",
+"speed": 30.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_evp1j"]
+
+[node name="pierce_bullet" type="Area2D"]
+script = ExtResource("1_xsdl0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = 1.55841
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_m3eqb")
+animation = &"fly"
+frame_progress = 0.910989
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(2, 2)
+shape = SubResource("CircleShape2D_evp1j")
+
+[node name="DeathTimer" type="Timer" parent="."]
