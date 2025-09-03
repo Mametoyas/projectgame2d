@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://cbr8b4hp6o8"]
 
 [ext_resource type="Script" uid="uid://1j2o3s8i8m6b" path="res://menu/main_menu.gd" id="1_f5okj"]
-[ext_resource type="Texture2D" uid="uid://b3d71shlc650m" path="res://menu/Game_Menu.png" id="2_o5w3e"]
+[ext_resource type="Texture2D" uid="uid://chvmgr71t5f8k" path="res://menu/Game_Menu.png" id="2_o5w3e"]
 [ext_resource type="Script" uid="uid://btnlgqck465tg" path="res://menu/panel.gd" id="3_1x3cv"]
-[ext_resource type="AudioStream" uid="uid://he5t7iunfh5b" path="res://BackGround_Music/Wainting_home.wav" id="3_o5w3e"]
+[ext_resource type="AudioStream" uid="uid://cqkkmyro4h8t8" path="res://BackGround_Music/Wainting_home.wav" id="3_o5w3e"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
