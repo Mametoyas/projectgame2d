@@ -126,7 +126,7 @@ func _place_now() -> void:
 
 	if tower.has_method("show_range"):
 		tower.call("show_range", false)
-
+	_update_tower_z_index(tower)
 	_cancel_place()
 
 
@@ -200,3 +200,8 @@ func _check_place_valid(tower: Node2D) -> bool:
 		i += 1
 
 	return true
+
+# ============= tower z_index sorting ============
+func _update_tower_z_index(tower: Node2D) -> void:
+	# Higher Y = higher z_index (drawn in front)
+	tower.z_index = int(tower.global_position.y)

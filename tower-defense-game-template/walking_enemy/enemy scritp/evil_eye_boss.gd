@@ -4,7 +4,7 @@ class_name Boss
 signal died(reward: int)
 signal hp_changed(current: int, max_hp: int)
 
-@export var max_hp: int = 999999999999999
+@export var max_hp: int = 4444
 @export var speed: float = 40.0
 @export var armor: int = 3
 @export var reward: int = 120
