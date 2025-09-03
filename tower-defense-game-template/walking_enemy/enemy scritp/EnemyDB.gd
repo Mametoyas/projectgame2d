@@ -7,7 +7,7 @@ const ENEMY_DB := {
 		"anim": "crawler_walk"
 	},
 	"runner": {    # 2) ไว บาง
-		"hp": 16, "speed": 200, "reward": 5,
+		"hp": 16, "speed": 180, "reward": 5,
 		"armor": 0, "regen": 0, "flying": false, "shield_hp": 0,
 		"on_death_spawn": null, "size": 0.9,
 		"anim": "runner_run"
@@ -43,7 +43,7 @@ const ENEMY_DB := {
 		"anim": "flyer_fly"
 	},
 	"money": {     # 8) money
-		"hp": 6, "speed": 200, "reward": 1000,
+		"hp": 6, "speed": 180, "reward": 500,
 		"armor": 0, "regen": 0, "flying": false, "shield_hp": 0,
 		"on_death_spawn": null, "size": 1.0,
 		"anim": "money_run"
@@ -61,7 +61,7 @@ const ENEMY_DB := {
 		"anim": "fish1_run"
 	},
 	"Minotaur": {   #) 
-		"hp": 100, "speed": 120, "reward": 200,
+		"hp": 100, "speed": 100, "reward": 200,
 		"armor": 5, "regen": 10, "flying": false, "shield_hp": 0,
 		"on_death_spawn": null, "size": 1.3,
 		"anim": "Minotaur_Walk"

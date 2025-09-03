@@ -8,10 +8,16 @@ var factory: Node = null         # enemy_factory (จะหาแบบขยั
 var boss_factory: Node = null    # boss_factory  (จะหาแบบขยันมือ)
 
 var waves: Array = [
-	["boss"],
-	["splitter","splitter","splitter","splitter","splitter"],
-	["tank","crawler","runner","regenerator","runner"],
-	["shielded","shielded","splitter","runner","flyer","flyer","splitter","splitter","splitter"]
+	["money","money","money","money","money"],
+	["HarpoonFish","fish1","HarpoonFish","fish1","HarpoonFish","fish1","HarpoonFish","fish1","HarpoonFish","fish1","HarpoonFish","fish1","HarpoonFish","fish1","HarpoonFish","fish1","HarpoonFish","fish1","HarpoonFish","fish1","HarpoonFish","fish1","HarpoonFish","fish1","HarpoonFish","fish1","HarpoonFish","fish1",],
+	["regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator",],
+	["splitter","tank","splitter","tank","splitter","tank","splitter","tank","Minotaur","splitter","tank","splitter","tank","splitter","tank","splitter","tank","Minotaur","splitter","tank","splitter","tank","splitter","tank","splitter","tank","Minotaur","splitter","tank","splitter","tank","splitter","tank","splitter","tank","Minotaur"],
+	["Minotaur","Minotaur","Minotaur","Minotaur","Gnoll","Gnoll","Gnoll","Gnoll","Gnoll","Gnoll","Minotaur","Minotaur","Minotaur","Minotaur","Gnoll","Gnoll","Gnoll","Gnoll","Gnoll","Gnoll","Minotaur","Minotaur","Minotaur","Minotaur","Gnoll","Gnoll","Gnoll","Gnoll","Gnoll","Gnoll"],
+	["shielded","shielded","shielded","Minotaur","Minotaur","Minotaur","Minotaur","Minotaur","Minotaur","Minotaur","Minotaur","shielded","shielded","shielded","Minotaur","Minotaur","Minotaur","Minotaur","Minotaur","Minotaur","Minotaur","Minotaur"],
+	["money","money","money","money","money","money","money","money","money","money","money",],
+	["HarpoonFish","fish1","HarpoonFish","fish1","HarpoonFish","fish1","HarpoonFish","fish1","HarpoonFish","fish1","HarpoonFish","fish1","HarpoonFish","fish1","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","splitter","tank","splitter","tank","splitter","tank","splitter","tank","Minotaur","splitter","tank","splitter","tank","splitter","tank","splitter","tank","Minotaur","shielded","shielded","shielded","Minotaur","Minotaur","Minotaur","Minotaur","Minotaur","Minotaur","Minotaur","Minotaur","shielded","shielded","shielded","Minotaur","Minotaur","Minotaur","Minotaur","Minotaur","Minotaur","Minotaur","Minotaur"],
+	["splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter","splitter",],
+	["boss"]
 ]
 
 var current_wave: int = 0

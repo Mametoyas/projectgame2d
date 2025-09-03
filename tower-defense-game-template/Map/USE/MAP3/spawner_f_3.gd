@@ -20,9 +20,9 @@ const SND_WIN := preload("res://audio/NEW_Winning all wave.wav")
 	#SFX.play_ui(SND_WIN)
 
 var waves = [
-	["runner","runner","runner","runner","runner"],
-	["tank","crawler","runner","regenerator","runner"],
-	["shielded","shielded","splitter","runner","flyer"]
+	["runner","runner","runner","runner","runner","money"],
+	["tank","crawler","runner","regenerator","runner","money"],
+	["shielded","shielded","splitter","splitter","regenerator","regenerator"]
 ]
 
 var current_wave := 0
