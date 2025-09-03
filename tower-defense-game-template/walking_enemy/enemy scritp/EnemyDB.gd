@@ -1,25 +1,25 @@
 # scripts/EnemyDB.gd
 const ENEMY_DB := {
 	"crawler": {   # 1) มาตรฐาน
-		"hp": 25, "speed": 120, "reward": 4,
+		"hp": 40, "speed": 120, "reward": 4,
 		"armor": 0, "regen": 0, "flying": false, "shield_hp": 0,
 		"on_death_spawn": null, "size": 1.0,
 		"anim": "crawler_walk"
 	},
 	"runner": {    # 2) ไว บาง
-		"hp": 16, "speed": 180, "reward": 5,
+		"hp": 24, "speed": 180, "reward": 5,
 		"armor": 0, "regen": 0, "flying": false, "shield_hp": 0,
 		"on_death_spawn": null, "size": 0.9,
 		"anim": "runner_run"
 	},
 	"tank": {      # 3) อึด ช้า เกราะ
-		"hp": 90, "speed": 90, "reward": 8,
+		"hp": 120, "speed": 90, "reward": 8,
 		"armor": 6, "regen": 0, "flying": false, "shield_hp": 0,
 		"on_death_spawn": null, "size": 1.2,
 		"anim": "tank_walk"
 	},
 	"regenerator": {  # 4) ฟื้นเลือด
-		"hp": 40, "speed": 120, "reward": 7,
+		"hp": 80, "speed": 120, "reward": 7,
 		"armor": 1, "regen": 3, "flying": false, "shield_hp": 0,
 		"on_death_spawn": null, "size": 1.0,
 		"anim": "regen_walk"
@@ -49,37 +49,37 @@ const ENEMY_DB := {
 		"anim": "money_run"
 	},
 	"snake": {   #) 
-		"hp": 10, "speed": 120, "reward": 3,
+		"hp": 15, "speed": 120, "reward": 3,
 		"armor": 0, "regen": 0, "flying": false, "shield_hp": 0,
 		"on_death_spawn": null, "size": 0.6,
 		"anim": "snake_run"
 	},
 	"fish1": {   #) 
-		"hp": 34, "speed": 100, "reward": 6,
+		"hp": 40, "speed": 100, "reward": 6,
 		"armor": 0, "regen": 0, "flying": false, "shield_hp": 0,
 		"on_death_spawn": null, "size": 1.0,
 		"anim": "fish1_run"
 	},
 	"Minotaur": {   #) 
-		"hp": 100, "speed": 100, "reward": 200,
-		"armor": 10, "regen": 10, "flying": false, "shield_hp": 0,
+		"hp": 120, "speed": 95, "reward": 200,
+		"armor": 15, "regen": 9.5, "flying": false, "shield_hp": 0,
 		"on_death_spawn": null, "size": 1.3,
 		"anim": "Minotaur_Walk"
 	},
 	"HarpoonFish": {   #) 
-		"hp": 90, "speed": 120, "reward": 6,
+		"hp": 100, "speed": 120, "reward": 6,
 		"armor": 0, "regen": 0, "flying": false, "shield_hp": 10,
 		"on_death_spawn": null, "size": 1.0,
 		"anim": "HarpoonFish_Run"
 	},
 	"Gnome": {   #) 
-		"hp": 20, "speed": 120, "reward": 6,
+		"hp": 55, "speed": 120, "reward": 6,
 		"armor": 0, "regen": 0, "flying": false, "shield_hp": 0,
 		"on_death_spawn": null, "size": 0.7,
 		"anim": "Gnome_Run"
 	},
 	"Gnoll": {   #) 
-		"hp": 20, "speed": 120, "reward": 6,
+		"hp": 35, "speed": 120, "reward": 6,
 		"armor": 0, "regen": 0, "flying": false, "shield_hp": 0,
 		"on_death_spawn": null, "size": 1.0,
 		"anim": "Gnoll_Walk"

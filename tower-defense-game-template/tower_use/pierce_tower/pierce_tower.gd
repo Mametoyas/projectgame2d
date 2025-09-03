@@ -11,7 +11,7 @@ const LEVELS: Array = [
 	{ "damage": 9,  "range": 180.0, "interval": 1.00, "anim": "lv2_idle",
 	  "cost": 60, "bullet": preload("res://tower_use/pierce_tower/pierce_bulletlv2.tscn"),
 	  "muzzles": ["MuzzleLv1"] },
-	{ "damage": 30, "range": 420.0, "interval": 0.80, "anim": "lv3_idle",
+	{ "damage": 30, "range": 420.0, "interval": 0.75, "anim": "lv3_idle",
 	  "cost": 150,"bullet": preload("res://tower_use/pierce_tower/pierce_bulletlv3.tscn"),
 	  "muzzles": ["MuzzleLv1"] }
 ]
