@@ -36,6 +36,10 @@ var in_range: Array[Enemy] = []
 
 var range_preview: Line2D = null
 
+const SND_SHOOT := preload("res://audio/elemental-magic-spell-impact-outgoing-228342.mp3")
+
+	#SFX.play_2d(SND_SHOOT, global_position)
+
 func _ready() -> void:
 	# ให้ Range มีวงกลมเสมอ
 	if range_shape == null:
@@ -257,6 +261,7 @@ func _on_shoot() -> void:
 		target.apply_damage(damage)
 
 func _spawn_bullet(pos: Vector2) -> void:
+	SFX.play_2d(SND_SHOOT, global_position)
 	var parent: Node = get_tree().current_scene
 	if parent == null:
 		parent = get_tree().root

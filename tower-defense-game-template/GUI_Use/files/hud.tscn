@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dy4ipkvnbrgty"]
+[gd_scene load_steps=14 format=3 uid="uid://dy4ipkvnbrgty"]
 
 [ext_resource type="Script" uid="uid://bomsu3c37kbe3" path="res://GUI_Use/files/hud.gd" id="1_yhpii"]
 [ext_resource type="Script" uid="uid://br33skp2ihilc" path="res://GUI_Use/files/build_ui.gd" id="2_ngh62"]
@@ -10,6 +10,8 @@
 [ext_resource type="Script" uid="uid://dafpx8ngaw33d" path="res://GUI_Use/files/boss_hpui.gd" id="9_wn8jp"]
 [ext_resource type="Script" uid="uid://cwc3usgt6hs8w" path="res://GUI_Use/files/pause_menu.gd" id="10_g487p"]
 [ext_resource type="Script" uid="uid://cu3ao770wxtfm" path="res://menu/AudioOptions.gd" id="10_ip7gb"]
+[ext_resource type="Script" uid="uid://jc38w3g86tug" path="res://GUI_Use/files/click_damage_skill.gd" id="11_g487p"]
+[ext_resource type="Script" uid="uid://ds733kk5nlp3k" path="res://GUI_Use/files/frenzy_btn.gd" id="12_0akhg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wn8jp"]
 bg_color = Color(1.44392e-07, 0.727623, 0.0999177, 1)
@@ -238,6 +240,24 @@ layout_mode = 2
 size_flags_vertical = 3
 max_value = 1.0
 step = 0.1
+
+[node name="ClickSkillBtn" type="Button" parent="."]
+offset_left = 981.0
+offset_top = 482.0
+offset_right = 1068.0
+offset_bottom = 513.0
+text = "Click DMG"
+
+[node name="ClickDamageSkill" type="Node" parent="."]
+script = ExtResource("11_g487p")
+
+[node name="FrenzyBtn" type="Button" parent="."]
+offset_left = 882.0
+offset_top = 482.0
+offset_right = 942.0
+offset_bottom = 513.0
+text = "Frenzy"
+script = ExtResource("12_0akhg")
 
 [connection signal="pressed" from="ReturnBtn" to="." method="_on_return_btn_pressed"]
 [connection signal="mouse_exited" from="Pause_menu/AudioOptions/VBoxContainer/MasterSlider" to="Pause_menu/AudioOptions" method="_on_master_slider_mouse_exited"]
