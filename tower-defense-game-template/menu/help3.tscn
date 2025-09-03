@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://b22tst75vyuqu"]
+
+[ext_resource type="Script" uid="uid://p0cuujleodki" path="res://menu/help_3.gd" id="1_674iq"]
+[ext_resource type="Texture2D" uid="uid://bknic4pr8tars" path="res://menu/help3.png" id="2_cngf5"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_674iq")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.797785, 0.950574)
+texture = ExtResource("2_cngf5")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(762, 509)
+zoom = Vector2(0.9, 0.8)
+
+[node name="next" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1371.0
+offset_top = 838.0
+offset_right = 1394.0
+offset_bottom = 869.0
+scale = Vector2(3, 3)
+text = "->"
+
+[node name="back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1270.0
+offset_top = 838.0
+offset_right = 1293.0
+offset_bottom = 869.0
+scale = Vector2(3, 3)
+text = "<-"
+
+[node name="menu" type="Button" parent="."]
+offset_left = 1345.0
+offset_top = 76.0
+offset_right = 1398.0
+offset_bottom = 107.0
+scale = Vector2(2, 2)
+text = "menu"
