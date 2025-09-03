@@ -3,6 +3,8 @@ extends Control
 
 @export var stage_select_path: String = "res://menu/stage_select.tscn"
 @export var select_help: String = "res://menu/help1.tscn"
+@export var options_path: String = "res://menu/options_menu.tscn"
+
 
 @onready var start_btn: Button = $Panel/StartButton
 @onready var help_btn: Button = $Panel/HelpButton
@@ -30,3 +32,9 @@ func _on_menu() -> void:
 func _on_exit() -> void:
 	SFX.play_ui(SND_CLICK)
 	get_tree().quit()
+
+
+func _on_button_2_pressed() -> void:
+	SFX.play_ui(SND_CLICK)
+	get_tree().change_scene_to_file(options_path)
+	

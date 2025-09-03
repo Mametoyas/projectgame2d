@@ -1,29 +1,30 @@
-[gd_scene load_steps=45 format=4 uid="uid://b38kluylin6p8"]
+[gd_scene load_steps=46 format=4 uid="uid://b38kluylin6p8"]
 
 [ext_resource type="PackedScene" uid="uid://k0wwmy1a2m60" path="res://Map/USE/MAP_FOREST.tscn" id="1_u7t5k"]
-[ext_resource type="Texture2D" uid="uid://c2dnug52ptdjr" path="res://Map/Tiny Swords (Free Pack)/Terrain/Tilemap_color1.png" id="2_5hh7t"]
-[ext_resource type="Texture2D" uid="uid://dw10122bbe0bm" path="res://Map/Tiny Swords (Free Pack)/Terrain/Water Background color.png" id="3_glf3u"]
-[ext_resource type="Texture2D" uid="uid://dkopvrpe8t3eg" path="res://Map/Tiny Swords (Free Pack)/Terrain/Tilemap_color3.png" id="4_j73gl"]
-[ext_resource type="Texture2D" uid="uid://440gwci4uye0" path="res://Map/Tiny Swords (Free Pack)/Buildings/Blue Buildings/House3.png" id="4_vuoar"]
-[ext_resource type="Texture2D" uid="uid://ddds2x8r4xjtp" path="res://Map/Tiny Swords (Free Pack)/Terrain/Tilemap_color2.png" id="5_pnww2"]
-[ext_resource type="Texture2D" uid="uid://0vagjs3fbwmw" path="res://Map/Tiny Swords (Free Pack)/Buildings/Blue Buildings/House2.png" id="5_vtsf8"]
+[ext_resource type="Texture2D" uid="uid://c2rog2efknajs" path="res://Map/Tiny Swords (Free Pack)/Terrain/Tilemap_color1.png" id="2_5hh7t"]
+[ext_resource type="Texture2D" uid="uid://owicrx4qt2pf" path="res://Map/Tiny Swords (Free Pack)/Terrain/Water Background color.png" id="3_glf3u"]
+[ext_resource type="Texture2D" uid="uid://do6vudd4co6fp" path="res://Map/Tiny Swords (Free Pack)/Terrain/Tilemap_color3.png" id="4_j73gl"]
+[ext_resource type="Texture2D" uid="uid://btrk6duitxowu" path="res://Map/Tiny Swords (Free Pack)/Buildings/Blue Buildings/House3.png" id="4_vuoar"]
+[ext_resource type="Texture2D" uid="uid://bwadkx1qpr5rd" path="res://Map/Tiny Swords (Free Pack)/Terrain/Tilemap_color2.png" id="5_pnww2"]
+[ext_resource type="Texture2D" uid="uid://gpol87eod03f" path="res://Map/Tiny Swords (Free Pack)/Buildings/Blue Buildings/House2.png" id="5_vtsf8"]
 [ext_resource type="Script" uid="uid://dd4br6c60vd2v" path="res://Map/USE/MAP1/map_forest_1.gd" id="6_8ef3s"]
-[ext_resource type="Texture2D" uid="uid://cshfbmglrapup" path="res://Map/Tiny Swords (Free Pack)/Buildings/Blue Buildings/House1.png" id="6_ax4fx"]
-[ext_resource type="Texture2D" uid="uid://cl1o7wqk83sly" path="res://Map/Tiny Swords (Free Pack)/Decorations/Rocks/Rock4.png" id="6_ctoj2"]
-[ext_resource type="Texture2D" uid="uid://bn82jaymer0cw" path="res://Map/Tiny Swords (Free Pack)/Buildings/Blue Buildings/Castle.png" id="7_6jajx"]
-[ext_resource type="Texture2D" uid="uid://ctlatio4jx63k" path="res://Map/Tiny Swords (Free Pack)/Decorations/Rocks/Rock3.png" id="7_lnnc2"]
-[ext_resource type="Texture2D" uid="uid://bkd142vr2hsel" path="res://Map/Tiny Swords (Free Pack)/Decorations/Rocks/Rock2.png" id="8_olpot"]
-[ext_resource type="Texture2D" uid="uid://s642vpjf172k" path="res://Map/Tiny Swords (Free Pack)/Decorations/Bushes/Bushe1.png" id="8_rk7mj"]
+[ext_resource type="Texture2D" uid="uid://df37ugw2nx2ei" path="res://Map/Tiny Swords (Free Pack)/Buildings/Blue Buildings/House1.png" id="6_ax4fx"]
+[ext_resource type="Texture2D" uid="uid://bdyn42scqpann" path="res://Map/Tiny Swords (Free Pack)/Decorations/Rocks/Rock4.png" id="6_ctoj2"]
+[ext_resource type="Texture2D" uid="uid://bamxqyvii5wpn" path="res://Map/Tiny Swords (Free Pack)/Buildings/Blue Buildings/Castle.png" id="7_6jajx"]
+[ext_resource type="Texture2D" uid="uid://cfj7vmdp182nn" path="res://Map/Tiny Swords (Free Pack)/Decorations/Rocks/Rock3.png" id="7_lnnc2"]
+[ext_resource type="Texture2D" uid="uid://l18dpftmvp2m" path="res://Map/Tiny Swords (Free Pack)/Decorations/Rocks/Rock2.png" id="8_olpot"]
+[ext_resource type="Texture2D" uid="uid://u6sqmqvblok8" path="res://Map/Tiny Swords (Free Pack)/Decorations/Bushes/Bushe1.png" id="8_rk7mj"]
 [ext_resource type="Script" uid="uid://dx1mvbieyio4j" path="res://Map/USE/MAP1/camera_2d_map_1.gd" id="9_5hh7t"]
-[ext_resource type="Texture2D" uid="uid://cdbysvvqkhos1" path="res://Map/Tiny Swords (Free Pack)/Decorations/Trees/Tree1.png" id="9_vgmcn"]
-[ext_resource type="Texture2D" uid="uid://ddcgmfrohi7kk" path="res://Map/Tiny Swords (Free Pack)/Decorations/Trees/Tree3.png" id="10_6dvv0"]
+[ext_resource type="Texture2D" uid="uid://duu358t4v8ib4" path="res://Map/Tiny Swords (Free Pack)/Decorations/Trees/Tree1.png" id="9_vgmcn"]
+[ext_resource type="Texture2D" uid="uid://clwe6fjhcjk3h" path="res://Map/Tiny Swords (Free Pack)/Decorations/Trees/Tree3.png" id="10_6dvv0"]
 [ext_resource type="PackedScene" uid="uid://dd31auwxsj6w3" path="res://Map/USE/BASE/base1.tscn" id="10_glf3u"]
-[ext_resource type="Texture2D" uid="uid://deqk5j3dmuqh2" path="res://Map/Tiny Swords (Free Pack)/Decorations/Trees/Tree4.png" id="11_nupx6"]
+[ext_resource type="Texture2D" uid="uid://c3lbous08kks7" path="res://Map/Tiny Swords (Free Pack)/Decorations/Trees/Tree4.png" id="11_nupx6"]
 [ext_resource type="PackedScene" uid="uid://kbd8nu0r2ngb" path="res://Map/USE/Sheep_move/sheep.tscn" id="20_663nu"]
 [ext_resource type="Script" uid="uid://6xeoiknqklcy" path="res://walking_enemy/maptest/spawnerF1.gd" id="21_bm05h"]
 [ext_resource type="PackedScene" uid="uid://dy4ipkvnbrgty" path="res://GUI_Use/files/hud.tscn" id="23_20xqa"]
 [ext_resource type="Script" uid="uid://ccd6w1tvp5vky" path="res://walking_enemy/enemy scritp/EnemyFactoryF1.gd" id="23_xk0xd"]
-[ext_resource type="AudioStream" uid="uid://daiiff764x7ig" path="res://BackGround_Music/start_defendes.wav" id="24_xk0xd"]
+[ext_resource type="AudioStream" uid="uid://bkygwbpngy1o3" path="res://BackGround_Music/start_defendes.wav" id="24_xk0xd"]
+[ext_resource type="PackedScene" uid="uid://b2ph8xrtw4d0n" path="res://pause_menu.tscn" id="25_2vfj2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ctoj2"]
 texture = ExtResource("2_5hh7t")
@@ -5841,7 +5842,8 @@ script = ExtResource("23_xk0xd")
 
 [node name="HUD" parent="." instance=ExtResource("23_20xqa")]
 
+[node name="Pause_menu2" parent="HUD" instance=ExtResource("25_2vfj2")]
+
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("24_xk0xd")
 volume_db = -10.0
-autoplay = true

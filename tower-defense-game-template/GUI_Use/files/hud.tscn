@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dy4ipkvnbrgty"]
+[gd_scene load_steps=12 format=3 uid="uid://dy4ipkvnbrgty"]
 
 [ext_resource type="Script" uid="uid://bomsu3c37kbe3" path="res://GUI_Use/files/hud.gd" id="1_yhpii"]
 [ext_resource type="Script" uid="uid://br33skp2ihilc" path="res://GUI_Use/files/build_ui.gd" id="2_ngh62"]
@@ -7,13 +7,15 @@
 [ext_resource type="PackedScene" uid="uid://cas2ckenysxyv" path="res://tower_use/aoe tower/tower_bomb.tscn" id="4_svqud"]
 [ext_resource type="Script" uid="uid://b36l1vryt31k5" path="res://gui_test/placement_manager.gd" id="5_mauiy"]
 [ext_resource type="PackedScene" uid="uid://h1yckjwf6lp0" path="res://tower_use/pierce_tower/pierce_tower.tscn" id="5_qqowv"]
-[ext_resource type="Script" uid="uid://ow2hm6hos8jh" path="res://GUI_Use/files/panel.gd" id="8_knd4f"]
 [ext_resource type="Script" uid="uid://dafpx8ngaw33d" path="res://GUI_Use/files/boss_hpui.gd" id="9_wn8jp"]
+[ext_resource type="Script" uid="uid://cwc3usgt6hs8w" path="res://GUI_Use/files/pause_menu.gd" id="10_g487p"]
+[ext_resource type="Script" uid="uid://cu3ao770wxtfm" path="res://menu/AudioOptions.gd" id="10_ip7gb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wn8jp"]
 bg_color = Color(1.44392e-07, 0.727623, 0.0999177, 1)
 
 [node name="HUD" type="CanvasLayer" groups=["hud"]]
+process_mode = 3
 script = ExtResource("1_yhpii")
 
 [node name="MoneyLabel" type="Label" parent="."]
@@ -88,20 +90,13 @@ text = "sell"
 [node name="placement_manager" type="Node" parent="."]
 script = ExtResource("5_mauiy")
 
-[node name="Panel" type="Panel" parent="."]
-offset_left = 1191.0
-offset_top = 19.0
-offset_right = 1231.0
-offset_bottom = 59.0
-scale = Vector2(1.6133, 1.18976)
-script = ExtResource("8_knd4f")
-
-[node name="ReturnBtn" type="Button" parent="Panel"]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+[node name="ReturnBtn" type="Button" parent="."]
+offset_left = 1198.0
+offset_top = 20.0
+offset_right = 1216.0
+offset_bottom = 51.0
 scale = Vector2(1.7572, 1.2477)
-text = "<-"
+text = "II"
 
 [node name="BossHPUI" type="Control" parent="."]
 layout_mode = 3
@@ -126,3 +121,125 @@ offset_top = 80.0
 offset_right = 757.0
 offset_bottom = 125.0
 text = "BossHP:"
+
+[node name="Pause_menu" type="Control" parent="."]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+offset_left = 341.057
+offset_top = 435.072
+offset_right = 381.057
+offset_bottom = 475.072
+script = ExtResource("10_g487p")
+
+[node name="PanelContainer" type="PanelContainer" parent="Pause_menu"]
+modulate = Color(0, 0, 0, 0.65098)
+show_behind_parent = true
+layout_mode = 0
+offset_left = -386.057
+offset_top = -443.072
+offset_right = 945.943
+offset_bottom = 148.928
+scale = Vector2(1.05464, 1.26194)
+
+[node name="Resume" type="Button" parent="Pause_menu"]
+layout_mode = 0
+offset_left = 115.655
+offset_top = -366.691
+offset_right = 185.655
+offset_bottom = -335.691
+scale = Vector2(1.75546, 1.75546)
+text = "Resume"
+
+[node name="MainMenu" type="Button" parent="Pause_menu"]
+layout_mode = 0
+offset_left = -101.057
+offset_top = -35.0716
+offset_right = -1.05652
+offset_bottom = -4.07159
+scale = Vector2(1.75546, 1.75546)
+text = "Main Menu"
+
+[node name="QuitGame" type="Button" parent="Pause_menu"]
+layout_mode = 0
+offset_left = 269.943
+offset_top = -35.0716
+offset_right = 369.943
+offset_bottom = -4.07159
+scale = Vector2(1.75546, 1.75546)
+text = "Quit Game"
+
+[node name="AudioOptions" type="Control" parent="Pause_menu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -341.057
+offset_top = -435.072
+offset_right = -21.0565
+offset_bottom = -375.072
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.992809)
+script = ExtResource("10_ip7gb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Pause_menu/AudioOptions"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 341.057
+offset_top = 148.805
+offset_right = 381.057
+offset_bottom = 248.805
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.984414, 0.984414)
+
+[node name="MasterLabel" type="Label" parent="Pause_menu/AudioOptions/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.36
+text = "Master"
+vertical_alignment = 2
+
+[node name="MasterSlider" type="HSlider" parent="Pause_menu/AudioOptions/VBoxContainer"]
+modulate = Color(1, 0, 0, 1)
+layout_mode = 2
+size_flags_vertical = 3
+max_value = 1.0
+step = 0.05
+
+[node name="SFXLabel" type="Label" parent="Pause_menu/AudioOptions/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.36
+text = "SFX"
+vertical_alignment = 2
+
+[node name="SFXSlider" type="HSlider" parent="Pause_menu/AudioOptions/VBoxContainer"]
+modulate = Color(1, 0, 1, 1)
+layout_mode = 2
+size_flags_vertical = 3
+max_value = 1.0
+step = 0.05
+
+[node name="MusicLabel" type="Label" parent="Pause_menu/AudioOptions/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.36
+text = "Music"
+vertical_alignment = 2
+
+[node name="MusicSlider" type="HSlider" parent="Pause_menu/AudioOptions/VBoxContainer"]
+modulate = Color(1, 0.517647, 0, 1)
+self_modulate = Color(1, 0.65098, 0, 1)
+layout_mode = 2
+size_flags_vertical = 3
+max_value = 1.0
+step = 0.1
+
+[connection signal="pressed" from="ReturnBtn" to="." method="_on_return_btn_pressed"]
+[connection signal="mouse_exited" from="Pause_menu/AudioOptions/VBoxContainer/MasterSlider" to="Pause_menu/AudioOptions" method="_on_master_slider_mouse_exited"]
+[connection signal="mouse_exited" from="Pause_menu/AudioOptions/VBoxContainer/SFXSlider" to="Pause_menu/AudioOptions" method="_on_sfx_slider_mouse_exited"]
+[connection signal="mouse_exited" from="Pause_menu/AudioOptions/VBoxContainer/MusicSlider" to="Pause_menu/AudioOptions" method="_on_music_slider_mouse_exited"]

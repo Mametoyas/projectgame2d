@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://cbr8b4hp6o8"]
 
 [ext_resource type="Script" uid="uid://1j2o3s8i8m6b" path="res://menu/main_menu.gd" id="1_f5okj"]
-[ext_resource type="Texture2D" uid="uid://bggrjof4lxhx" path="res://menu/Game_Menu.png" id="2_o5w3e"]
+[ext_resource type="Texture2D" uid="uid://chvmgr71t5f8k" path="res://menu/Game_Menu.png" id="2_o5w3e"]
 [ext_resource type="Script" uid="uid://btnlgqck465tg" path="res://menu/panel.gd" id="3_1x3cv"]
-[ext_resource type="AudioStream" uid="uid://3gfcebbo1drd" path="res://BackGround_Music/Wainting_home.wav" id="3_o5w3e"]
+[ext_resource type="AudioStream" uid="uid://cqkkmyro4h8t8" path="res://BackGround_Music/Wainting_home.wav" id="3_o5w3e"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -27,6 +27,7 @@ offset_bottom = 40.0
 script = ExtResource("3_1x3cv")
 
 [node name="StartButton" type="Button" parent="Panel"]
+process_mode = 3
 layout_mode = 2
 offset_left = 79.0
 offset_top = 366.0
@@ -37,6 +38,7 @@ text = "           "
 flat = true
 
 [node name="HelpButton" type="Button" parent="Panel"]
+process_mode = 3
 layout_mode = 2
 offset_left = 846.0
 offset_top = 365.0
@@ -47,6 +49,7 @@ text = "           "
 flat = true
 
 [node name="Button2" type="Button" parent="Panel"]
+process_mode = 3
 layout_mode = 2
 offset_left = 78.0
 offset_top = 529.0
@@ -57,6 +60,7 @@ text = "           "
 flat = true
 
 [node name="ExitButton" type="Button" parent="Panel"]
+process_mode = 3
 layout_mode = 2
 offset_left = 627.0
 offset_top = 528.0
@@ -69,3 +73,5 @@ flat = true
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_o5w3e")
 autoplay = true
+
+[connection signal="pressed" from="Panel/Button2" to="." method="_on_button_2_pressed"]

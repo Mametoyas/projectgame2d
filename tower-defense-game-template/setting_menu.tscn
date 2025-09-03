@@ -1,27 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://ve2lf0cdpo00"]
+[gd_scene load_steps=2 format=3 uid="uid://b04e32wx7ilx8"]
 
-[ext_resource type="Texture2D" uid="uid://cj1x1iv0h5ind" path="res://menu/help2.png" id="1_8grcy"]
-[ext_resource type="Script" uid="uid://0u1sivinlo8o" path="res://menu/help_2.gd" id="1_f5fmc"]
+[ext_resource type="Texture2D" uid="uid://ttiob4bqw5nx" path="res://menu/SettingBG.png" id="1_3iptn"]
 
-[node name="Control" type="Control"]
+[node name="SettingMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_f5fmc")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -8.0
+offset_top = -6.0
+offset_right = 1622.0
+offset_bottom = 826.0
 scale = Vector2(0.797785, 0.950574)
-texture = ExtResource("1_8grcy")
+texture = ExtResource("1_3iptn")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(762, 509)
-zoom = Vector2(0.9, 0.8)
+position = Vector2(641, 366)
+scale = Vector2(-3.54, -3.54)
 
 [node name="next" type="Button" parent="."]
 layout_mode = 0
@@ -43,9 +43,19 @@ text = "<-"
 
 [node name="menu" type="Button" parent="."]
 layout_mode = 0
-offset_left = 1345.0
-offset_top = 76.0
-offset_right = 1398.0
-offset_bottom = 107.0
+offset_left = 1141.0
+offset_top = 641.0
+offset_right = 1194.0
+offset_bottom = 672.0
 scale = Vector2(2, 2)
-text = "menu"
+text = "Menu"
+
+[node name="HSlider" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 604.0
+offset_right = 148.0
+offset_bottom = 620.0
+scale = Vector2(3.74267, 2.58414)
+max_value = 1.0
+step = 0.1
