@@ -1,0 +1,51 @@
+res://audio/sfx.tscn::fb3583c254041ea27d44498bb261de9a::1756911297::res://.godot/exported/133200997/export-7b345c2f3b26ab74bbb2370cf4238af3-sfx.scn
+res://connection_ii/ConnectionII.tres::41bd0b07165f2ef4ac454c07e2192200::1756911297::res://.godot/exported/133200997/export-d2a806218c49db0c6cb5857e15281cef-ConnectionII.res
+res://gui_test/gui.tscn::b53229eafc3246205c4990127450c1e8::1756911297::res://.godot/exported/133200997/export-a5d8c801ad40310be3ce9dde66b63c5f-gui.scn
+res://GUI_Use/files/hud.tscn::5943a19fa07845be2ccd1be5a7e94021::1756932939::res://.godot/exported/133200997/export-3041893aeb1a9e601965f3bf815eed8a-hud.scn
+res://Map/FORTEST/ememy_def.tscn::90f20f2349991fe701e6361c41d53c49::1756911297::res://.godot/exported/133200997/export-a14c086f12db3246ce6e8351f227988f-ememy_def.scn
+res://Map/FORTEST/enemy _test.tscn::a70d53e6a7bb21f67ae6944aab003894::1756911297::res://.godot/exported/133200997/export-6a92dfbec1972072fe8067caf8b58f1c-enemy _test.scn
+res://Map/FORTEST/minotuar.tscn::81a1c5b093824f519b3dbaaeaedcf9f0::1756911297::res://.godot/exported/133200997/export-dc22ef68adb41b66c11832e4f30fb493-minotuar.scn
+res://Map/FORTEST/rock.tscn::5ecc329b0d21925cf3e3039aa42716a2::1756911297::res://.godot/exported/133200997/export-dfcc7821334dfcd62484b7451fa74e7f-rock.scn
+res://Map/FORTEST/spawn_wave.tscn::47268e5669d699d73f602156bfabd63e::1756911297::res://.godot/exported/133200997/export-147ffe1bc9ab3a5a0a1fadc652aca447-spawn_wave.scn
+res://Map/FORTEST/spider.tscn::102adfa7098aaea5dfd46f539184f597::1756911297::res://.godot/exported/133200997/export-d0eae79bb16c29c448ce92de7a88fde8-spider.scn
+res://Map/FORTEST/stage1.tscn::9eab9d7e17205a3363b588e826788665::1756911297::res://.godot/exported/133200997/export-b48565f71d6e18d02d9708b07be3f29e-stage1.scn
+res://Map/FORTEST/tree.tscn::b11f0e6af4a7ea95c9bb6fa2a9b7acd1::1756911297::res://.godot/exported/133200997/export-822b9823e3b08a4b0cd479766f92550b-tree.scn
+res://Map/FORTEST/WAVEDF.tscn::a96e9fdaf300d2e3f0475699a80f8000::1756911297::res://.godot/exported/133200997/export-d9c93d223125d5176526e67c8a929618-WAVEDF.scn
+res://Map/FORTEST/wave_test.tscn::f7d27100fbce00ac733c0fb03658b796::1756911297::res://.godot/exported/133200997/export-a455a5ee27a6d10421bad0f7020b0029-wave_test.scn
+res://Map/USE/BASE/base1.tscn::ee2521887ec0e6ba75dcf3ada496d265::1756932937::res://.godot/exported/133200997/export-a0971ee8e765474f9a64baabc4f9cb61-base1.scn
+res://Map/USE/MAP1/Forest1.tscn::395bfcebea9142bf1433cbebdc4da4a6::1756932938::res://.godot/exported/133200997/export-d5eb9b25af9dfd01bb35b2023e9509ed-Forest1.scn
+res://Map/USE/MAP2/Forest2.tscn::fe3450e6618dbbc0535b39d99942f925::1756932938::res://.godot/exported/133200997/export-0b2e6bbd147e5ff3ce6be77f0ab6e6da-Forest2.scn
+res://Map/USE/MAP3/Forest3.tscn::0f9135faf26cdecad6f82ff264eb671c::1756932939::res://.godot/exported/133200997/export-0a05776f8877a0af626758b24191ba0c-Forest3.scn
+res://Map/USE/MAP4/Forest4.tscn::06aa985fe6b6316503faef0965be4751::1756932939::res://.godot/exported/133200997/export-b76de4c487ee99e56f3c296f6576ccb6-Forest4.scn
+res://Map/USE/MAP5/Forest5.tscn::82b4974f33850895acceacb1ddb3c19c::1756932937::res://.godot/exported/133200997/export-756d5262ce4174d1e48e68c91d81cf30-Forest5.scn
+res://Map/USE/Sheep_move/sheep.tscn::b8d19bb72675f815b417ff88cf51f606::1756911297::res://.godot/exported/133200997/export-ecd4b0e2479e1667438915b152ffaf1e-sheep.scn
+res://Map/USE/MAP_FOREST.tscn::8db3baf1dbeaed277257dbea67262ce0::1756911297::res://.godot/exported/133200997/export-7861b906e7acfe8416b66d56e6de43d3-MAP_FOREST.scn
+res://menu/help1.tscn::33ac85d5ae5ee37862f2045a1c892add::1756932939::res://.godot/exported/133200997/export-07b31fde8e29636acbd614da410f1bb2-help1.scn
+res://menu/help2.tscn::68425d4bd4ab9957d6a0b6522a3a401f::1756932940::res://.godot/exported/133200997/export-ad4f21e66d08d1e18e181c2334a84c87-help2.scn
+res://menu/help3.tscn::1b098f9f138c0dfc8c1f1186f8f169fa::1756911297::res://.godot/exported/133200997/export-447b86bfabd8c7e64f8f8df324b3b3f8-help3.scn
+res://menu/help4.tscn::5bb8ef8e448366bd60d5bb24fb346f6b::1756911297::res://.godot/exported/133200997/export-d3a466b189db86d8c56ee5fa031190d2-help4.scn
+res://menu/lose_screen.tscn::00137fd152d89bb4c1f36e784c9dae98::1756911297::res://.godot/exported/133200997/export-c2455784c2b94fcf0e702349837c7b46-lose_screen.scn
+res://menu/main_menu.tscn::b086203f63590f24880c0d48285cd641::1756932938::res://.godot/exported/133200997/export-07aabad00ba46ff461d6bc7e498cd0f9-main_menu.scn
+res://menu/options_menu.tscn::f271196cbd483b4baa00b8f00bc4123c::1756932940::res://.godot/exported/133200997/export-e275bb5553c6170bafd4894918b4f16d-options_menu.scn
+res://menu/stage_select.tscn::a426a193cd976480b74ff618f048d96f::1756932938::res://.godot/exported/133200997/export-5558c45054dd352d1e7171d33893d802-stage_select.scn
+res://Skills/active_skills/buff_damage.tscn::e37d571355cfeaf1e4a9ed77eda61df8::1756911297::res://.godot/exported/133200997/export-1a69334057a57f0357821c7c03f90697-buff_damage.scn
+res://Skills/active_skills/frames_hammer.tscn::01a9c275f837b75c9d26995c715515cd::1756911297::res://.godot/exported/133200997/export-051d0e24a2c04f0392f934de5860ae67-frames_hammer.scn
+res://Skills/active_skills/lightning.tscn::a6ecf98e3d13703d6a3009da2a592813::1756911297::res://.godot/exported/133200997/export-198e2fb195b2c481590b1b33d5433375-lightning.scn
+res://tower_use/aoe tower/bomb_bullet.tscn::c3c755ebd5d14b0830116ec19d4eec10::1756911297::res://.godot/exported/133200997/export-d8fe14801fef663df20d32b7c7931320-bomb_bullet.scn
+res://tower_use/aoe tower/bomb_bulletlv2.tscn::fe381839b61a16bfe38303e8ad77024f::1756911297::res://.godot/exported/133200997/export-3a92c65021f03702c0c1c2b01b88a65e-bomb_bulletlv2.scn
+res://tower_use/aoe tower/bomb_bulletlv3.tscn::b0600f51d3a0f975ff275fb14a062d4c::1756911297::res://.godot/exported/133200997/export-1bdee7110050102f44950cdf19bbf4eb-bomb_bulletlv3.scn
+res://tower_use/aoe tower/tower_bomb.tscn::82c2969c1780937111ea52a9b40aff48::1756932226::res://.godot/exported/133200997/export-06591f087dec5830b950c23ca62b08f7-tower_bomb.scn
+res://tower_use/pierce_tower/pierce_bullet.tscn::a821d0a9542748ab92cb329e6547eee2::1756911297::res://.godot/exported/133200997/export-610edc11baca29e58a9b92adc1351f93-pierce_bullet.scn
+res://tower_use/pierce_tower/pierce_bulletlv2.tscn::735a48df2e712d6abc768a79237e8c3b::1756911297::res://.godot/exported/133200997/export-066ec77a1e206759668867b1608a55fb-pierce_bulletlv2.scn
+res://tower_use/pierce_tower/pierce_bulletlv3.tscn::bd481447c54161754d44f214798a6ec2::1756911297::res://.godot/exported/133200997/export-ccee770791111ff9aac3018a3e7ad211-pierce_bulletlv3.scn
+res://tower_use/pierce_tower/pierce_tower.tscn::70a964e0f3699c748a2d01567a2341f8::1756932940::res://.godot/exported/133200997/export-e608618d21a08628a1282fddf4031fcb-pierce_tower.scn
+res://tower_use/tower_archer/arrow_archer_tower.tscn::a26b323be9b4ada96e692335336b1e59::1756932940::res://.godot/exported/133200997/export-d25b8d3d3876abc8ab78f7fd8ad225ad-arrow_archer_tower.scn
+res://tower_use/tower_archer/tower_archer.tscn::cbfb9f84db82fb295e003728848f3eb1::1756932940::res://.godot/exported/133200997/export-d8d0773cd84d17c40cbcd22f4aeef4fc-tower_archer.scn
+res://walking_enemy/enemy scritp/enemy.tscn::03812b3a94a37af5f0f695ba2a7f6e20::1756932226::res://.godot/exported/133200997/export-4738e0ef337d2954f5aa417beda5b5a1-enemy.scn
+res://walking_enemy/enemy scritp/evil_eye_boss.tscn::a223d31660eeaf7c126820551c20463f::1756932937::res://.godot/exported/133200997/export-9bdfe12ae00f64c701f169cbe595516e-evil_eye_boss.scn
+res://walking_enemy/maptest/test_path.tscn::27509eb3c749c7d8d26564a89e89897e::1756927202::res://.godot/exported/133200997/export-b3d5e861bc4e492da0a8f0012f9fbeef-test_path.scn
+res://walking_enemy/tower test/bullet.tscn::1b8cc3f1e361256c291961e434f6b925::1756911297::res://.godot/exported/133200997/export-3ffab64458ac447533c9dc1abd7f1b15-bullet.scn
+res://walking_enemy/tower test/tower.tscn::6fda553713f54db421933d21d2300017::1756911297::res://.godot/exported/133200997/export-9f51bbd892f40ab63ffef4b220882d36-tower.scn
+res://pause_menu.tscn::ef718cab5ebda6baa0471c1710a6058d::1756932940::res://.godot/exported/133200997/export-8f8844d4375fca029c0f20cf6f905ea1-pause_menu.scn
+res://Reset.tscn::bde279a5ec04ec77c32ab4395de9c9eb::1756932938::res://.godot/exported/133200997/export-0a9ebbc6fc792a26024a9d90a3fd2225-Reset.scn
+res://setting_menu.tscn::623a5853f5554bc5bc0eb1a3842b16d7::1756932940::res://.godot/exported/133200997/export-43d8a8ef02f22b6392188ad38751e564-setting_menu.scn
