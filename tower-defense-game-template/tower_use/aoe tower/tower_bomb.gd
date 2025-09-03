@@ -6,14 +6,14 @@ extends Node2D
 
 const LEVELS: Array = [
 	{},
-	{ "damage": 22, "range": 120.0, "interval": 0.9, "anim": "lv1_idle",
+	{ "damage": 22, "range": 150.0, "interval": 0.9, "anim": "lv1_idle",
 	  "cost": 0,   "bullet": preload("res://tower_use/aoe tower/bomb_bullet.tscn"),
 	  "muzzles": ["MuzzleLv1"] },
 	{ "damage": 32, "range": 180.0, "interval": 0.8, "anim": "lv2_idle",
 	  "cost": 70,  "bullet": preload("res://tower_use/aoe tower/bomb_bulletlv2.tscn"),
 	  "muzzles": ["MuzzleLv1"] },
-	{ "damage": 45, "range": 210.0, "interval": 0.7, "anim": "lv3_idle",
-	  "cost": 110, "bullet": preload("res://tower_use/aoe tower/bomb_bulletlv3.tscn"),
+	{ "damage": 40, "range": 220.0, "interval": 0.7, "anim": "lv3_idle",
+	  "cost": 140, "bullet": preload("res://tower_use/aoe tower/bomb_bulletlv3.tscn"),
 	  "muzzles": ["MuzzleLv1"] }
 ]
 

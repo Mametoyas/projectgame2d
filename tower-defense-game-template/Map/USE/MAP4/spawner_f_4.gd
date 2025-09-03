@@ -16,9 +16,9 @@ const SND_WIN := preload("res://audio/NEW_Winning all wave.wav")
 const AUTO_START := false
 
 var waves = [
-	["runner","runner","runner","runner","runner"],
-	["tank","crawler","runner","regenerator","runner"],
-	["shielded","shielded","splitter","runner","flyer"]
+	["HarpoonFish","HarpoonFish","HarpoonFish","money","fish1","fish1","fish1"],
+	["tank","HarpoonFish","fish1","regenerator","HarpoonFish","fish1","money"],
+	["Minotaur","shielded","shielded","splitter","runner","flyer"]
 ]
 
 var current_wave := 0
