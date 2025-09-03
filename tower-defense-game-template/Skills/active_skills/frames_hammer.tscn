@@ -1,6 +1,7 @@
-[gd_scene load_steps=27 format=3 uid="uid://h238yyti7uts"]
+[gd_scene load_steps=28 format=3 uid="uid://h238yyti7uts"]
 
 [ext_resource type="Texture2D" uid="uid://c2bb8ebt0txoy" path="res://Skills/assets/Frames_hammer/VFX5/Frames/paladin_skill5_frame1.png" id="1_3110k"]
+[ext_resource type="Script" uid="uid://c4qk0b1i6s764" path="res://Skills/active_skills/frames_hammer.gd" id="1_tt1kf"]
 [ext_resource type="Texture2D" uid="uid://c78xidfyv3gne" path="res://Skills/assets/Frames_hammer/VFX5/Frames/paladin_skill5_frame2.png" id="2_jgy3j"]
 [ext_resource type="Texture2D" uid="uid://fpjjk4gdxo3v" path="res://Skills/assets/Frames_hammer/VFX5/Frames/paladin_skill5_frame3.png" id="3_bhgb6"]
 [ext_resource type="Texture2D" uid="uid://ifbyk6anbw63" path="res://Skills/assets/Frames_hammer/VFX5/Frames/paladin_skill5_frame4.png" id="4_4ebr2"]
@@ -106,27 +107,27 @@ animations = [{
 }],
 "loop": false,
 "name": &"default",
-"speed": 5.0
+"speed": 15.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wftuo"]
 radius = 40.4475
 
 [node name="frames_hammer" type="Area2D"]
+script = ExtResource("1_tt1kf")
 
 [node name="hammer" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -28)
 sprite_frames = SubResource("SpriteFrames_tt1kf")
 animation = &"Hammer"
-frame = 6
-frame_progress = 0.527591
+frame_progress = 0.113749
 
 [node name="smoke" type="AnimatedSprite2D" parent="."]
 position = Vector2(7.10543e-15, 6)
 scale = Vector2(0.550781, 0.550781)
 sprite_frames = SubResource("SpriteFrames_w0n2u")
-frame = 4
-frame_progress = 0.444161
+frame = 10
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_wftuo")

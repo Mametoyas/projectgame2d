@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://dxsm02qk087el"]
+[gd_scene load_steps=9 format=3 uid="uid://dxsm02qk087el"]
 
+[ext_resource type="Script" uid="uid://c5admah0ff7gu" path="res://Skills/active_skills/lightning.gd" id="1_i6qui"]
 [ext_resource type="Texture2D" uid="uid://c4vc6a5k8fab0" path="res://Skills/assets/lightning/VFX3/Frames/lightning_skill3_frame1.png" id="1_whujs"]
 [ext_resource type="Texture2D" uid="uid://gpf1ame0l5j4" path="res://Skills/assets/lightning/VFX3/Frames/lightning_skill3_frame2.png" id="2_i6qui"]
 [ext_resource type="Texture2D" uid="uid://cbe3nia74jbuw" path="res://Skills/assets/lightning/VFX3/Frames/lightning_skill3_frame3.png" id="3_ceif2"]
@@ -33,11 +34,12 @@ animations = [{
 radius = 40.05
 
 [node name="lightning" type="Area2D"]
+script = ExtResource("1_i6qui")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(5, -92)
 sprite_frames = SubResource("SpriteFrames_jixiw")
-frame_progress = 0.436593
+frame_progress = 0.7649
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_lex4b")
