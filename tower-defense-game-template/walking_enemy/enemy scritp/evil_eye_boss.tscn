@@ -1,7 +1,7 @@
 [gd_scene load_steps=23 format=3 uid="uid://bmwuxbmsxcxub"]
 
 [ext_resource type="Script" uid="uid://dnurmdq31t5nf" path="res://walking_enemy/enemy scritp/evil_eye_boss.gd" id="1_lf6r3"]
-[ext_resource type="Texture2D" uid="uid://cl6g2m5itms22" path="res://walking_enemy/enemy asset/Bringer-of-Death-SpritSheet.png" id="2_ywdgt"]
+[ext_resource type="Texture2D" uid="uid://cjao0dpnmuny0" path="res://walking_enemy/enemy asset/Bringer-of-Death-SpritSheet.png" id="2_ywdgt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ef0kp"]
 atlas = ExtResource("2_ywdgt")

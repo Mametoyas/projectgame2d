@@ -8,6 +8,7 @@ var factory: Node = null         # enemy_factory (จะหาแบบขยั
 var boss_factory: Node = null    # boss_factory  (จะหาแบบขยันมือ)
 
 var waves: Array = [
+	["boss"],
 	["money","money","money","money","money"],
 	["HarpoonFish","fish1","HarpoonFish","fish1","HarpoonFish","fish1","HarpoonFish","fish1","HarpoonFish","fish1","HarpoonFish","fish1","HarpoonFish","fish1","HarpoonFish","fish1","HarpoonFish","fish1","HarpoonFish","fish1","HarpoonFish","fish1","HarpoonFish","fish1","HarpoonFish","fish1","HarpoonFish","fish1",],
 	["regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator","regenerator",],

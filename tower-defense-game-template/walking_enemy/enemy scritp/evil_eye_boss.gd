@@ -5,12 +5,12 @@ signal died(reward: int)
 signal hp_changed(current: int, max_hp: int)
 
 @export var max_hp: int = 999999999999999
-@export var speed: float = 120.0
+@export var speed: float = 40.0
 @export var armor: int = 3
 @export var reward: int = 120
 
 @export var attack_range: float = 600.0
-@export var attack_cooldown: float = 1.2
+@export var attack_cooldown: float = 0.01
 
 var hp: int
 var alive: bool = true

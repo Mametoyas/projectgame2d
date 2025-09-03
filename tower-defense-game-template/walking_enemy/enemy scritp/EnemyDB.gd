@@ -62,7 +62,7 @@ const ENEMY_DB := {
 	},
 	"Minotaur": {   #) 
 		"hp": 100, "speed": 100, "reward": 200,
-		"armor": 5, "regen": 10, "flying": false, "shield_hp": 0,
+		"armor": 10, "regen": 10, "flying": false, "shield_hp": 0,
 		"on_death_spawn": null, "size": 1.3,
 		"anim": "Minotaur_Walk"
 	},
