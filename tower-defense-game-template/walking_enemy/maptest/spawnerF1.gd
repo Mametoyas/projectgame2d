@@ -8,8 +8,13 @@ extends Node
 
 const AUTO_START := false  # ตั้งเป็น true เพื่อให้เริ่ม wave อัตโนมัติไว้เทส
 
+const SND_CLICK := preload("res://audio/computer-mouse-click-02-383961.mp3")
+const SND_WIN := preload("res://audio/NEW_Winning all wave.wav")
+	#SFX.play_ui(SND_WIN)
+
+
 var waves = [
-	["runner"],
+	["money"],
 	["runner"],
 	["runner"]
 ]
@@ -48,6 +53,7 @@ func _prepare_next_wave() -> void:
 		if next_button:
 			next_button.text = "All waves cleared!"
 			StageProgress.unlock_next_if_cleared(1)
+			SFX.play_ui(SND_WIN)
 			next_button.disabled = true
 			next_button.visible = true
 		return

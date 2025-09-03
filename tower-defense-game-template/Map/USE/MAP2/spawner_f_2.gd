@@ -13,6 +13,9 @@ extends Node
 
 const AUTO_START := false
 
+const SND_WIN := preload("res://audio/NEW_Winning all wave.wav")
+	#SFX.play_ui(SND_WIN)
+
 var waves = [
 	["runner","runner","runner","runner","runner"],
 	["tank","crawler","runner","regenerator","runner"],
@@ -49,6 +52,8 @@ func _prepare_next_wave() -> void:
 	if current_wave >= waves.size():
 		if next_button:
 			next_button.text = "All waves cleared!"
+			StageProgress.unlock_next_if_cleared(2)
+			SFX.play_ui(SND_WIN)
 			next_button.disabled = true
 			next_button.visible = true
 		return

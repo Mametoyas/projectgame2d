@@ -12,8 +12,6 @@ signal base_destroyed
 
 const SND_LOSE := preload("res://audio/monster-bite-44538.mp3")
 
-	#SFX.play_ui(SND_LOSE)
-
 var hp: int
 var _dead: bool = false
 
@@ -90,3 +88,4 @@ func _change_to_lose() -> void:
 
 	get_tree().paused = false
 	get_tree().change_scene_to_file(lose_scene_path)
+	StageProgress.save_unlocked(1)

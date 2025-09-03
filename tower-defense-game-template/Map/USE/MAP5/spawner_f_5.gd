@@ -54,6 +54,7 @@ func _prepare_next_wave() -> void:
 	if current_wave >= waves.size():
 		if next_button:
 			next_button.text = "All waves cleared!"
+			StageProgress.unlock_next_if_cleared(5)
 			next_button.disabled = true
 			next_button.visible = true
 		return

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dh6vmsjs4odw"]
 
-[ext_resource type="FontFile" uid="uid://bs1a7udesxgfv" path="res://connection_ii/ConnectionII.otf" id="1_hdmo1"]
+[ext_resource type="FontFile" uid="uid://c5tyisxmn13ig" path="res://connection_ii/ConnectionII.otf" id="1_hdmo1"]
 
 [node name="PauseMenu" type="Control"]
 layout_mode = 3

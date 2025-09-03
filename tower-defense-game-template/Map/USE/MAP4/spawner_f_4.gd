@@ -10,6 +10,9 @@ extends Node
 	$"../Forest4Line2",
 ]
 
+const SND_WIN := preload("res://audio/NEW_Winning all wave.wav")
+	#SFX.play_ui(SND_WIN)
+
 const AUTO_START := false
 
 var waves = [
@@ -48,6 +51,8 @@ func _prepare_next_wave() -> void:
 	if current_wave >= waves.size():
 		if next_button:
 			next_button.text = "All waves cleared!"
+			StageProgress.unlock_next_if_cleared(4)
+			SFX.play_ui(SND_WIN)
 			next_button.disabled = true
 			next_button.visible = true
 		return
