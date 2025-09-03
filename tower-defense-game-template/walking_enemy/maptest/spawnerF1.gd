@@ -116,8 +116,8 @@ func _on_enemy_died(reward: int) -> void:
 		hud.call("add_money", reward)
 
 	# ถ้าใช้ BuildUI ให้ซิงก์ค่าเงินด้วย
-	var ui: Node = null        # <<< ใส่ชนิดให้ชัดเจน
-	if hud != null and hud.has_node("BuildUI"):
-		ui = hud.get_node("BuildUI")
-	if ui != null and ui.has_method("add_money"):
-		ui.call("add_money", reward)
+	#var ui: Node = null        # <<< ใส่ชนิดให้ชัดเจน
+	#if hud != null and hud.has_node("BuildUI"):
+		#ui = hud.get_node("BuildUI")
+	#if ui != null and ui.has_method("add_money"):
+		#ui.call("add_money", reward)
