@@ -170,7 +170,7 @@ func _on_enemy_died(reward: int) -> void:
 	var hud := tree.get_first_node_in_group("hud")
 	if hud and hud.has_method("add_money"):
 		hud.call("add_money", reward)
-	if hud and hud.has_node("BuildUI"):
-		var ui := hud.get_node("BuildUI")
-		if ui and ui.has_method("add_money"):
-			ui.call("add_money", reward)
+	#if hud and hud.has_node("BuildUI"):
+		#var ui := hud.get_node("BuildUI")
+		#if ui and ui.has_method("add_money"):
+			#ui.call("add_money", reward)
