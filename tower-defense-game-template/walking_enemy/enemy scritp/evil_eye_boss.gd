@@ -119,7 +119,8 @@ func _try_attack_tower() -> void:
 
 func _finish_attack() -> void:
 	if _attack_target and is_instance_valid(_attack_target):
-		_attack_target.queue_free()
+		_attack_target.call_deferred("queue_free")
+
 	_attack_target = null
 	_attacking = false
 
@@ -141,4 +142,4 @@ func die() -> void:
 		return
 	alive = false
 	died.emit(reward)
-	queue_free()
+	call_deferred("queue_free")

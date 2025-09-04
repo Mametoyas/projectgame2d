@@ -73,5 +73,5 @@ func _buff_tower(t: Node) -> void:
 				var st3 := t.get_node("ShootTimer") as Timer
 				st3.wait_time = float(t.get_meta("orig_interval"))
 				t.remove_meta("orig_interval")
-		tm.queue_free())
+		tm.call_deferred("queue_free"))
 	tm.start()

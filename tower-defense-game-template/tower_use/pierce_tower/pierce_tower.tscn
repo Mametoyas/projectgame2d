@@ -1,10 +1,10 @@
 [gd_scene load_steps=32 format=3 uid="uid://h1yckjwf6lp0"]
 
 [ext_resource type="Script" uid="uid://domau4yhs0jat" path="res://tower_use/pierce_tower/pierce_tower.gd" id="1_jcxwd"]
-[ext_resource type="Texture2D" uid="uid://el05fa0ywkh1" path="res://tower_use/asset/Tower 06.png" id="2_y3b26"]
-[ext_resource type="Texture2D" uid="uid://bd3ruhvqmnse2" path="res://tower_use/asset/Tower 06 - Level 01 - Weapon.png" id="3_2ylgp"]
-[ext_resource type="Texture2D" uid="uid://drm11tv57yidw" path="res://tower_use/asset/Tower 06 - Level 02 - Weapon.png" id="4_bhg1o"]
-[ext_resource type="Texture2D" uid="uid://cc3f7glj1apeq" path="res://tower_use/asset/Tower 06 - Level 03 - Weapon.png" id="5_mdok1"]
+[ext_resource type="Texture2D" uid="uid://brpfo34r3k2dw" path="res://tower_use/asset/Tower 06.png" id="2_y3b26"]
+[ext_resource type="Texture2D" uid="uid://cdjnv6dgm6dy6" path="res://tower_use/asset/Tower 06 - Level 01 - Weapon.png" id="3_2ylgp"]
+[ext_resource type="Texture2D" uid="uid://bjgbfgaa2lxk" path="res://tower_use/asset/Tower 06 - Level 02 - Weapon.png" id="4_bhg1o"]
+[ext_resource type="Texture2D" uid="uid://cl6e78t2dqlpn" path="res://tower_use/asset/Tower 06 - Level 03 - Weapon.png" id="5_mdok1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_45mbx"]
 atlas = ExtResource("2_y3b26")

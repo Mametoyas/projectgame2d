@@ -18,8 +18,8 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	AudioServer.set_bus_volume_db(0, linear_to_db($AudioOptions/VBoxContainer/MasterSlider.value))
+#func _process(delta):
+	#AudioServer.set_bus_volume_db(0, linear_to_db($AudioOptions/VBoxContainer/MasterSlider.value))
 
 func _on_next() -> void:
 	SFX.play_ui(SND_CLICK)
@@ -33,7 +33,6 @@ func _on_quit() -> void:
 func _on_back() -> void:
 	get_tree().paused = false
 	SFX.play_ui(SND_CLICK)
-	await get_tree().create_timer(1)
 	get_tree().change_scene_to_file(main_menu)
 	
 	#QuitBut.pressed.connect(gomain)

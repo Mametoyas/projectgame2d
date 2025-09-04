@@ -152,7 +152,8 @@ func show_range(enabled: bool) -> void:
 		range_area = get_node_or_null("Range") as Area2D
 	if enabled:
 		if range_preview != null and is_instance_valid(range_preview):
-			range_preview.queue_free()
+			range_preview.call_deferred("queue_free")
+
 		range_preview = Line2D.new()
 		range_preview.width = 2.0
 		range_preview.default_color = Color(0, 1, 1, 0.45)
@@ -169,7 +170,8 @@ func show_range(enabled: bool) -> void:
 		range_area.add_child(range_preview)
 	else:
 		if range_preview != null and is_instance_valid(range_preview):
-			range_preview.queue_free()
+			range_preview.call_deferred("queue_free")
+
 		range_preview = null
 
 # ----- target & fire -----

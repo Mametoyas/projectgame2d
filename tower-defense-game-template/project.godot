@@ -20,12 +20,20 @@ config/icon="uid://bdrepu5l2meg5"
 SFX="*res://audio/sfx.gd"
 StageProgress="*res://menu/StageProgress.gd"
 
+[debug]
+
+settings/physics_interpolation/enable_warnings=false
+
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[editor]
+
+version_control/autoload_on_startup=true
 
 [input]
 

@@ -88,4 +88,3 @@ func _change_to_lose() -> void:
 
 	get_tree().paused = false
 	get_tree().change_scene_to_file(lose_scene_path)
-	StageProgress.save_unlocked(1)

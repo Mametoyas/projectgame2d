@@ -54,4 +54,4 @@ func _on_area_entered(a: Area2D) -> void:
 	if p and p.is_in_group("enemies"):
 		if p.has_method("apply_damage"):
 			p.call("apply_damage", damage)
-		queue_free()
+		call_deferred("queue_free")

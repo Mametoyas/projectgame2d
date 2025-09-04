@@ -100,7 +100,8 @@ func _process(delta: float) -> void:
 		_update_bar()
 	if follower.progress_ratio >= 1.0:
 		reached_end.emit()
-		queue_free()
+		call_deferred("queue_free")
+
 
 func apply_damage(amount: int) -> void:
 	if amount <= 0: return
@@ -119,7 +120,8 @@ func apply_damage(amount: int) -> void:
 		SFX.play_2d(SND_DIE, global_position)
 		_spawn_children_if_any()
 		died.emit(reward)
-		queue_free()
+		call_deferred("queue_free")
+
 
 func _update_bar() -> void:
 	var ratio: float = clamp(hp / float(max_hp), 0.0, 1.0)
