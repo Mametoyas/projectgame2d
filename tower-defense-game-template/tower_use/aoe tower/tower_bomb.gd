@@ -162,8 +162,7 @@ func show_range(enabled: bool) -> void:
 
 	if enabled:
 		if range_preview != null and is_instance_valid(range_preview):
-			range_preview.call_deferred("queue_free")
-
+			range_preview.queue_free()
 
 		range_preview = Line2D.new()
 		range_preview.width = 2.0
@@ -184,8 +183,7 @@ func show_range(enabled: bool) -> void:
 		parent_node.add_child(range_preview)
 	else:
 		if range_preview != null and is_instance_valid(range_preview):
-			range_preview.call_deferred("queue_free")
-
+			range_preview.queue_free()
 		range_preview = null
 
 # เก็บศัตรูเข้า/ออกระยะ

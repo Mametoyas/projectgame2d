@@ -41,4 +41,4 @@ func _on_area_entered(a: Area2D) -> void:
 	if p and p.is_in_group("enemies"):
 		# ศัตรูมีฟังก์ชัน apply_damage อยู่แล้ว
 		p.apply_damage(damage)
-		call_deferred("queue_free")
+		queue_free()

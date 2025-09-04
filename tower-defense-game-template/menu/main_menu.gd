@@ -23,11 +23,11 @@ func _ready() -> void:
 
 func _on_start() -> void:
 	SFX.play_ui(SND_CLICK)
-	get_tree().change_scene_to_flie(stage_select_path)
+	get_tree().change_scene_to_file(stage_select_path)
 
 func _on_menu() -> void:
 	SFX.play_ui(SND_CLICK)
-	get_tree().change_scene_to_flie(select_help)
+	get_tree().change_scene_to_file(select_help)
 
 func _on_exit() -> void:
 	SFX.play_ui(SND_CLICK)
@@ -36,5 +36,5 @@ func _on_exit() -> void:
 
 func _on_button_2_pressed() -> void:
 	SFX.play_ui(SND_CLICK)
-	get_tree().change_scene_to_flie(options_path)
+	get_tree().change_scene_to_file(options_path)
 	

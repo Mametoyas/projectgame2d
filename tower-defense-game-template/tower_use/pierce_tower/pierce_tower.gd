@@ -1,3 +1,4 @@
+# res://tower_use/pierce_tower/Tower.gd
 extends Node2D
 
 @export var current_level: int = 1
@@ -26,9 +27,6 @@ const LEVELS: Array = [
 
 const SND_SHOOT := preload("res://audio/crossbow-firing-95020.mp3")
 
-	#SFX.play_2d(SND_SHOOT, global_position)
-
-
 var bullet_scene: PackedScene = null
 var muzzles: Array[Marker2D] = []
 
@@ -42,6 +40,7 @@ var range_preview: Line2D = null
 
 func _ready() -> void:
 	_wire_select_area()
+
 	range_area.monitoring = true
 	range_area.monitorable = true
 	range_area.collision_layer = 0
@@ -65,26 +64,23 @@ func _ready() -> void:
 
 	z_index = 50
 	if sprite_base: sprite_base.z_index = 50
-	if sprite_top:  sprite_top.z_index  = 51   # ทับชั้นฐานเล็กน้อย
+	if sprite_top:  sprite_top.z_index  = 51
 
 func _process(_d: float) -> void:
 	if target == null or not is_instance_valid(target):
 		_pick_target()
 	elif not can_target_flying and target.is_in_group("flying_enemies"):
 		_pick_target()
-		
+
 func _wire_select_area() -> void:
-	# ทำให้ SelectArea ถูก pick ได้แน่นอน
 	if select_area:
 		select_area.input_pickable = true
-		select_area.monitoring = true      # ไม่จำเป็นสำหรับ input_event แต่เปิดไว้ปลอดภัย
+		select_area.monitoring = true
 		select_area.monitorable = true
-		# ชั้นชนไม่สำคัญกับ input_event แต่ตั้งค่ามาตรฐานไว้กันพลาด
 		select_area.collision_layer = 1
 		select_area.collision_mask = 0
 		if select_shape:
 			select_shape.disabled = false
-		# กันต่อซ้ำ
 		if not select_area.input_event.is_connected(_on_select_area_input):
 			select_area.input_event.connect(_on_select_area_input)
 
@@ -93,7 +89,6 @@ func _on_select_area_input(_vp, event: InputEvent, _shape_idx: int) -> void:
 		var menu := get_tree().get_first_node_in_group("floating_tower_menu")
 		if menu:
 			menu.call("open_for", self)
-
 
 # ----- level/apply -----
 func _apply_level() -> void:
@@ -124,27 +119,29 @@ func _apply_level() -> void:
 		if sprite_base.sprite_frames.has_animation(an):
 			sprite_base.play(an)
 	if sprite_top and sprite_top.sprite_frames and cfg.has("anim"):
-		var an := String(cfg["anim"])
-		if sprite_top.sprite_frames.has_animation(an):
-			sprite_top.play(an)
+		var an2 := String(cfg["anim"])
+		if sprite_top.sprite_frames.has_animation(an2):
+			sprite_top.play(an2)
 
 	_set_range_mask()
 
 func get_upgrade_cost() -> int:
-	if current_level >= 3: return 0
+	if current_level >= 3:
+		return 0
 	return int((LEVELS[current_level + 1] as Dictionary)["cost"])
 
 func upgrade() -> bool:
-	if current_level >= 3: return false
+	if current_level >= 3:
+		return false
 	current_level += 1
 	_apply_level()
 	return true
 
 func _set_range_mask() -> void:
 	range_area.collision_mask = 0
-	range_area.set_collision_mask_value(1, true)
+	range_area.set_collision_mask_value(1, true) # ดิน
 	if can_target_flying:
-		range_area.set_collision_mask_value(2, true)
+		range_area.set_collision_mask_value(2, true) # บิน
 
 # ----- show/hide range (optional) -----
 func show_range(enabled: bool) -> void:
@@ -152,8 +149,7 @@ func show_range(enabled: bool) -> void:
 		range_area = get_node_or_null("Range") as Area2D
 	if enabled:
 		if range_preview != null and is_instance_valid(range_preview):
-			range_preview.call_deferred("queue_free")
-
+			range_preview.queue_free()
 		range_preview = Line2D.new()
 		range_preview.width = 2.0
 		range_preview.default_color = Color(0, 1, 1, 0.45)
@@ -161,17 +157,14 @@ func show_range(enabled: bool) -> void:
 
 		var pts := PackedVector2Array()
 		var segs := 64
-		var i := 0
-		while i < segs:
+		for i in range(segs):
 			var ang := TAU * float(i) / float(segs)
 			pts.append(Vector2(cos(ang), sin(ang)) * range_radius)
-			i += 1
 		range_preview.points = pts
 		range_area.add_child(range_preview)
 	else:
 		if range_preview != null and is_instance_valid(range_preview):
-			range_preview.call_deferred("queue_free")
-
+			range_preview.queue_free()
 		range_preview = null
 
 # ----- target & fire -----
@@ -213,6 +206,9 @@ func _on_shoot() -> void:
 	if target == null or not is_instance_valid(target):
 		return
 	if bullet_scene == null:
+		return
+	# กันเคส target เพิ่งหลุดระยะ
+	if not in_range.has(target):
 		return
 
 	if muzzles.is_empty():

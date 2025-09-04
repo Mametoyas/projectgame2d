@@ -13,17 +13,12 @@ config_version=5
 config/name="Tower Defense Game"
 run/main_scene="uid://cbr8b4hp6o8"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="uid://bdrepu5l2meg5"
+config/icon="uid://dbhij3fi2qo2e"
 
 [autoload]
 
 SFX="*res://audio/sfx.gd"
 StageProgress="*res://menu/StageProgress.gd"
-G="*res://Globals.gd"
-
-[debug]
-
-settings/physics_interpolation/enable_warnings=false
 
 [display]
 
@@ -32,10 +27,6 @@ window/size/viewport_height=720
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
-[editor]
-
-version_control/autoload_on_startup=true
-
 [input]
 
 LeftClick={
@@ -43,7 +34,3 @@ LeftClick={
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(642, 33),"global_position":Vector2(650, 113),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
 ]
 }
-
-[rendering]
-
-textures/vram_compression/import_etc2_astc=true

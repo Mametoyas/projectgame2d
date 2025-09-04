@@ -21,12 +21,12 @@ func _ready() -> void:
 
 func _on_next() -> void:
 	SFX.play_ui(SND_CLICK)
-	get_tree().change_scene_to_flie(next_path)
+	get_tree().change_scene_to_file(next_path)
 
 func _on_back() -> void:
 	SFX.play_ui(SND_CLICK)
-	get_tree().change_scene_to_flie(back_path)
+	get_tree().change_scene_to_file(back_path)
 	
 func _on_main() -> void:
 	SFX.play_ui(SND_CLICK)
-	get_tree().change_scene_to_flie(main_menu)
+	get_tree().change_scene_to_file(main_menu)

@@ -180,7 +180,7 @@ func show_range(enabled: bool) -> void:
 
 	if enabled:
 		if range_preview != null and is_instance_valid(range_preview):
-			range_preview.call_deferred("queue_free")
+			range_preview.queue_free()
 
 		range_preview = Line2D.new()
 		range_preview.width = 2.0
@@ -202,7 +202,7 @@ func show_range(enabled: bool) -> void:
 		parent_node.add_child(range_preview)
 	else:
 		if range_preview != null and is_instance_valid(range_preview):
-			range_preview.call_deferred("queue_free")
+			range_preview.queue_free()
 		range_preview = null
 
 # ====== เลือกเป้าหมาย / ยิง ======
@@ -271,6 +271,7 @@ func _spawn_bullet(pos: Vector2) -> void:
 	b.set("damage", damage)
 	b.set("dir", (target.global_position - pos).normalized())
 
+# ====== ยูทิล: ระยะจริง ======
 func get_effective_range_radius() -> float:
 	var cs: CircleShape2D = range_shape.shape as CircleShape2D
 	if cs == null:

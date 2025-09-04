@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b04e32wx7ilx8"]
 
-[ext_resource type="Texture2D" uid="uid://bknobn5vmbrcf" path="res://menu/SettingBG.png" id="1_3iptn"]
+[ext_resource type="Texture2D" uid="uid://4xfqlbfiiohl" path="res://menu/SettingBG.png" id="1_3iptn"]
 
 [node name="SettingMenu" type="Control"]
 layout_mode = 3

@@ -26,4 +26,4 @@ func testEsc():
 
 func _on_me_nu_pressed() -> void:
 	if menu_path != "":
-		get_tree().change_scene_to_flie(menu_path)
+		get_tree().change_scene_to_file(menu_path)

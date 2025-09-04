@@ -14,7 +14,7 @@ extends Panel
 	##SFX.play_ui(SND_CLICK)
 	##
 	##if PausePath != "":
-		##get_tree().change_scene_to_flie(PausePath)
+		##get_tree().change_scene_to_file(PausePath)
 #
 #func _on_exit() -> void:
 	#SFX.play_ui(SND_CLICK)

@@ -98,12 +98,10 @@ func _explode() -> void:
 		anim.play("hit")
 		anim.animation_finished.connect(_on_anim_finished, Object.CONNECT_ONE_SHOT)
 	else:
-		call_deferred("queue_free")
-
+		queue_free()
 
 func _on_anim_finished() -> void:
-	call_deferred("queue_free")
-
+	queue_free()
 
 func _on_life_over() -> void:
-	call_deferred("queue_free")
+	queue_free()

@@ -141,8 +141,7 @@ func _free_ghost() -> void:
 		if ghost.has_method("show_range"):
 			ghost.call("show_range", false)
 		if is_instance_valid(ghost):
-			ghost.call_deferred("queue_free")
-
+			ghost.queue_free()
 	ghost = null
 
 # ============= ตรวจพื้นที่ห้ามวาง =============

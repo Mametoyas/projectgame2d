@@ -109,8 +109,7 @@ func _on_sell() -> void:
 	if ui != null and ui.has_method("add_money"):
 		ui.call("add_money", 30)
 		SFX.play_ui(SND_CLICK)
-	tower.call_deferred("queue_free")
-
+	tower.queue_free()
 	close()
 
 func _unhandled_input(e: InputEvent) -> void:
