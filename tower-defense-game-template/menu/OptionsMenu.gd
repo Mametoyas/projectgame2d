@@ -17,4 +17,4 @@ func _ready():
 
 func _on_menu_pressed() -> void:
 	SFX.play_ui(SND_CLICK)
-	get_tree().change_scene_to_file(main_menu)
+	get_tree().change_scene_to_flie(main_menu)

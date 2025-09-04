@@ -1,6 +1,6 @@
 extends Control
 
-@export var main_menu: String = "res://menu/main_menu.tscn"
+const  main_menu = preload("res://menu/main_menu.tscn")
 @onready var ResumBut: Button = $Resume
 @onready var MainBut: Button = $MainMenu
 @onready var QuitBut: Button = $QuitGame
@@ -33,8 +33,8 @@ func _on_quit() -> void:
 func _on_back() -> void:
 	get_tree().paused = false
 	SFX.play_ui(SND_CLICK)
-	get_tree().change_scene_to_file(main_menu)
+	get_tree().change_scene_to_flie(main_menu)
 	
 	#QuitBut.pressed.connect(gomain)
 #func gomain() -> void:
-	#get_tree().change_scene_to_file(main_menu)
+	#get_tree().change_scene_to_flie(main_menu)

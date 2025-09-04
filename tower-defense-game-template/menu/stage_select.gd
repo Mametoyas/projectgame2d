@@ -40,7 +40,7 @@ func _wire(btn: Button, scene_path: String) -> void:
 func _go_scene(p: String) -> void:
 	if p == "":
 		return
-	get_tree().change_scene_to_file(p)
+	get_tree().change_scene_to_flie(p)
 
 func _go_main() -> void:
 	_go_scene(main_menu_path)

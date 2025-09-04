@@ -87,4 +87,4 @@ func _change_to_lose() -> void:
 		get_tree().set_meta("last_level_path", cs.scene_file_path)
 
 	get_tree().paused = false
-	get_tree().change_scene_to_file(lose_scene_path)
+	get_tree().change_scene_to_flie(lose_scene_path)
