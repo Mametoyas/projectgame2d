@@ -1,0 +1,87 @@
+[gd_scene load_steps=19 format=3 uid="uid://dwxqbgxv0ipwm"]
+
+[ext_resource type="Texture2D" uid="uid://02quupc0w5h8" path="res://Skills/assets/Buff damage/Frames/paladin_skill2_frame1.png" id="1_wt11x"]
+[ext_resource type="Texture2D" uid="uid://drqor5u0lqf7c" path="res://Skills/assets/Buff damage/Frames/paladin_skill2_frame2.png" id="2_0cux5"]
+[ext_resource type="Texture2D" uid="uid://bnwl2rn6ieftl" path="res://Skills/assets/Buff damage/Frames/paladin_skill2_frame3.png" id="3_ng1c4"]
+[ext_resource type="Texture2D" uid="uid://dm1vvr2tclhd5" path="res://Skills/assets/Buff damage/Frames/paladin_skill2_frame4.png" id="4_i0ylo"]
+[ext_resource type="Texture2D" uid="uid://bk4u4xfso7wmn" path="res://Skills/assets/Buff damage/Frames/paladin_skill2_frame5.png" id="5_04epa"]
+[ext_resource type="Texture2D" uid="uid://dxir22e4s1ls8" path="res://Skills/assets/Buff damage/Frames/paladin_skill2_frame6.png" id="6_cb4hx"]
+[ext_resource type="Texture2D" uid="uid://bgb3ahh8mjac3" path="res://Skills/assets/Buff damage/Frames/paladin_skill2_frame7.png" id="7_t1rpq"]
+[ext_resource type="Texture2D" uid="uid://cyul03ty07y0w" path="res://Skills/assets/Buff damage/Frames/paladin_skill2_frame8.png" id="8_ovequ"]
+[ext_resource type="Texture2D" uid="uid://dbdi8aq175xfq" path="res://Skills/assets/Buff damage/Frames/paladin_skill2_frame9.png" id="9_xmi3j"]
+[ext_resource type="Texture2D" uid="uid://bvlm1e1x6w4xc" path="res://Skills/assets/Buff damage/Frames/paladin_skill2_frame10.png" id="10_gtci1"]
+[ext_resource type="Texture2D" uid="uid://c360nlwdu1k7d" path="res://Skills/assets/Buff damage/Frames/paladin_skill2_frame11.png" id="11_xys1f"]
+[ext_resource type="Texture2D" uid="uid://dm4pdy58qhjuk" path="res://Skills/assets/Buff damage/Frames/paladin_skill2_frame12.png" id="12_qsrgl"]
+[ext_resource type="Texture2D" uid="uid://b0uvhrcdy2p6b" path="res://Skills/assets/Buff damage/Frames/paladin_skill2_frame13.png" id="13_siedy"]
+[ext_resource type="Texture2D" uid="uid://caxfvon8uoq5x" path="res://Skills/assets/Buff damage/Frames/paladin_skill2_frame14.png" id="14_0pqmb"]
+[ext_resource type="Texture2D" uid="uid://d122xxh4scxis" path="res://Skills/assets/Buff damage/Frames/paladin_skill2_frame15.png" id="15_6q1oi"]
+[ext_resource type="Texture2D" uid="uid://fryap10x5gj6" path="res://Skills/assets/Buff damage/Frames/paladin_skill2_frame16.png" id="16_gryou"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5pdsy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_wt11x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_0cux5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ng1c4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_i0ylo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_04epa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_cb4hx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_t1rpq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ovequ")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xmi3j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_gtci1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_xys1f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_qsrgl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_siedy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_0pqmb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_6q1oi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_gryou")
+}],
+"loop": false,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_65nhq"]
+radius = 1024.0
+
+[node name="Buff_damage" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_5pdsy")
+frame = 15
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_65nhq")

@@ -1,0 +1,43 @@
+[gd_scene load_steps=8 format=3 uid="uid://dxsm02qk087el"]
+
+[ext_resource type="Texture2D" uid="uid://c4vc6a5k8fab0" path="res://Skills/assets/lightning/VFX3/Frames/lightning_skill3_frame1.png" id="1_whujs"]
+[ext_resource type="Texture2D" uid="uid://gpf1ame0l5j4" path="res://Skills/assets/lightning/VFX3/Frames/lightning_skill3_frame2.png" id="2_i6qui"]
+[ext_resource type="Texture2D" uid="uid://cbe3nia74jbuw" path="res://Skills/assets/lightning/VFX3/Frames/lightning_skill3_frame3.png" id="3_ceif2"]
+[ext_resource type="Texture2D" uid="uid://bqqeca0xsoiaq" path="res://Skills/assets/lightning/VFX3/Frames/lightning_skill3_frame4.png" id="4_5r1fw"]
+[ext_resource type="Texture2D" uid="uid://cue6j4bae00ay" path="res://Skills/assets/lightning/VFX3/Frames/lightning_skill3_frame5.png" id="5_ihdyj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jixiw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_whujs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_i6qui")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ceif2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5r1fw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ihdyj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lex4b"]
+radius = 40.05
+
+[node name="lightning" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(5, -92)
+sprite_frames = SubResource("SpriteFrames_jixiw")
+frame_progress = 0.436593
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_lex4b")
