@@ -7,6 +7,7 @@ const SND_CLICK := preload("res://audio/computer-mouse-click-02-383961.mp3")
 @export_file("*.tscn") var stage3_path: String = "res://Map/USE/MAP3/Forest3.tscn"
 @export_file("*.tscn") var stage4_path: String = "res://Map/USE/MAP4/Forest4.tscn"
 @export_file("*.tscn") var stage5_path: String = "res://Map/USE/MAP5/Forest5.tscn"
+@export_file("*.tscn") var prize_path: String = "res://menu/prize.tscn"
 @export_file("*.tscn") var main_menu_path: String = "res://menu/main_menu.tscn"
 
 @onready var b1: Button = $CenterContainer/Menu/Stage1Btn
@@ -14,6 +15,7 @@ const SND_CLICK := preload("res://audio/computer-mouse-click-02-383961.mp3")
 @onready var b3: Button = $CenterContainer/Menu/Stage3Btn
 @onready var b4: Button = $CenterContainer/Menu/Stage4Btn
 @onready var b5: Button = $CenterContainer/Menu/Stage5Btn
+@onready var prize: Button = $Panel/prizeBtn
 @onready var bBack: Button = $CenterContainer/Menu/BackBtn
 
 func _ready() -> void:
@@ -22,6 +24,7 @@ func _ready() -> void:
 	_connect_stage_button(b3, stage3_path)
 	_connect_stage_button(b4, stage4_path)
 	_connect_stage_button(b5, stage5_path)
+	_connect_stage_button(prize, prize_path)
 
 	if bBack:
 		bBack.pressed.connect(_go_main)
@@ -61,6 +64,10 @@ func _refresh_lock_state() -> void:
 	var label5: String = " "
 	if unlocked < 5: label5 = "XXXX"
 	_set_btn_state(b5, unlocked >= 5, label5)
+	
+	var label6: String = "prize"
+	if unlocked < 6: label6 = "XXXX"
+	_set_btn_state(prize, unlocked >= 6, label6)
 
 func _set_btn_state(btn: Button, enabled: bool, label: String) -> void:
 	if btn == null:

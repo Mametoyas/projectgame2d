@@ -80,3 +80,16 @@ zoom = Vector2(1, 0.9)
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_m706i")
 autoplay = true
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="prizeBtn" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 1185.0
+offset_top = 9.0
+offset_right = 1276.0
+offset_bottom = 63.0
+text = "Prize"
