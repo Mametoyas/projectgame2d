@@ -1,3 +1,4 @@
+# res://enemy/Enemy.gd
 extends Node2D
 class_name Enemy
 
@@ -31,20 +32,18 @@ var follower: PathFollow2D
 
 const SND_DIE := preload("res://audio/monster-death-grunt-131480.mp3")
 
-# ======================
-# ตั้งค่า Layer ให้ Hitbox ตามชนิด (บิน/ดิน)
 func _apply_hitbox_layers() -> void:
 	if hitbox == null:
 		return
+	# ให้ตรวจจับง่ายและเสถียรบน Web
+	hitbox.monitoring = true
+	hitbox.monitorable = true
 	hitbox.collision_layer = 0
 	hitbox.collision_mask = 0
 	if flying:
-		# ศัตรูบินอยู่ Layer 2
-		hitbox.set_collision_layer_value(2, true)
+		hitbox.set_collision_layer_value(2, true) # ศัตรูบิน
 	else:
-		# ศัตรูภาคพื้นอยู่ Layer 1
-		hitbox.set_collision_layer_value(1, true)
-# ======================
+		hitbox.set_collision_layer_value(1, true) # ศัตรูเดินดิน
 
 func setup(config: Dictionary) -> void:
 	type_id   = String(config.get("type_id", type_id))
@@ -66,13 +65,11 @@ func setup(config: Dictionary) -> void:
 	anim_name = String(config.get("anim", anim_name))
 	scale     = Vector2.ONE * size
 
-	# หลังจากรู้ค่า flying แล้ว → ตั้ง Layer ของ Hitbox
 	_apply_hitbox_layers()
 
 func _ready() -> void:
 	hp = max_hp
 
-	# ตั้งค่า HP bar
 	bar_back.size = bar_size
 	bar_back.color = Color(0, 0, 0, 0.75)
 	bar_fill.size = bar_size - Vector2(2,2)
@@ -80,17 +77,20 @@ func _ready() -> void:
 	bar_fill.color = Color(0.2, 0.9, 0.2)
 	_update_bar()
 
-	_apply_hitbox_layers()   # กันพลาด เรียกอีกทีตอนเริ่ม
-	print("Enemy:", type_id, " flying=", flying, " layer=", hitbox.collision_layer)
-	if flying: add_to_group("flying_enemies")
+	_apply_hitbox_layers()
+	if flying:
+		add_to_group("flying_enemies")
 	add_to_group("enemies")
-	if hitbox:
+
+	if hitbox and not hitbox.area_entered.is_connected(_on_area_entered):
 		hitbox.area_entered.connect(_on_area_entered)
+
 	if anim_name != "" and anim and anim.sprite_frames and anim.sprite_frames.has_animation(anim_name):
 		anim.play(anim_name)
 
 func _process(delta: float) -> void:
-	if follower == null: return
+	if follower == null:
+		return
 	follower.progress += speed * delta
 	global_position = follower.global_position
 	if rotate_along_path:
@@ -100,40 +100,44 @@ func _process(delta: float) -> void:
 		_update_bar()
 	if follower.progress_ratio >= 1.0:
 		reached_end.emit()
-		queue_free()
+		call_deferred("queue_free")
 
 func apply_damage(amount: int) -> void:
-	if amount <= 0: return
+	if amount <= 0:
+		return
 	var dmg: int = max(amount - armor, 1)
 	if shield_hp > 0:
 		var absorbed: int = min(dmg, shield_hp)
 		shield_hp -= absorbed
 		dmg -= absorbed
-		# อัปเดตแถบเลือด/สีทันที เผื่อโล่เพิ่งหมด
 		_update_bar()
 		if dmg <= 0:
 			return
 	hp -= float(dmg)
 	_update_bar()
 	if hp <= 0.0:
-		SFX.play_2d(SND_DIE, global_position)
+		# ปิดการชนทั้งหมดก่อนคิวฟรี (กันค้างใน WASM)
+		if hitbox:
+			hitbox.set_deferred("monitoring", false)
+			hitbox.set_deferred("collision_layer", 0)
+			hitbox.set_deferred("collision_mask", 0)
+		if SFX and SFX.has_method("play_2d"):
+			SFX.play_2d(SND_DIE, global_position)
 		_spawn_children_if_any()
 		died.emit(reward)
-		queue_free()
+		call_deferred("queue_free")
 
 func _update_bar() -> void:
 	var ratio: float = clamp(hp / float(max_hp), 0.0, 1.0)
 	bar_fill.size.x = (bar_size.x - 2.0) * ratio
-
-	# สีของหลอด: มีโล่ = ขาว, โล่หมด = เขียว
 	if shield_hp > 0:
-		bar_fill.color = Color(1, 1, 1, 1)         # ขาว
+		bar_fill.color = Color(1,1,1,1)
 	else:
-		bar_fill.color = Color(0.2, 0.9, 0.2, 1)   # เขียว
-
+		bar_fill.color = Color(0.2, 0.9, 0.2, 1)
 
 func _on_area_entered(a: Area2D) -> void:
-	if a.has_method("get_damage"):
+	# เผื่อมี projectile อื่นที่ส่ง damage ผ่าน method นี้
+	if a and a.has_method("get_damage"):
 		apply_damage(int(a.get_damage()))
 
 func _spawn_children_if_any() -> void:
@@ -146,14 +150,16 @@ func _spawn_children_if_any() -> void:
 		return
 
 	var tree := Engine.get_main_loop() as SceneTree
-	if tree == null: return
+	if tree == null:
+		return
 	var factory := tree.get_first_node_in_group("enemy_factory")
 	if factory == null or not factory.has_method("spawn"):
 		return
 
 	for i in c:
 		var path2d := follower.get_parent() as Path2D
-		if path2d == null: break
+		if path2d == null:
+			break
 		var f: PathFollow2D = follower.duplicate() as PathFollow2D
 		f.progress = max(0.0, follower.progress - 10.0)
 		f.h_offset = randf_range(-s, s)

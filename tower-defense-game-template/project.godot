@@ -13,7 +13,7 @@ config_version=5
 config/name="Tower Defense Game"
 run/main_scene="uid://cbr8b4hp6o8"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="uid://bdrepu5l2meg5"
+config/icon="uid://dbhij3fi2qo2e"
 
 [autoload]
 

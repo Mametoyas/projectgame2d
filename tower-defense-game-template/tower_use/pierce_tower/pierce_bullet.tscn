@@ -1,8 +1,8 @@
 [gd_scene load_steps=15 format=3 uid="uid://nqhy1vxpq7bd"]
 
 [ext_resource type="Script" uid="uid://ma71us3axd07" path="res://tower_use/pierce_tower/pierce_bullet.gd" id="1_xsdl0"]
-[ext_resource type="Texture2D" uid="uid://mmxy5syie8ax" path="res://tower_use/asset/Tower 06 - Level 01 - Projectile.png" id="2_xsdl0"]
-[ext_resource type="Texture2D" uid="uid://dca6c448n15wg" path="res://tower_use/asset/Tower 06 - Weapon - Impact.png" id="3_m3eqb"]
+[ext_resource type="Texture2D" uid="uid://crl8835s3roq8" path="res://tower_use/asset/Tower 06 - Level 01 - Projectile.png" id="2_xsdl0"]
+[ext_resource type="Texture2D" uid="uid://b0eblkwgjv2wy" path="res://tower_use/asset/Tower 06 - Weapon - Impact.png" id="3_m3eqb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_evp1j"]
 atlas = ExtResource("2_xsdl0")
